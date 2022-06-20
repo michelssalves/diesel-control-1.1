@@ -30,6 +30,7 @@ $combustivel = $_REQUEST['combustivel'];
 $marca = $_REQUEST['marca'];
 $modelo = $_REQUEST['modelo'];
 $prefixo = $_REQUEST['prefixo'];
+$setor = $_REQUEST['setor'];
 $dataIncial = $_REQUEST['dataIncial'];
 $dataFinal = $_REQUEST['dataFinal'];
 if($acao == 'limpar'){
@@ -40,12 +41,14 @@ if($acao == 'limpar'){
     $combustivel = '';
     $marca = '';
     $modelo = '';
+    $setor = '';
 
 }
 if($prefixo && $prefixo <> 'TODOS'){$filtroPrefixo = "AND prefixo = '$prefixo'";};
 if($combustivel && $combustivel <> 'TODOS' ){$filtroCombustivel = "AND combustivel = '$combustivel'";}
 if($marca && $marca <> 'TODOS'){$filtroMarca = "AND marca = '$marca'";}
 if($modelo && $modelo <> 'TODOS'){$filtroModelo = "AND modelo = '$modelo'";}
+if($setor && $setor <> 'TODOS'){$filtroSetor = "AND setor = '$setor'";}
 if($dataIncial  == ''){
     $dataIncial = date('Y-m-d');
     $dataHoraIncial = date('Y-m-d 00:00');}else{
@@ -70,7 +73,7 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
         JOIN abastecimentos AS a 
         ON a.id_veiculo = v.id_veiculo
         WHERE data_abastecimento BETWEEN '$dataHoraIncial' AND '$dataHoraFinal'
-        $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo
+        $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor
         ORDER BY data_abastecimento ASC ");
         $sql->execute();
 
@@ -126,7 +129,6 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
                 <td> '.$row['hr'].'</td>
                 <td class="w3-right-align"> '.$row['diferencahr'].'</td>
                 <td> '.$row['frentista'].'</td>
-                <td> '.l10($row['setor']).'</td>
                 </tr>';
             }
            

@@ -174,7 +174,6 @@ include 'assets/controllers/checkAcess.php';
                     <th><center>Hr</th>
                     <th><center>Dif Hr</th>
                     <th><center>Frentista</th>  
-                    <th><center>Setor</th>  
                     </tr>
                 </thead>
                 <tbody>
