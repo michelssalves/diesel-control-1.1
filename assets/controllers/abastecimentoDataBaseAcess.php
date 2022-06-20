@@ -1,0 +1,344 @@
+<?php
+session_start();
+$acao = $_REQUEST['acao'];
+
+if($acao == 'registrar-abastecimento'){
+
+    registrarAbastecimento();
+
+}
+if($acao == 'alterar-abastecimento'){
+
+    alterarAbastecimento();
+
+}
+if($acao == 'excluir-abastecimento'){
+
+    excluirAbastecimento();
+
+}
+if($acao == 'ultimoKm'){
+    
+    $id_veiculo =  $_REQUEST['id_veiculo'];
+
+    $informacoesVeiculo = informacoesVeiculo($id_veiculo);
+
+    header('Content-Type: application/json');
+    echo json_encode($informacoesVeiculo);
+}
+$combustivel = $_REQUEST['combustivel'];
+$marca = $_REQUEST['marca'];
+$modelo = $_REQUEST['modelo'];
+$prefixo = $_REQUEST['prefixo'];
+$dataIncial = $_REQUEST['dataIncial'];
+$dataFinal = $_REQUEST['dataFinal'];
+if($acao == 'limpar'){
+
+    $dataIncial = date('Y-m-d');
+    $dataFinal = date('Y-m-d');
+    $prefixo = '';
+    $combustivel = '';
+    $marca = '';
+    $modelo = '';
+
+}
+if($prefixo && $prefixo <> 'TODOS'){$filtroPrefixo = "AND prefixo = '$prefixo'";};
+if($combustivel && $combustivel <> 'TODOS' ){$filtroCombustivel = "AND combustivel = '$combustivel'";}
+if($marca && $marca <> 'TODOS'){$filtroMarca = "AND marca = '$marca'";}
+if($modelo && $modelo <> 'TODOS'){$filtroModelo = "AND modelo = '$modelo'";}
+if($dataIncial  == ''){
+    $dataIncial = date('Y-m-d');
+    $dataHoraIncial = date('Y-m-d 00:00');}else{
+    $horaInicial = '00:00';
+    $dataHoraIncial = $dataIncial.' '.$horaInicial;
+}
+if($dataFinal == ''){ 
+    $dataHoraFinal = date('Y-m-d 23:59');
+    $dataFinal = date('Y-m-d'); 
+}else{
+    $horaFinal = '23:59';
+    $dataHoraFinal = $dataFinal.' '.$horaFinal;
+}
+
+function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo,$dataHoraIncial, $dataHoraFinal){
+    include 'config.php';
+    include 'functions.php';
+
+        $sql = $pdo->prepare("SELECT v.id_veiculo, a.bomba, v.setor, a.diferencahr, a.ultimohr, a.id_abastecimento, a.data_abastecimento, v.placa, v.numero_equipamento, v.descricao_caminhao, a.odometroinicial,a.odometrofinal, a.litros_od, a.litros, 
+        a.ultimokm,a.km, a.diferencakm, a.hr, a.frentista, v.prefixo, a.media, v.combustivel
+        FROM veiculos AS v  
+        JOIN abastecimentos AS a 
+        ON a.id_veiculo = v.id_veiculo
+        WHERE data_abastecimento BETWEEN '$dataHoraIncial' AND '$dataHoraFinal'
+        $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo
+        ORDER BY data_abastecimento ASC ");
+        $sql->execute();
+
+        if ($sql->rowCount() > 0) {
+
+            $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+            foreach($lista as $row){
+
+                $info = array(
+                'id_abastecimento' => $row['id_abastecimento'],
+                'bomba' => $row['bomba'],
+                'data_abastecimento' => dmaHLocal($row['data_abastecimento']),
+                'numero_equipamento' =>  $row['numero_equipamento'],
+                'odometroinicial' =>  $row['odometroinicial'],
+                'odometrofinal' =>  $row['odometrofinal'],
+                'litros_od' =>  $row['litros_od'],
+                'litros' =>  $row['litros'],
+                'media' =>  $row['media'],
+                'ultimokm' =>  $row['ultimokm'],
+                'km' =>  $row['km'],
+                'diferencakm' => $row['diferencakm'],
+                'ultimohr' =>  $row['ultimohr'],
+                'hr' =>  $row['hr'],
+                'diferencahr' =>  $row['diferencahr'],
+                'frentista' =>  $row['frentista']
+                );
+
+                $info = http_build_query($info);
+                $url ='alterar-abastecimento?'.$info;
+                $link = "PopupCenter('$url','Upload',400,900)";
+                
+                $corMedia = '';
+                $corLitros = '';
+                    if($row['media'] < 1.5){$corMedia = 'bg-danger';}
+                    if($row['media'] > 2.5 && $row['descricao_caminhao'] == 'COMPACTADOR'){$corMedia = 'bg-warning';}
+                    if($row['litros_od'] <> $row['litros'] ){$corLitros = 'bg-warning';}
+     
+                $txtTableControles .= '<tr>
+                <td class="w3-left-align" width="200px;"> '.dmaHis($row['data_abastecimento']).'</td>
+                <td> '.$row['numero_equipamento'].' </td>
+                <td> '.$row['placa'].' </td>
+                <td onclick="'.$link.'" style="cursor:pointer;"> '.$row['prefixo'].' </td>
+                <td class="w3-right-align"> '.($row['odometroinicial']).' </td>
+                <td class="w3-right-align" > '.($row['odometrofinal']).' </td>
+                <td class="'.$corLitros.' w3-right-align"> '.($row['litros_od']).' </td>
+                <td class="'.$corLitros.' w3-right-align"> '.($row['litros']).' </td>
+                <td class="'.$corMedia.' w3-right-align"> '.($row['media']).' </td>
+                <td> '.$row['ultimokm'].' </td>
+                <td> '.$row['km'].' </td>
+                <td class="w3-right-align"> '.$row['diferencakm'].' </td>
+                <td> '.$row['ultimohr'].'</td>
+                <td> '.$row['hr'].'</td>
+                <td class="w3-right-align"> '.$row['diferencahr'].'</td>
+                <td> '.$row['frentista'].'</td>
+                <td> '.l10($row['setor']).'</td>
+                </tr>';
+            }
+           
+        }
+          return  $txtTableControles;      
+}                 
+function informacoesVeiculo($id_veiculo){
+
+    include 'config.php';
+
+    $id_veiculo =  intval($_REQUEST['id_veiculo']);
+    
+    $sql = $pdo->prepare("SELECT * FROM abastecimentos
+	WHERE id_veiculo = :id_veiculo  ORDER BY data_abastecimento DESC LIMIT 1");
+	$sql->bindValue(':id_veiculo', $id_veiculo);
+	$sql->execute();
+	$row = $sql->fetch(PDO::FETCH_ASSOC);
+    $ultimoKm = $row['km'];
+    if($row['km'] < 0){$ultimoKm = 0;}
+    $ultimoHr = $row['hr'];
+    if($row['hr'] < 0){$ultimoHr = 0;}
+    
+
+    $informacoesVeiculo = [
+        'ultimoKm' => $ultimoKm,
+        'ultimoHr' => $ultimoHr
+    ];
+
+    return $informacoesVeiculo;
+
+}
+function registrarAbastecimento(){
+
+    include 'config.php';
+    include 'functions.php';
+    
+    $id_veiculo = $_POST['prefixo'];
+    $bomba = $_POST['bomba'];
+    $odometroinicial = $_POST['odometroinicial']; 
+    $ultimokm = $_POST['ultimokm']; 
+    $km = $_POST['km']; 
+    $diferencakm = $_POST['diferencakm'];
+    $ultimohr = $_POST['ultimohr']; 
+    $hr = $_POST['hr']; 
+    $diferencahr = $_POST['diferencahr']; 
+    $frentista = $_POST['frentista'];
+    $odometrofinal = $_POST['odometrofinal']; 
+    $litros = $_POST['litros']; 
+    $litros_od = $_POST['litros_od'];
+    $media = $_POST['media'];
+    $data_abastecimento = dmaHLocal($_POST['data_abastecimento']);
+    if($data_abastecimento == ''){
+
+        $sql = $pdo->prepare("INSERT INTO abastecimentos (id_veiculo, bomba, odometroinicial, ultimokm,	
+        km, diferencakm, ultimohr, hr, diferencahr, frentista,	odometrofinal, litros, litros_od, media, data_abastecimento) 
+        VALUES (:id_veiculo, :bomba, :odometroinicial,:ultimokm,:km, :diferencakm, :ultimohr, :hr, :diferencahr,
+        :frentista, :odometrofinal, :litros, :litros_od, :media, NOW())");
+
+    }else{
+
+        $sql = $pdo->prepare("INSERT INTO abastecimentos (id_veiculo, bomba, odometroinicial, ultimokm,	
+        km, diferencakm, ultimohr, hr, diferencahr, frentista,	odometrofinal, litros, litros_od, media, data_abastecimento) 
+        VALUES (:id_veiculo, :bomba, :odometroinicial,:ultimokm,:km, :diferencakm, :ultimohr, :hr, :diferencahr,
+        :frentista, :odometrofinal, :litros, :litros_od, :media, :data_abastecimento)");
+
+        $sql->bindValue(':data_abastecimento', $data_abastecimento);
+    }
+ 
+    $sql->bindValue(':id_veiculo', $id_veiculo);
+    $sql->bindValue(':bomba', $bomba);
+    $sql->bindValue(':odometroinicial', $odometroinicial);
+    $sql->bindValue(':ultimokm', $ultimokm);
+    $sql->bindValue(':km', $km);
+    $sql->bindValue(':diferencakm', $diferencakm);
+    $sql->bindValue(':ultimohr', $ultimohr);
+    $sql->bindValue(':hr', $hr);
+    $sql->bindValue(':diferencahr', $diferencahr);
+    $sql->bindValue(':frentista', $frentista);
+    $sql->bindValue(':odometrofinal', $odometrofinal);
+    $sql->bindValue(':litros', $litros);
+    $sql->bindValue(':litros_od', $litros_od);
+    $sql->bindValue(':media', $media);
+   
+    $sql->execute();
+
+    $_SESSION['msg'] = '<div class="w3-green">CADASTRADO COM SUCESSO!</div>';
+    header("Location: abastecer-veiculos");
+    
+} 
+function alterarAbastecimento(){
+
+    include 'config.php';
+
+    $id_abastecimento = $_POST['id_abastecimento'];
+    $numero_equipamento = $_POST['numero_equipamento'];
+    $bomba = $_POST['bomba'];
+    $odometroinicial = $_POST['odometroinicial']; 
+    $ultimokm = $_POST['ultimokm']; 
+    $km = $_POST['km']; 
+    $diferencakm = $_POST['diferencakm'];
+    $ultimohr = $_POST['ultimohr']; 
+    $hr = $_POST['hr']; 
+    $diferencahr = $_POST['diferencahr']; 
+    $frentista = $_POST['frentista'];
+    $odometrofinal = $_POST['odometrofinal']; 
+    $litros = $_POST['litros']; 
+    $litros_od = $_POST['litros_od'];
+    $media = $_POST['media'];
+
+    $id_veiculo = consultarIdEquipamento($numero_equipamento);
+    
+    $sql = $pdo->prepare("UPDATE abastecimentos SET id_veiculo = :id_veiculo, bomba = :bomba, odometroinicial = :odometroinicial, 
+    ultimokm = :ultimokm, km = :km, diferencakm = :diferencakm, ultimohr = :ultimohr, hr = :hr, diferencahr = :diferencahr, 
+    frentista = :frentista,	odometrofinal = :odometrofinal, litros = :litros, litros_od = :litros_od, media = :media 
+    WHERE id_abastecimento = :id_abastecimento");
+    
+    $sql->bindValue(':id_abastecimento', $id_abastecimento);
+    $sql->bindValue(':id_veiculo', $id_veiculo);
+    $sql->bindValue(':bomba', $bomba);
+    $sql->bindValue(':odometroinicial', $odometroinicial);
+    $sql->bindValue(':ultimokm', $ultimokm);
+    $sql->bindValue(':km', $km);
+    $sql->bindValue(':diferencakm', $diferencakm);
+    $sql->bindValue(':ultimohr', $ultimohr);
+    $sql->bindValue(':hr', $hr);
+    $sql->bindValue(':diferencahr', $diferencahr);
+    $sql->bindValue(':frentista', $frentista);
+    $sql->bindValue(':odometrofinal', $odometrofinal);
+    $sql->bindValue(':litros', $litros);
+    $sql->bindValue(':litros_od', $litros_od);
+    $sql->bindValue(':media', $media);
+    $sql->execute();
+
+    header("Location: abastecida-alterada");
+}   
+function excluirAbastecimento(){
+
+    include 'config.php';
+
+    $id_abastecimento = $_POST['id_abastecimento'];
+    
+    $sql = $pdo->prepare("DELETE FROM abastecimentos WHERE id_abastecimento = :id_abastecimento");
+    
+    $sql->bindValue(':id_abastecimento', $id_abastecimento);
+
+    $sql->execute();
+
+    header("Location: abastecida-excluida");
+
+}
+function listarAbastecimentos(){
+
+    include 'config.php';
+    include 'functions.php';
+
+        $sql = $pdo->prepare("SELECT a.diferencahr, a.ultimohr, a.id_abastecimento, a.data_abastecimento, v.placa, v.numero_equipamento, v.descricao_caminhao, a.odometroinicial,a.odometrofinal, a.litros_od, a.litros, 
+        a.ultimokm,a.km, a.diferencakm, a.hr, a.frentista, v.prefixo, a.media
+        FROM veiculos AS v  
+        JOIN abastecimentos AS a 
+        ON a.id_veiculo = v.id_veiculo
+        ORDER BY data_abastecimento DESC LIMIT 30");
+        $sql->execute();
+
+        if ($sql->rowCount() > 0) {
+
+            $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
+           
+             foreach($lista as $row){
+
+                    $corMedia = '';
+                    $corLitros = '';
+                        if($row['media'] < 1.5){$corMedia = 'bg-danger';}
+                        if($row['media'] > 2.5 && $row['descricao_caminhao'] == 'COMPACTADOR'){$corMedia = 'bg-warning';}
+                         if($row['litros_od'] <> $row['litros'] ){$corLitros = 'bg-warning';}
+    
+                    $txtTable = $txtTable.'<tr>
+                    <td class="w3-left-align" > '.dmaH($row['data_abastecimento']).'</td>
+                    <td> '.$row['numero_equipamento'].' </td>
+                    <td> '.$row['placa'].' </td>
+                    <td> '.$row['prefixo'].' </td>
+                    <td class="w3-right-align"> '.v2($row['odometroinicial']).' </td>
+                    <td class="w3-right-align" > '.v2($row['odometrofinal']).' </td>
+                    <td class="'.$corLitros.' w3-right-align"> '.v2($row['litros_od']).' </td>
+                    <td class="'.$corLitros.' w3-right-align"> '.v2($row['litros']).' </td>
+                    <td class="'.$corMedia.' w3-right-align"> '.v2($row['media']).' </td>
+                    <td> '.$row['ultimokm'].' </td>
+                    <td> '.$row['km'].' </td>
+                    <td class="w3-right-align"> '.$row['diferencakm'].' </td>
+                    <td> '.$row['ultimohr'].'</td>
+                    <td> '.$row['hr'].'</td>
+                    <td class="w3-right-align"> '.$row['diferencahr'].'</td>
+                    <td> '.$row['frentista'].'</td>
+                    </tr>';
+                      
+                }
+            }       
+                   
+           return $txtTable;            
+}
+function consultarIdEquipamento($numero_equipamento){
+
+    include 'config.php';
+    include 'functions.php';
+    
+    $sql = $pdo->prepare("SELECT id_veiculo FROM veiculos WHERE numero_equipamento = :numero_equipamento");
+    $sql->bindValue(':numero_equipamento', $numero_equipamento);
+    $sql->execute();
+    $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
+    foreach($lista as $row){
+        $id_veiculo = $row['id_veiculo'];
+    }
+    return  $id_veiculo;
+ 
+}
+?>
