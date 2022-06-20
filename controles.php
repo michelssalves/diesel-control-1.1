@@ -66,34 +66,71 @@ include 'assets/controllers/checkAcess.php';
                 </select> 
             </th>
             <th>
-                <label><center>Combustivel</label><br>
+                <label>
+                    <center>Combustivel
+                </label><br>
                 <select onChange="this.form.submit()" name="combustivel">
-                <option selected><?= ($combustivel <> '' ? $combustivel : 'TODOS' )?></options>
-                <option>TODOS</options>
-                <option>DIESEL S10</option>
-                <option>GASOLINA</option>
+                    <option selected><?= ($combustivel <> '' ? $combustivel : 'TODOS') ?></options>
+                    <option>TODOS</options>
+                        <?php
+                        $sql = $pdo->prepare("SELECT DISTINCT combustivel FROM veiculos  ORDER BY combustivel");
+                        $sql->execute();
+                        $fetchAll = $sql->fetchAll();
+                        foreach ($fetchAll as $combustivel) {
+                            echo '<option value="' . $combustivel['combustivel'] . '">' . substr($combustivel['combustivel'], 0, 10) . '</option>';
+                        }
+                        ?>
                 </select>
             </th>
             <th>
-                <label><center>Marca</label><br>
+                <label>
+                    <center>Marca
+                </label><br>
                 <select onChange="this.form.submit()" name="marca">
-                <option selected><?= ($marca <> '' ? $marca : 'TODOS' )?></options>
-                <option>TODOS</options>
-                <option>VOLVO</option>
-                <option>VOLKSWAGEN</option>
-                <option>MERCEDES BENZ</option>
+                    <option selected><?= ($marca <> '' ? $marca : 'TODOS') ?></options>
+                    <option>TODOS</options>
+                        <?php
+                        $sql = $pdo->prepare("SELECT DISTINCT marca FROM veiculos  ORDER BY marca");
+                        $sql->execute();
+                        $fetchAll = $sql->fetchAll();
+                        foreach ($fetchAll as $marca) {
+                            echo '<option value="' . $marca['marca'] . '">' . substr($marca['marca'], 0, 10) . '</option>';
+                        }
+                        ?>
                 </select>
             </th>
             <th>
-                <label><center>Modelo</label><br>
+                <label>
+                    <center>Modelo
+                </label><br>
                 <select onChange="this.form.submit()" name="modelo">
-                <option selected><?= ($modelo <> '' ? $modelo : 'TODOS' )?></options>
-                <option>TODOS</options>
-                <option>VM270R</option>
-                <option>MB1729</option>
-                <option>VW17280</option>
-                <option>VW17260</option>
-                <option>VW17230</option>
+                    <option selected><?= ($modelo <> '' ? $modelo : 'TODOS') ?></options>
+                    <option>TODOS</options>
+                        <?php
+                        $sql = $pdo->prepare("SELECT DISTINCT modelo FROM veiculos  ORDER BY modelo");
+                        $sql->execute();
+                        $fetchAll = $sql->fetchAll();
+                        foreach ($fetchAll as $modelo) {
+                            echo '<option value="' . $modelo['modelo'] . '">' . substr($modelo['modelo'], 0, 15) . '</option>';
+                        }
+                        ?>
+                </select>
+            </th>
+            <th>
+                <label>
+                    <center>Setor
+                </label><br>
+                <select onChange="this.form.submit()" name="setor">
+                    <option selected><?= ($setor <> '' ? $setor : 'TODOS') ?></options>
+                    <option>TODOS</options>
+                        <?php
+                        $sql = $pdo->prepare("SELECT DISTINCT setor FROM veiculos  ORDER BY setor");
+                        $sql->execute();
+                        $fetchAll = $sql->fetchAll();
+                        foreach ($fetchAll as $setor) {
+                            echo '<option value="' . $setor['setor'] . '">' . substr($setor['setor'], 0, 15) . '</option>';
+                        }
+                        ?>
                 </select>
             </th>
             <th>
