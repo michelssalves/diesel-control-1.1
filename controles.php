@@ -177,7 +177,7 @@ include 'assets/controllers/checkAcess.php';
                     </tr>
                 </thead>
                 <tbody>
-                    <?= filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo,$dataHoraIncial, $dataHoraFinal) ?>
+                    <?= filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataHoraIncial, $dataHoraFinal) ?>
                 </tbody>
             </table>
         

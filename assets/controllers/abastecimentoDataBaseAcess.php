@@ -63,7 +63,7 @@ if($dataFinal == ''){
     $dataHoraFinal = $dataFinal.' '.$horaFinal;
 }
 
-function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo,$dataHoraIncial, $dataHoraFinal){
+function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataHoraIncial, $dataHoraFinal){
     include 'config.php';
     include 'functions.php';
 
