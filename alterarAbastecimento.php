@@ -18,7 +18,7 @@ include 'assets/controllers/checkAcess.php';
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="diesel-control/assets/css/menucontroles.css">
+    <link rel="stylesheet" href="diesel-control-1.1/assets/css/menucontroles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">  
 </head>
@@ -74,6 +74,6 @@ include 'assets/controllers/checkAcess.php';
         <button name="acao" value="excluir-abastecimento" class="w3-button w3-red">Excluir</button>
         <button name="acao" value="alterar-abastecimento" class="w3-button w3-blue">Alterar</button>
 </form> 
-<script src="diesel-control/assets/js/functionScripts.js"></script>
+<script src="diesel-control-1.1/assets/js/functionScripts.js"></script>
 </body>
 </html>                    

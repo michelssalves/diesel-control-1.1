@@ -43,7 +43,7 @@ function somenteNumeros(num) {
 }
 $("#prefixo").on("change", function () {
     $.ajax({
-        url: 'diesel-control/assets/controllers/abastecimentoDataBaseAcess.php',
+        url: 'diesel-control-1.1/assets/controllers/abastecimentoDataBaseAcess.php',
         type: 'POST',
         dataType: "json",
         data: {id_veiculo: $("#prefixo").val(), acao: 'ultimoKm' },

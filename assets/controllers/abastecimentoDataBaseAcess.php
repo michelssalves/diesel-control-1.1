@@ -64,6 +64,7 @@ if($dataFinal == ''){
 }
 
 function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataHoraIncial, $dataHoraFinal){
+    
     include 'config.php';
     include 'functions.php';
 
