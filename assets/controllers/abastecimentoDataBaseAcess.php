@@ -184,11 +184,16 @@ function registrarAbastecimento(){
     $data_abastecimento = dmaHLocal($_POST['data_abastecimento']);
 
     if($data_abastecimento == ''){
+         
+        $data_abastecimento = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
+        $data_abastecimento = $data_abastecimento->format('Y-m-d H:i');
 
         $sql = $pdo->prepare("INSERT INTO abastecimentos (id_veiculo, bomba, odometroinicial, ultimokm,	
         km, diferencakm, ultimohr, hr, diferencahr, frentista,	odometrofinal, litros, litros_od, media, data_abastecimento) 
         VALUES (:id_veiculo, :bomba, :odometroinicial,:ultimokm,:km, :diferencakm, :ultimohr, :hr, :diferencahr,
-        :frentista, :odometrofinal, :litros, :litros_od, :media, NOW())");
+        :frentista, :odometrofinal, :litros, :litros_od, :media, :data_abastecimento)");
+
+        $sql->bindValue(':data_abastecimento', $data_abastecimento);
 
     }else{
 
