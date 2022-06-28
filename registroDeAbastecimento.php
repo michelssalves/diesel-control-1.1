@@ -85,7 +85,7 @@ include 'assets/controllers/checkAcess.php';
                 <div class="field">
                     <div class="control">
                         <label>Odometro Inicial</label>
-                        <br><input onkeyup="somenteNumeros(this);" id="odometroinicial" name="odometroinicial" type="number" step="0.01" class="form-control" placeholder="Odometro Inicial" autofocus>
+                        <br><input onkeyup="somenteNumeros(this);" onblur="calcularLitrosOd();" id="odometroinicial" name="odometroinicial" type="number" step="0.01" class="form-control" placeholder="Odometro Inicial" autofocus>
                     </div>
                 </div>
                 <div class="field">
@@ -189,7 +189,7 @@ include 'assets/controllers/checkAcess.php';
                     </tr>
                 </thead>
                 <tbody>
-                    <?= listarAbastecimentos() ?>
+                    <?= listarAbastecimentos()?>
                 </tbody>
             </table>
         </div>
