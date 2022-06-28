@@ -34,7 +34,8 @@ include 'assets/controllers/checkAcess.php';
                     <label class="w3-bar-item w3-button w3-left">Usuario Logado:</label>
                     <a class="w3-bar-item w3-button"><?= $usuario; ?></a>
                 </div> 
-                <?php if($msgSucesso){echo $msgSucesso;}?>
+                <?php if($msgSucesso){echo $msgSucesso;
+                $msgSucesso = '';}?>
                     <form class="menu" method="POST">
                         <div class="field">
                             <div class="control">
