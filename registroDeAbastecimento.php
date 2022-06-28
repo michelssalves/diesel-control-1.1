@@ -38,7 +38,7 @@ include 'assets/controllers/checkAcess.php';
                     <form class="menu" method="POST">
                         <div class="field">
                             <div class="control">
-                                <input readonly hidden id="frentista" name="frentista" type="text" class="form-control" value="<?= $usuario ?>" autofocus>
+                                <input readonly hidden id="frentista" name="frentista" type="text" class="form-control" value="<?= $login ?>" autofocus>
                             </div>
                         </div>
                         <div class="field">
