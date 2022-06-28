@@ -22,7 +22,7 @@ function calcularLitrosOd() {
 
 	const litrosOdometro = odometroFinal - odometroInicial
 
-		document.getElementById("litros_od").value = litrosOdometro 
+		document.getElementById("litros_od").value = litrosOdometro.toFixed(2)
 }
 function calcularMedia(){
 
