@@ -10,7 +10,7 @@ $permissao =  $_SESSION['id_permissao'] ;
 $id_funcionario = $_SESSION['id_funcionario'];
 $token = $_SESSION['token'];
 $data_abastecimento = new DateTime("$data_abastecimento", new DateTimeZone('America/Sao_Paulo'));
-//echo $data_abastecimento;
+echo $data_abastecimento;
 
 include 'assets/controllers/checkAcess.php';
 ?>
