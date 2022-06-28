@@ -182,27 +182,32 @@ function registrarAbastecimento(){
     $litros_od = $_POST['litros_od'];
     $media = $_POST['media'];
     $data_abastecimento = dmaHLocal($_POST['data_abastecimento']);
+    $data_sem_hora = Ymd($data_abastecimento);
 
     if($data_abastecimento == ''){
          
         $data_abastecimento = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
         $data_abastecimento = $data_abastecimento->format('Y-m-d H:i');
+        $data_sem_hora = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
+        $data_sem_hora = $data_sem_hora->format('Y-m-d');
 
         $sql = $pdo->prepare("INSERT INTO abastecimentos (id_veiculo, bomba, odometroinicial, ultimokm,	
-        km, diferencakm, ultimohr, hr, diferencahr, frentista,	odometrofinal, litros, litros_od, media, data_abastecimento) 
+        km, diferencakm, ultimohr, hr, diferencahr, frentista,	odometrofinal, litros, litros_od, media, data_abastecimento, dataabastecimento2) 
         VALUES (:id_veiculo, :bomba, :odometroinicial,:ultimokm,:km, :diferencakm, :ultimohr, :hr, :diferencahr,
-        :frentista, :odometrofinal, :litros, :litros_od, :media, :data_abastecimento)");
+        :frentista, :odometrofinal, :litros, :litros_od, :media, :data_abastecimento, :data_sem_hora)");
 
         $sql->bindValue(':data_abastecimento', $data_abastecimento);
+        $sql->bindValue(':data_sem_hora', $data_sem_hora);
 
     }else{
 
         $sql = $pdo->prepare("INSERT INTO abastecimentos (id_veiculo, bomba, odometroinicial, ultimokm,	
-        km, diferencakm, ultimohr, hr, diferencahr, frentista,	odometrofinal, litros, litros_od, media, data_abastecimento) 
+        km, diferencakm, ultimohr, hr, diferencahr, frentista,	odometrofinal, litros, litros_od, media, data_abastecimento, dataabastecimento2) 
         VALUES (:id_veiculo, :bomba, :odometroinicial,:ultimokm,:km, :diferencakm, :ultimohr, :hr, :diferencahr,
         :frentista, :odometrofinal, :litros, :litros_od, :media, :data_abastecimento)");
 
         $sql->bindValue(':data_abastecimento', $data_abastecimento);
+        $sql->bindValue(':data_sem_hora', $data_sem_hora);
     }
  
     $sql->bindValue(':id_veiculo', $id_veiculo);
