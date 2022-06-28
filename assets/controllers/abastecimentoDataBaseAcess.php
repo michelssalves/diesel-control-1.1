@@ -303,8 +303,8 @@ function listarAbastecimentos(){
                     $corLitros = '';
                         if($row['media'] < 1.5){$corMedia = 'bg-danger';}
                         if($row['media'] > 2.5 && $row['descricao_caminhao'] == 'COMPACTADOR'){$corMedia = 'bg-warning';}
-                        if($row['media'] > 15 ){$corMedia = 'bg-danger';}
-                         if($row['litros_od'] <> $row['litros'] ){$corLitros = 'bg-warning';}
+                        if($row['media'] > 17 ){$corMedia = 'bg-info';}
+                        if($row['litros_od'] <> $row['litros'] ){$corLitros = 'bg-warning';}
     
                     $txtTable = $txtTable.'<tr>
                     <td class="w3-left-align" > '.dmaH($row['data_abastecimento']).'</td>
