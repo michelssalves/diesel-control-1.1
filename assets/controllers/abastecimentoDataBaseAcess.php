@@ -182,10 +182,8 @@ function registrarAbastecimento(){
     $litros_od = $_POST['litros_od'];
     $media = $_POST['media'];
     $data_abastecimento = dmaHLocal($_POST['data_abastecimento']);
-    
-    if($data_abastecimento == ''){
 
-        $data_abastecimento = new DateTime("$data_hora0", new DateTimeZone('America/Sao_Paulo'));
+    if($data_abastecimento == ''){
 
         $sql = $pdo->prepare("INSERT INTO abastecimentos (id_veiculo, bomba, odometroinicial, ultimokm,	
         km, diferencakm, ultimohr, hr, diferencahr, frentista,	odometrofinal, litros, litros_od, media, data_abastecimento) 
