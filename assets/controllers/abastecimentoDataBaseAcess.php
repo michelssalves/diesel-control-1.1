@@ -76,6 +76,8 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
         WHERE data_abastecimento BETWEEN '$dataHoraIncial' AND '$dataHoraFinal'
         $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor
         ORDER BY data_abastecimento ASC ");
+
+        var_dump($sql);
         $sql->execute();
 
         if ($sql->rowCount() > 0) {
