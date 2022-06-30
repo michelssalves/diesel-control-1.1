@@ -68,7 +68,7 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
     include 'config.php';
     include 'functions.php';
 
-        $sql = $pdo->prepare("SELECT v.id_veiculo, a.bomba, v.setor, a.diferencahr, a.ultimohr, a.id_abastecimento, a.data_abastecimento, v.placa, v.numero_equipamento, v.descricao_caminhao, a.odometroinicial,a.odometrofinal, a.litros_od, a.litros, 
+        $sql = $pdo->prepare("SELECT v.marca, v.modelo, v.id_veiculo, a.bomba, v.setor, a.diferencahr, a.ultimohr, a.id_abastecimento, a.data_abastecimento, v.placa, v.numero_equipamento, v.descricao_caminhao, a.odometroinicial,a.odometrofinal, a.litros_od, a.litros, 
         a.ultimokm,a.km, a.diferencakm, a.hr, a.frentista, v.prefixo, a.media, v.combustivel
         FROM veiculos AS v  
         JOIN abastecimentos AS a 
