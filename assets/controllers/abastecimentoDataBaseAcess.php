@@ -116,6 +116,9 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
      
                 $txtTableControles .= '<tr>
                 <td class="w3-left-align" width="200px;"> '.dmaHis($row['data_abastecimento']).'</td>
+                <td hidden class="w3-left-align" width="200px;"> '.H_i($row['data_abastecimento']).'</td>
+                <td hidden class="w3-left-align" width="200px;"> '.Month($row['data_abastecimento']).'</td>
+                <td hidden class="w3-left-align" width="200px;"> '.Year($row['data_abastecimento']).'</td>
                 <td> '.$row['numero_equipamento'].' </td>
                 <td onclick="'.$link.'" style="cursor:pointer;"> '.$row['prefixo'].' </td>
                 <td> '.$row['placa'].' </td>

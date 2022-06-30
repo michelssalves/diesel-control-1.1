@@ -159,6 +159,9 @@ include 'assets/controllers/checkAcess.php';
                 <thead class="thead-dark sorttable">
                     <tr>
                     <th><center>Data</th>
+                    <th hidden ><center>Hora</th>
+                    <th hidden ><center>Mês</th>
+                    <th hidden ><center>Ano</th>
                     <th><center>Prefixo Sap</th>
                     <th><center>Prefixo</th>
                     <th><center>Placa</th>

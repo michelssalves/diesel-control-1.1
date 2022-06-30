@@ -96,6 +96,8 @@ function l100($v){ return substr($v, 0, 100); }
 function l4($v){ return substr($v, 0, 4); }
 
 //funções para data
+function Year($m)   { if ($m) { $data = date('Y',strtotime($m)); 	return $data;}}  //converte yyyy-mm-aa para dd-mm-aaaa
+function Month($m)   { if ($m) { $data = date('m',strtotime($m)); 	return $data;}}  //converte yyyy-mm-aa para dd-mm-aaaa
 function hi($m)   { if ($m) { $data = date('Hi',strtotime($m)); 	return $data;}}  //converte yyyy-mm-aa para dd-mm-aaaa
 function H_i($m)  { if ($m) { $data = date('H:i',strtotime($m)); 	return $data;}}  //converte yyyy-mm-aa para dd-mm-aaaa
 function dma($m)  { if ($m) { $data = date('d-m-Y',strtotime($m)); 	return $data; }}  //converte yyyy-mm-aa para dd-mm-aaaa
