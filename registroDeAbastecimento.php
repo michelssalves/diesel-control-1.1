@@ -9,7 +9,6 @@ $usuario = $_SESSION['nome'] ;
 $permissao =  $_SESSION['id_permissao'] ;
 $id_funcionario = $_SESSION['id_funcionario'];
 $token = $_SESSION['token'];
-
 include 'assets/controllers/checkAcess.php';
 ?>
 <!doctype html>

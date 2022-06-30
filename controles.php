@@ -160,20 +160,22 @@ include 'assets/controllers/checkAcess.php';
                     <tr>
                     <th><center>Data</th>
                     <th><center>Prefixo Sap</th>
-                    <th><center>Placa</th>
                     <th><center>Prefixo</th>
-                    <th><center>ODI</th>
-                    <th><center>ODF</th>
+                    <th><center>Placa</th>
+                    <th><center>Combustivel</th>
                     <th><center>Litros Od</th>
                     <th><center>Litros</th>
-                    <th><center>Media</th>
                     <th><center>Ultimo Km</th>
                     <th><center>Km</th>
                     <th><center>Dif Km</th>
                     <th><center>Ultimo Hr</th>
                     <th><center>Hr</th>
                     <th><center>Dif Hr</th>
-                    <th><center>Frentista</th>  
+                    <th><center>Frentista</th> 
+                    <th><center>Marca</th> 
+                    <th><center>Modelo</th> 
+                    <th><center>Media</th> 
+                    <th><center>Setor</th> 
                     </tr>
                 </thead>
                 <tbody>

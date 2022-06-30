@@ -117,13 +117,11 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
                 $txtTableControles .= '<tr>
                 <td class="w3-left-align" width="200px;"> '.dmaHis($row['data_abastecimento']).'</td>
                 <td> '.$row['numero_equipamento'].' </td>
-                <td> '.$row['placa'].' </td>
                 <td onclick="'.$link.'" style="cursor:pointer;"> '.$row['prefixo'].' </td>
-                <td class="w3-right-align"> '.($row['odometroinicial']).' </td>
-                <td class="w3-right-align" > '.($row['odometrofinal']).' </td>
+                <td> '.$row['placa'].' </td>
+                <td> '.$row['combustivel'].' </td>
                 <td class="'.$corLitros.' w3-right-align"> '.($row['litros_od']).' </td>
                 <td class="'.$corLitros.' w3-right-align"> '.($row['litros']).' </td>
-                <td class="'.$corMedia.' w3-right-align"> '.($row['media']).' </td>
                 <td> '.$row['ultimokm'].' </td>
                 <td> '.$row['km'].' </td>
                 <td class="w3-right-align"> '.$row['diferencakm'].' </td>
@@ -131,6 +129,10 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
                 <td> '.$row['hr'].'</td>
                 <td class="w3-right-align"> '.$row['diferencahr'].'</td>
                 <td> '.$row['frentista'].'</td>
+                <td> '.$row['marca'].'</td>
+                <td> '.$row['modelo'].'</td>
+                <td class="'.$corMedia.' w3-right-align"> '.($row['media']).' </td>
+                <td> '.$row['setor'].'</td>
                 </tr>';
             }
            
