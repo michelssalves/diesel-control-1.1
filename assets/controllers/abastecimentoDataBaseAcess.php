@@ -44,11 +44,11 @@ if($acao == 'limpar'){
     $setor = '';
 
 }
-if($prefixo && $prefixo <> 'TODOS'){$filtroPrefixo = "AND prefixo = '$prefixo'";};
-if($combustivel && $combustivel <> 'TODOS' ){$filtroCombustivel = "AND combustivel = '$combustivel'";}
-if($marca && $marca <> 'TODOS'){$filtroMarca = "AND marca = '$marca'";}
-if($modelo && $modelo <> 'TODOS'){$filtroModelo = "AND modelo = '$modelo'";}
-if($setor && $setor <> 'TODOS'){$filtroSetor = "AND setor = '$setor'";}
+if($prefixo && $prefixo <> 'TODOS'){$filtroPrefixo = "AND v.prefixo = '$prefixo'";};
+if($combustivel && $combustivel <> 'TODOS' ){$filtroCombustivel = "AND v.combustivel = '$combustivel'";}
+if($marca && $marca <> 'TODOS'){$filtroMarca = "AND v.marca = '$marca'";}
+if($modelo && $modelo <> 'TODOS'){$filtroModelo = "AND v.modelo = '$modelo'";}
+if($setor && $setor <> 'TODOS'){$filtroSetor = "AND v.setor = '$setor'";}
 if($dataIncial  == ''){
     $dataIncial = date('Y-m-d');
     $dataHoraIncial = date('Y-m-d 00:00');}else{
@@ -68,14 +68,13 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
     include 'config.php';
     include 'functions.php';
 
-        $sql = $pdo->prepare("SELECT v.marca AS marca, v.modelo AS modelo, v.id_veiculo, a.bomba, v.setor AS setor, a.diferencahr, a.ultimohr, a.id_abastecimento, a.data_abastecimento, v.placa, v.numero_equipamento, v.descricao_caminhao, a.odometroinicial,a.odometrofinal, a.litros_od, a.litros, 
-        a.ultimokm,a.km, a.diferencakm, a.hr, a.frentista, v.prefixo, a.media, v.combustivel AS combustivel
+        $sql = $pdo->prepare("SELECT *
         FROM veiculos AS v  
         JOIN abastecimentos AS a 
         ON a.id_veiculo = v.id_veiculo
-        WHERE data_abastecimento BETWEEN '$dataHoraIncial' AND '$dataHoraFinal'
+        WHERE a.data_abastecimento BETWEEN '$dataHoraIncial' AND '$dataHoraFinal'
         $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor
-        ORDER BY data_abastecimento ASC ");
+        ORDER BY a.data_abastecimento ASC ");
 
         var_dump($sql);
         $sql->execute();
