@@ -120,6 +120,8 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
                 <td onclick="'.$link.'" style="cursor:pointer;"> '.$row['prefixo'].' </td>
                 <td> '.$row['placa'].' </td>
                 <td> '.$row['combustivel'].' </td>
+                <td hidden> '.v2($row['odometronicial']).' </td>
+                <td hidden> '.v2($row['odometrofinal']).' </td>
                 <td class="'.$corLitros.' w3-right-align"> '.v3($row['litros_od']).' </td>
                 <td class="'.$corLitros.' w3-right-align"> '.v3($row['litros']).' </td>
                 <td> '.$row['ultimokm'].' </td>
@@ -131,7 +133,7 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
                 <td><center> '.$row['frentista'].'</td>
                 <td><center> '.$row['marca'].'</td>
                 <td><center> '.$row['modelo'].'</td>
-                <td class="'.$corMedia.' w3-right-align"> '.($row['media']).' </td>
+                <td class="'.$corMedia.' w3-right-align"><center> '.($row['media']).' </td>
                 <td><center> '.$row['setor'].'</td>
                 </tr>';
             }
