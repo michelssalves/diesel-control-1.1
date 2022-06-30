@@ -76,7 +76,6 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
         $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor
         ORDER BY a.data_abastecimento ASC ");
 
-        var_dump($sql);
         $sql->execute();
 
         if ($sql->rowCount() > 0) {
@@ -129,11 +128,11 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
                 <td> '.$row['ultimohr'].'</td>
                 <td> '.$row['hr'].'</td>
                 <td class="w3-right-align"> '.$row['diferencahr'].'</td>
-                <td> '.$row['frentista'].'</td>
-                <td> '.$row['marca'].'</td>
-                <td> '.$row['modelo'].'</td>
+                <td><center> '.$row['frentista'].'</td>
+                <td><center> '.$row['marca'].'</td>
+                <td><center> '.$row['modelo'].'</td>
                 <td class="'.$corMedia.' w3-right-align"> '.($row['media']).' </td>
-                <td> '.$row['setor'].'</td>
+                <td><center> '.$row['setor'].'</td>
                 </tr>';
             }
            
