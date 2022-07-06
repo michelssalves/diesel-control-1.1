@@ -19,8 +19,7 @@ include 'assets/controllers/checkAcess.php';
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="diesel-control-1.1/assets/css/menuregistro.css">
-    
+    <link rel="stylesheet" href="diesel-control-1.1/assets/css/menuregistro.css">    
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -32,6 +31,22 @@ include 'assets/controllers/checkAcess.php';
                     <a href="logout"class="w3-bar-item w3-button w3-red w3-right">Sair</a>
                     <label class="w3-bar-item w3-button w3-left">Usuario Logado:</label>
                     <a class="w3-bar-item w3-button"><?= $usuario; ?></a>
+                </div> 
+                <div class="w3-bar w3-light-grey w3-container">
+                <table class="table table-bordered" style="border: 10px;">
+                <thead class="thead-dark" >
+                    <tr>
+                        <th class="text-success"><center>Acertos</th>
+                        <th class="text-danger"><center>Erros</th>
+                        <th><center>% Acertos</th>  
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <?= listarAcertos($id_funcionario) ?>
+                    </tr>
+                </tbody>
+            </table>
                 </div> 
                 <?php if($msgSucesso){echo $msgSucesso;}?>
                     <form class="menu" method="POST">

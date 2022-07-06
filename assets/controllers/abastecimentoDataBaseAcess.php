@@ -192,26 +192,6 @@ function registrarAbastecimento(){
     $data_abastecimento = dmaHLocal($_POST['data_abastecimento']);
     $data_sem_hora = Ymd($data_abastecimento);
 
-    if($diferencakm < 0 || $diferencakm > 600){
-        $id_erro = 1;
-        registrarErro($id_funcionario, $id_erro);
-        $x= 1;
-    }
-    if($diferencahr < 0 || $diferencahr > 48){
-        $id_erro = 2;
-        registrarErro($id_funcionario, $id_erro);
-        $x= 1;
-    }
-    if($litros <> $litros_od){
-        $id_erro = 3;
-        registrarErro($id_funcionario, $id_erro);
-        $x= 1;
-    }
-    if($x == 0){
-        $id_erro = 4;
-        registrarAcerto($id_funcionario, $id_erro);
-    }
-
     if($data_abastecimento == ''){
          
         $data_abastecimento = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
@@ -252,8 +232,28 @@ function registrarAbastecimento(){
     $sql->bindValue(':litros', $litros);
     $sql->bindValue(':litros_od', $litros_od);
     $sql->bindValue(':media', $media);
-   
     $sql->execute();
+    $id_abastecimento = $pdo->lastInsertId();
+
+    if($diferencakm < 0 || $diferencakm > 600){
+        $id_erro = 1;
+        registrarErro($id_funcionario, $id_erro, $id_abastecimento);
+        $x= 1;
+    }
+    if($diferencahr < 0 || $diferencahr > 48){
+        $id_erro = 2;
+        registrarErro($id_funcionario, $id_erro, $id_abastecimento);
+        $x= 1;
+    }
+    if($litros <> $litros_od){
+        $id_erro = 3;
+        registrarErro($id_funcionario, $id_erro, $id_abastecimento);
+        $x= 1;
+    }
+    if($x == 0){
+        $id_erro = 4;
+        registrarAcerto($id_funcionario, $id_erro, $id_abastecimento);
+    }
 
     $_SESSION['msg'] = '<div class="w3-green">CADASTRADO COM SUCESSO!</div>';
     header("Location: abastecer-veiculos");
@@ -385,7 +385,7 @@ function consultarIdEquipamento($numero_equipamento){
     return  $id_veiculo;
  
 }
-function registrarErro($id_funcionario, $id_erro){
+function registrarErro($id_funcionario, $id_erro, $id_abastecimento){
 
     include 'config.php';
 
@@ -393,15 +393,16 @@ function registrarErro($id_funcionario, $id_erro){
     $erro_data = $x->format('Y-m-d H:i');
     $erro_status = 1;
     
-    $sql = $pdo->prepare("INSERT INTO erros_de_registro(id_funcionario, id_erro, erro_status, erro_data) VALUES(:id_funcionario, :id_erro, :erro_status, :erro_data)");
+    $sql = $pdo->prepare("INSERT INTO erros_de_registro(id_funcionario, id_erro, erro_status, erro_data, id_abastecimento) VALUES(:id_funcionario, :id_erro, :erro_status, :erro_data, :id_abastecimento)");
     $sql->bindValue(':id_funcionario', $id_funcionario);
     $sql->bindValue(':id_erro', $id_erro);
     $sql->bindValue(':erro_status', $erro_status);
     $sql->bindValue(':erro_data', $erro_data);
+    $sql->bindValue(':id_abastecimento', $id_abastecimento);
     $sql->execute();
 
 }
-function registrarAcerto($id_funcionario, $id_erro){
+function registrarAcerto($id_funcionario, $id_erro, $id_abastecimento){
 
     include 'config.php';
 
@@ -409,13 +410,39 @@ function registrarAcerto($id_funcionario, $id_erro){
     $erro_data = $x->format('Y-m-d H:i');
     $erro_status = 0;
     
-    $sql = $pdo->prepare("INSERT INTO erros_de_registro(id_funcionario, id_erro, erro_status, erro_data) VALUES(:id_funcionario, :id_erro, :erro_status, :erro_data)");
+    $sql = $pdo->prepare("INSERT INTO erros_de_registro(id_funcionario, id_erro, erro_status, erro_data, id_abastecimento) VALUES(:id_funcionario, :id_erro, :erro_status, :erro_data, :id_abastecimento)");
     $sql->bindValue(':id_funcionario', $id_funcionario);
     $sql->bindValue(':id_erro', $id_erro);
     $sql->bindValue(':erro_status', $erro_status);
     $sql->bindValue(':erro_data', $erro_data);
+    $sql->bindValue(':id_abastecimento', $id_abastecimento);
     $sql->execute();
 
+}
+function listarAcertos($id_funcionario){
+    include 'config.php';
+
+
+    $sql = $pdo->prepare("SELECT a.acertos, b.erros, c.qtde_abastecimentos FROM 
+    (SELECT COUNT(erro_status) AS erros FROM erros_de_registro WHERE id_funcionario = :id_funcionario AND id_erro <> 4) AS b, 
+    (SELECT COUNT(erro_status) AS acertos FROM erros_de_registro WHERE id_funcionario = :id_funcionario AND id_erro = 4) AS a, 
+    (SELECT COUNT(id_abastecimento) AS qtde_abastecimentos FROM erros_de_registro WHERE id_funcionario = 1) AS c");
+    $sql->bindValue(':id_funcionario', $id_funcionario);
+    $sql->execute();
+    $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
+   
+    foreach($lista as $row){
+
+        $v1 = $row['acertos'] * 100; 
+        $v2 = $v1/$row['qtde_abastecimentos'];
+        $txtTableQuadro = $txtTableQuadro.'<tr>
+        <td><center>'.$row['acertos'].'</td>
+        <td><center>'.$row['erros'].'</td>
+        <td><center>'.number_format($v2,'2',',','.').'</td>
+        </tr>';
+        
+    }
+    return $txtTableQuadro;
 }
 
 ?>
