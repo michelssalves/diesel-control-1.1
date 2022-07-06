@@ -423,7 +423,7 @@ function listarAcertos($id_funcionario){
     include 'config.php';
 
 
-    $sql = $pdo->prepare("SELECT a.acertos, b.erros, c.qtde_abastecimentos , , d.mes_atual FROM 
+    $sql = $pdo->prepare("SELECT a.acertos, b.erros, c.qtde_abastecimentos, d.mes_atual FROM 
     (SELECT COUNT(DISTINCT(id_abastecimento)) AS erros FROM erros_de_registro WHERE id_funcionario = :id_funcionario AND id_erro <> 4) AS b, 
     (SELECT COUNT(DISTINCT(id_abastecimento)) AS acertos FROM erros_de_registro WHERE id_funcionario = :id_funcionario AND id_erro = 4) AS a, 
     (SELECT COUNT(DISTINCT(id_abastecimento)) AS qtde_abastecimentos FROM erros_de_registro WHERE id_funcionario = :id_funcionario) AS c,
