@@ -426,7 +426,7 @@ function listarAcertos($id_funcionario){
     $sql = $pdo->prepare("SELECT a.acertos, b.erros, c.qtde_abastecimentos FROM 
     (SELECT COUNT(DISTINCT(id_abastecimento)) AS erros FROM erros_de_registro WHERE id_funcionario = :id_funcionario AND id_erro <> 4) AS b, 
     (SELECT COUNT(DISTINCT(id_abastecimento)) AS acertos FROM erros_de_registro WHERE id_funcionario = :id_funcionario AND id_erro = 4) AS a, 
-    (SELECT COUNT(DISTINCT(id_abastecimento)) AS qtde_abastecimentos FROM erros_de_registro WHERE id_funcionario = 1) AS c");
+    (SELECT COUNT(DISTINCT(id_abastecimento)) AS qtde_abastecimentos FROM erros_de_registro WHERE id_funcionario = :id_funcionario) AS c");
     $sql->bindValue(':id_funcionario', $id_funcionario);
     $sql->execute();
     $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
