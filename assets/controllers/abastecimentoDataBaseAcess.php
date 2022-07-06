@@ -438,7 +438,7 @@ function listarAcertos($id_funcionario){
         $txtTableQuadro = $txtTableQuadro.'<tr>
         <td><center>'.$row['acertos'].'</td>
         <td><center>'.$row['erros'].'</td>
-        <td><center>'.number_format($v2,'2',',','.').'</td>
+        <td><center>'.number_format($v2,'2',',','.').'%</td>
         </tr>';
         
     }
