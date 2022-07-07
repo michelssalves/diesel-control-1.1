@@ -524,19 +524,56 @@ function listarAcertos($id_funcionario){
         $v2 = $v1/$row['qtde_abastecimentos'];
         $txtTableQuadro = $txtTableQuadro.'<tr>
         <td><center>'.$row['acertos'].'</td>
-        <td><center>'.$row['erros'].'</td>
+        <td><center><a style="text-decoration:none; cursor:pointer" href="visualizador-de-erros-v2">'.$row['erros'].'</a></td>
         <td><center>'.number_format($v2,'2',',','.').'%</td>
         </tr>';
-        
-    }}else{
-        $txtTableQuadro = $txtTableQuadro.'<tr>
-        <td><center>0</td>
-        <td><center>0</td>
-        <td><center>0%</td>
-        </tr>';
+    
+        }
+    }else{
+    $txtTable = $txtTable.'<tr>
+    <td><center>0</td>
+    <td><center><a style="text-decoration:none; cursor:pointer" href="visualizador-de-erros-v2">0</a></td>
+    <td><center>0%</td>
+    </tr>';
     }
-    return $txtTableQuadro;
+    return $txtTable;
 }
+function listarErros($id_funcionario){
 
+    include 'config.php';
+    include 'functions.php';
 
+    $sql = $pdo->prepare("SELECT * FROM erros_de_registro AS ER 
+    JOIN abastecimentos AS AB ON AB.id_abastecimento = ER.id_abastecimento 
+    JOIN veiculos AS V ON V.id_veiculo = AB.id_veiculo 
+    WHERE id_funcionario = :id_funcionario AND id_erro <> 4");
+    $sql->bindValue(':id_funcionario', $id_funcionario);
+    $sql->execute();
+    if($sql->rowCount() > 0){
+    $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
+   
+    foreach($lista as $row){
+
+        $txtTable = $txtTable.'<tr>
+        <td><center>'.$row['erro_data'].'</td>
+        <td><center>'.$row['prefixo'].'</td>
+        <td><center>'.$row['setor'].'</td>
+        <td><center>'.$row['bomba'].'</td>
+        <td><center>'.$row['odometroinicial'].'</td>
+        <td><center>'.$row['odometrofinal'].'</td>
+        <td><center>'.$row['litros_od'].'</td>
+        <td><center>'.$row['litros'].'</td>
+        <td><center>'.$row['ultimokm'].'</td>
+        <td><center>'.$row['km'].'</td>
+        <td><center>'.$row['diferencakm'].'</td>
+        <td><center>'.$row['ultimohr'].'</td>
+        <td><center>'.$row['hr'].'</td>
+        <td><center>'.$row['diferencahr'].'</td>
+        <td><center>'.$row['frentista'].'</td>
+        <td><center>'.$row['media'].'</td>
+        </tr>';
+    }    
+    return $txtTable;
+}
+}
 ?>
