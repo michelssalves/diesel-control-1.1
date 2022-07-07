@@ -141,6 +141,7 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
                 <td onclick="'.$link.'" style="cursor:pointer;"> '.$row['prefixo'].' </td>
                 <td> '.$row['placa'].' </td>
                 <td> '.$row['combustivel'].' </td>
+                <td hidden> '.$row['bomba'].' </td>
                 <td hidden> '.v2($row['odometroinicial']).' </td>
                 <td hidden> '.v2($row['odometrofinal']).' </td>
                 <td class="'.$corLitros.' w3-right-align"> '.v3($row['litros_od']).' </td>

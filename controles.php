@@ -166,6 +166,7 @@ include 'assets/controllers/checkAcess.php';
                     <th><center>Prefixo</th>
                     <th><center>Placa</th>
                     <th><center>Combustivel</th>
+                    <th hidden><center>Bomba</th>
                     <th hidden><center>Odometro Incial</th>
                     <th hidden><center>Odometro Final</th>
                     <th><center>Litros Od</th>
