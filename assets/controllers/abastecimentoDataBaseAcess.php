@@ -506,7 +506,6 @@ function registrarAcerto($id_funcionario, $id_erro, $id_abastecimento){
 function listarAcertos($id_funcionario){
     include 'config.php';
 
-
     $sql = $pdo->prepare("SELECT a.acertos, b.erros, c.qtde_abastecimentos, d.mes_atual FROM 
     (SELECT COUNT(DISTINCT(id_abastecimento)) AS erros FROM erros_de_registro WHERE id_funcionario = :id_funcionario AND id_erro <> 4) AS b, 
     (SELECT COUNT(DISTINCT(id_abastecimento)) AS acertos FROM erros_de_registro WHERE id_funcionario = :id_funcionario AND id_erro = 4) AS a, 
@@ -522,9 +521,9 @@ function listarAcertos($id_funcionario){
 
         $v1 = $row['acertos'] * 100; 
         $v2 = $v1/$row['qtde_abastecimentos'];
-        $txtTableQuadro = $txtTableQuadro.'<tr>
+        $txtTable = $txtTable.'<tr>
         <td><center>'.$row['acertos'].'</td>
-        <td><center><a style="text-decoration:none; cursor:pointer" href="visualizador-de-erros-v2">'.$row['erros'].'</a></td>
+        <td><center><a style="text-decoration:none; cursor:pointer" href="visualizador-de-erros">'.$row['erros'].'</a></td>
         <td><center>'.number_format($v2,'2',',','.').'%</td>
         </tr>';
     
@@ -532,7 +531,7 @@ function listarAcertos($id_funcionario){
     }else{
     $txtTable = $txtTable.'<tr>
     <td><center>0</td>
-    <td><center><a style="text-decoration:none; cursor:pointer" href="visualizador-de-erros-v2">0</a></td>
+    <td><center><a style="text-decoration:none; cursor:pointer" href="visualizador-de-erros">0</a></td>
     <td><center>0%</td>
     </tr>';
     }
