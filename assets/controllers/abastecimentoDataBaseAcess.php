@@ -363,12 +363,11 @@ function listarAbastecimentos(){
     include 'config.php';
     include 'functions.php';
 
-        $sql = $pdo->prepare("SELECT a.diferencahr, a.ultimohr, a.id_abastecimento, a.data_abastecimento, v.placa, v.numero_equipamento, v.descricao_caminhao, a.odometroinicial,a.odometrofinal, a.litros_od, a.litros, 
-        a.ultimokm,a.km, a.diferencakm, a.hr, a.frentista, v.prefixo, a.media
+        $sql = $pdo->prepare("SELECT *
         FROM veiculos AS v  
         JOIN abastecimentos AS a 
         ON a.id_veiculo = v.id_veiculo
-        ORDER BY data_abastecimento DESC LIMIT 30");
+        ORDER BY data_abastecimento DESC LIMIT 30 ");
         $sql->execute();
 
         if ($sql->rowCount() > 0) {
@@ -379,9 +378,25 @@ function listarAbastecimentos(){
 
                     $corMedia = '';
                     $corLitros = '';
-                        if($row['media'] < 1.5){$corMedia = 'bg-danger';}
+                        
+                    if($row['combustivel'] <> 'GASOLINA'){
+
+                        if($row['setor'] = 'Coleta Domiciliar'){
+                            if($row['diferencakm'] > 400){$corMedia = 'bg-danger';}
+                            if($row['diferencahr'] > 24){$corMedia = 'bg-danger';}
+                        }elseif($row['setor'] = 'Privado'){
+                            if($row['diferencakm'] > 2000){$corMedia = 'bg-danger';}
+                            if($row['diferencahr'] > 60){$corMedia = 'bg-danger';}
+                        }else{
+                            if($row['diferencakm'] >= 1000){$corMedia = 'bg-danger';}
+                            if($row['diferencahr'] >= 50){$corMedia = 'bg-danger';}
+                        }    
+                    }
+               
                         if($row['media'] > 2.5 && $row['descricao_caminhao'] == 'COMPACTADOR'){$corMedia = 'bg-warning';}
+                        if($row['media'] < 1.5){$corMedia = 'bg-danger';}
                         if($row['media'] > 17.0 ){$corMedia = 'bg-info';}
+
                         if($row['litros_od'] <> $row['litros'] ){$corLitros = 'bg-warning';}
     
                     $txtTable = $txtTable.'<tr>
