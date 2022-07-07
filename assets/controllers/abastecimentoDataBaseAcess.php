@@ -376,20 +376,22 @@ function listarAbastecimentos(){
            
              foreach($lista as $row){
 
+                    $corDifKm = '';
+                    $corDifHr = '';
                     $corMedia = '';
                     $corLitros = '';
                         
                     if($row['combustivel'] <> 'GASOLINA'){
 
                         if($row['setor'] = 'Coleta Domiciliar'){
-                            if($row['diferencakm'] > 400){$corMedia = 'bg-danger';}
-                            if($row['diferencahr'] > 24){$corMedia = 'bg-danger';}
+                            if($row['diferencakm'] > 400){$corDifKm = 'bg-danger';}
+                            if($row['diferencahr'] > 24){$corDifHr = 'bg-danger';}
                         }elseif($row['setor'] = 'Privado'){
-                            if($row['diferencakm'] > 2000){$corMedia = 'bg-danger';}
-                            if($row['diferencahr'] > 60){$corMedia = 'bg-danger';}
+                            if($row['diferencakm'] > 2000){$corDifKm = 'bg-danger';}
+                            if($row['diferencahr'] > 60){$corDifHr = 'bg-danger';}
                         }else{
-                            if($row['diferencakm'] > 1000){$corMedia = 'bg-danger';}
-                            if($row['diferencahr'] > 50){$corMedia = 'bg-danger';}
+                            if($row['diferencakm'] > 1000){$corDifKm = 'bg-danger';}
+                            if($row['diferencahr'] > 50){$corDifHr = 'bg-danger';}
                         }    
                     }
                
@@ -411,16 +413,16 @@ function listarAbastecimentos(){
                     <td class="'.$corMedia.' w3-right-align"> '.v2($row['media']).' </td>
                     <td> '.$row['ultimokm'].' </td>
                     <td> '.$row['km'].' </td>
-                    <td class="w3-right-align"> '.$row['diferencakm'].' </td>
+                    <td class="'.$corDifKm.' class="w3-right-align"> '.$row['diferencakm'].' </td>
                     <td> '.$row['ultimohr'].'</td>
                     <td> '.$row['hr'].'</td>
-                    <td class="w3-right-align"> '.$row['diferencahr'].'</td>
+                    <td class="'.$corDifHr.' class="w3-right-align"> '.$row['diferencahr'].'</td>
                     <td> '.$row['frentista'].'</td>
                     </tr>';
                       
                 }
             }       
-                   
+                  
            return $txtTable;            
 }
 function consultarIdEquipamento($numero_equipamento){
