@@ -115,14 +115,14 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
                 if($row['combustivel'] <> 'GASOLINA'){
 
                     if($row['setor'] == 'Coleta Domiciliar'){
-                        if($row['diferencakm'] > 400){$corDifKm = 'bg-danger';}
-                        if($row['diferencahr'] > 24){$corDifHr = 'bg-danger';}
+                        if($row['diferencakm'] > 400 || $row['diferencakm'] < 0){$corDifKm = 'bg-danger';}
+                        if($row['diferencahr'] > 24 || $row['diferencahr'] < 0){$corDifHr = 'bg-danger';}
                     }elseif($row['setor'] == 'Privado'){
-                        if($row['diferencakm'] > 2000){$corDifKm = 'bg-danger';}
-                        if($row['diferencahr'] > 60){$corDifHr = 'bg-danger';}
+                        if($row['diferencakm'] > 2000 || $row['diferencakm']  < 0){$corDifKm = 'bg-danger';}
+                        if($row['diferencahr'] > 60 || $row['diferencahr'] < 0){$corDifHr = 'bg-danger';}
                     }else{
-                        if($row['diferencakm'] > 1000){$corDifKm = 'bg-danger';}
-                        if($row['diferencahr'] > 50){$corDifHr = 'bg-danger';}
+                        if($row['diferencakm'] > 1000 || $row['diferencakm']  < 0){$corDifKm = 'bg-danger';}
+                        if($row['diferencahr'] > 50 || $row['diferencahr'] < 0){$corDifHr = 'bg-danger';}
                     }    
                 }
            
@@ -402,14 +402,14 @@ function listarAbastecimentos(){
                     if($row['combustivel'] <> 'GASOLINA'){
 
                         if($row['setor'] == 'Coleta Domiciliar'){
-                            if($row['diferencakm'] > 400){$corDifKm = 'bg-danger';}
-                            if($row['diferencahr'] > 24){$corDifHr = 'bg-danger';}
+                            if($row['diferencakm'] > 400 || $row['diferencakm'] < 0){$corDifKm = 'bg-danger';}
+                            if($row['diferencahr'] > 24 || $row['diferencahr'] < 0){$corDifHr = 'bg-danger';}
                         }elseif($row['setor'] == 'Privado'){
-                            if($row['diferencakm'] > 2000){$corDifKm = 'bg-danger';}
-                            if($row['diferencahr'] > 60){$corDifHr = 'bg-danger';}
+                            if($row['diferencakm'] > 2000 || $row['diferencakm']  < 0){$corDifKm = 'bg-danger';}
+                            if($row['diferencahr'] > 60 || $row['diferencahr'] < 0){$corDifHr = 'bg-danger';}
                         }else{
-                            if($row['diferencakm'] > 1000){$corDifKm = 'bg-danger';}
-                            if($row['diferencahr'] > 50){$corDifHr = 'bg-danger';}
+                            if($row['diferencakm'] > 1000 || $row['diferencakm']  < 0){$corDifKm = 'bg-danger';}
+                            if($row['diferencahr'] > 50 || $row['diferencahr'] < 0){$corDifHr = 'bg-danger';}
                         }    
                     }
                
