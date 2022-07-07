@@ -388,8 +388,8 @@ function listarAbastecimentos(){
                             if($row['diferencakm'] > 2000){$corMedia = 'bg-danger';}
                             if($row['diferencahr'] > 60){$corMedia = 'bg-danger';}
                         }else{
-                            if($row['diferencakm'] >= 1000){$corMedia = 'bg-danger';}
-                            if($row['diferencahr'] >= 50){$corMedia = 'bg-danger';}
+                            if($row['diferencakm'] > 1000){$corMedia = 'bg-danger';}
+                            if($row['diferencahr'] > 50){$corMedia = 'bg-danger';}
                         }    
                     }
                
