@@ -59,7 +59,7 @@ function login($usuario, $senha){
                     $_SESSION['token'] = $row['token'];
 
                 }                   
-                header("Location: menu-principal-v2");            
+                header("Location: menu-principal");            
              } 
             
         }else{
