@@ -40,7 +40,7 @@ function login($usuario, $senha){
                     $_SESSION['token'] = $row['token'];
 
                 }
-                header("Location: menu-principal-v2"); 
+                header("Location: menu-principal"); 
             }    
         }elseif($usuario && $senha == '983184'){
 
@@ -64,7 +64,7 @@ function login($usuario, $senha){
             
         }else{
             $_SESSION['msg'] = '<div class="alert-danger"> senha ou usuário incorreto!</div>';
-             header("Location: login-diesel-control-v2"); 
+             header("Location: login-diesel-control"); 
         }       
 }
 function menuPrincipal(){
