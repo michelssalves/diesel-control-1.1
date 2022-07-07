@@ -255,7 +255,7 @@ function registrarAbastecimento(){
                 $x= 1;
             }
         }
-        if($setor == 'Privado'){
+        elseif($setor == 'Privado'){
             
             if($diferencakm < 0 || $diferencakm > 2000 ){
                 $id_erro = 1;
@@ -273,7 +273,7 @@ function registrarAbastecimento(){
                 $id_erro = 1;
                 registrarErro($id_funcionario, $id_erro, $id_abastecimento);
                 $x= 1;
-            }
+        }
             if($diferencahr < 0 || $diferencahr > 50){
                 $id_erro = 2;
                 registrarErro($id_funcionario, $id_erro, $id_abastecimento);
