@@ -235,25 +235,63 @@ function registrarAbastecimento(){
     $sql->execute();
     $id_abastecimento = $pdo->lastInsertId();
 
-    if($diferencakm < 0 || $diferencakm > 600){
-        $id_erro = 1;
-        registrarErro($id_funcionario, $id_erro, $id_abastecimento);
-        $x= 1;
+    $lista = consultarEquipamento($id_veiculo);
+    foreach($lista as $row){
+        $setor = $row['setor'];
+        $combustivel = $row['combustivel'];
     }
-    if($diferencahr < 0 || $diferencahr > 48){
-        $id_erro = 2;
-        registrarErro($id_funcionario, $id_erro, $id_abastecimento);
-        $x= 1;
-    }
-    if($litros <> $litros_od){
-        $id_erro = 3;
-        registrarErro($id_funcionario, $id_erro, $id_abastecimento);
-        $x= 1;
-    }
-    if($x == 0){
-        $id_erro = 4;
-        registrarAcerto($id_funcionario, $id_erro, $id_abastecimento);
-    }
+    if($combustivel <> 'GASOLINA'){
+
+        if($setor == 'Coleta Domiciliar'){
+
+            if($diferencakm < 0 || $diferencakm > 600 ){
+                $id_erro = 1;
+                registrarErro($id_funcionario, $id_erro, $id_abastecimento);
+                $x= 1;
+            }
+            if($diferencahr < 0 || $diferencahr > 48){
+                $id_erro = 2;
+                registrarErro($id_funcionario, $id_erro, $id_abastecimento);
+                $x= 1;
+            }
+        }
+        if($setor == 'Privado'){
+            
+            if($diferencakm < 0 || $diferencakm > 2000 ){
+                $id_erro = 1;
+                registrarErro($id_funcionario, $id_erro, $id_abastecimento);
+                $x= 1;
+            }
+            if($diferencahr < 0 || $diferencahr > 100){
+                $id_erro = 2;
+                registrarErro($id_funcionario, $id_erro, $id_abastecimento);
+                $x= 1;
+            }
+        }else{
+
+            if($diferencakm < 0 || $diferencakm > 1000){
+                $id_erro = 1;
+                registrarErro($id_funcionario, $id_erro, $id_abastecimento);
+                $x= 1;
+            }
+            if($diferencahr < 0 || $diferencahr > 50){
+                $id_erro = 2;
+                registrarErro($id_funcionario, $id_erro, $id_abastecimento);
+                $x= 1;
+            }
+
+        }
+    }    
+        if($litros <> $litros_od){
+            $id_erro = 3;
+            registrarErro($id_funcionario, $id_erro, $id_abastecimento);
+            $x= 1;
+        }
+   
+        if($x == 0){
+            $id_erro = 4;
+            registrarAcerto($id_funcionario, $id_erro, $id_abastecimento);
+        }
 
     $_SESSION['msg'] = '<div class="w3-green">CADASTRADO COM SUCESSO!</div>';
     header("Location: abastecer-veiculos");
@@ -385,6 +423,16 @@ function consultarIdEquipamento($numero_equipamento){
     return  $id_veiculo;
  
 }
+function consultarEquipamento($id_veiculo){
+    include 'config.php';
+   
+    $sql = $pdo->prepare("SELECT * FROM veiculos WHERE id_veiculo = :id_veiculo");
+    $sql->bindValue(':id_veiculo', $id_veiculo);
+    $sql->execute();
+    $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
+    return  $lista;
+ 
+}
 function registrarErro($id_funcionario, $id_erro, $id_abastecimento){
 
     include 'config.php';
@@ -453,5 +501,6 @@ function listarAcertos($id_funcionario){
     }
     return $txtTableQuadro;
 }
+
 
 ?>
