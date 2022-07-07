@@ -383,10 +383,10 @@ function listarAbastecimentos(){
                         
                     if($row['combustivel'] <> 'GASOLINA'){
 
-                        if($row['setor'] = 'Coleta Domiciliar'){
+                        if($row['setor'] == 'Coleta Domiciliar'){
                             if($row['diferencakm'] > 400){$corDifKm = 'bg-danger';}
                             if($row['diferencahr'] > 24){$corDifHr = 'bg-danger';}
-                        }elseif($row['setor'] = 'Privado'){
+                        }elseif($row['setor'] == 'Privado'){
                             if($row['diferencakm'] > 2000){$corDifKm = 'bg-danger';}
                             if($row['diferencahr'] > 60){$corDifHr = 'bg-danger';}
                         }else{
