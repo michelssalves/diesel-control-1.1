@@ -658,6 +658,7 @@ function listarTodosErros(){
         <td class="'.$corDifHr.'"><center>'.$row['diferencahr'].'</td>
         <td><center>'.$row['frentista'].'</td>
         <td><center>'.$row['media'].'</td>
+        <td hidden><center></td>
         </tr>';
     }    
     return $txtTable;

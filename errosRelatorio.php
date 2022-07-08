@@ -51,6 +51,7 @@ include 'assets/controllers/checkAcess.php';
                         <th><center>Dif Hr</th>
                         <th><center>Frentista</th> 
                         <th><center>Média</th> 
+                        <th hiiden><center>Anular</th> 
                     </tr>
                 </thead>
                 <tbody>
