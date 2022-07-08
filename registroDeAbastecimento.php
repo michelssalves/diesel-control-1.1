@@ -36,6 +36,9 @@ include 'assets/controllers/checkAcess.php';
                 <table class="table table-bordered" style="border: 10px;">
                 <thead class="thead-dark" >
                     <tr>
+                    <td colspan="2">Clique em Erros</td>
+                    </tr>
+                    <tr>
                         <th class="text-success"><center>Acertos</th>
                         <th class="text-danger"><center>Erros</th>
                         <th><center>% Acertos</th>  
