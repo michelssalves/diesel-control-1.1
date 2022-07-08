@@ -38,7 +38,7 @@ if($acao == 'limpar'){
     $x = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
     $$dataIncial = $x->format('Y-m-d 00:00');
     $x = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
-    $dataFinal = $x->format('Y-m-d 00:00');
+    $dataFinal = $x->format('Y-m-d 23:59');
     $prefixo = '';
     $combustivel = '';
     $marca = '';
