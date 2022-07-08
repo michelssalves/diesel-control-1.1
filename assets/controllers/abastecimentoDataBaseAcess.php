@@ -643,8 +643,8 @@ function listarTodosErros(){
         <td><center>'.$row['bomba'].'</td>
         <td><center>'.$row['odometroinicial'].'</td>
         <td><center>'.$row['odometrofinal'].'</td>
-        <td class="'.$corLitros.'"><center>'.$row['litros_od'].'</td>
-        <td class="'.$corLitros.'"><center>'.$row['litros'].'</td>
+        <td class="'.$corLitros.'"><center>'.v2($row['litros_od']).'</td>
+        <td class="'.$corLitros.'"><center>'.v2($row['litros']).'</td>
         <td><center>'.$row['ultimokm'].'</td>
         <td><center>'.$row['km'].'</td>
         <td class="'.$corDifKm.'"><center>'.$row['diferencakm'].'</td>
