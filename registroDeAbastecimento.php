@@ -40,7 +40,7 @@ include 'assets/controllers/checkAcess.php';
                     </tr>
                     <tr>
                         <th class="text-success"><center>Acertos</th>
-                        <th class="text-danger"><center><a style="text-decoration:none; cursor:pointer" href="visualizador-de-erros">Erros</a></th>
+                        <th class="text-danger"><center><a style="text-decoration:none; cursor:pointer; color:red" href="visualizador-de-erros">Erros</a></th>
                         <th><center>% Acertos</th>  
                     </tr>
                 </thead>
