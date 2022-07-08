@@ -572,10 +572,6 @@ function listarErros($id_funcionario){
             }    
         }
    
-            if($row['media'] > 2.5 && $row['descricao_caminhao'] == 'COMPACTADOR'){$corMedia = 'bg-warning';}
-            if($row['media'] < 1.5){$corMedia = 'bg-danger';}
-            if($row['media'] > 17.0 ){$corMedia = 'bg-info';}
-
             if($row['litros_od'] <> $row['litros'] ){$corLitros = 'bg-warning';}
 
         $txtTable = $txtTable.'<tr>
@@ -585,14 +581,14 @@ function listarErros($id_funcionario){
         <td><center>'.$row['bomba'].'</td>
         <td><center>'.$row['odometroinicial'].'</td>
         <td><center>'.$row['odometrofinal'].'</td>
-        <td><center>'.$row['litros_od'].'</td>
-        <td><center>'.$row['litros'].'</td>
+        <td class="'.$corLitros.'><center>'.$row['litros_od'].'</td>
+        <td class="'.$corLitros.'><center>'.$row['litros'].'</td>
         <td><center>'.$row['ultimokm'].'</td>
         <td><center>'.$row['km'].'</td>
-        <td><center>'.$row['diferencakm'].'</td>
+        <td class="'.$corDifKm.'><center>'.$row['diferencakm'].'</td>
         <td><center>'.$row['ultimohr'].'</td>
         <td><center>'.$row['hr'].'</td>
-        <td><center>'.$row['diferencahr'].'</td>
+        <td class="'.$corDifHr.'><center>'.$row['diferencahr'].'</td>
         <td><center>'.$row['frentista'].'</td>
         <td><center>'.$row['media'].'</td>
         </tr>';
