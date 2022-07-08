@@ -3,10 +3,10 @@ session_start();
 include 'assets/controllers/config.php';
 include 'assets/controllers/abastecimentoDataBaseAcess.php';
 $nivelPremissao = 0;
-echo $login = $_SESSION['usuario'];
-echo $usuario = $_SESSION['nome'] ;
+$login = $_SESSION['usuario'];
+$usuario = $_SESSION['nome'] ;
 $permissao =  $_SESSION['id_permissao'] ;
-echo $id_funcionario = $_SESSION['id_funcionario'];
+$id_funcionario = $_SESSION['id_funcionario'];
 $token = $_SESSION['token'];
 include 'assets/controllers/checkAcess.php';
 ?>

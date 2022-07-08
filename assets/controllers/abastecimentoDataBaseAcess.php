@@ -553,6 +553,31 @@ function listarErros($id_funcionario){
    
     foreach($lista as $row){
 
+        $corDifKm = '';
+        $corDifHr = '';
+        $corMedia = '';
+        $corLitros = '';
+            
+        if($row['combustivel'] <> 'GASOLINA'){
+
+            if($row['setor'] == 'Coleta Domiciliar'){
+                if($row['diferencakm'] > 400 || $row['diferencakm'] < 0){$corDifKm = 'bg-danger';}
+                if($row['diferencahr'] > 24 || $row['diferencahr'] < 0){$corDifHr = 'bg-danger';}
+            }elseif($row['setor'] == 'Privado'){
+                if($row['diferencakm'] > 2000 || $row['diferencakm']  < 0){$corDifKm = 'bg-danger';}
+                if($row['diferencahr'] > 60 || $row['diferencahr'] < 0){$corDifHr = 'bg-danger';}
+            }else{
+                if($row['diferencakm'] > 1000 || $row['diferencakm']  < 0){$corDifKm = 'bg-danger';}
+                if($row['diferencahr'] > 50 || $row['diferencahr'] < 0){$corDifHr = 'bg-danger';}
+            }    
+        }
+   
+            if($row['media'] > 2.5 && $row['descricao_caminhao'] == 'COMPACTADOR'){$corMedia = 'bg-warning';}
+            if($row['media'] < 1.5){$corMedia = 'bg-danger';}
+            if($row['media'] > 17.0 ){$corMedia = 'bg-info';}
+
+            if($row['litros_od'] <> $row['litros'] ){$corLitros = 'bg-warning';}
+
         $txtTable = $txtTable.'<tr>
         <td><center>'.$row['erro_data'].'</td>
         <td><center>'.$row['prefixo'].'</td>
