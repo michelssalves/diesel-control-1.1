@@ -2,7 +2,7 @@
 session_start();
 include 'assets/controllers/config.php';
 include 'assets/controllers/abastecimentoDataBaseAcess.php';
-$nivelPremissao = 0;
+$nivelPremissao = 1;
 $login = $_SESSION['usuario'];
 $usuario = $_SESSION['nome'] ;
 $permissao =  $_SESSION['id_permissao'] ;
