@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_start();
 include 'assets/controllers/config.php';
 include 'assets/controllers/abastecimentoDataBaseAcess.php';
@@ -47,7 +47,7 @@ include 'assets/controllers/checkAcess.php';
                         <th><center>Dif Hr</th>
                         <th><center>Frentista</th> 
                         <th><center>Média</th> 
-                        <th><center>Anuldo?</th> 
+                        <th><center>Anulado?</th> 
                     </tr>
                 </thead>
                 <tbody>
