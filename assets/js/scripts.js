@@ -85,11 +85,12 @@ if ( window.history.replaceState ) {
     window.history.replaceState( null, null, window.location.href );
 }
 async function alterarStatusErro(idErro){
-
+    const acao = 'alterarStatuErro'
 	const data = new FormData()
 	data.append('idErro', idErro)
+    data.append('acao', acao)
 
-	const req = await fetch('controller/ajaxAlterarStatusErro.php', {
+	const req = await fetch('controller/abastecimentoDataBaseAcess.php', {
 		method: 'POST',
 		body: data
 	})
