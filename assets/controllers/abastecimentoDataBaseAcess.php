@@ -50,14 +50,23 @@ if($marca && $marca <> 'TODOS'){$filtroMarca = "AND v.marca = '$marca'";}
 if($modelo && $modelo <> 'TODOS'){$filtroModelo = "AND v.modelo = '$modelo'";}
 if($setor && $setor <> 'TODOS'){$filtroSetor = "AND v.setor = '$setor'";}
 if($dataIncial  == ''){
-    $dataIncial = date('Y-m-d');
-    $dataHoraIncial = date('Y-m-d 00:00');}else{
+
+    $x = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
+    $dataHoraIncial = $x->format('Y-m-d 00:00');
+
+    //$dataIncial = date('Y-m-d');
+    //$dataHoraIncial = date('Y-m-d 00:00');
+}else{
     $horaInicial = '00:00';
     $dataHoraIncial = $dataIncial.' '.$horaInicial;
 }
 if($dataFinal == ''){ 
-    $dataHoraFinal = date('Y-m-d 23:59');
-    $dataFinal = date('Y-m-d'); 
+
+    $x = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
+    $dataHoraFinal = $x->format('Y-m-d 23:59');
+
+   //$dataHoraFinal = date('Y-m-d 23:59');
+    //$dataFinal = date('Y-m-d'); 
 }else{
     $horaFinal = '23:59';
     $dataHoraFinal = $dataFinal.' '.$horaFinal;
