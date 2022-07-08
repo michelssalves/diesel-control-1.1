@@ -575,7 +575,7 @@ function listarErros($id_funcionario){
             if($row['litros_od'] <> $row['litros'] ){$corLitros = 'bg-warning';}
 
         $txtTable = $txtTable.'<tr>
-        <td style="width:80px"><center>'.$row['erro_data'].'</td>
+        <td style="width:120px"><center>'.$row['erro_data'].'</td>
         <td><center>'.$row['prefixo'].'</td>
         <td><center>'.$row['setor'].'</td>
         <td><center>'.$row['bomba'].'</td>
