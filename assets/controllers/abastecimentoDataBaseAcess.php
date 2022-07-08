@@ -523,7 +523,7 @@ function listarAcertos($id_funcionario){
         $v2 = $v1/$row['qtde_abastecimentos'];
         $txtTable = $txtTable.'<tr>
         <td><center>'.$row['acertos'].'</td>
-        <td><center><a style="text-decoration:none; cursor:pointer" href="visualizador-de-erros">'.$row['erros'].'</a></td>
+        <td><center><a style="text-decoration:none; cursor:pointer; color:red" href="visualizador-de-erros">'.$row['erros'].'</a></td>
         <td><center>'.number_format($v2,'2',',','.').'%</td>
         </tr>';
     
