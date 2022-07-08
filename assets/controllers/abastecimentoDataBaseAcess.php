@@ -637,7 +637,7 @@ function listarTodosErros(){
             }
 
         $txtTable = $txtTable.'<tr>
-        <td style="width:150px"><center>'.$row['erro_data'].'</td>
+        <td style="width:250px"><center>'.$row['erro_data'].'</td>
         <td><center>'.$row['prefixo'].'</td>
         <td><center>'.l7($row['setor']).'</td>
         <td><center>'.$row['bomba'].'</td>
