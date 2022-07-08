@@ -17,7 +17,7 @@ $sql->bindValue(':idErro', $idErro);
 $sql->execute();
 var_dump($sql);
 $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
-
+print_r($lista);
 echo $lista['erro_status'];
 ?>
 <!doctype html>
