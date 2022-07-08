@@ -14,7 +14,7 @@ if($acao == 'alterar-abastecimento'){
 }
 if($acao == 'alterar-status-erro'){
 
-    $id_abastecimento = $_REQUEST['id_abastecimento'];
+    echo $id_abastecimento = $_REQUEST['id_abastecimento'];
     $idErro = $_REQUEST['idErro'];
 
     $erro_status = alterarStatuErro($idErro, $id_abastecimento);
