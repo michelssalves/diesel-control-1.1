@@ -117,15 +117,6 @@ function w($m) { $data = date('w',strtotime($m)); return $data; } //converte yyy
 function diaTexto($m) { $data = date('D',strtotime($m)); return $data; } //converte yyyy-mm-aa HH:ii para dd-mm-aaaa HH:ii
 
 
-function upload($arq, $nome, $local)
-{
-	if (move_uploaded_file($_FILES[$arq]['tmp_name'], $local . '/' .  $nome . '.pdf')) 
-	{ return 1 ;}
-	else
-	{ return 0; }
-
-}
-
 //acha mes pelo nome
 function achaMes($m) 
 {
