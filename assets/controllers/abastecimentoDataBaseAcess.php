@@ -654,9 +654,9 @@ function listarTodosErros(){
             if($row['litros_od'] <> $row['litros'] ){$corLitros = 'bg-warning';}
 
             if($row['erro_status'] == 1){
-                $anularErro = '<td id="'.$row['id_abastecimento'].'" onclick="alterarStatusErro('.$row['id'].','.$row['id_abastecimento'].')" class="w3-green" style="cursor:pointer"><center>NÃO</td>';
+                $anularErro = '<td id="'.$row['id_abastecimento'].'" onclick="alterarStatusErro('.$row['id'].','.$row['id_abastecimento'].')" class="w3-red" style="cursor:pointer"><center>NÃO</td>';
             }else{
-                $anularErro = '<td id="'.$row['id_abastecimento'].'" onclick="alterarStatusErro('.$row['id'].','.$row['id_abastecimento'].' )" class="w3-red" style="cursor:pointer"><center>SIM</td>';
+                $anularErro = '<td id="'.$row['id_abastecimento'].'" onclick="alterarStatusErro('.$row['id'].','.$row['id_abastecimento'].' )" class="w3-green" style="cursor:pointer"><center>SIM</td>';
             }
 
         $txtTable = $txtTable.'<tr>
