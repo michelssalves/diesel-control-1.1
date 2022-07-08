@@ -14,7 +14,7 @@ async function alterarStatusErro(idErro, id_abastecimento){
 
 	novoStatus = json.erro_status
 
-    alert(erro_status)
+    alert(novoStatus)
 
 	if(novoStatus == 1){
 		document.getElementById(id_abastecimento).innerHTML='NÃO'
