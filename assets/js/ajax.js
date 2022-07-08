@@ -14,10 +14,12 @@ async function alterarStatusErro(idErro, id_abastecimento){
 
 	novoStatus = json.erro_status
 
+    alert(erro_status)
+
 	if(novoStatus == 1){
 		document.getElementById(id_abastecimento).innerHTML='NÃO'
 		document.getElementById(id_abastecimento).className='w3-red'
-	}else{
+	}else if(novoStatus== 0){
 		document.getElementById(id_abastecimento).innerHTML='SIM'
 		document.getElementById(id_abastecimento).className='w3-green'
 	}
