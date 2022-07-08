@@ -11,8 +11,8 @@ $token = $_SESSION['token'];
 include 'assets/controllers/checkAcess.php';
 
 include 'config.php';
-
-$sql = $pdo->prepare("SELECT erro_status FROM erros_de_registro WHERE id_erro = :idErro");
+$idErro = 12;
+$sql = $pdo->prepare("SELECT erro_status FROM erros_de_registro WHERE id = :idErro");
 $sql->bindValue(':idErro', $idErro);
 $sql->execute();
 $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
