@@ -50,6 +50,7 @@ if($marca && $marca <> 'TODOS'){$filtroMarca = "AND v.marca = '$marca'";}
 if($modelo && $modelo <> 'TODOS'){$filtroModelo = "AND v.modelo = '$modelo'";}
 if($setor && $setor <> 'TODOS'){$filtroSetor = "AND v.setor = '$setor'";}
 if($dataIncial  == ''){
+    
     $dataIncial = date('Y-m-d');
     $dataHoraIncial = date('Y-m-d 00:00');}else{
     $horaInicial = '00:00';
@@ -547,6 +548,65 @@ function listarErros($id_funcionario){
     JOIN veiculos AS V ON V.id_veiculo = AB.id_veiculo 
     WHERE id_funcionario = :id_funcionario AND id_erro <> 4");
     $sql->bindValue(':id_funcionario', $id_funcionario);
+    $sql->execute();
+    if($sql->rowCount() > 0){
+    $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
+   
+    foreach($lista as $row){
+
+        $corDifKm = '';
+        $corDifHr = '';
+        $corMedia = '';
+        $corLitros = '';
+            
+        if($row['combustivel'] <> 'GASOLINA'){
+
+            if($row['setor'] == 'Coleta Domiciliar'){
+                if($row['diferencakm'] > 400 || $row['diferencakm'] < 0){$corDifKm = 'bg-danger';}
+                if($row['diferencahr'] > 24 || $row['diferencahr'] < 0){$corDifHr = 'bg-danger';}
+            }elseif($row['setor'] == 'Privado'){
+                if($row['diferencakm'] > 2000 || $row['diferencakm']  < 0){$corDifKm = 'bg-danger';}
+                if($row['diferencahr'] > 60 || $row['diferencahr'] < 0){$corDifHr = 'bg-danger';}
+            }else{
+                if($row['diferencakm'] > 1000 || $row['diferencakm']  < 0){$corDifKm = 'bg-danger';}
+                if($row['diferencahr'] > 50 || $row['diferencahr'] < 0){$corDifHr = 'bg-danger';}
+            }    
+        }
+   
+            if($row['litros_od'] <> $row['litros'] ){$corLitros = 'bg-warning';}
+
+        $txtTable = $txtTable.'<tr>
+        <td style="width:150px"><center>'.$row['erro_data'].'</td>
+        <td><center>'.$row['prefixo'].'</td>
+        <td><center>'.l7($row['setor']).'</td>
+        <td><center>'.$row['bomba'].'</td>
+        <td><center>'.$row['odometroinicial'].'</td>
+        <td><center>'.$row['odometrofinal'].'</td>
+        <td class="'.$corLitros.'"><center>'.$row['litros_od'].'</td>
+        <td class="'.$corLitros.'"><center>'.$row['litros'].'</td>
+        <td><center>'.$row['ultimokm'].'</td>
+        <td><center>'.$row['km'].'</td>
+        <td class="'.$corDifKm.'"><center>'.$row['diferencakm'].'</td>
+        <td><center>'.$row['ultimohr'].'</td>
+        <td><center>'.$row['hr'].'</td>
+        <td class="'.$corDifHr.'"><center>'.$row['diferencahr'].'</td>
+        <td><center>'.$row['frentista'].'</td>
+        <td><center>'.$row['media'].'</td>
+        </tr>';
+    }    
+    return $txtTable;
+}
+}
+function listarTodosErros(){
+
+    include 'config.php';
+    include 'functions.php';
+
+    $sql = $pdo->prepare("SELECT * FROM erros_de_registro AS ER 
+    JOIN abastecimentos AS AB ON AB.id_abastecimento = ER.id_abastecimento 
+    JOIN veiculos AS V ON V.id_veiculo = AB.id_veiculo 
+    WHERE id_erro <> 4");
+
     $sql->execute();
     if($sql->rowCount() > 0){
     $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
