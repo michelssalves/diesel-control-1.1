@@ -541,7 +541,7 @@ function listarErros($id_funcionario){
     $sql = $pdo->prepare("SELECT * FROM erros_de_registro AS ER 
     JOIN abastecimentos AS AB ON AB.id_abastecimento = ER.id_abastecimento 
     JOIN veiculos AS V ON V.id_veiculo = AB.id_veiculo 
-    WHERE id_funcionario = :id_funcionario AND id_erro <> 4");
+    WHERE id_funcionario = :id_funcionario AND id_erro <> 4 AND erro_status = 0");
     $sql->bindValue(':id_funcionario', $id_funcionario);
     $sql->execute();
     if($sql->rowCount() > 0){
