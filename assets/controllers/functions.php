@@ -94,7 +94,7 @@ function l15($v){ return substr($v, 0, 15); }
 function l30($v){ return substr($v, 0, 30); }
 function l100($v){ return substr($v, 0, 100); }
 function l4($v){ return substr($v, 0, 4); }
-
+function l7($v){ return substr($v, 0, 7); }
 //funções para data
 function Year($m)   { if ($m) { $data = date('Y',strtotime($m)); 	return $data;}}  //converte yyyy-mm-aa para dd-mm-aaaa
 function Month($m)   { if ($m) { $data = date('m',strtotime($m)); 	return $data;}}  //converte yyyy-mm-aa para dd-mm-aaaa

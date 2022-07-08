@@ -577,7 +577,7 @@ function listarErros($id_funcionario){
         $txtTable = $txtTable.'<tr>
         <td style="width:150px"><center>'.$row['erro_data'].'</td>
         <td><center>'.$row['prefixo'].'</td>
-        <td><center>'.$row['setor'].'</td>
+        <td><center>'.l7($row['setor']).'</td>
         <td><center>'.$row['bomba'].'</td>
         <td><center>'.$row['odometroinicial'].'</td>
         <td><center>'.$row['odometrofinal'].'</td>
