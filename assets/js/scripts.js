@@ -84,3 +84,26 @@ function table2excel(id) {
 if ( window.history.replaceState ) {
     window.history.replaceState( null, null, window.location.href );
 }
+async function alterarStatusErro(idErro){
+
+	const data = new FormData()
+	data.append('idErro', idErro)
+
+	const req = await fetch('controller/ajaxAlterarStatusErro.php', {
+		method: 'POST',
+		body: data
+	})
+	const json = await req.json()
+
+	const idRow =`n${id_abastecimento}`
+
+	novoStatus = json.statusNovo
+
+	if(novoStatus <= 0){
+		document.getElementById(idRow).innerHTML='NÃO'
+		document.getElementById(idRow).className='w3-red'
+	}else{
+		document.getElementById(idRow).innerHTML='SIM'
+		document.getElementById(idRow).className='w3-green'
+	}
+}
