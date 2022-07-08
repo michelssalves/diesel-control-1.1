@@ -52,7 +52,7 @@ if($setor && $setor <> 'TODOS'){$filtroSetor = "AND v.setor = '$setor'";}
 if($dataIncial  == ''){
 
     $x = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
-    $dataHoraIncial = $x->format('Y-m-d');
+    $dataHoraIncial = $x->format('d-m-Y');
 
     //$dataIncial = date('Y-m-d');
     //$dataHoraIncial = date('Y-m-d 00:00');
@@ -63,7 +63,7 @@ if($dataIncial  == ''){
 if($dataFinal == ''){ 
 
     $x = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
-    $dataHoraFinal = $x->format('Y-m-d');
+    $dataHoraFinal = $x->format('d-m-Y');
 
    //$dataHoraFinal = date('Y-m-d 23:59');
     //$dataFinal = date('Y-m-d'); 
