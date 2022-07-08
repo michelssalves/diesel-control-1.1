@@ -27,8 +27,8 @@ include 'assets/controllers/checkAcess.php';
         <div class="container-xl">
             <div class="container-xxl">  
             <div class="w3-bar w3-light-grey">
-                <a href="abastecer-veiculos" class="w3-bar-item w3-button w3-red w3-right">Voltar</a>
                 <a href="logout" class="w3-bar-item w3-button w3-red w3-right">Sair</a>
+                <a href="abastecer-veiculos" class="w3-bar-item w3-button w3-blue w3-right">Voltar</a>
                 <label class="w3-bar-item w3-button w3-left">Usuario Logado:</label>
                 <a class="w3-bar-item w3-button"><?= $usuario; ?></a>
             </div>   
