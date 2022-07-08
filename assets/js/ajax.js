@@ -12,15 +12,15 @@ async function alterarStatusErro(idErro, id_abastecimento){
 
 	const json = await req.json()
 
-	novoStatus = json.status_erro
+	const idRow =`td${id_abastecimento}`
 
-    alert(novoStatus)
+	novoStatus = json.statusNovo
 
-	if(novoStatus == 1){
-		document.getElementById(id_abastecimento).innerHTML='NÃO'
-		document.getElementById(id_abastecimento).className='w3-red'
-	}else if(novoStatus== 0){
-		document.getElementById(id_abastecimento).innerHTML='SIM'
-		document.getElementById(id_abastecimento).className='w3-green'
+	if(novoStatus <= 0){
+		document.getElementById(idRow).innerHTML='N�O'
+		document.getElementById(idRow).className='w3-red'
+	}else{
+		document.getElementById(idRow).innerHTML='SIM'
+		document.getElementById(idRow).className='w3-green'
 	}
 }
