@@ -698,7 +698,8 @@ function  alterarStatuErro($idErro, $id_abastecimento){
         $sql = $pdo->prepare("UPDATE erros_de_registro SET erro_status = 0 WHERE id_abastecimento = :id_abastecimento");
         $sql->bindValue('id_abastecimento',$id_abastecimento);
         $sql->execute();
-    }elseif($erro_status == '0'){
+    }
+    if($erro_status == '0'){
         $sql = $pdo->prepare("UPDATE erros_de_registro SET erro_status = 1 WHERE id_abastecimento = :id_abastecimento");
         $sql->bindValue('id_abastecimento',$id_abastecimento);
         $sql->execute();
