@@ -20,6 +20,7 @@ if($acao == 'alterar-status-erro'){
     $statusNovo = alterarStatuErro($idErro, $id_abastecimento);
 
     header('Content-Type: application/json');
+    
     echo json_encode($statusNovo);
 
 }

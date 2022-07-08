@@ -14,7 +14,7 @@ async function alterarStatusErro(idErro, id_abastecimento){
 
 	const idRow =`td${id_abastecimento}`
 
-	novoStatus = json.statusNovo
+	novoStatus = json.erro_status
 	alert()
 	if(novoStatus == 1){
 		document.getElementById(idRow).innerHTML='N�O'
