@@ -710,8 +710,13 @@ function  alterarStatuErro($idErro, $id_abastecimento){
     $sql->execute();
     $lista = $sql->fetch(PDO::FETCH_ASSOC);
 
-    $erro_status = $lista['erro_status'];
+    $erro = $lista['erro_status'];
+
+    $erro_status = [
+        'erro' => $erro,
+    ];
 
     return $erro_status;
+
 }
 ?>
