@@ -12,9 +12,21 @@ if($acao == 'alterar-abastecimento'){
     alterarAbastecimento();
 
 }
+if($acao == 'alterar-status-erro'){
+
+
+    $idErro =  $_REQUEST['idErro'];
+
+    $erro_status = alterarStatuErro($idErro);
+
+    header('Content-Type: application/json');
+    echo json_encode($erro_status);
+
+}
 if($acao == 'excluir-abastecimento'){
 
     excluirAbastecimento();
+    
 
 }
 if($acao == 'ultimoKm'){
@@ -670,5 +682,18 @@ function listarTodosErros(){
     }    
     return $txtTable;
 }
+}
+function  alterarStatuErro($idErro){
+
+    include 'config.php';
+
+    $sql = $pdo->prepare("SELECT erro_status FROM erros_de_registro WHERE id_erro = :idErro");
+    $sql->bindValue(':idErro', $idErro);
+    $sql->execute();
+    $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
+   
+    $lista['erro_status'];
+
+
 }
 ?>

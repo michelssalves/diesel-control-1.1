@@ -85,7 +85,7 @@ if ( window.history.replaceState ) {
     window.history.replaceState( null, null, window.location.href );
 }
 async function alterarStatusErro(idErro){
-    const acao = 'alterarStatuErro'
+    const acao = 'alterar-status-erro'
 	const data = new FormData()
 	data.append('idErro', idErro)
     data.append('acao', acao)
