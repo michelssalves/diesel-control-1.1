@@ -641,6 +641,12 @@ function listarTodosErros(){
    
             if($row['litros_od'] <> $row['litros'] ){$corLitros = 'bg-warning';}
 
+            if($row['erros_status'] == 1){
+                $anularErro = '<td w3-green style="cursor:pointer"><center>SIM</td>';
+            }else{
+                $anularErro = '<td w3-red style="cursor:pointer"><center>NÃO</td>';
+            }
+
         $txtTable = $txtTable.'<tr>
         <td style="width:150px"><center>'.$row['erro_data'].'</td>
         <td><center>'.$row['prefixo'].'</td>
@@ -658,7 +664,8 @@ function listarTodosErros(){
         <td class="'.$corDifHr.'"><center>'.$row['diferencahr'].'</td>
         <td><center>'.$row['frentista'].'</td>
         <td><center>'.$row['media'].'</td>
-        <td hidden><center></td>
+        '.$anularErro.'
+        
         </tr>';
     }    
     return $txtTable;
