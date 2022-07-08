@@ -9,14 +9,6 @@ $permissao =  $_SESSION['id_permissao'] ;
 $id_funcionario = $_SESSION['id_funcionario'];
 $token = $_SESSION['token'];
 include 'assets/controllers/checkAcess.php';
-
-
-$idErro = 12;
-$sql = $pdo->prepare("SELECT erro_status FROM erros_de_registro WHERE id = :idErro");
-$sql->bindValue(':idErro', $idErro);
-$sql->execute();
-$lista = $sql->fetch(PDO::FETCH_ASSOC);
-echo $erro_status = $lista['erro_status'];
 ?>
 <!doctype html>
 <html lang="pt-br">

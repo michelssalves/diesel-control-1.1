@@ -14,10 +14,10 @@ if($acao == 'alterar-abastecimento'){
 }
 if($acao == 'alterar-status-erro'){
 
+    $id_abastecimento = $_REQUEST['id_abastecimento'];
+    $idErro = $_REQUEST['idErro'];
 
-    $idErro =  $_REQUEST['idErro'];
-
-    $erro_status = alterarStatuErro($idErro);
+    $erro_status = alterarStatuErro($idErro, $id_abastecimento);
 
     header('Content-Type: application/json');
     echo json_encode($erro_status);
@@ -654,9 +654,9 @@ function listarTodosErros(){
             if($row['litros_od'] <> $row['litros'] ){$corLitros = 'bg-warning';}
 
             if($row['erro_status'] == 1){
-                $anularErro = '<td id="n'.$row['id_abastecimento'].'" onclick="alterarStatusErro('.$row['id'].')" class="w3-green" style="cursor:pointer"><center>SIM</td>';
+                $anularErro = '<td id="'.$row['id_abastecimento'].'" onclick="alterarStatusErro('.$row['id'].','.$row['id_abastecimento'].')" class="w3-green" style="cursor:pointer"><center>SIM</td>';
             }else{
-                $anularErro = '<td id="n'.$row['id_abastecimento'].'" onclick="alterarStatusErro('.$row['id'].')" class="w3-red" style="cursor:pointer"><center>NÃO</td>';
+                $anularErro = '<td id="'.$row['id_abastecimento'].'" onclick="alterarStatusErro('.$row['id'].','.$row['id_abastecimento'].' )" class="w3-red" style="cursor:pointer"><center>NÃO</td>';
             }
 
         $txtTable = $txtTable.'<tr>
@@ -683,17 +683,34 @@ function listarTodosErros(){
     return $txtTable;
 }
 }
-function  alterarStatuErro($idErro){
+function  alterarStatuErro($idErro, $id_abastecimento){
 
     include 'config.php';
 
-    $sql = $pdo->prepare("SELECT erro_status FROM erros_de_registro WHERE id_erro = :idErro");
+    $sql = $pdo->prepare("SELECT erro_status FROM erros_de_registro WHERE id = :idErro");
     $sql->bindValue(':idErro', $idErro);
     $sql->execute();
-    $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
-   
-    $lista['erro_status'];
+    $lista = $sql->fetch(PDO::FETCH_ASSOC);
 
+    $erro_status = $lista['erro_status'];
 
+    if($erro_status == '1'){
+        $sql = $pdo->prepare("UPDATE erros_de_registro SET erro_status = 0 WHERE id_abastecimento = :id_abastecimento");
+        $sql->bindValue('id_abastecimento',$id_abastecimento);
+        $sql->execute();
+    }elseif($erro_status == '0'){
+        $sql = $pdo->prepare("UPDATE erros_de_registro SET erro_status = 1 WHERE id_abastecimento = :id_abastecimento");
+        $sql->bindValue('id_abastecimento',$id_abastecimento);
+        $sql->execute();
+    }
+
+    $sql = $pdo->prepare("SELECT erro_status FROM erros_de_registro WHERE id = :idErro");
+    $sql->bindValue(':idErro', $idErro);
+    $sql->execute();
+    $lista = $sql->fetch(PDO::FETCH_ASSOC);
+
+    $erro_status = $lista['erro_status'];
+
+    return $erro_status;
 }
 ?>

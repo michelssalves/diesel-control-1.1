@@ -84,10 +84,11 @@ function table2excel(id) {
 if ( window.history.replaceState ) {
     window.history.replaceState( null, null, window.location.href );
 }
-async function alterarStatusErro(idErro){
+async function alterarStatusErro(idErro, id_abastecimento){
     const acao = 'alterar-status-erro'
 	const data = new FormData()
 	data.append('idErro', idErro)
+    data.append('id_abastecimento', id_abastecimento)
     data.append('acao', acao)
 
 	const req = await fetch('controller/abastecimentoDataBaseAcess.php', {
@@ -96,9 +97,9 @@ async function alterarStatusErro(idErro){
 	})
 	const json = await req.json()
 
-	const idRow =`n${id_abastecimento}`
+	const idRow = id_abastecimento
 
-	novoStatus = json.statusNovo
+	novoStatus = json.erro_status
 
 	if(novoStatus <= 0){
 		document.getElementById(idRow).innerHTML='NÃO'
