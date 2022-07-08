@@ -10,11 +10,12 @@ $id_funcionario = $_SESSION['id_funcionario'];
 $token = $_SESSION['token'];
 include 'assets/controllers/checkAcess.php';
 
-include 'config.php';
+
 $idErro = 12;
 $sql = $pdo->prepare("SELECT erro_status FROM erros_de_registro WHERE id = :idErro");
 $sql->bindValue(':idErro', $idErro);
 $sql->execute();
+var_dump($sql);
 $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 echo $lista['erro_status'];
