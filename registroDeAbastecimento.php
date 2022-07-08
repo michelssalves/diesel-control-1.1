@@ -31,7 +31,7 @@ include 'assets/controllers/checkAcess.php';
                     <a href="logout"class="w3-bar-item w3-button w3-red w3-right">Sair</a>
                     <a href="menu-principal" class="w3-bar-item w3-button w3-blue w3-right">Voltar</a>
                     <label class="w3-bar-item">Usuario Logado:</label>
-                    <a style="text-decoration:none;" class="w3-bar-item"><?= $usuario; ?></a>
+                    <a style="text-decoration:none; text-color:black" class="w3-bar-item"><?= $usuario; ?></a>
                     
                 </div> 
                 <div class="w3-bar w3-light-grey w3-container">
