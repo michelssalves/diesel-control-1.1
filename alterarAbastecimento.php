@@ -74,6 +74,6 @@ include 'assets/controllers/checkAcess.php';
         <button name="acao" value="excluir-abastecimento" class="w3-button w3-red">Excluir</button>
         <button name="acao" value="alterar-abastecimento" class="w3-button w3-blue">Alterar</button>
 </form> 
-<script src="diesel-control-1.1/assets/js/functionScripts.js"></script>
+        <script src="diesel-control-1.1/assets/js/scripts.js"></script>
 </body>
 </html>                    
