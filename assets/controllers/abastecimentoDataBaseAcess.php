@@ -604,7 +604,8 @@ function listarTodosErros(){
     $sql = $pdo->prepare("SELECT * FROM erros_de_registro AS ER 
     JOIN abastecimentos AS AB ON AB.id_abastecimento = ER.id_abastecimento 
     JOIN veiculos AS V ON V.id_veiculo = AB.id_veiculo 
-    WHERE id_erro <> 4");
+    WHERE id_erro <> 4
+    GROUP BY id_abstecimento");
 
     $sql->execute();
     if($sql->rowCount() > 0){
