@@ -182,31 +182,7 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
         }
           return  $txtTableControles;      
 }                 
-function informacoesVeiculo($id_veiculo){
 
-    include 'config.php';
-
-    $id_veiculo =  intval($_REQUEST['id_veiculo']);
-    
-    $sql = $pdo->prepare("SELECT * FROM abastecimentos
-	WHERE id_veiculo = :id_veiculo  ORDER BY data_abastecimento DESC LIMIT 1");
-	$sql->bindValue(':id_veiculo', $id_veiculo);
-	$sql->execute();
-	$row = $sql->fetch(PDO::FETCH_ASSOC);
-    $ultimoKm = $row['km'];
-    if($row['km'] < 0){$ultimoKm = 0;}
-    $ultimoHr = $row['hr'];
-    if($row['hr'] < 0){$ultimoHr = 0;}
-    
-
-    $informacoesVeiculo = [
-        'ultimoKm' => $ultimoKm,
-        'ultimoHr' => $ultimoHr
-    ];
-
-    return $informacoesVeiculo;
-
-}
 function registrarAbastecimento(){
 
     include 'config.php';
@@ -708,15 +684,40 @@ function  alterarStatuErro($idErro, $id_abastecimento){
     $sql = $pdo->prepare("SELECT erro_status FROM erros_de_registro WHERE id = :idErro");
     $sql->bindValue(':idErro', $idErro);
     $sql->execute();
-    $lista = $sql->fetch(PDO::FETCH_ASSOC);
+    $row = $sql->fetch(PDO::FETCH_ASSOC);
 
-    $erro = $lista['erro_status'];
+    $erro_status = $row['erro_status'];
 
-    $erro_status = [
-        'erro' => $erro,
+    $status_erro = [
+        'erro_status' => $erro_status,
     ];
 
-    return $erro_status;
+    return $status_erro;
+
+}
+function informacoesVeiculo($id_veiculo){
+
+    include 'config.php';
+
+    $id_veiculo =  intval($_REQUEST['id_veiculo']);
+    
+    $sql = $pdo->prepare("SELECT * FROM abastecimentos
+	WHERE id_veiculo = :id_veiculo  ORDER BY data_abastecimento DESC LIMIT 1");
+	$sql->bindValue(':id_veiculo', $id_veiculo);
+	$sql->execute();
+	$row = $sql->fetch(PDO::FETCH_ASSOC);
+    $ultimoKm = $row['km'];
+    if($row['km'] < 0){$ultimoKm = 0;}
+    $ultimoHr = $row['hr'];
+    if($row['hr'] < 0){$ultimoHr = 0;}
+    
+
+    $informacoesVeiculo = [
+        'ultimoKm' => $ultimoKm,
+        'ultimoHr' => $ultimoHr
+    ];
+
+    return $informacoesVeiculo;
 
 }
 ?>

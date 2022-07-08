@@ -12,7 +12,7 @@ async function alterarStatusErro(idErro, id_abastecimento){
 
 	const json = await req.json()
 
-	novoStatus = json.erro_status
+	novoStatus = json.status_erro
 
     alert(novoStatus)
 
