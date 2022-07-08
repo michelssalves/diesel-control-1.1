@@ -591,7 +591,7 @@ function listarErros($id_funcionario){
     return $txtTable;
 }
 }
-function listarTodosErros(){
+function listarTodosErros($dataHoraIncial, $dataHoraFinal){
 
     include 'config.php';
     include 'functions.php';
@@ -599,7 +599,7 @@ function listarTodosErros(){
     $sql = $pdo->prepare("SELECT * FROM erros_de_registro AS ER 
     JOIN abastecimentos AS AB ON AB.id_abastecimento = ER.id_abastecimento 
     JOIN veiculos AS V ON V.id_veiculo = AB.id_veiculo 
-    WHERE id_erro <> 4
+    WHERE id_erro <> 4 AND erro_data BETWEEN '$dataHoraIncial' AND '$dataHoraFinal'
     GROUP BY AB.id_abastecimento");
 
     $sql->execute();

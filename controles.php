@@ -147,7 +147,6 @@ include 'assets/controllers/checkAcess.php';
             </th>
         </tr>          
     </table>
-
     </form>
   
   </div>

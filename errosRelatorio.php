@@ -30,7 +30,31 @@ include 'assets/controllers/checkAcess.php';
                 <button class="w3-button w3-green" onClick="table2excel('t1')">Excel</button>
                 <label class="w3-bar-item w3-button w3-left">Usuario Logado:</label>
                 <a class="w3-bar-item w3-button"><?= $usuario; ?></a>
-            </div>   
+            </div>  
+            <form method="POST">
+    <table style="margin-left:60px;">
+        <tr >
+            <th>
+                <label><center>Data 01</label><br>
+                <input type="date" name="dataIncial" value="<?= $dataIncial ?>"></th>
+            <th>
+                <label><center>Data 02</label><br>
+                <input type="date" name="dataFinal" value="<?= $dataFinal ?>"></th>
+            <th>
+            <th>
+                <input type="hidden"  name="acao" value="filtrar">
+            </th>
+            <th>
+                <label><center></label><br>
+            <button  class="w3-button w3-blue" type="submit">Filtrar</button>      
+            </th>
+            <th>
+                <label><center></label><br>
+                <button  class="w3-button w3-grey" name="acao" value="limpar" type="submit">Limpar</button>
+            </th>
+        </tr>          
+    </table>
+    </form> 
             <table id="t1" class="w3-table w3-table-all sortable " border="1">
                 <thead class="thead-dark">
                     <tr>
@@ -54,7 +78,7 @@ include 'assets/controllers/checkAcess.php';
                     </tr>
                 </thead>
                 <tbody>
-                    <?= listarTodosErros()?>
+                    <?= listarTodosErros($dataHoraIncial, $dataHoraFinal)?>
                 </tbody>
             </table>
     <script src="diesel-control-1.1/assets/js/scripts.js"></script>
