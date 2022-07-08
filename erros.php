@@ -23,9 +23,9 @@ include 'assets/controllers/checkAcess.php';
 </head>
 <body>
 <div class="container-md">
-        <div class="container-lg">
-            <div class="container-xl">
-                <div class="container-xxl">    
+    <div class="container-lg">
+        <div class="container-xl">
+            <div class="container-xxl">    
             <table class="table table-striped table-bordered table-hoverable">
                 <thead class="thead-dark">
                     <tr>
