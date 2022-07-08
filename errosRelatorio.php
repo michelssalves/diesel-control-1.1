@@ -48,10 +48,6 @@ include 'assets/controllers/checkAcess.php';
                 <label><center></label><br>
             <button  class="w3-button w3-blue" type="submit">Filtrar</button>      
             </th>
-            <th>
-                <label><center></label><br>
-                <button  class="w3-button w3-grey" name="acao" value="limpar" type="submit">Limpar</button>
-            </th>
         </tr>          
     </table>
     </form> 
