@@ -27,7 +27,7 @@ include 'assets/controllers/checkAcess.php';
             <div class="container-xl">
                 <div class="container-xxl">    
     <div class="container">
-        <div class="row">
+
             <table class="table table-striped table-bordered table-hoverable">
                 <thead class="thead-dark">
                     <tr>
@@ -54,7 +54,6 @@ include 'assets/controllers/checkAcess.php';
                 </tbody>
             </table>
         </div>
-    </div>
     <script src="diesel-control-1.1/assets/js/scripts.js"></script>
 </body>
 </html>
