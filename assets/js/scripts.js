@@ -95,19 +95,18 @@ async function alterarStatusErro(idErro, id_abastecimento){
 		method: 'POST',
 		body: data
 	})
-	const json = await req.json()
 
-	const idRow = id_abastecimento
+	const json = await req.json()
 
 	novoStatus = json.erro_status
 
-    alert(novoStatus)
+    novoStatus = 0
 
 	if(novoStatus == 0){
-		document.getElementById(idRow).innerHTML='NÃO'
-		document.getElementById(idRow).className='w3-red'
+		document.getElementById(id_abastecimento).innerHTML='NÃO'
+		document.getElementById(id_abastecimento).className='w3-red'
 	}else{
-		document.getElementById(idRow).innerHTML='SIM'
-		document.getElementById(idRow).className='w3-green'
+		document.getElementById(id_abastecimento).innerHTML='SIM'
+		document.getElementById(id_abastecimento).className='w3-green'
 	}
 }
