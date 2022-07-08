@@ -551,7 +551,6 @@ function listarErros($id_funcionario){
 
         $corDifKm = '';
         $corDifHr = '';
-        $corMedia = '';
         $corLitros = '';
             
         if($row['combustivel'] <> 'GASOLINA'){
