@@ -28,7 +28,7 @@ include 'assets/controllers/checkAcess.php';
                 <label class="w3-bar-item w3-button w3-left">Usuario Logado:</label>
                 <a class="w3-bar-item w3-button"><?= $usuario; ?></a>
             </div>   
-            <table class="table table-striped table-bordered table-hoverable">
+            <table id="t1" class="w3-table w3-table-all sortable " border="1">
                 <thead class="thead-dark">
                     <tr>
                         <th><center>Data</th>
