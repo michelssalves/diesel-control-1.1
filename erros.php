@@ -51,6 +51,9 @@ include 'assets/controllers/checkAcess.php';
                     <?= listarErros($id_funcionario)?>
                 </tbody>
             </table>
+        </div>
+    </div>
+</div>
     <script src="diesel-control-1.1/assets/js/scripts.js"></script>
 </body>
 </html>
