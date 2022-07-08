@@ -18,7 +18,7 @@ $sql->execute();
 var_dump($sql);
 $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
 print_r($lista);
-echo $lista['erro_status'];
+echo $erro_status = $lista['erro_status'];
 ?>
 <!doctype html>
 <html lang="pt-br">
