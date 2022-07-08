@@ -687,11 +687,11 @@ function  alterarStatuErro($idErro, $id_abastecimento){
 
     $erro_status = $row['erro_status'];
 
-    $status_erro = [
+    $statusNovo = [
         'erro_status' => $erro_status,
     ];
 
-    return $status_erro;
+    return $statusNovo;
 
 }
 function informacoesVeiculo($id_veiculo){
