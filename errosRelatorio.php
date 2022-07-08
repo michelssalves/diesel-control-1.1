@@ -22,10 +22,6 @@ include 'assets/controllers/checkAcess.php';
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="container-md">
-    <div class="container-lg">
-        <div class="container-xl">
-            <div class="container-xxl">  
             <div class="w3-bar w3-light-grey">
                 <a href="logout" class="w3-bar-item w3-button w3-red w3-right">Sair</a>
                 <a href="controle-de-combustivel" class="w3-bar-item w3-button w3-blue w3-right">Voltar</a>
@@ -58,9 +54,6 @@ include 'assets/controllers/checkAcess.php';
                     <?= listarTodosErros()?>
                 </tbody>
             </table>
-        </div>
-    </div>
-</div>
     <script src="diesel-control-1.1/assets/js/scripts.js"></script>
 </body>
 </html>
