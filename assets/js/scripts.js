@@ -91,7 +91,7 @@ async function alterarStatusErro(idErro, id_abastecimento){
     data.append('id_abastecimento', id_abastecimento)
     data.append('acao', acao)
 
-	const req = await fetch('assets/controllers/abastecimentoDataBaseAcess.php', {
+	const req = await fetch('diesel-control-1.1/assets/controllers/abastecimentoDataBaseAcess.php', {
 		method: 'POST',
 		body: data
 	})
