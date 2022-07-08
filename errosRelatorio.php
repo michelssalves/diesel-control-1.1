@@ -15,7 +15,7 @@ $idErro = 12;
 $sql = $pdo->prepare("SELECT erro_status FROM erros_de_registro WHERE id = :idErro");
 $sql->bindValue(':idErro', $idErro);
 $sql->execute();
-$lista = $sql->fetchAll(PDO::FETCH_ASSOC);
+$lista = $sql->fetch(PDO::FETCH_ASSOC);
 print_r($lista);
 var_dump($lista);
 echo $erro_status = $lista['erro_status'];
