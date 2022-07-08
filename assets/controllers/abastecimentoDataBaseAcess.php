@@ -35,8 +35,10 @@ $dataIncial = $_REQUEST['dataIncial'];
 $dataFinal = $_REQUEST['dataFinal'];
 if($acao == 'limpar'){
 
-    $dataIncial = date('Y-m-d');
-    $dataFinal = date('Y-m-d');
+    $x = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
+    $$dataIncial = $x->format('Y-m-d 00:00');
+    $x = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
+    $dataFinal = $x->format('Y-m-d 00:00');
     $prefixo = '';
     $combustivel = '';
     $marca = '';
@@ -54,8 +56,6 @@ if($dataIncial  == ''){
     $x = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
     $dataHoraIncial = $x->format('Y-m-d 00:00');
 
-    //$dataIncial = date('Y-m-d');
-    //$dataHoraIncial = date('Y-m-d 00:00');
 }else{
     $horaInicial = '00:00';
     $dataHoraIncial = $dataIncial.' '.$horaInicial;
@@ -65,8 +65,6 @@ if($dataFinal == ''){
     $x = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
     $dataHoraFinal = $x->format('Y-m-d 23:59');
 
-   //$dataHoraFinal = date('Y-m-d 23:59');
-    //$dataFinal = date('Y-m-d'); 
 }else{
     $horaFinal = '23:59';
     $dataHoraFinal = $dataFinal.' '.$horaFinal;
