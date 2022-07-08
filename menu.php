@@ -26,7 +26,6 @@ include 'assets/controllers/checkAcess.php';
 <div class="w3-bar w3-light-grey">
   <a href="logout"class="w3-bar-item w3-button w3-red w3-right">Sair</a>
   <label class="w3-bar-item">Usuario Logado: <?= $usuario; ?></label> 
-  <h1 class="w3-bar-item w3-button" style="margin-left:180px;"><center>MENU PRINCIPAL</h1>
 </div> 
                     <table class="table table-hover">
                         <?= menuPrincipal();?>
