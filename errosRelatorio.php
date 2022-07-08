@@ -61,6 +61,7 @@ include 'assets/controllers/checkAcess.php';
         </div>
     </div>
 </div>
+    <script src="diesel-control-1.1/assets/js/ajax.js"></script>
     <script src="diesel-control-1.1/assets/js/scripts.js"></script>
 </body>
 </html>
