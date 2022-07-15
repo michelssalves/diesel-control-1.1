@@ -3,9 +3,14 @@ session_start();
 $acao = $_REQUEST['acao'];
 
 if($acao == 'registrar-abastecimento'){
+    if($_REQUEST['media'] > 0){
 
-    registrarAbastecimento();
+        registrarAbastecimento();
 
+    }else{
+        $_SESSION['msg'] = "<script>alert('NÃO REGISTRADO! MÉDIA INCORRETA!'')</script>";
+        header("Location: abastecer-veiculos");
+    }
 }
 if($acao == 'alterar-abastecimento'){
 
@@ -207,7 +212,7 @@ function registrarAbastecimento(){
     $data_abastecimento = dmaHLocal($_POST['data_abastecimento']);
     $data_sem_hora = Ymd($data_abastecimento);
 
-if($media > 0){
+
     if($data_abastecimento == ''){
          
         $data_abastecimento = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
@@ -310,11 +315,7 @@ if($media > 0){
         }
 
     $_SESSION['msg'] = '<div class="w3-green">CADASTRADO COM SUCESSO!</div>';
-    header("Location: abastecer-veiculos");
-    }else{
-        $_SESSION['msg'] = "<script>alert('NÃO REGISTRADO! MÉDIA INCORRETA!'')</script>";
-        header("Location: abastecer-veiculos");
-    }
+    header("Location: abastecer-veiculos");   
 } 
 function alterarAbastecimento(){
 
