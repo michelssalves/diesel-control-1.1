@@ -3,14 +3,9 @@ session_start();
 $acao = $_REQUEST['acao'];
 
 if($acao == 'registrar-abastecimento'){
-    if($_REQUEST['media'] > 0){
 
         registrarAbastecimento();
 
-    }else{
-        $_SESSION['msg'] = "<script>alert('NÃO REGISTRADO! MÉDIA INCORRETA!'')</script>";
-        header("Location: abastecer-veiculos");
-    }
 }
 if($acao == 'alterar-abastecimento'){
 
