@@ -220,12 +220,13 @@ include 'assets/controllers/checkAcess.php';
 <script>
     function validarFormulario(){
         var media = document.forms["formCadastro"]["media"].value;
-        if (media <= 0 ) {
-            alert("Média está incorreta!");
-            return false;     
+        if (media > 0 ) {
+
+            return true;    
         }
         else{
-            return true;
+            alert("Média está incorreta!");
+            return false; 
         }
     }
 </script>
