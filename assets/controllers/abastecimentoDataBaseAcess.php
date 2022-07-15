@@ -313,6 +313,7 @@ if($media > 0){
     header("Location: abastecer-veiculos");
     }else{
         $_SESSION['msg'] = '<div class="w3-red">NÃO REGISTRADO! MÉDIA INCORRETA!</div>';
+        header("Location: abastecer-veiculos");
     }
 } 
 function alterarAbastecimento(){
