@@ -312,7 +312,7 @@ if($media > 0){
     $_SESSION['msg'] = '<div class="w3-green">CADASTRADO COM SUCESSO!</div>';
     header("Location: abastecer-veiculos");
     }else{
-        $_SESSION['msg'] = '<div class="w3-red">NÃO REGISTRADO! MÉDIA INCORRETA!</div>';
+        $_SESSION['msg'] = "<script>alert('NÃO REGISTRADO! MÉDIA INCORRETA!'')</script>";
         header("Location: abastecer-veiculos");
     }
 } 
