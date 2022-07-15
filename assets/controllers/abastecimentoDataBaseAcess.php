@@ -207,6 +207,7 @@ function registrarAbastecimento(){
     $data_abastecimento = dmaHLocal($_POST['data_abastecimento']);
     $data_sem_hora = Ymd($data_abastecimento);
 
+if($media > 0){
     if($data_abastecimento == ''){
          
         $data_abastecimento = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
@@ -310,7 +311,9 @@ function registrarAbastecimento(){
 
     $_SESSION['msg'] = '<div class="w3-green">CADASTRADO COM SUCESSO!</div>';
     header("Location: abastecer-veiculos");
-    
+    }else{
+        $_SESSION['msg'] = '<div class="w3-red">MÉDIA INCORRETA!</div>';
+    }
 } 
 function alterarAbastecimento(){
 
