@@ -104,25 +104,25 @@ include 'assets/controllers/checkAcess.php';
                 <div class="field">
                     <div class="control">
                         <label>Odometro Inicial</label>
-                        <br><input onkeyup="somenteNumeros(this),calcularLitrosOd();" id="odometroinicial" name="odometroinicial" type="number" step="0.01" class="form-control" placeholder="Odometro Inicial" autofocus>
+                        <br><input value="<?=$odometroinicial?>" onkeyup="somenteNumeros(this),calcularLitrosOd();" id="odometroinicial" name="odometroinicial" type="number" step="0.01" class="form-control" placeholder="Odometro Inicial" autofocus>
                     </div>
                 </div>
                 <div class="field">
                     <div class="control">
                         <label>Ultimo Km</label>
-                        <br><input readonly id="ultimokm" name="ultimokm" type="text" class="form-control" placeholder="Km Anterior" autofocus>
+                        <br><input required readonly id="ultimokm" name="ultimokm" type="text" class="form-control" placeholder="Km Anterior" autofocus>
                     </div>
                 </div>
                 <div class="field">
                     <div class="control">
                         <label>Km</label>
-                        <br><input onkeyup="somenteNumeros(this),calcularMedia(),calcularDiferencaKm();" id="km" name="km" type="number" step="0.01" class="form-control" placeholder="Km" autofocus required>
+                        <br><input value="<?=$km?>"  onkeyup="somenteNumeros(this),calcularMedia(),calcularDiferencaKm();" id="km" name="km" type="number" step="0.01" class="form-control" placeholder="Km" autofocus required>
                     </div>
                 </div>
                 <div class="field">
                     <div class="control">
                         <label>Diferenca Km</label>
-                        <br><input readonly id="diferencakm" name="diferencakm" type="text" class="form-control" placeholder="Diferenca Km" autofocus>
+                        <br><input required readonly id="diferencakm" name="diferencakm" type="text" class="form-control" placeholder="Diferenca Km" autofocus>
                     </div>
                 </div>
                 <div class="field">
@@ -134,7 +134,7 @@ include 'assets/controllers/checkAcess.php';
                 <div class="field">
                     <div class="control">
                         <label>Horimetro</label>
-                        <br><input onkeyup="somenteNumeros(this),calcularDiferencaHr();" id="hr" name="hr" type="number" class="form-control" step="0.01" placeholder="Hr" autofocus required>
+                        <br><input value="<?=$hr?>" onkeyup="somenteNumeros(this),calcularDiferencaHr();" id="hr" name="hr" type="number" class="form-control" step="0.01" placeholder="Hr" autofocus required>
                     </div>
                 </div>
                 <div class="field">
@@ -146,14 +146,14 @@ include 'assets/controllers/checkAcess.php';
                 <div class="field">
                     <div class="control">
                         <label>Odometro Final</label>
-                        <input onkeyup="somenteNumeros(this),calcularLitrosOd();" id="odometrofinal" name="odometrofinal" type="number" step="0.01" class="form-control" placeholder="Odometro Final" autofocus required>
+                        <input value="<?=$odometrofinal?>" onkeyup="somenteNumeros(this),calcularLitrosOd();" id="odometrofinal" name="odometrofinal" type="number" step="0.01" class="form-control" placeholder="Odometro Final" autofocus required>
                     </div>
                 </div>
                                         
                 <div class="field">
                     <div class="control">
                         <label>Litros</label>
-                        <br><input onkeyup="somenteNumeros(this),calcularMedia();" id="litros" name="litros" type="number" step="0.01" class="form-control" placeholder="Litros" autofocus required>
+                        <br><input value="<?=$litros?>" onkeyup="somenteNumeros(this),calcularMedia();" id="litros" name="litros" type="number" step="0.01" class="form-control" placeholder="Litros" autofocus required>
                     </div>
                 </div>
                 <?php if($permissao == 1){ ?>
@@ -168,13 +168,13 @@ include 'assets/controllers/checkAcess.php';
                 <div class="field">
                     <div class="control">
                         <label>Litros Odometro</label>
-                        <br><input readonly id="litros_od" name="litros_od" type="text" class="form-control" placeholder="Litros Odometro" autofocus required>
+                        <br><input value="<?=$litros_od?>" readonly id="litros_od" name="litros_od" type="text" class="form-control" placeholder="Litros Odometro" autofocus required>
                     </div>
                 </div>
                 <div class="field">
                     <div class="control">   
                         <label>Media do Veiculo</label>
-                        <br><input readonly id="media" name="media" type="text" class="form-control" placeholder="Media" autofocus required>
+                        <br><input value="<?=$media?>" readonly id="media" name="media" type="text" class="form-control" placeholder="Media" autofocus required>
                         <br><input hidden name="acao" value="registrar-abastecimento" type="text"  required> 
                     </div>
                 </div>
