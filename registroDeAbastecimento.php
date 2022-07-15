@@ -1,6 +1,6 @@
 <?php
 session_start();
-$msgSucesso = $_SESSION['msg']; 
+//$msgSucesso = $_SESSION['msg']; 
 include 'assets/controllers/config.php';
 include 'assets/controllers/abastecimentoDataBaseAcess.php';
 $nivelPremissao = 0;
@@ -51,7 +51,8 @@ include 'assets/controllers/checkAcess.php';
                 </tbody>
             </table>
                 </div> 
-                <?php if($msgSucesso){echo $msgSucesso;}?>
+                <?php if(isset($_SESSION['msg'])){echo $_SESSION['msg'];}
+                         unset($_SESSION['msg']);?>
                     <form class="menu" method="POST">
                         <div class="field">
                             <div class="control">
