@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_start();
 $msgSucesso = $_SESSION['msg']; 
 include 'assets/controllers/config.php';
@@ -36,7 +36,7 @@ include 'assets/controllers/checkAcess.php';
                 <table class="table table-bordered" style="border: 10px;">
                 <thead class="thead-dark" >
                     <tr>
-                    <td colspan="3" style="font-weight:bold"><center>CLIQUE EM ERROS PARA VER SEU HISTÓRICO</td>
+                    <td colspan="3" style="font-weight:bold"><center>CLIQUE EM ERROS PARA VER SEU HISTÃRICO</td>
                     </tr>
                     <tr>
                         <th class="text-success"><center>Acertos</th>
@@ -225,7 +225,7 @@ include 'assets/controllers/checkAcess.php';
             return true;    
         }
         else{
-            alert("M�dia est� incorreta!");
+            alert("Média está incorreta!");
             return false; 
         }
     }
