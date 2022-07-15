@@ -53,7 +53,7 @@ include 'assets/controllers/checkAcess.php';
                 </div> 
                 <?php if(isset($msgSucesso)){echo $msgSucesso;}
                          unset($_SESSION['msg']);?>
-                    <form class="menu" method="POST">
+                    <form name="formCadastro" onsubmit="return validarFormulario()" class="menu" method="POST">
                         <div class="field">
                             <div class="control">
                                 <input readonly hidden id="frentista" name="frentista" type="text" class="form-control" value="<?= $login ?>" autofocus>
@@ -217,5 +217,17 @@ include 'assets/controllers/checkAcess.php';
     <script src="diesel-control-1.1/assets/js/scripts.js"></script>
 </body>
 </html>
+<script>
+    function validarFormulario(){
+        var media = document.forms["formCadastro"]["media"].value;
+        if (media <= 0 ) {
+            alert("Média está incorreta!");
+            return false;     
+        }
+        else{
+            return true;
+        }
+    }
+</script>
 
 
