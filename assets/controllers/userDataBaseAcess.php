@@ -52,6 +52,7 @@ function login($usuario, $senha){
                 
                 $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
                 foreach($lista as $row){
+                    
                     $_SESSION['id_funcionario'] = $row['id_funcionario'];
                     $_SESSION['usuario'] =  $row['usuario'];
                     $_SESSION['nome'] = $row['nome'];

@@ -104,7 +104,7 @@ include 'assets/controllers/checkAcess.php';
                 <div class="field">
                     <div class="control">
                         <label>Odometro Inicial</label>
-                        <br><input onkeyup="somenteNumeros(this);" onblur="calcularLitrosOd();" id="odometroinicial" name="odometroinicial" type="number" step="0.01" class="form-control" placeholder="Odometro Inicial" autofocus>
+                        <br><input onkeyup="somenteNumeros(this),calcularLitrosOd();" id="odometroinicial" name="odometroinicial" type="number" step="0.01" class="form-control" placeholder="Odometro Inicial" autofocus>
                     </div>
                 </div>
                 <div class="field">
@@ -116,7 +116,7 @@ include 'assets/controllers/checkAcess.php';
                 <div class="field">
                     <div class="control">
                         <label>Km</label>
-                        <br><input onkeyup="somenteNumeros(this);" onblur="calcularDiferencaKm(),calcularMedia();" id="km" name="km" type="number" step="0.01" class="form-control" placeholder="Km" autofocus required>
+                        <br><input onkeyup="somenteNumeros(this),calcularMedia(),calcularDiferencaKm();" id="km" name="km" type="number" step="0.01" class="form-control" placeholder="Km" autofocus required>
                     </div>
                 </div>
                 <div class="field">
@@ -134,7 +134,7 @@ include 'assets/controllers/checkAcess.php';
                 <div class="field">
                     <div class="control">
                         <label>Horimetro</label>
-                        <br><input onkeyup="somenteNumeros(this);" onblur="calcularDiferencaHr();" id="hr" name="hr" type="number" class="form-control" step="0.01" placeholder="Hr" autofocus required>
+                        <br><input onkeyup="somenteNumeros(this),calcularDiferencaHr();" id="hr" name="hr" type="number" class="form-control" step="0.01" placeholder="Hr" autofocus required>
                     </div>
                 </div>
                 <div class="field">
@@ -146,14 +146,14 @@ include 'assets/controllers/checkAcess.php';
                 <div class="field">
                     <div class="control">
                         <label>Odometro Final</label>
-                        <input onkeyup="somenteNumeros(this);" onblur="calcularLitrosOd();" id="odometrofinal" name="odometrofinal" type="number" step="0.01" class="form-control" placeholder="Odometro Final" autofocus required>
+                        <input onkeyup="somenteNumeros(this),calcularLitrosOd();" id="odometrofinal" name="odometrofinal" type="number" step="0.01" class="form-control" placeholder="Odometro Final" autofocus required>
                     </div>
                 </div>
                                         
                 <div class="field">
                     <div class="control">
                         <label>Litros</label>
-                        <br><input onkeyup="somenteNumeros(this);" onblur="calcularMedia();" id="litros" name="litros" type="number" step="0.01" class="form-control" placeholder="Litros" autofocus required>
+                        <br><input onkeyup="somenteNumeros(this),calcularMedia();" id="litros" name="litros" type="number" step="0.01" class="form-control" placeholder="Litros" autofocus required>
                     </div>
                 </div>
                 <?php if($permissao == 1){ ?>
