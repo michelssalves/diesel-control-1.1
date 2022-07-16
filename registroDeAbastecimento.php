@@ -219,11 +219,12 @@ include 'assets/controllers/checkAcess.php';
 </html>
 <script>
     function validarFormulario(){
+        
         var media = document.forms["formCadastro"]["media"].value;
         var diferencakm = document.forms["formCadastro"]["diferencakm"].value;
         var diferencahr = document.forms["formCadastro"]["diferencahr"].value;
         
-        if (media > 0 ) {
+        if (media > 0){
             if(diferencakm < 2000){
                 if(diferencahr < 60){
 
@@ -241,6 +242,7 @@ include 'assets/controllers/checkAcess.php';
             return false; 
         }
     }
+}   
 </script>
 
 
