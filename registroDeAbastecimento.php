@@ -224,22 +224,22 @@ include 'assets/controllers/checkAcess.php';
         var diferencakm = document.forms["formCadastro"]["diferencakm"].value;
         var diferencahr = document.forms["formCadastro"]["diferencahr"].value;
         
-        if (media > 0){
-            if(diferencakm < 2000){
-                if(diferencahr < 60){
+        if (media > 0 && media < 25){
+            if(diferencakm < 2000 && diferencakm > 0){
+                if(diferencahr < 60 && diferencahr >= 0)){
 
                     return true;   
 
                 }else{
-                        alert("HR está incorreto!");
+                        alert("HR está incorreto!\n Valor maior que 60 ou menor que zero!");
                         return false;
                     }
         }else{
-                alert("KM está incorreto!");
+                alert("KM está incorreto!\n Valor Maior que 2000 ou menor que zero!");
                 return false; 
             }    
     }else{
-            alert("Média está incorreta!");
+            alert("Média está incorreta!\n Digite Km e Litros novamente!");
             return false; 
         }
 }   
