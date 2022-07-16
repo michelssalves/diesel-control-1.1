@@ -225,7 +225,7 @@ include 'assets/controllers/checkAcess.php';
         
         if (media > 0 ) {
             if(diferencakm < 2000){
-                if(diferencahr > 60){
+                if(diferencahr < 60){
 
                     return true;   
 
