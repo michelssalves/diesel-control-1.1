@@ -231,17 +231,17 @@ include 'assets/controllers/checkAcess.php';
                     return true;   
 
                 }else{
-                    alert("HR está incorreto!");
-                    return false;
-            }else{
+                        alert("HR está incorreto!");
+                        return false;
+                    }
+        }else{
                 alert("KM está incorreto!");
                 return false; 
             }    
-        }else{
+    }else{
             alert("Média está incorreta!");
             return false; 
         }
-    }
 }   
 </script>
 
