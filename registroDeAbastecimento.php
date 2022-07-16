@@ -231,15 +231,15 @@ include 'assets/controllers/checkAcess.php';
                     return true;   
 
                 }else{
-                        alert("HR está incorreto!\n Valor maior que 60 ou menor que zero!");
+                        alert("Diferenca HR está incorreto!\nValor maior que 60 ou menor que zero!");
                         return false;
                     }
         }else{
-                alert("KM está incorreto!\n Valor Maior que 2000 ou menor que zero!");
+                alert("Diferenca Km está incorreto!\nValor Maior que 2000 ou menor que zero!");
                 return false; 
             }    
     }else{
-            alert("Média está incorreta!\n Digite Km e Litros novamente!");
+            alert("Média está incorreta!\nDigite Km e Litros novamente!");
             return false; 
         }
 }   
