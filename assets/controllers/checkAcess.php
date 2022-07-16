@@ -6,6 +6,7 @@ $acao = $_REQUEST['acao'];
 $id_funcionario = $_SESSION['id_funcionario'];
 $token = $_SESSION['token'];
 $permissao = $_SESSION['id_permissao'];
+$login = $_SESSION['usuario'];
 
 $sql = $pdo->prepare("SELECT * FROM funcionarios WHERE id_funcionario = :id_funcionario");
 $sql->bindValue(':id_funcionario',$id_funcionario);
@@ -20,7 +21,7 @@ foreach($lista as $row){
     $tokenLogado = $row['token'];
 }
 
-if($idLogado <> $id_funcionario || $tokenLogado <> $token || $permissaoLogado <> $permissao || $nivelPremissao > $permissao){
+if($usuarioLogado <> $login || $idLogado <> $id_funcionario || $tokenLogado <> $token || $permissaoLogado <> $permissao || $nivelPremissao > $permissao){
     session_destroy();
     header("Location: login-diesel-control");
 }
