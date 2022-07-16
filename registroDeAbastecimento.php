@@ -220,11 +220,23 @@ include 'assets/controllers/checkAcess.php';
 <script>
     function validarFormulario(){
         var media = document.forms["formCadastro"]["media"].value;
+        var diferencakm = document.forms["formCadastro"]["diferencakm"].value;
+        var diferencahr = document.forms["formCadastro"]["diferencahr"].value;
+        
         if (media > 0 ) {
+            if(diferencakm < 2000){
+                if(diferencahr > 60){
 
-            return true;    
-        }
-        else{
+                    return true;   
+
+                }else{
+                    alert("HR está incorreto!");
+                    return false;
+            }else{
+                alert("KM está incorreto!");
+                return false; 
+            }    
+        }else{
             alert("Média está incorreta!");
             return false; 
         }
