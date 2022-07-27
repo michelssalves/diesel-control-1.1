@@ -705,6 +705,7 @@ function informacoesVeiculo($id_veiculo){
 	$sql->bindValue(':id_veiculo', $id_veiculo);
 	$sql->execute();
 	$row = $sql->fetch(PDO::FETCH_ASSOC);
+    $setor = $row['setor'];
     $ultimoKm = $row['km'];
     if($row['km'] < 0){$ultimoKm = 0;}
     $ultimoHr = $row['hr'];
@@ -712,6 +713,7 @@ function informacoesVeiculo($id_veiculo){
     
 
     $informacoesVeiculo = [
+        'setor' => $setor,
         'ultimoKm' => $ultimoKm,
         'ultimoHr' => $ultimoHr
     ];

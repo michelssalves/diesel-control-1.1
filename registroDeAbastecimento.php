@@ -104,6 +104,12 @@ include 'assets/controllers/checkAcess.php';
                 <br>
                 <div class="field">
                     <div class="control">
+                        <label>Setor</label>
+                        <br><input readonly class="form-control" id="setor" name="setor">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
                         <label>Odometro Inicial</label>
                         <br><input value="<?=$odometroinicial?>" onkeyup="somenteNumeros(this),calcularLitrosOd();" id="odometroinicial" name="odometroinicial" type="number" step="0.01" class="form-control" placeholder="Odometro Inicial" autofocus>
                     </div>

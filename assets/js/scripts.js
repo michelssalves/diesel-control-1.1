@@ -51,6 +51,7 @@ $("#prefixo").on("change", function () {
             
             $("#ultimokm").val(json.ultimoKm);
             $("#ultimohr").val(json.ultimoHr);
+            $("#setor").val(json.setor);
     
         }
     });
