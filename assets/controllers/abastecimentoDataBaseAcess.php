@@ -700,9 +700,7 @@ function informacoesVeiculo($id_veiculo){
 
     $id_veiculo =  intval($_REQUEST['id_veiculo']);
     
-    $sql = $pdo->prepare("SELECT * FROM abastecimentos AS a
-    JOIN veiculos AS v
-    ON a.id_veiculo = v.id_veiculo
+    $sql = $pdo->prepare("SELECT * FROM abastecimentos 
 	WHERE id_veiculo = :id_veiculo  
     ORDER BY data_abastecimento DESC LIMIT 1
     ");
