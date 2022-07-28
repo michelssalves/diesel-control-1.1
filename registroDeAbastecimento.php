@@ -226,13 +226,14 @@ include 'assets/controllers/checkAcess.php';
 <script>
     function validarFormulario(){
         
+        var setor = document.forms["formCadastro"]["setor"].value;
         var media = document.forms["formCadastro"]["media"].value;
         var diferencakm = document.forms["formCadastro"]["diferencakm"].value;
         var diferencahr = document.forms["formCadastro"]["diferencahr"].value;
-        
-        if (media > 0 && media < 25){
-            if(diferencakm < 2000 && diferencakm > 0){
-                if(diferencahr < 60 && diferencahr >= 0){
+        if(setor != 'Privado'){
+            if (media > 0 && media < 25){
+                if(diferencakm < 2000 && diferencakm > 0){
+                    if(diferencahr < 60 && diferencahr >= 0){
 
                     return true;   
 
@@ -248,6 +249,9 @@ include 'assets/controllers/checkAcess.php';
             alert("Média está incorreta!\nDigite Km e Litros novamente!");
             return false; 
         }
+    }else{
+        return true; 
+    }     
 }   
 </script>
 
