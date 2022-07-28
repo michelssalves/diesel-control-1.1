@@ -713,6 +713,11 @@ function informacoesVeiculo($id_veiculo){
     $ultimoHr = $row['hr'];
     if($row['hr'] < 0){$ultimoHr = 0;}
     
+    $sql = $pdo->prepare("SELECT * FROM veiculos WHERE id_veiculo = :id_veiculo");
+	$sql->bindValue(':id_veiculo', $id_veiculo);
+	$sql->execute();
+	$row = $sql->fetch(PDO::FETCH_ASSOC);
+    $setor = $row['setor'];
 
     $informacoesVeiculo = [
         'setor' => $setor,

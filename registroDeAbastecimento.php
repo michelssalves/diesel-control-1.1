@@ -105,7 +105,7 @@ include 'assets/controllers/checkAcess.php';
                 <div class="field">
                     <div class="control">
                         <label></label>
-                        <br><input readonly hidden class="form-control" id="setor" name="setor">
+                        <br><input readonly class="form-control" id="setor" name="setor">
                     </div>
                 </div>
                 <div class="field">
