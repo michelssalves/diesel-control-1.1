@@ -155,8 +155,10 @@ include 'assets/controllers/checkAcess.php';
     </div>
     </div>
     </div> 
-           <table id="t1" class="w3-table w3-table-all sortable " border="1">
-                <thead class="thead-dark sorttable">
+    <table id="t1" class="table table-striped table-bordered table-hoverable">
+    <thead class="thead-dark">
+          <!-- <table id="t1" class="w3-table w3-table-all sortable " border="1">
+                <thead class="thead-dark sorttable">-->
                     <tr>
                     <th><center>Data</th>
                     <th hidden ><center>Hora</th>
