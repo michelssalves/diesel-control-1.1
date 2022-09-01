@@ -24,48 +24,48 @@ include 'assets/controllers/checkAcess.php';
 <body>
 <form method="POST">
         <center><label style="font-weight:bold;">Prefixo</label><br>
-            <input id="prefixo"  name="prefixo" type="text" autofocus required  ><br>
+            <input id="prefixo"  name="prefixo" type="text" autofocus required style="width: 300px;"><br>
     
             <label style="font-weight:bold;">Numero do Equipamento</label><br>
-            <input id="numero_equipamento"  name="numero_equipamento" type="text" autofocus required  ><br>
+            <input id="numero_equipamento"  name="numero_equipamento" type="text" autofocus required style="width: 300px;"><br>
         
             <label style="font-weight:bold;">Placa</label><br>
-            <input id="placa"  name="placa" type="text"  autofocus required  ><br>
+            <input id="placa"  name="placa" type="text"  autofocus required style="width: 300px;"><br>
         
             <label style="font-weight:bold;">Descrição</label><br>
-            <input id="descricao_caminhao" name="descricao_caminhao" type="text" autofocus required  ><br>
+            <input id="descricao_caminhao" name="descricao_caminhao" type="text" autofocus required style="width: 300px;"><br>
         
             <label style="font-weight:bold;">Renavam</label><br>
-            <input id="renavam" name="renavam" type="text"  autofocus required  ><br>
+            <input id="renavam" name="renavam" type="text"  autofocus required style="width: 300px;"><br>
     
             <label style="font-weight:bold;">Chassi</label><br>
-            <input id="chassi"  name="chassi" type="text" autofocus required  ><br>
+            <input id="chassi"  name="chassi" type="text" autofocus required style="width: 300px;"><br>
         
             <label style="font-weight:bold;">Numero do Motor</label><br>
-            <input id="numero_motor" name="numero_motor" type="text"  autofocus required  ><br>
+            <input id="numero_motor" name="numero_motor" type="text"  autofocus required style="width: 300px;"><br>
         
             <label style="font-weight:bold;">Ano</label><br>
-            <input id="ano"  name="ano" type="text" autofocus required  ><br>
+            <input id="ano"  name="ano" type="text" autofocus required style="width: 300px;"><br>
         
             <label style="font-weight:bold;">Marca</label><br>
-            <input id="marca" name="marca" type="text" autofocus required  ><br>
+            <input id="marca" name="marca" type="text" autofocus required style="width: 300px;"><br>
     
             <label style="font-weight:bold;">Modelo</label><br>
-            <input id="modelo"  name="modelo" type="text" autofocus required  ><br>
+            <input id="modelo"  name="modelo" type="text" autofocus required style="width: 300px;"><br>
 
             <label style="font-weight:bold;">Combustivel</label><br>
-            <select id="combustivel" name="combustivel" required  >
+            <select id="combustivel" name="combustivel" required style="width: 300px;text-align: center">
                 <option value="DIESEL S10">DIESEL S10</option>
                 <option value="GASOLINA">GASOLINA</option>
             </select><br>
             <label style="font-weight:bold;">Metodo</label><br>
-            <select id="metodo" name="metodo" required  >
+            <select id="metodo" name="metodo" required style="width: 300px;text-align: center">
                 <option value="1">KM</option>
                 <option value="3">HR</option>
                 <option value="MM">MM</option>
             </select><br>
             <label style="font-weight:bold;">Setor</label><br>
-            <select id="setor" name="setor" required  >
+            <select id="setor" name="setor" required style="width: 300px;text-align: center">
                 <option value="Coleta Domiciliar">Coleta Domiciliar</option>
                 <option value="Ctrss">Ctrss</option>
                 <option value="Limpeza Especial">Limpeza Especial</option>
@@ -74,7 +74,7 @@ include 'assets/controllers/checkAcess.php';
                 <option value="Privado">Privado</option>
             </select><br>
             <label style="font-weight:bold;">Status</label><br>
-            <select id="status_veiculo" name="status_veiculo" required  >
+            <select id="status_veiculo" name="status_veiculo" required style="width: 300px;text-align: center">
                 <option value="1">Ativo</option>
                 <option value="0">Inativo</option>
             </select>
