@@ -72,7 +72,7 @@ include 'assets/controllers/checkAcess.php';
                 <option value="Varricao">Varricão</option>
                 <option value="Lqnl">Lqnl</option>
                 <option value="Privado">Privado</option>
-            </select>
+            </select><br>
             <label style="font-weight:bold;">Setor</label><br>
             <select id="status_veiculo" name="status_veiculo" required style="width: 300px;">
                 <option value="1">Ativo</option>
