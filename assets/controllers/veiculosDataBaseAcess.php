@@ -57,7 +57,7 @@ function cadastroAlteracaoVeiculo(){
     $modelo = strtoupper($_POST['modelo']);
     $combustivel = strtoupper($_POST['combustivel']);
     $metodo = strtoupper($_POST['metodo']);
-    $setor = strtoupper($_POST['setor']);
+    $setor = $_POST['setor'];
     $status_veiculo = strtoupper($_POST['status_veiculo']);
    
 
