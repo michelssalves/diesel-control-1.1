@@ -36,9 +36,8 @@ include 'assets/controllers/checkAcess.php';
   <a href="relatorio-de-erros"><button class="w3-button w3-red">Erros</button></a>
   <a href="logout" class="w3-bar-item w3-button w3-red w3-right">Sair</a>
   <label class="w3-bar-item">Usuario Logado: <?= $usuario; ?></label> 
-
 </div>    
-<nav class="navbar navbar-expand-lg navbar-light ">
+<nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid">
     <form method="POST">
     <table>
@@ -148,7 +147,6 @@ include 'assets/controllers/checkAcess.php';
         </tr>          
     </table>
     </form>
-  
   </div>
 </nav>     
 </div>
