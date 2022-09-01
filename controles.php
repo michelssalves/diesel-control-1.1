@@ -38,7 +38,7 @@ include 'assets/controllers/checkAcess.php';
   <label class="w3-bar-item">Usuario Logado: <?= $usuario; ?></label> 
 
 </div>    
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light ">
   <div class="container-fluid">
     <form method="POST">
     <table>
