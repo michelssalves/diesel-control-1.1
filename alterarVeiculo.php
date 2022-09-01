@@ -55,7 +55,7 @@ include 'assets/controllers/checkAcess.php';
             <input id="marca" value="<?= $_REQUEST['marca']?>" name="marca" type="text" autofocus required style="width: 300px;"><br>
     
             <label style="font-weight:bold;">Modelo</label><br>
-            <input id="modelo" value="<?= $_REQUEST['modelo']?>" name="modelo" type="text" autofocus required style="width: 300px;"><br>
+            <input id="modelo" value="<?= $_REQUEST['modelo']?>" name="modelo" type="text" autofocus required style="width: 300px;text-align: center"><br>
     
             <label style="font-weight:bold;">Combustivel</label><br>
             <select id="combustivel" name="combustivel"   required style="width: 300px;text-align: center">
