@@ -51,7 +51,7 @@ include 'assets/controllers/checkAcess.php';
             <input id="marca" name="marca" type="text" autofocus required style="width: 300px;"><br>
     
             <label style="font-weight:bold;">Modelo</label><br>
-            <input id="modelo"  name="modelo" type="text" autofocus required style="width: 300px;"><br><br>
+            <input id="modelo"  name="modelo" type="text" autofocus required style="width: 300px;"><br>
 
             <label style="font-weight:bold;">Combustivel</label><br>
             <select id="combustivel" name="combustivel" required style="width: 300px;">
@@ -72,8 +72,7 @@ include 'assets/controllers/checkAcess.php';
                 <option value="Varricao">Varricão</option>
                 <option value="Lqnl">Lqnl</option>
                 <option value="Privado">Privado</option>
-            </select><br>
-
+            </select>
             <br><label style="font-weight:bold;">Status</label><br>
             <input id="status_veiculo" name="status_veiculo" type="text" autofocus required style="width: 300px;"><br>
             
