@@ -53,7 +53,7 @@ include 'assets/controllers/checkAcess.php';
             <label style="font-weight:bold;">Modelo</label><br>
             <input id="modelo"  name="modelo" type="text" autofocus required style="width: 300px;"><br><br>
     
-            <select id="combustivel" name="combustivel" required>
+            <select id="combustivel" name="combustivel" required style="width: 300px;">
                 <option value="DIESEL S10">DIESEL S10</option>
                 <option value="GASOLINA">GASOLINA</option>
             </select>
