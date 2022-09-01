@@ -51,7 +51,7 @@ include 'assets/controllers/checkAcess.php';
             <input id="marca" name="marca" type="text" autofocus required style="width: 300px;"><br>
     
             <label style="font-weight:bold;">Modelo</label><br>
-            <input id="modelo"  name="modelo" type="text" autofocus required style="width: 300px;"><br>
+            <input id="modelo"  name="modelo" type="text" autofocus required style="width: 300px;"><br><br>
     
             <select id="combustivel" name="combustivel" required>
                 <option value="DIESEL S10">DIESEL S10</option>
