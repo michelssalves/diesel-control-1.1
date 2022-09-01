@@ -63,8 +63,17 @@ include 'assets/controllers/checkAcess.php';
                 <option value="DIESEL S10">DIESEL S10</option>
                 <option value="GASOLINA">GASOLINA</option>
             </select><br>
+            <label style="font-weight:bold;">Metodo</label><br>
             <select id="metodo" name="metodo" required style="width: 300px;text-align: center">
-                <option value="<?= $_REQUEST['metodo']?>"><?= $_REQUEST['metodo']?></option>
+                <option value="<?= $_REQUEST['metodo']?>">
+                <?php if($_REQUEST['metodo'] = 1){
+                    echo 'KM';
+                }elseif($_REQUEST['metodo'] = 2){
+                    echo 'HR';
+                }else{
+                    echo 'MM';
+                }
+                ?></option>
                 <option value="1">KM</option>
                 <option value="3">HR</option>
                 <option value="MM">MM</option>
