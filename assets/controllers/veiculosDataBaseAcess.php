@@ -108,7 +108,7 @@ function desativarVeiculo(){
     include 'config.php';
 
     $id_veiculo = $_POST['id_veiculo'];
-    $status_veiculo = '0';
+    $status_veiculo = '2';
     
     $sql = $pdo->prepare("UPDATE veiculos SET status_veiculo = :status_veiculo WHERE id_veiculo = :id_veiculo");
     
