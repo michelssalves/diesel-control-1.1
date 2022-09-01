@@ -41,7 +41,7 @@ include 'assets/controllers/checkAcess.php';
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <form method="POST">
-    <table style="margin-left:30px;">
+    <table>
         <tr >
             <th>
                 <label><center>Data 01</label><br>
