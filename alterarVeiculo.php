@@ -58,25 +58,33 @@ include 'assets/controllers/checkAcess.php';
             <input id="modelo" value="<?= $_REQUEST['modelo']?>" name="modelo" type="text" autofocus required style="width: 300px;"><br>
     
             <label style="font-weight:bold;">Combustivel</label><br>
-            <input id="combustivel" value="<?= $_REQUEST['combustivel']?>" name="combustivel" type="text" autofocus required style="width: 300px;"><br>
-        
-
-            <label style="font-weight:bold;">Metodo</label><br>
-            <input id="metodo" value="<?= $_REQUEST['metodo']?>" name="metodo" type="text" autofocus required style="width: 300px;"><br>
-
-            <label style="font-weight:bold;">Setor</label><br>
-            <input id="setor" value="<?= $_REQUEST['setor']?>" name="setor" type="text" autofocus required style="width: 300px;"><br>
-
-            <label style="font-weight:bold;">Status</label><br>
-            <input id="status_veiculo" value="<?= $_REQUEST['status_veiculo']?>" name="status_veiculo" type="text" autofocus required style="width: 300px;"><br>
-            <br>
-            <label style="font-weight:bold;">Combustivel</label><br>
             <select id="combustivel" name="combustivel"   required style="width: 300px;text-align: center">
                 <option value="<?= $_REQUEST['combustivel']?>"><?= $_REQUEST['combustivel']?></option>
                 <option value="DIESEL S10">DIESEL S10</option>
                 <option value="GASOLINA">GASOLINA</option>
             </select><br>
-    
+            <select id="metodo" name="metodo" required style="width: 300px;text-align: center">
+                <option value="<?= $_REQUEST['metodo']?>"><?= $_REQUEST['metodo']?></option>
+                <option value="1">KM</option>
+                <option value="3">HR</option>
+                <option value="MM">MM</option>
+            </select><br>
+            <label style="font-weight:bold;">Setor</label><br>
+            <select id="setor" name="setor" required style="width: 300px;text-align: center">
+                <option value="<?= $_REQUEST['setor']?>"><?= $_REQUEST['setor']?></option>
+                <option value="Coleta Domiciliar">Coleta Domiciliar</option>
+                <option value="Ctrss">Ctrss</option>
+                <option value="Limpeza Especial">Limpeza Especial</option>
+                <option value="Varricao">Varricão</option>
+                <option value="Lqnl">Lqnl</option>
+                <option value="Privado">Privado</option>
+            </select><br>
+            <label style="font-weight:bold;">Status</label><br>
+            <select id="status_veiculo" name="status_veiculo" required style="width: 300px;text-align: center">
+                <option value="<?= $_REQUEST['status_veiculo']?>"><?= $_REQUEST['status_veiculo']?></option>
+                <option value="1">Ativo</option>
+                <option value="0">Inativo</option>
+            </select>
             <input value="cadastro-veiculo" name="menu" type="hidden"required><br>
             <br>
         <button name="acao" value="excluir-veiculo" class="w3-button w3-red">Excluir</button>
