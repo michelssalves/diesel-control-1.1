@@ -164,8 +164,8 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
                 <td hidden> '.$row['bomba'].' </td>
                 <td hidden> '.v2($row['odometroinicial']).' </td>
                 <td hidden> '.v2($row['odometrofinal']).' </td>
-                <td class="'.$corLitros.' w3-right-align"> '.v3($row['litros_od']).' </td>
-                <td class="'.$corLitros.' w3-right-align"> '.v3($row['litros']).' </td>
+                <td class="'.$corLitros.' w3-right-align"> '.v2($row['litros_od']).' </td>
+                <td class="'.$corLitros.' w3-right-align"> '.v2($row['litros']).' </td>
                 <td> '.$row['ultimokm'].' </td>
                 <td> '.$row['km'].' </td>
                 <td class="'.$corDifKm.' class="w3-right-align"> '.$row['diferencakm'].' </td>
