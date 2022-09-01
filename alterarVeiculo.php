@@ -69,7 +69,15 @@ include 'assets/controllers/checkAcess.php';
 
             <label style="font-weight:bold;">Status</label><br>
             <input id="status_veiculo" value="<?= $_REQUEST['status_veiculo']?>" name="status_veiculo" type="text" autofocus required style="width: 300px;"><br>
-            
+            <br>
+            <label style="font-weight:bold;">Combustivel</label><br>
+            <select id="combustivel" name="combustivel"   required style="width: 300px;text-align: center">
+                <option value="<?= $_REQUEST['combustivel']?>"><?= $_REQUEST['combustivel']?></option>
+                <option value="DIESEL S10">DIESEL S10</option>
+                <option value="GASOLINA">GASOLINA</option>
+            </select><br>
+    
+            <input value="cadastro-veiculo" name="menu" type="hidden"required><br>
             <br>
         <button name="acao" value="excluir-veiculo" class="w3-button w3-red">Excluir</button>
         <button name="acao" value="cadastro-alteracao-veiculo" class="w3-button w3-blue">Alterar</button>
