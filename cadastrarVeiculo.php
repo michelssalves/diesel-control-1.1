@@ -59,13 +59,13 @@ include 'assets/controllers/checkAcess.php';
                 <option value="GASOLINA">GASOLINA</option>
             </select><br>
             <label style="font-weight:bold;">Metodo</label><br>
-            <select id="metodo" name="metodo" required>
+            <select id="metodo" name="metodo" required style="width: 300px;">
                 <option value="1">1</option>
                 <option value="3">3</option>
                 <option value="MM">MM</option>
             </select><br>
             <label style="font-weight:bold;">Setor</label><br>
-            <select id="setor" name="setor" required>
+            <select id="setor" name="setor" required style="width: 300px;">
                 <option value="Coleta Domiciliar">Coleta Domiciliar</option>
                 <option value="Ctrss">Ctrss</option>
                 <option value="Limpeza Especial">Limpeza Especial</option>
