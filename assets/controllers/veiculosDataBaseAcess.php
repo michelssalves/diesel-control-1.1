@@ -156,7 +156,7 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
                 );
 
                 $info = http_build_query($info);
-                $url ='alterarVeiculo.php?'.$info;
+                $url ='alterar-veiculo?'.$info;
                 $link = "PopupCenter('$url','Veiculos',400,900)";
                 $x++;
                 $txtTableVeiculos .= '<tr>
