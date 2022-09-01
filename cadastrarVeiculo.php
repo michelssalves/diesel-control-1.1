@@ -58,7 +58,6 @@ include 'assets/controllers/checkAcess.php';
                 <option value="GASOLINA">GASOLINA</option>
             </select>
     
-
             <select id="metodo" name="metodo" required>
                 <option value="1">1</option>
                 <option value="3">3</option>
@@ -74,7 +73,7 @@ include 'assets/controllers/checkAcess.php';
                 <option value="Privado">Privado</option>
             </select>
 
-            <label style="font-weight:bold;">Status</label><br>
+            <br><label style="font-weight:bold;">Status</label><br>
             <input id="status_veiculo" name="status_veiculo" type="text" autofocus required style="width: 300px;"><br>
             
             <input value="cadastro-veiculo" name="menu" type="hidden"required><br>
