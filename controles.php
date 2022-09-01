@@ -181,7 +181,7 @@ include 'assets/controllers/checkAcess.php';
                     <th><center>Marca</th> 
                     <th><center>Modelo</th> 
                     <th><center>Media</th> 
-                    <th><center>Setor</th> 
+                    <th hidden><center>Setor</th> 
                     </tr>
                 </thead>
                 <tbody>
