@@ -60,8 +60,8 @@ include 'assets/controllers/checkAcess.php';
             </select><br>
             <label style="font-weight:bold;">Metodo</label><br>
             <select id="metodo" name="metodo" required style="width: 300px;text-align: center">
-                <option value="1">1</option>
-                <option value="3">3</option>
+                <option value="1">KM</option>
+                <option value="3">HR</option>
                 <option value="MM">MM</option>
             </select><br>
             <label style="font-weight:bold;">Setor</label><br>
