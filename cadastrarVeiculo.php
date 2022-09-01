@@ -61,7 +61,16 @@ include 'assets/controllers/checkAcess.php';
             <input id="metodo" name="metodo" type="text" autofocus required style="width: 300px;"><br>
 
             <label style="font-weight:bold;">Setor</label><br>
-            <input id="setor" name="setor" type="text" autofocus required style="width: 300px;"><br>
+            <input id="setor" name="setor" type="text" ><br>
+
+            <select name="setor" required style="width: 300px;">
+                <option value="Coleta Domiciliar"></option>
+                <option value="Ctrss"></option>
+                <option value="Limpeza Especial"></option>
+                <option value="Varricao"></option>
+                <option value="Lqnl"></option>
+                <option value="Privado"></option>
+            </select>
 
             <label style="font-weight:bold;">Status</label><br>
             <input id="status_veiculo" name="status_veiculo" type="text" autofocus required style="width: 300px;"><br>
