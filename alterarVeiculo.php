@@ -26,45 +26,45 @@ include 'assets/controllers/checkAcess.php';
 </head>
 <body>
 <form class="menu" method="POST">
-            <input id="id_veiculo" value="<?= $_REQUEST['id_veiculo']?>" name="id_veiculo" type="hidden" autofocus required style="width: 300px;"><br>
+            <input id="id_veiculo" value="<?= $_REQUEST['id_veiculo']?>" name="id_veiculo" type="hidden" autofocus required><br>
         <center><label style="font-weight:bold;">Prefixo</label><br>
-            <input id="prefixo" value="<?= $_REQUEST['prefixo']?>" name="prefixo" type="text" autofocus required style="width: 300px;"><br>
+            <input id="prefixo" value="<?= $_REQUEST['prefixo']?>" name="prefixo" type="text" autofocus required><br>
     
             <label style="font-weight:bold;">Numero do Equipamento</label><br>
-            <input id="numero_equipamento"  value="<?= $_REQUEST['numero_equipamento']?>" name="numero_equipamento" type="text" autofocus required style="width: 300px;"><br>
+            <input id="numero_equipamento"  value="<?= $_REQUEST['numero_equipamento']?>" name="numero_equipamento" type="text" autofocus required ><br>
         
             <label style="font-weight:bold;">Placa</label><br>
-            <input id="placa" value="<?= $_REQUEST['placa']?>" name="placa" type="text"  autofocus required style="width: 300px;"><br>
+            <input id="placa" value="<?= $_REQUEST['placa']?>" name="placa" type="text"  autofocus required><br>
         
             <label style="font-weight:bold;">Descriçãoo</label><br>
-            <input id="descricao_caminhao" value="<?= $_REQUEST['descricao_caminhao']?>" name="descricao_caminhao" type="text" autofocus required style="width: 300px;"><br>
+            <input id="descricao_caminhao" value="<?= $_REQUEST['descricao_caminhao']?>" name="descricao_caminhao" type="text" autofocus required style="width: 300px;text-align: center"><br>
         
             <label style="font-weight:bold;">Renavam</label><br>
-            <input id="renavam" value="<?= $_REQUEST['renavam']?>" name="renavam" type="text"  autofocus required style="width: 300px;"><br>
+            <input id="renavam" value="<?= $_REQUEST['renavam']?>" name="renavam" type="text"  autofocus required ><br>
     
             <label style="font-weight:bold;">Chassi</label><br>
-            <input id="chassi" value="<?= $_REQUEST['chassi']?>" name="chassi" type="text" autofocus required style="width: 300px;"><br>
+            <input id="chassi" value="<?= $_REQUEST['chassi']?>" name="chassi" type="text" autofocus required><br>
         
             <label style="font-weight:bold;">Numero do Motor</label><br>
-            <input id="numero_motor" value="<?= $_REQUEST['numero_motor']?>" name="numero_motor" type="text"  autofocus required style="width: 300px;"><br>
+            <input id="numero_motor" value="<?= $_REQUEST['numero_motor']?>" name="numero_motor" type="text"  autofocus required ><br>
         
             <label style="font-weight:bold;">Ano</label><br>
-            <input id="ano" value="<?= $_REQUEST['ano']?>" name="ano" type="text" autofocus required style="width: 300px;"><br>
+            <input id="ano" value="<?= $_REQUEST['ano']?>" name="ano" type="text" autofocus required><br>
         
             <label style="font-weight:bold;">Marca</label><br>
-            <input id="marca" value="<?= $_REQUEST['marca']?>" name="marca" type="text" autofocus required style="width: 300px;"><br>
+            <input id="marca" value="<?= $_REQUEST['marca']?>" name="marca" type="text" autofocus required ><br>
     
             <label style="font-weight:bold;">Modelo</label><br>
-            <input id="modelo" value="<?= $_REQUEST['modelo']?>" name="modelo" type="text" autofocus required style="width: 300px;text-align: center"><br>
+            <input id="modelo" value="<?= $_REQUEST['modelo']?>" name="modelo" type="text" autofocus required ><br>
     
             <label style="font-weight:bold;">Combustivel</label><br>
-            <select id="combustivel" name="combustivel"   required style="width: 300px;text-align: center">
+            <select id="combustivel" name="combustivel"   required >
                 <option value="<?= $_REQUEST['combustivel']?>"><?= $_REQUEST['combustivel']?></option>
                 <option value="DIESEL S10">DIESEL S10</option>
                 <option value="GASOLINA">GASOLINA</option>
             </select><br>
             <label style="font-weight:bold;">Metodo</label><br>
-            <select id="metodo" name="metodo" required style="width: 300px;text-align: center">
+            <select id="metodo" name="metodo" required >
                 <option value="<?= $_REQUEST['metodo']?>">
                 <?php if($_REQUEST['metodo'] = 1){
                     echo 'KM';
@@ -79,7 +79,7 @@ include 'assets/controllers/checkAcess.php';
                 <option value="MM">MM</option>
             </select><br>
             <label style="font-weight:bold;">Setor</label><br>
-            <select id="setor" name="setor" required style="width: 300px;text-align: center">
+            <select id="setor" name="setor" required >
                 <option value="<?= $_REQUEST['setor']?>"><?= $_REQUEST['setor']?></option>
                 <option value="Coleta Domiciliar">Coleta Domiciliar</option>
                 <option value="Ctrss">Ctrss</option>
@@ -89,7 +89,7 @@ include 'assets/controllers/checkAcess.php';
                 <option value="Privado">Privado</option>
             </select><br>
             <label style="font-weight:bold;">Status</label><br>
-            <select id="status_veiculo" name="status_veiculo" required style="width: 300px;text-align: center">
+            <select id="status_veiculo" name="status_veiculo" required >
                 <option value="<?= $_REQUEST['status_veiculo']?>">
                 <?php if($_REQUEST['status_veiculo'] = 1){
                     echo 'Ativo';
