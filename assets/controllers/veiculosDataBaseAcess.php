@@ -117,7 +117,7 @@ function desativarVeiculo(){
 
     $sql->execute();
 
-    header("Location: sucesso.php?acao=desativarVeiculo");
+    header("Location: veiculo-desativado?acao=desativarVeiculo");
 
 }
 function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo,$filtroSetor, $filtroStatus){
