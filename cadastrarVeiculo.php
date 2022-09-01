@@ -54,18 +54,18 @@ include 'assets/controllers/checkAcess.php';
             <input id="modelo"  name="modelo" type="text" autofocus required style="width: 300px;"><br>
 
             <label style="font-weight:bold;">Combustivel</label><br>
-            <select id="combustivel" name="combustivel" required style="width: 300px;">
+            <select id="combustivel" name="combustivel" required style="width: 300px;text-align: center">
                 <option value="DIESEL S10">DIESEL S10</option>
                 <option value="GASOLINA">GASOLINA</option>
             </select><br>
             <label style="font-weight:bold;">Metodo</label><br>
-            <select id="metodo" name="metodo" required style="width: 300px;">
+            <select id="metodo" name="metodo" required style="width: 300px;text-align: center">
                 <option value="1">1</option>
                 <option value="3">3</option>
                 <option value="MM">MM</option>
             </select><br>
             <label style="font-weight:bold;">Setor</label><br>
-            <select id="setor" name="setor" required style="width: 300px;">
+            <select id="setor" name="setor" required style="width: 300px;text-align: center">
                 <option value="Coleta Domiciliar">Coleta Domiciliar</option>
                 <option value="Ctrss">Ctrss</option>
                 <option value="Limpeza Especial">Limpeza Especial</option>
