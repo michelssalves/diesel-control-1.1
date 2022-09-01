@@ -73,8 +73,11 @@ include 'assets/controllers/checkAcess.php';
                 <option value="Lqnl">Lqnl</option>
                 <option value="Privado">Privado</option>
             </select>
-            <br><label style="font-weight:bold;">Status</label><br>
-            <input id="status_veiculo" name="status_veiculo" type="text" autofocus required style="width: 300px;"><br>
+            <label style="font-weight:bold;">Setor</label><br>
+            <select id="status_veiculo" name="status_veiculo" required style="width: 300px;">
+                <option value="1">Ativo</option>
+                <option value="0">Inativo</option>
+            </select>
             
             <input value="cadastro-veiculo" name="menu" type="hidden"required><br>
             <br>
