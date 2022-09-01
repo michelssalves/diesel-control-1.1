@@ -90,7 +90,13 @@ include 'assets/controllers/checkAcess.php';
             </select><br>
             <label style="font-weight:bold;">Status</label><br>
             <select id="status_veiculo" name="status_veiculo" required style="width: 300px;text-align: center">
-                <option value="<?= $_REQUEST['status_veiculo']?>"><?= $_REQUEST['status_veiculo']?></option>
+                <option value="<?= $_REQUEST['status_veiculo']?>">
+                <?php if($_REQUEST['status_veiculo'] = 1){
+                    echo 'Ativo';
+                }else{
+                    echo 'Inativo';
+                }
+                ?></option>
                 <option value="1">Ativo</option>
                 <option value="0">Inativo</option>
             </select>
