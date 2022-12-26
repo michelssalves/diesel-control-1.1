@@ -25,6 +25,7 @@ include 'assets/controllers/checkAcess.php';
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/fontawesome.all.min.6.2.1.css">
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/tablesaw.css">
+    <link rel="stylesheet" href="diesel-control-1.1/assets/css/w3.min.css">
 </head>
 <body>
     <div class="container-md">
