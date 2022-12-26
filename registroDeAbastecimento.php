@@ -45,30 +45,24 @@ include 'assets/controllers/checkAcess.php';
     </nav>
     <?php if (isset($msgSucesso)) { echo $msgSucesso; }unset($_SESSION['msg']); ?>
     <form method="POST">
-        <div class="field">
-            <div class="control">
-                <input readonly hidden id="frentista" name="frentista" type="text" class="form-control" value="<?= $login ?>" autofocus>
-                <input readonly hidden id="id_funcionario" name="id_funcionario" type="text" class="form-control" value="<?= $id_funcionario ?>" autofocus>
-                <input hidden name="acao" value="registrar-abastecimento" type="text" required>
-            </div>
-        </div>
-        <div class="field">
-            <div class="control">
-                <label>Prefixo</label>
-                <select class="form-select" name="prefixo" id="prefixo" onchange="buscarInfoVeiculo(this.value)" required>
-                    <option value="">Escolha o Prefixo</option>
-                    <?php
-                    $ativado = 1;
-                    $sql = $pdo->prepare("SELECT * FROM veiculos  WHERE status_veiculo = :ativado ORDER BY prefixo");
-                    $sql->bindValue(':ativado', $ativado);
-                    $sql->execute();
-                    $fetchAll = $sql->fetchAll();
-                    foreach ($fetchAll as $prefixo) {
-                        echo '<option value="'.$prefixo['id_veiculo'].'">' .$prefixo['prefixo'].'</option>';
-                    }
-                    ?>
-                </select>
-            </div>
+        <input readonly id="frentista" name="frentista" type="hidden" class="form-control" value="<?= $login ?>" autofocus>
+        <input readonly id="id_funcionario" name="id_funcionario" type="hidden" class="form-control" value="<?= $id_funcionario ?>" autofocus>
+        <input name="acao" value="registrar-abastecimento" type="hidden" required>
+        <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
+            <select class="form-select" name="prefixo" id="prefixo" onchange="buscarInfoVeiculo(this.value)" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+                <option value="">Escolha o Prefixo</option>
+                <?php
+                $ativado = 1;
+                $sql = $pdo->prepare("SELECT * FROM veiculos  WHERE status_veiculo = :ativado ORDER BY prefixo");
+                $sql->bindValue(':ativado', $ativado);
+                $sql->execute();
+                $fetchAll = $sql->fetchAll();
+                foreach ($fetchAll as $prefixo) {
+                    echo '<option value="'.$prefixo['id_veiculo'].'">' .$prefixo['prefixo'].'</option>';
+                }
+                ?>
+            </select>
         </div>
         <br>
         <div class="field">
@@ -90,6 +84,7 @@ include 'assets/controllers/checkAcess.php';
                     <label class="form-check-label" for="inlineRadio3">B03</label>
                 </div>
             </div>
+
         <br>
         <div class="mb-3">
             <div class="input-group input-group-sm mb-3">
@@ -104,7 +99,7 @@ include 'assets/controllers/checkAcess.php';
 
             <div class="input-group input-group-sm mb-3">
                 <span class="input-group-text" id="inputGroup-sizing">Ultimo Km:</span>
-                <input readonly id="ultimokm" name="ultimokm" placeholder="Km Anterior" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  placeholder="Odometro Inicial" autofocus required>
+                <input readonly id="ultimokm" name="ultimokm" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Km Anterior" autofocus required>
             </div>
 
             <div class="input-group input-group-sm mb-3">
