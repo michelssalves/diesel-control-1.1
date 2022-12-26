@@ -32,34 +32,28 @@ include 'assets/controllers/checkAcess.php';
                     <a href="menu-principal" class="w3-bar-item w3-button w3-blue w3-right">Voltar</a>
                     <label class="w3-bar-item">Usuario Logado: <?= $usuario; ?></label>    
                 </div> -->
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col">
-                             
-                        </div>
-                        <div class="col">
-                           
-                        </div>
-                        <div class="col">
-                            
-                        </div>
+                <nav class="navbar navbar-expand-lg bg-primary">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Navbar w/ text</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarText">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                <a href="menu-principal" class="w3-bar-item w3-button w3-blue w3-right">Voltar</a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="logout"class="w3-bar-item w3-button w3-red w3-right">Sair</a>
+                                </li>
+    
+                            </ul>
+                         <span class="navbar-text">
+                         <label>Usuario Logado: <?= $usuario; ?></label> 
+                        </span>
                     </div>
                 </div>
-                <div class="container">
-                    <div class="row justify-content-md-center">
-                        <div class="col-md-auto mt-4">  
-                            <a href="menu-principal" class="w3-bar-item w3-button w3-blue w3-right">Voltar</a>
-                            <a href="logout"class="w3-bar-item w3-button w3-red w3-right">Sair</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row justify-content-md-center">
-                        <div class="col-md-auto mt-4">  
-                            <label>Usuario Logado: <?= $usuario; ?></label> 
-                        </div>
-                    </div>
-                </div>
+            </nav>
          <!--        <div class="w3-bar w3-light-grey w3-container">
                 <table class="table table-bordered" style="border: 10px;">
                 <thead class="thead-dark" >
