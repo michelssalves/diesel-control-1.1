@@ -179,11 +179,6 @@ include 'assets/controllers/checkAcess.php';
         </div>
         <button type="submit" class="btn btn-primary btn-sm">Cadastrar</button>
     </form>
-    </div>
-    </div>
-    </div>
-    </div>
-   
         <div class="table-responsive">
             <div class="tabelas-customizadas">
                 <table data-tablesaw-sortable data-tablesaw-sortable-switch class="tablesaw table-sm fs-6 mb-0" data-tablesaw-mode="columntoggle" data-tablesaw-minimap>
