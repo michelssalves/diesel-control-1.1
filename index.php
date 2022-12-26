@@ -1,6 +1,5 @@
 <?php
 session_start();
-$msgErroLogin = $_SESSION['msg']; 
 include 'assets/controllers/userDataBaseAcess.php';
 ?>
 <!doctype html>
@@ -18,7 +17,6 @@ include 'assets/controllers/userDataBaseAcess.php';
   <body class="text-center">    
 <main class="form-signin w-100 m-auto">
 <div>
-<?php if($msgErroLogin){echo $msgErroLogin;session_destroy();}?>
 </div>
   <form method="POST">
     <h1 class="h3 mb-3 fw-normal">Acesso</h1>

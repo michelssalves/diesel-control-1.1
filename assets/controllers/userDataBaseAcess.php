@@ -8,7 +8,7 @@ $senha = addslashes($_POST['senha']);
 if($acao == 'login'){
     if (isset($_POST['usuario']) && !empty($_POST['usuario']) && isset($_POST['senha']) && !empty($_POST['senha'])) {
         
-        login($usuario, $senha);
+        login($usuario, $senha, $msg);
     }
 }
 function login($usuario, $senha){
@@ -64,9 +64,10 @@ function login($usuario, $senha){
              } 
             
         }else{
-            $_SESSION['msg'] = '<div class="alert-danger"> senha ou usuário incorreto!</div>';
+             $msg = '<div class="alert-danger"> senha ou usuário incorreto!</div>';
              header("Location: login-diesel-control"); 
-        }       
+        }  
+        
 }
 function menuPrincipal(){
     
