@@ -44,7 +44,7 @@ include 'assets/controllers/checkAcess.php';
         </div>
     </div>
     <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      
                 <div class="table-responsive">
                     <table class="table table-sm fs-6 mb-0">
                         <thead class="fundo-cabecalho">
@@ -135,7 +135,6 @@ include 'assets/controllers/checkAcess.php';
                     </table>
                 </div>
         </form>
-        </nav>
         <div class="table-responsive">
             <div class="tabelas-customizadas">
                 <table id="t1" data-tablesaw-sortable data-tablesaw-sortable-switch class="tablesaw table-sm fs-6 mb-0" data-tablesaw-mode="columntoggle" data-tablesaw-minimap>
