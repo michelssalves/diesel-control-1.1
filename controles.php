@@ -32,7 +32,7 @@ include 'assets/controllers/checkAcess.php';
 <div class="w3-bar w3-light-grey">
   <a href="menu-principal" class="w3-bar-item w3-button" >Menu Principal</a>
   <a href="controle-de-veiculos" class="w3-bar-item w3-button" >Veiculos</a>
-  <button class="w3-button w3-green" onClick="table2excel('t1')">Excel</button>
+  <button class="w3-button w3-green" onclick="table2excel('t1')">Excel</button>
   <a href="relatorio-de-erros"><button class="w3-button w3-red">Erros</button></a>
   <a href="logout" class="w3-bar-item w3-button w3-red w3-right">Sair</a>
   <label class="w3-bar-item">Usuario Logado: <?= $usuario; ?></label> 

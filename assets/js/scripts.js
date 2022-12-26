@@ -100,6 +100,7 @@ async function buscarInfoVeiculo(id){
 
 }
 function table2excel(id) {
+	
     $("#" + id).table2excel({
         exclude: ".excludeThisClass",
         name: "export",
