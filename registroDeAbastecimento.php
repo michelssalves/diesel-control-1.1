@@ -224,13 +224,15 @@ include 'assets/controllers/checkAcess.php';
 </body>
 </html>
 <script>
-    function validarFormulario(){
+    /*function validarFormulario(){
         
+        var bomba = document.forms["formCadastro"]["bomba"].value;
         var setor = document.forms["formCadastro"]["setor"].value;
         var media = document.forms["formCadastro"]["media"].value;
         var diferencakm = document.forms["formCadastro"]["diferencakm"].value;
         var diferencahr = document.forms["formCadastro"]["diferencahr"].value;
-        if(setor != 'Privado' || setor != 'PRIVADO'){
+        
+        if(setor != 'Privado' || setor != 'PRIVADO' || bomba != 'GASOLINA'){
             if (media > 0 && media < 25){
                 if(diferencakm < 2000 && diferencakm > 0){
                     if(diferencahr < 60 && diferencahr >= 0){
@@ -251,8 +253,8 @@ include 'assets/controllers/checkAcess.php';
         }
     }else{
         return true; 
-    }     
-}   
+    }   
+}    */ 
 </script>
 
 
