@@ -102,9 +102,9 @@ async function buscarInfoVeiculo(id){
 	const dados = await fetch(`diesel-control-1.1/assets/controllers/abastecimentoDataBaseAcess.php?&acao=ultimoKm&id=${id}`)
     const response = await dados.json()
     console.log(response)
-	document.getElementById("setor").value = response['dados'].dep_cheque
-	document.getElementById("ultimokm").value = response['dados'].id_requisicao
-	document.getElementById("ultimohr").value = response['dados'].dep_dinheiro
+	document.getElementById("setor").value = response['dados'].setor
+	document.getElementById("ultimokm").value = response['dados'].ultimokm
+	document.getElementById("ultimohr").value = response['dados'].ultimohr
 
 
 }
