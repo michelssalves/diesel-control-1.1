@@ -43,10 +43,10 @@ include 'assets/controllers/checkAcess.php';
         <div class="row justify-content-md-center">
             <div class="col-md-auto mt-4">  
             <form method="POST">
-
-                    <button name="acao" value="filtrar" type="submit" class='btn btn-warning btn-sm'>Filtrar</button>
-                    <button onclick="<?= $link ?>" name='filtrar-cheques' class='btn btn-info btn-sm'>Cadastrar</button>
-                    <button name="acao" value="limpar" type="submit" class='btn btn-danger btn-sm'>Limpar</button>
+                <?php $link = "PopupCenter('cadastrar-veiculo',' Cadastrar Veiculos',400,900)"; ?>   
+                <button name="acao" value="filtrar" type="submit" class='btn btn-primary btn-sm'>Filtrar</button>
+                <button onclick="<?= $link ?>" name='filtrar-cheques' class='btn btn-sucess btn-sm'>Cadastrar</button>
+                <button name="acao" value="limpar" type="submit" class='btn btn-warning btn-sm'>Limpar</button>
 
             </div>
         </div>
@@ -159,7 +159,7 @@ include 'assets/controllers/checkAcess.php';
                                     <center>
                                 </label><br>
 
-                                <?php $link = "PopupCenter('cadastrar-veiculo',' Cadastrar Veiculos',400,900)"; ?>
+                               
                                 <button onclick="<?= $link ?>" type="button" class="w3-button w3-black">Cadastrar</button>
                             </th>
                             <th>
