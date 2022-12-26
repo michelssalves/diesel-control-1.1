@@ -48,7 +48,7 @@ include 'assets/controllers/checkAcess.php';
         <input readonly id="frentista" name="frentista" type="hidden" class="form-control" value="<?= $login ?>" autofocus>
         <input readonly id="id_funcionario" name="id_funcionario" type="hidden" class="form-control" value="<?= $id_funcionario ?>" autofocus>
         <input name="acao" value="registrar-abastecimento" type="hidden" required>
-        <div class="input-group input-group-sm mb-3">
+        <div class="input-group input-group-sm mb-3 mt-1">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
             <select class="form-select" name="prefixo" id="prefixo" onchange="buscarInfoVeiculo(this.value)" aria-describedby="inputGroup-sizing" required>
                 <option value="">Escolha o Prefixo</option>
@@ -69,19 +69,19 @@ include 'assets/controllers/checkAcess.php';
             <div class="control">
                 <div class="form-check form-check-inline">
                     <input style="height: 50px; width: 50px;" class="form-check-input" type="radio" name="bomba" id="bomba" value="GASOLINA" required>
-                    <label class="form-check-label" for="inlineRadio2">GASOLINA</label>
+                    <label class="form-check-label mt-3" for="inlineRadio2">GASOLINA</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input style="height: 50px; width: 50px;" class="form-check-input" type="radio" name="bomba" id="bomba" value="BOMBA 01" required>
-                    <label class="form-check-label" for="inlineRadio1">B01</label>
+                    <label class="form-check-label mt-3" for="inlineRadio1">B01</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input style="height: 50px; width: 50px;" class="form-check-input" type="radio" name="bomba" id="bomba" value="BOMBA 02" required>
-                    <label class="form-check-label" for="inlineRadio2">B02</label>
+                    <label class="form-check-label mt-3" for="inlineRadio2">B02</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input style="height: 50px; width: 50px;" class="form-check-input" type="radio" name="bomba" id="bomba" value="BOMBA 03" required>
-                    <label class="form-check-label" for="inlineRadio3">B03</label>
+                    <label class="form-check-label mt-3" for="inlineRadio3">B03</label>
                 </div>
             </div>
 
