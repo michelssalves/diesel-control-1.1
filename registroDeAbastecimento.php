@@ -21,6 +21,7 @@ include 'assets/controllers/checkAcess.php';
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/menuregistro.css">    
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="diesel-control-1.1/assets/css/tablesaw.css">
 </head>
 <body>
     <div class="container-md">
@@ -221,40 +222,10 @@ include 'assets/controllers/checkAcess.php';
         </div>
     </div>
     <script src="diesel-control-1.1/assets/js/scripts.js"></script>
+        <!-- TABLESAW - DEIXA A TABELA RESPONSIVA-->
+    <script src="diesel-control-1.1/assets/js/tablesawn-label.js"></script>
+    <script src="diesel-control-1.1/assets/js/tablesaw.js"></script>
+    <script src="diesel-control-1.1/assets/js/tablesaw-init.js"></script>
+    <!-- /TABLESAW - DEIXA A TABELA RESPONSIVA-->
 </body>
 </html>
-<script>
-    /*function validarFormulario(){
-        
-        var bomba = document.forms["formCadastro"]["bomba"].value;
-        var setor = document.forms["formCadastro"]["setor"].value;
-        var media = document.forms["formCadastro"]["media"].value;
-        var diferencakm = document.forms["formCadastro"]["diferencakm"].value;
-        var diferencahr = document.forms["formCadastro"]["diferencahr"].value;
-        
-        if(setor != 'Privado' || setor != 'PRIVADO' || bomba != 'GASOLINA'){
-            if (media > 0 && media < 25){
-                if(diferencakm < 2000 && diferencakm > 0){
-                    if(diferencahr < 60 && diferencahr >= 0){
-
-                    return true;   
-
-                }else{
-                        alert("Diferenca HR está incorreto!\nValor maior que 60 ou menor que zero!");
-                        return false;
-                    }
-        }else{
-                alert("Diferenca Km está incorreto!\nValor Maior que 2000 ou menor que zero!");
-                return false; 
-            }    
-    }else{
-            alert("Média está incorreta!\nDigite Km e Litros novamente!");
-            return false; 
-        }
-    }else{
-        return true; 
-    }   
-}    */ 
-</script>
-
-
