@@ -171,10 +171,10 @@ include 'assets/controllers/checkAcess.php';
                             <th data-tablesaw-sortable-col data-tablesaw-priority="6">
                                 <center>Nº Equip
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="0">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="1">
                                 <center>Prefixo
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="0">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="1">
                                 <center>Placa
                             </th>
                             <th data-tablesaw-sortable-col data-tablesaw-priority="6">
@@ -186,7 +186,7 @@ include 'assets/controllers/checkAcess.php';
                             <th data-tablesaw-sortable-col data-tablesaw-priority="0">
                                 <center>Chassi
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="6">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="0">
                                 <center>Nº Motor
                             </th>
                             <th data-tablesaw-sortable-col data-tablesaw-priority="6">
