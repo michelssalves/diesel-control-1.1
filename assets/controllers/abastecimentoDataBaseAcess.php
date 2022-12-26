@@ -156,13 +156,13 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
 
                     if($row['litros_od'] <> $row['litros'] ){$corLitros = 'bg-warning';}
      
-                $txtTableControles .= '<tr>
+                $txtTableControles .= '<tr onclick="'.$link.'" style="cursor:pointer;">
                 <td class="w3-left-align">'.dmaH($row['data_abastecimento']).'</td>
                 <td hidden class="w3-left-align"> '.H_i($row['data_abastecimento']).'</td>
                 <td hidden class="w3-left-align"> '.Month($row['data_abastecimento']).'</td>
                 <td hidden class="w3-left-align"> '.Year($row['data_abastecimento']).'</td>
                 <td> '.$row['numero_equipamento'].' </td>
-                <td onclick="'.$link.'" style="cursor:pointer;"> '.$row['prefixo'].' </td>
+                <td> '.$row['prefixo'].' </td>
                 <td> '.$row['placa'].' </td>
                 <td> '.$row['combustivel'].' </td>
                 <td hidden> '.$row['bomba'].' </td>

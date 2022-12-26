@@ -27,7 +27,6 @@ include 'assets/controllers/checkAcess.php';
     <script src="diesel-control-1.1/assets/js/sorttable.js"></script>
     <script src="diesel-control-1.1/assets/js/jquery.table2excel.js"></script>
 </head>
-
 <body>
     <div class="w3-bar w3-light-grey">
         <a href="menu-principal" class="w3-bar-item w3-button">Menu Principal</a>
@@ -88,7 +87,8 @@ include 'assets/controllers/checkAcess.php';
                                     ?>
                             </select>
                         </td>
-                        <td> <select onChange="this.form.submit()" name="combustivel">
+                        <td> 
+                            <select onChange="this.form.submit()" name="combustivel">
                                 <option selected><?= ($combustivel <> '' ? $combustivel : 'TODOS') ?></options>
                                 <option>TODOS</options>
                                     <?php
@@ -99,8 +99,10 @@ include 'assets/controllers/checkAcess.php';
                                         echo '<option value="' . $combustivel['combustivel'] . '">' . substr($combustivel['combustivel'], 0, 10) . '</option>';
                                     }
                                     ?>
-                            </select></td>
-                        <td> <select onChange="this.form.submit()" name="marca">
+                            </select>
+                        </td>
+                        <td> 
+                            <select onChange="this.form.submit()" name="marca">
                                 <option selected><?= ($marca <> '' ? $marca : 'TODOS') ?></options>
                                 <option>TODOS</options>
                                     <?php
@@ -111,8 +113,10 @@ include 'assets/controllers/checkAcess.php';
                                         echo '<option value="' . $marca['marca'] . '">' . substr($marca['marca'], 0, 10) . '</option>';
                                     }
                                     ?>
-                            </select></td>
-                        <td> <select onChange="this.form.submit()" name="modelo">
+                            </select>
+                        </td>
+                        <td> 
+                            <select onChange="this.form.submit()" name="modelo">
                                 <option selected><?= ($modelo <> '' ? $modelo : 'TODOS') ?></options>
                                 <option>TODOS</options>
                                     <?php
@@ -123,8 +127,10 @@ include 'assets/controllers/checkAcess.php';
                                         echo '<option value="' . $modelo['modelo'] . '">' . substr($modelo['modelo'], 0, 15) . '</option>';
                                     }
                                     ?>
-                            </select></td>
-                        <td> <select onChange="this.form.submit()" name="setor">
+                            </select>
+                        </td>
+                        <td> 
+                            <select onChange="this.form.submit()" name="setor">
                                 <option selected><?= ($setor <> '' ? $setor : 'TODOS') ?></options>
                                 <option>TODOS</options>
                                     <?php
@@ -135,7 +141,8 @@ include 'assets/controllers/checkAcess.php';
                                         echo '<option value="' . $setor['setor'] . '">' . substr($setor['setor'], 0, 15) . '</option>';
                                     }
                                     ?>
-                            </select></td>
+                            </select>
+                        </td>
                         <td>
                             <center><input onChange="this.form.submit()" type="checkbox" id="status" name="status" value="checked" <?= $status ?>>
                         </td>
@@ -207,5 +214,4 @@ include 'assets/controllers/checkAcess.php';
     <script src="diesel-control-1.1/assets/js/fontawesome.all.min.js"></script>
     <script src="diesel-control-1.1/assets/js/bootstrap.bundle.min.v5.2.3.js"></script>
 </body>
-
 </html>

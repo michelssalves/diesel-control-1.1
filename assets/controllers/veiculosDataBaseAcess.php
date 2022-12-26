@@ -159,10 +159,10 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
                 $url ='alterar-veiculo?'.$info;
                 $link = "PopupCenter('$url','Veiculos',400,900)";
                 $x++;
-                $txtTableVeiculos .= '<tr>
+                $txtTableVeiculos .= '<tr onclick="'.$link.'" style="cursor:pointer;">
                 <td><center>'.$x.'</td>
                 <td>'.$row['numero_equipamento'].'</td>
-                <td onclick="'.$link.'" style="cursor:pointer;">'.l4($row['prefixo']).'</td>
+                <td>'.l4($row['prefixo']).'</td>
                 <td>'.$row['placa'].'</td>
                 <td>'.$row['descricao_caminhao'].'</td>
                 <td>'.$row['renavam'].'</td>
