@@ -13,11 +13,9 @@ include 'assets/controllers/checkAcess.php';
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="diesel-control-1.1/assets/css/tablesaw.css">
-    <link rel="stylesheet" href="diesel-control-1.1/assets/css/custom.css">
-    <link rel="stylesheet" href="diesel-control-1.1/assets/css/fontawesome.all.min.6.2.1.css">
+
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/bootstrap.min.css">
- 
+    <link rel="stylesheet" href="diesel-control-1.1/assets/css/tablesaw.css">
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/w3.min.css">
     <!--  TABLESAW - DEIXA A TABELA RESPONSIVA-->
     <script src="diesel-control-1.1/assets/js/tablesawn-label.js"></script>
