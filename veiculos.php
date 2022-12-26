@@ -31,10 +31,6 @@ include 'assets/controllers/checkAcess.php';
 </head>
 
 <body>
-    <div class="container-md">
-        <div class="container-lg">
-            <div class="container-xl">
-                <div class="container-xxl">
                     <div class="w3-bar w3-light-grey">
                         <a href="menu-principal" class="w3-bar-item w3-button">Menu Principal</a>
                         <a href="controle-de-combustivel" class="w3-bar-item w3-button">Controles</a>
@@ -163,10 +159,8 @@ include 'assets/controllers/checkAcess.php';
                             </form>
                         </div>
                     </nav>
-                </div>
-            </div>
-        </div>
-    </div>
+     
+    <div class="container">
     <!--<table id="t1" class="table table-striped table-bordered table-hoverable">
         <thead class="thead-dark">-->
         <div class="table-responsive">
@@ -225,6 +219,10 @@ include 'assets/controllers/checkAcess.php';
             <?= filtrarVeiculos($filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, $filtroSetor, $filtroStatus) ?>
         </tbody>
     </table>
+            </div>
+            </div>
+            </div>
+            </div>
     <script src="diesel-control-1.1/assets/js/scripts.js"></script>
     <script src="diesel-control-1.1/assets/js/fontawesome.all.min.js"></script>
     <script src="diesel-control-1.1/assets/js/bootstrap.bundle.min.v5.2.3.js"></script>
