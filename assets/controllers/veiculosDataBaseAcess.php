@@ -139,10 +139,10 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
             $x = 0;
             foreach($lista as $row){
 
-                $modalAlterarVeiculo = "modalAlterarVeiculo'".$row['id_veiculo']."'";
+                $modalAlterarVeiculo = "modalAlterarVeiculo".$row['id_veiculo']."";
 
                 $linkModalAlterar = "data-bs-toggle='modal' data-bs-target='#$modalAlterarVeiculo' style='cursor:pointer'";
-                
+
                 $info = array(
                 'id_veiculo' => $row['id_veiculo'],
                 'numero_equipamento' => $row['numero_equipamento'],
