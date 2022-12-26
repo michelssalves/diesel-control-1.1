@@ -21,12 +21,18 @@ include 'assets/controllers/checkAcess.php';
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/tablesaw.css">
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/w3.min.css">
+    <script src="diesel-control-1.1/assets/js/jquery-3.6.1.min.js"></script>
 </head>
 <body>
     <div class="container-md">
         <div class="container-lg">
             <div class="container-xl">
                 <div class="container-xxl">
+               <!-- <div class="w3-bar w3-light-grey">
+                    <a href="logout"class="w3-bar-item w3-button w3-red w3-right">Sair</a>
+                    <a href="menu-principal" class="w3-bar-item w3-button w3-blue w3-right">Voltar</a>
+                    <label class="w3-bar-item">Usuario Logado: <?= $usuario; ?></label>    
+                </div> -->
                 <nav class="navbar navbar-expand-lg bg-light">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="#"><label>Usuario Logado: <?= $usuario; ?></label></a>
@@ -45,6 +51,25 @@ include 'assets/controllers/checkAcess.php';
                     </div>
                 </div>
             </nav>
+         <!--        <div class="w3-bar w3-light-grey w3-container">
+                <table class="table table-bordered" style="border: 10px;">
+                <thead class="thead-dark" >
+                    <tr>
+                    <td colspan="3" style="font-weight:bold"><center>CLIQUE EM ERROS PARA VER SEU HISTÓRICO</td>
+                    </tr>
+                    <tr>
+                        <th class="text-success"><center>Acertos</th>
+                        <th class="text-danger"><center><a style="text-decoration:none; cursor:pointer; color:red" href="visualizador-de-erros">Erros</a></th>
+                        <th><center>% Acertos</th>  
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <?php //listarAcertos($id_funcionario) ?>
+                    </tr>
+                </tbody>
+            </table>
+                </div> -->
                 <?php if(isset($msgSucesso)){echo $msgSucesso;}
                          unset($_SESSION['msg']);?>
                     <form name="formCadastro" onsubmit="return validarFormulario()" class="menu" method="POST">
@@ -220,7 +245,6 @@ include 'assets/controllers/checkAcess.php';
     </div>
     <script src="diesel-control-1.1/assets/js/scripts.js"></script>
     <script src="diesel-control-1.1/assets/js/fontawesome.all.min.js"></script>
-    <script src="diesel-control-1.1/assets/js/jquery-3.6.1.min.js"></script>
     <script src="diesel-control-1.1/assets/js/bootstrap.bundle.min.v5.2.3.js"></script>
         <!-- TABLESAW - DEIXA A TABELA RESPONSIVA-->
     <script src="diesel-control-1.1/assets/js/tablesawn-label.js"></script>
