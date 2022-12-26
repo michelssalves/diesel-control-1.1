@@ -13,14 +13,16 @@ include 'assets/controllers/checkAcess.php';
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="diesel-control-1.1/assets/css/custom.css">
-    <link rel="stylesheet" href="diesel-control-1.1/assets/css/fontawesome.all.min.6.2.1.css">
+
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="diesel-control-1.1/assets/css/tablesaw.css">
+ 
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/w3.min.css">
     <script src="diesel-control-1.1/assets/js/fontawesome.all.min.js"></script>
     <script src="diesel-control-1.1/assets/js/bootstrap.bundle.min.v5.2.3.js"></script>
-    <!--  TABLESAW - DEIXA A TABELA RESPONSIVA-->
+    <!--  TABLESAW - DEIXA A TABELA RESPONSIVA
+    <link rel="stylesheet" href="diesel-control-1.1/assets/css/tablesaw.css">
+    <link rel="stylesheet" href="diesel-control-1.1/assets/css/custom.css">
+    <link rel="stylesheet" href="diesel-control-1.1/assets/css/fontawesome.all.min.6.2.1.css">-->
     <script src="diesel-control-1.1/assets/js/tablesawn-label.js"></script>
     <script src="diesel-control-1.1/assets/js/tablesaw.js"></script>
     <script src="diesel-control-1.1/assets/js/tablesaw-init.js"></script>
