@@ -194,22 +194,22 @@ include 'assets/controllers/checkAcess.php';
             <table data-tablesaw-sortable data-tablesaw-sortable-switch class="tablesaw table-sm fs-6 mb-0" data-tablesaw-mode="columntoggle" data-tablesaw-minimap>
               <thead class="thead-dark">
                     <tr>
-                        <th data-tablesaw-sortable-col data-tablesaw-priority="3"><center>Data</th>
-                        <th data-tablesaw-sortable-col data-tablesaw-priority="3"><center>Prefixo Sap</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="4"><center>Data</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="4"><center>Prefixo Sap</th>
                         <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Placa</th>
-                        <th data-tablesaw-sortable-col data-tablesaw-priority="3"><center>Prefixo</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="4"><center>Prefixo</th>
                         <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>ODI</th>
                         <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>ODF</th>
                         <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Litros Od</th>
-                        <th data-tablesaw-sortable-col data-tablesaw-priority="3"><center>Litros</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="4"><center>Litros</th>
                         <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Media</th>
-                        <th data-tablesaw-sortable-col data-tablesaw-priority="3"><center>Ultimo Km</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="4"><center>Ultimo Km</th>
                         <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Km</th>
-                        <th data-tablesaw-sortable-col data-tablesaw-priority="3"><center>Dif Km</th>
-                        <th data-tablesaw-sortable-col data-tablesaw-priority="3"><center>Ultimo Hr</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="4"><center>Dif Km</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="4"><center>Ultimo Hr</th>
                         <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Hr</th>
                         <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Dif Hr</th>
-                        <th data-tablesaw-sortable-col data-tablesaw-priority="3"><center>Frentista</th>  
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="4"><center>Frentista</th>  
                     </tr>
                 </thead>
                 <tbody>
