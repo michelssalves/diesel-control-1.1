@@ -99,3 +99,12 @@ async function buscarInfoVeiculo(id){
 
 
 }
+function table2excel(id) {
+    $("#" + id).table2excel({
+        exclude: ".excludeThisClass",
+        name: "export",
+        filename: "export.xls", // do include extension, usar xls pra nÃ£o dar pau com o chrome
+        preserveColors: true // set to true if you want background colors and font colors preserved
+        
+    });
+}
