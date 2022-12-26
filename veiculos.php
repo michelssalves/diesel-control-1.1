@@ -192,10 +192,10 @@ include 'assets/controllers/checkAcess.php';
                             <th data-tablesaw-sortable-col data-tablesaw-priority="6">
                                 <center>Ano
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="6">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="1">
                                 <center>Marca
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="6">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="1">
                                 <center>Modelo
                             </th>
                             <th data-tablesaw-sortable-col data-tablesaw-priority="6">
