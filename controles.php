@@ -35,7 +35,15 @@ include 'assets/controllers/checkAcess.php';
         <a class="w3-bar-item w3-button w3-right"><?= $usuario; ?></a>
     </div>
     <div class="container">
-        <form method="POST">
+        <div class="row justify-content-md-center">
+            <div class="col-md-auto mt-4">  
+            <form method="POST">  
+                <button name="acao" value="filtrar" type="submit" class='btn btn-primary btn-sm'>Filtrar</button>
+                <button name="acao" value="limpar" type="submit" class='btn btn-warning btn-sm'>Limpar</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="table-responsive">
                     <table class="table table-sm">
@@ -138,21 +146,6 @@ include 'assets/controllers/checkAcess.php';
                                         }
                                         ?>
                                 </select>
-                            </th>
-                            <th>
-                                <input type="hidden" name="acao" value="filtrar">
-                            </th>
-                            <th>
-                                <label>
-                                    <center>
-                                </label><br>
-                                <button class="w3-button w3-blue" type="submit">Filtrar</button>
-                            </th>
-                            <th>
-                                <label>
-                                    <center>
-                                </label><br>
-                                <button class="w3-button w3-grey" name="acao" value="limpar" type="submit">Limpar</button>
                             </th>
                         </tr>
                     </table>
