@@ -98,10 +98,10 @@ include 'assets/controllers/checkAcess.php';
                         </div>
                 </div>
                 <br>
-                <div class="field">
-                    <div class="control">
-                        <label></label>
-                        <br><input readonly class="form-control" id="setor" name="setor">
+                <div class="mb-3">
+                    <div class="input-group input-group-sm mb-3">
+                     <span class="input-group-text" id="inputGroup-sizing">Setor:</span>
+                        <input readonly id="setor" name="setor" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
                     </div>
                 </div>
                 <div class="field">
