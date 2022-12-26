@@ -22,16 +22,23 @@ include 'assets/controllers/checkAcess.php';
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/tablesaw.css">
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/w3.min.css">
     <script src="diesel-control-1.1/assets/js/jquery-3.6.1.min.js"></script>
-    <script src="diesel-control-1.1/assets/js/fontawesome.all.min.js"></script>
-    <script src="diesel-control-1.1/assets/js/bootstrap.bundle.min.v5.2.3.js"></script>
-        <!-- TABLESAW - DEIXA A TABELA RESPONSIVA-->
-    <script src="diesel-control-1.1/assets/js/tablesawn-label.js"></script>
-    <script src="diesel-control-1.1/assets/js/tablesaw.js"></script>
-    <script src="diesel-control-1.1/assets/js/tablesaw-init.js"></script>
-    <!-- /TABLESAW - DEIXA A TABELA RESPONSIVA-->
 </head>
 <script src="">
-
+    $("#prefixo").on("change", function () {
+    $.ajax({
+        url: 'diesel-control-1.1/assets/controllers/abastecimentoDataBaseAcess.php',
+        type: 'POST',
+        dataType: "json",
+        data: {id_veiculo: $("#prefixo").val(), acao: 'ultimoKm' },
+        success: function (json) {
+            
+            $("#ultimokm").val(json.ultimoKm);
+            $("#ultimohr").val(json.ultimoHr);
+            $("#setor").val(json.setor);
+    
+        }
+    });
+});
 </script>
 <body>
     <div class="container-md">
@@ -230,5 +237,12 @@ include 'assets/controllers/checkAcess.php';
         </div>
     </div>
     <script src="diesel-control-1.1/assets/js/scripts.js"></script>
+    <script src="diesel-control-1.1/assets/js/fontawesome.all.min.js"></script>
+    <script src="diesel-control-1.1/assets/js/bootstrap.bundle.min.v5.2.3.js"></script>
+        <!-- TABLESAW - DEIXA A TABELA RESPONSIVA-->
+    <script src="diesel-control-1.1/assets/js/tablesawn-label.js"></script>
+    <script src="diesel-control-1.1/assets/js/tablesaw.js"></script>
+    <script src="diesel-control-1.1/assets/js/tablesaw-init.js"></script>
+    <!-- /TABLESAW - DEIXA A TABELA RESPONSIVA-->
 </body>
 </html>

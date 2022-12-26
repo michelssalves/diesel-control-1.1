@@ -41,21 +41,7 @@ function somenteNumeros(num) {
       campo.value = "";
     }
 }
-$("#prefixo").on("change", function () {
-    $.ajax({
-        url: 'diesel-control-1.1/assets/controllers/abastecimentoDataBaseAcess.php',
-        type: 'POST',
-        dataType: "json",
-        data: {id_veiculo: $("#prefixo").val(), acao: 'ultimoKm' },
-        success: function (json) {
-            
-            $("#ultimokm").val(json.ultimoKm);
-            $("#ultimohr").val(json.ultimoHr);
-            $("#setor").val(json.setor);
-    
-        }
-    });
-});
+
 function PopupCenter(url, title, w, h) {  
     // Fixes dual-screen position                         Most browsers      Firefox  
     var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;  
