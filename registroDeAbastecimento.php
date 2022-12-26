@@ -194,8 +194,8 @@ include 'assets/controllers/checkAcess.php';
     </div>  
     <div class="container">
         <div class="row">                 
-            <table data-tablesaw-sortable data-tablesaw-sortable-switch class="tablesaw table-sm table-striped table-bordered table-hoverable s-6 mb-0" data-tablesaw-mode="columntoggle" data-tablesaw-minimap>
-                <thead class="thead-dark">
+            <table data-tablesaw-sortable data-tablesaw-sortable-switch class="tablesaw table-sm table-hover table-striped fs-6 mb-0" data-tablesaw-mode="columntoggle" data-tablesaw-minimap>
+              <thead class="thead-dark">
                     <tr>
                         <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Data</th>
                         <th data-tablesaw-sortable-col data-tablesaw-priority="5"><center>Prefixo Sap</th>
