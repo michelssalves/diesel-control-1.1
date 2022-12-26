@@ -45,7 +45,7 @@ include 'assets/controllers/checkAcess.php';
             <form method="POST">
                 <?php $link = "PopupCenter('cadastrar-veiculo',' Cadastrar Veiculos',400,900)"; ?>   
                 <button name="acao" value="filtrar" type="submit" class='btn btn-primary btn-sm'>Filtrar</button>
-                <button onclick="<?= $link ?>" name='filtrar-cheques' class='btn btn-sucess btn-sm'>Cadastrar</button>
+                <button onclick="<?= $link ?>" name='filtrar-cheques' class='btn btn-success btn-sm'>Cadastrar</button>
                 <button name="acao" value="limpar" type="submit" class='btn btn-warning btn-sm'>Limpar</button>
 
             </div>
@@ -148,27 +148,6 @@ include 'assets/controllers/checkAcess.php';
                                 <label>Mostrar Desativados</label><br>
                                 <center><input onChange="this.form.submit()" type="checkbox" id="status" name="status" value="checked" <?= $status ?>>
                             </th>
-                            <th>
-                                <label>
-                                    <center>
-                                </label><br>
-                                <button class="w3-button w3-blue" name="acao" value="filtrar" type="submit">Filtrar</button>
-                            </th>
-                            <th>
-                                <label>
-                                    <center>
-                                </label><br>
-
-                               
-                                <button onclick="<?= $link ?>" type="button" class="w3-button w3-black">Cadastrar</button>
-                            </th>
-                            <th>
-                                <label>
-                                    <center>
-                                </label><br>
-                                <button class="w3-button w3-grey" name="acao" value="limpar" type="submit">Limpar</button>
-                            </th>
-
                         </tr>
                     </table>
                     </div>
