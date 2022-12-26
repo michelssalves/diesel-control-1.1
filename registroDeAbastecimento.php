@@ -188,9 +188,9 @@ include 'assets/controllers/checkAcess.php';
         </div>
     </div>
     </div>  
-
-        <div class="table-responsive"> 
-         <div class="tabelas-customizadas">              
+    <div class="container">
+    <div class="table-responsive"> 
+        <div class="tabelas-customizadas">              
             <table data-tablesaw-sortable data-tablesaw-sortable-switch class="tablesaw table-sm fs-6 mb-0" data-tablesaw-mode="columntoggle" data-tablesaw-minimap>
               <thead class="thead-dark">
                     <tr>
@@ -216,9 +216,9 @@ include 'assets/controllers/checkAcess.php';
                     <?= listarAbastecimentos()?>
                 </tbody>
             </table>
-            </div> 
-            </div> 
-        
+        </div> 
+    </div> 
+    </div>   
  
     <script src="diesel-control-1.1/assets/js/scripts.js"></script>
     <script src="diesel-control-1.1/assets/js/fontawesome.all.min.js"></script>
