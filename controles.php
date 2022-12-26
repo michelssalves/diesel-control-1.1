@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'assets/controllers/config.php';
+//include 'assets/controllers/config.php';
 include 'assets/controllers/abastecimentoDataBaseAcess.php';
 $nivelPremissao = 1;
 $login = $_SESSION['usuario'];
