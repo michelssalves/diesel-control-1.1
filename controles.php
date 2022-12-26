@@ -31,7 +31,7 @@ include 'assets/controllers/checkAcess.php';
     <script src="diesel-control-1.1/assets/js/sorttable.js"></script>
     <script src="diesel-control-1.1/assets/js/jquery.table2excel.js"></script>  
 </head>
-<body>   
+<body>
     <div class="w3-bar w3-light-grey">
         <a href="menu-principal" class="w3-bar-item w3-button" >Menu Principal</a>
         <a href="controle-de-veiculos" class="w3-bar-item w3-button" >Veiculos</a>
