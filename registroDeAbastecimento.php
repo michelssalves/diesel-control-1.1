@@ -50,7 +50,7 @@ include 'assets/controllers/checkAcess.php';
         <input name="acao" value="registrar-abastecimento" type="hidden" required>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
-            <select class="form-select" name="prefixo" id="prefixo" onchange="buscarInfoVeiculo(this.value)" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+            <select class="form-select" name="prefixo" id="prefixo" onchange="buscarInfoVeiculo(this.value)" aria-describedby="inputGroup-sizing" required>
                 <option value="">Escolha o Prefixo</option>
                 <?php
                 $ativado = 1;
