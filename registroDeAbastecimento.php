@@ -49,6 +49,7 @@ include 'assets/controllers/checkAcess.php';
             <div class="control">
                 <input readonly hidden id="frentista" name="frentista" type="text" class="form-control" value="<?= $login ?>" autofocus>
                 <input readonly hidden id="id_funcionario" name="id_funcionario" type="text" class="form-control" value="<?= $id_funcionario ?>" autofocus>
+                <input hidden name="acao" value="registrar-abastecimento" type="text" required>
             </div>
         </div>
         <div class="field">
@@ -89,8 +90,6 @@ include 'assets/controllers/checkAcess.php';
                     <label class="form-check-label" for="inlineRadio3">B03</label>
                 </div>
             </div>
-
-      
         <br>
         <div class="mb-3">
             <div class="input-group input-group-sm mb-3">
@@ -98,80 +97,62 @@ include 'assets/controllers/checkAcess.php';
                 <input readonly id="setor" name="setor" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
             </div>
 
-            <div class="field">
-                <div class="control">
-                    <label>Odometro Inicial</label>
-                    <br><input value="<?= $odometroinicial ?>" onkeyup="somenteNumeros(this),calcularLitrosOd();" id="odometroinicial" name="odometroinicial" type="number" step="0.01" class="form-control" placeholder="Odometro Inicial" autofocus>
-                </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing">Odometro Inicial:</span>
+                <input value="<?= $odometroinicial ?>" onkeyup="somenteNumeros(this),calcularLitrosOd();" id="odometroinicial" name="odometroinicial" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  placeholder="Odometro Inicial" autofocus required>
             </div>
+
             <div class="input-group input-group-sm mb-3">
                 <span class="input-group-text" id="inputGroup-sizing">Ultimo Km:</span>
-                <input readonly id="ultimokm" name="ultimokm" placeholder="Km Anterior" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
-            </div>
-            <div class="field">
-                <div class="control">
-                    <label>Km</label>
-                    <br><input value="<?= $km ?>" onkeyup="somenteNumeros(this),calcularMedia(),calcularDiferencaKm();" id="km" name="km" type="number" step="0.01" class="form-control" placeholder="Km" autofocus required>
-                </div>
-            </div>
-            <div class="field">
-                <div class="control">
-                    <label>Diferenca Km</label>
-                    <br><input required readonly id="diferencakm" name="diferencakm" type="text" class="form-control" placeholder="Diferenca Km" autofocus>
-                </div>
-            </div>
-            <div class="field">
-                <div class="control">
-                    <label>Ultimo Hr</label>
-                    <br><input readonly id="ultimohr" name="ultimohr" type="text" class="form-control" placeholder="Ultimo Hr" autofocus>
-                </div>
-            </div>
-            <div class="field">
-                <div class="control">
-                    <label>Horimetro</label>
-                    <br><input value="<?= $hr ?>" onkeyup="somenteNumeros(this),calcularDiferencaHr();" id="hr" name="hr" type="number" class="form-control" step="0.01" placeholder="Hr" autofocus required>
-                </div>
-            </div>
-            <div class="field">
-                <div class="control">
-                    <label>Diferenca Hr</label>
-                    <br><input readonly id="diferencahr" name="diferencahr" type="text" class="form-control" placeholder="Diferenca Hr" autofocus>
-                </div>
-            </div>
-            <div class="field">
-                <div class="control">
-                    <label>Odometro Final</label>
-                    <input value="<?= $odometrofinal ?>" onkeyup="somenteNumeros(this),calcularLitrosOd();" id="odometrofinal" name="odometrofinal" type="number" step="0.01" class="form-control" placeholder="Odometro Final" autofocus required>
-                </div>
+                <input readonly id="ultimokm" name="ultimokm" placeholder="Km Anterior" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  placeholder="Odometro Inicial" autofocus required>
             </div>
 
-            <div class="field">
-                <div class="control">
-                    <label>Litros</label>
-                    <br><input value="<?= $litros ?>" onkeyup="somenteNumeros(this),calcularMedia();" id="litros" name="litros" type="number" step="0.01" class="form-control" placeholder="Litros" autofocus required>
-                </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing">Km:</span>
+                <input value="<?= $km ?>" onkeyup="somenteNumeros(this),calcularMedia(),calcularDiferencaKm();" id="km" name="km"  type="number" step="0.01" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Km" required>
+            </div>
+    
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing">Diferenca Km:</span>
+                <input readonly id="diferencakm" name="diferencakm" type="text" class="form-control"  autofocus aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Diferenca Km" autofocus required>
+            </div>
+
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing">Ultimo Hr:</span>
+                <input readonly id="ultimohr" name="ultimohr" type="text" class="form-control"  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ultimo Horimetro" autofocus required>
+            </div>
+
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing">Hr:</span>
+                <input value="<?= $hr ?>" onkeyup="somenteNumeros(this),calcularDiferencaHr();" id="hr" name="hr" type="number" class="form-control" step="0.01"  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Horimetro" autofocus required>
+            </div>
+
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing">Diferenca Hr:</span>
+                <input readonly id="diferencahr" name="diferencahr" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Diferenca Horimetro" autofocus required>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing">Odometro Final:</span>
+                <input value="<?= $odometrofinal ?>" onkeyup="somenteNumeros(this),calcularLitrosOd();" id="odometrofinal" name="odometrofinal" type="number" step="0.01" class="form-control" placeholder="Odometro Final"  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+            </div>
+
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing">Litros:</span>
+                <input value="<?= $litros ?>" onkeyup="somenteNumeros(this),calcularMedia();" id="litros" name="litros" type="number" step="0.01" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Litros" autofocus required>
             </div>
             <?php if ($permissao == 1) { ?>
-                <div class="field">
-                    <div class="control">
-                        <label>Data Hora do Abastecimento</label>
-                        <br><input id="data_abastecimento" name="data_abastecimento" type="datetime-local" class="form-control" placeholder="Data Hora do Abastecimento" autofocus required>
-                    </div>
-                </div>
-
-            <?php } ?>
-            <div class="field">
-                <div class="control">
-                    <label>Litros Odometro</label>
-                    <br><input value="<?= $litros_od ?>" readonly id="litros_od" name="litros_od" type="text" class="form-control" placeholder="Litros Odometro" autofocus required>
-                </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing">Data Abastecimento:</span>
+                <input id="data_abastecimento" name="data_abastecimento" type="datetime-local" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Data Hora do Abastecimento" autofocus required>
             </div>
-            <div class="field">
-                <div class="control">
-                    <label>Media do Veiculo</label>
-                    <br><input value="<?= $media ?>" readonly id="media" name="media" type="text" class="form-control" placeholder="Media" autofocus required>
-                    <br><input hidden name="acao" value="registrar-abastecimento" type="text" required>
-                </div>
+            <?php } ?>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing">Litros Odometro:</span>
+                <input value="<?= $litros_od ?>" readonly id="litros_od" name="litros_od" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Litros Odometro" autofocus required>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing">Media:</span>
+                <input value="<?= $media ?>" readonly id="media" name="media" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Media" autofocus required>
             </div>
         </div>
         <button type="submit" class="btn btn-primary btn-sm">Cadastrar</button>
