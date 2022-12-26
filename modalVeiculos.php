@@ -97,8 +97,6 @@
                 <option value="0">Inativo</option>
             </select>
         </div>
-              
-  
       </div>
         <div class="modal-footer">
           <div class="d-flex gap-2 d-sm-flex mb-2 justify-content-md-center">

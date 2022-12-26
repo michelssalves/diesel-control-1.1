@@ -1,14 +1,16 @@
 .tabelas-customizadas{
   
     font-family: 'Times New Roman', Times, serif;
+    font-size: 13px;
+
 
    
   }
   
   .tabelas-customizadas th, .tabelas-customizadas td{
     border: 1px solid black;
-    font-weight: bold;
-    font-size: 13px;
+    font-weight: bolder;
+   
   
   }
   .tabelas-customizadas tr{
