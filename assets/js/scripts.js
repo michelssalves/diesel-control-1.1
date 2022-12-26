@@ -103,7 +103,7 @@ async function buscarInfoVeiculo(id){
 
     console.log(id)
 
-	const dados = await fetch(`diesel-control-1.1/assets/controllers/abastecimentoDataBaseAcess.php&acao=ultimoKm&id=${id}`)
+	const dados = await fetch(`diesel-control-1.1/assets/controllers/abastecimentoDataBaseAcess.php?&acao=ultimoKm&id=${id}`)
     const response = await dados.json()
     console.log(response)
 	/*EXEMPLO DE COMO CONVERTER DATA EM DIA DA SEMANA
