@@ -59,7 +59,7 @@ include 'assets/controllers/checkAcess.php';
                         <div class="field">
                             <div class="control">
                                 <label>Prefixo</label>
-                                <select class="form-select" name="prefixo" id="prefixo" onchange="buscarInfoVeiculo()" required>
+                                <select class="form-select" name="prefixo" id="prefixo" onchange="buscarInfoVeiculo(this.id)" required>
                                     <option value="">Escolha o Prefixo</option>
                                     <?php
                                     $ativado = 1;
