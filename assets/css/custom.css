@@ -2,14 +2,13 @@
   
     font-family: 'Times New Roman', Times, serif;
     font-size: 13px;
-
-
-   
+    font-weight: bold;
+    font-style: normal;
   }
   
   .tabelas-customizadas th, .tabelas-customizadas td{
     border: 1px solid black;
-    font-weight: bolder;
+    font-weight: bold;
    
   
   }
@@ -64,20 +63,5 @@
     background-color:rgba(220, 53, 69, 0.9);
     border-radius: 5px;
     font-size: 14px;
-  
-  }
-  .centralizar{
-  
-    text-align: center;
-  
-  }
-
-  .tabela-caixa-diario-anexos th, .tabela-caixa-diario-anexos td{
-    border: 1px solid black;
-  
-  }
-  
-  .tabela-caixa-diario-observacoes th, .tabela-caixa-diario-observacoes td{
-    border: 1px solid black;
   
   }
