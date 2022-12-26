@@ -137,6 +137,8 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
             $x = 0;
             foreach($lista as $row){
 
+                $extract($row);
+
                 $info = array(
                 'id_veiculo' => $row['id_veiculo'],
                 'numero_equipamento' => $row['numero_equipamento'],
@@ -174,7 +176,7 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
                 <td>'.$row['combustivel'].'</td>
                 <td>'.$row['metodo'].'</td>
                 <td>'.$row['setor'].'</td>
-                <td>'.$row['status_veiculo'].'</td>
+                <td>'.($status_veiculo = 1 ? 'Ativo': 'Inativo').'</td>
             </tr>';
             }
            
