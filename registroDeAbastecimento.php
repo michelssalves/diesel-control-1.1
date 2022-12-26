@@ -21,7 +21,7 @@ include 'assets/controllers/checkAcess.php';
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/tablesaw.css">
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/w3.min.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container-md">
