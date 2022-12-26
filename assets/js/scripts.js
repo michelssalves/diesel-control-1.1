@@ -99,19 +99,12 @@ async function alterarStatusErro(idErro, id_abastecimento){
 }
 async function buscarInfoVeiculo(id){
 
-    console.log(id)
-
 	const dados = await fetch(`diesel-control-1.1/assets/controllers/abastecimentoDataBaseAcess.php?&acao=ultimoKm&id=${id}`)
     const response = await dados.json()
     console.log(response)
-	/*EXEMPLO DE COMO CONVERTER DATA EM DIA DA SEMANA
-	const data = new Date(response['dados'].data_caixa)
-	const diaDaSemana = data.getDay()
-	var semana = ["Domingo", "Segunda-Feira", "Ter�a-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "S�bado"];*
-	document.getElementById("data_caixa_dia_semana").value = semana[diaDaSemana+1]*/
-//	document.getElementById("setor").value = response['dados'].dep_cheque
-//	document.getElementById("ultimokm").value = response['dados'].id_requisicao
-//	document.getElementById("ultimohr").value = response['dados'].dep_dinheiro
+	document.getElementById("setor").value = response['dados'].dep_cheque
+	document.getElementById("ultimokm").value = response['dados'].id_requisicao
+	document.getElementById("ultimohr").value = response['dados'].dep_dinheiro
 
 
 }
