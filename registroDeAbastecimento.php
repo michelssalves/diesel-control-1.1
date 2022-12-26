@@ -40,17 +40,12 @@ include 'assets/controllers/checkAcess.php';
                         </button>
                         <div class="collapse navbar-collapse" id="navbarText">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
+                                <li class="nav-item ml-5">
                                     <a href="menu-principal" class="btn btn-primary btn-sm">Voltar</a>
                                     <a href="logout"class="btn btn-danger btn-sm">Sair</a>
                                 </li>
-                                <li class="nav-item">
-                                    
-                                </li>
-    
                             </ul>
                          <span class="navbar-text">
-                         
                         </span>
                     </div>
                 </div>
