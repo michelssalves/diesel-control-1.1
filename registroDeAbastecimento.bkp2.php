@@ -25,7 +25,10 @@ include 'assets/controllers/checkAcess.php';
 </head>
 
 <body>
-
+    <div class="container-md">
+        <div class="container-lg">
+            <div class="container-xl">
+                <div class="container-xxl">
                 <nav class="navbar navbar-expand-lg bg-light">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="#"><label>Usuario Logado: <?= $usuario; ?></label></a>
