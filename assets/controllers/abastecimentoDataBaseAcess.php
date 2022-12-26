@@ -32,7 +32,7 @@ if($acao == 'excluir-abastecimento'){
 }
 if($acao == 'ultimoKm'){
     
-    $id_veiculo =  $_REQUEST['id'];
+    echo $id_veiculo =  $_REQUEST['id'];
 
     $informacoesVeiculo = informacoesVeiculo($id_veiculo);
 
