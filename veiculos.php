@@ -180,10 +180,10 @@ include 'assets/controllers/checkAcess.php';
                             <th data-tablesaw-sortable-col data-tablesaw-priority="6">
                                 <center>Descricao
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="6">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="0">
                                 <center>Renavam
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="6">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="0">
                                 <center>Chassi
                             </th>
                             <th data-tablesaw-sortable-col data-tablesaw-priority="6">
