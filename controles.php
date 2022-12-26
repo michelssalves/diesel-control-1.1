@@ -39,18 +39,18 @@ include 'assets/controllers/checkAcess.php';
     <script src="diesel-control-1.1/assets/js/sorttable.js"></script>
     <script src="diesel-control-1.1/assets/js/jquery.table2excel.js"></script>  
 </head>
-<body>
-<div class="w3-bar w3-light-grey">
-  <a href="menu-principal" class="w3-bar-item w3-button" >Menu Principal</a>
-  <a href="controle-de-veiculos" class="w3-bar-item w3-button" >Veiculos</a>
-  <button class="w3-button w3-green" onclick="table2excel('t1')">Excel</button>
-  <a href="logout" class="w3-bar-item w3-button w3-red w3-right">Sair</a>
-  <label class="w3-bar-item">Usuario Logado: <?= $usuario; ?></label> 
-</div>    
+<body>   
 <nav class="navbar navbar-expand-lg navbar-light">
-  <div class="container-fluid">
-    <form method="POST">
-    <table>
+<div class="w3-bar w3-light-grey">
+<a href="menu-principal" class="w3-bar-item w3-button" >Menu Principal</a>
+  <a href="controle-de-veiculos" class="w3-bar-item w3-button" >Veiculos</a>
+        <button class="w3-button w3-green" onclick="table2excel('t1')">Excel</button>
+        <a href="logout" class="w3-bar-item w3-button w3-red w3-right">Sair</a>
+        <a class="w3-bar-item w3-button w3-right"><?= $usuario; ?></a>
+    </div>
+    <div class="container">
+        <form method="POST">
+        <table>
         <tr >
             <th>
                 <label><center>Data 01</label><br>
@@ -157,7 +157,7 @@ include 'assets/controllers/checkAcess.php';
         </tr>          
     </table>
     </form>
-  </div>
+  
 </nav>     
     <div class="table-responsive">
         <div class="tabelas-customizadas">
@@ -194,6 +194,7 @@ include 'assets/controllers/checkAcess.php';
                     <?= filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataHoraIncial, $dataHoraFinal) ?>
                 </tbody>
             </table>
+</div>
 <script src="diesel-control-1.1/assets/js/scripts.js"></script>
 </body>
 </html>
