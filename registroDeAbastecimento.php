@@ -91,7 +91,7 @@ include 'assets/controllers/checkAcess.php';
 
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Odometro Inicial:</span>
-            <input value="<?= $odometroinicial ?>" onkeyup="somenteNumeros(this),calcularLitrosOd();" id="odometroinicial" name="odometroinicial" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  placeholder="Odometro Inicial" autofocus required>
+            <input value="<?= $odometroinicial ?>" onkeyup="somenteNumeros(this),calcularLitrosOd();" id="odometroinicial" name="odometroinicial" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  placeholder="Odometro Inicial" autofocus required>
         </div>
 
         <div class="input-group input-group-sm mb-3">
@@ -101,7 +101,7 @@ include 'assets/controllers/checkAcess.php';
 
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Km:</span>
-            <input value="<?= $km ?>" onkeyup="somenteNumeros(this),calcularMedia(),calcularDiferencaKm();" id="km" name="km"  type="number" step="0.01" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Km" required>
+            <input value="<?= $km ?>" onkeyup="somenteNumeros(this),calcularMedia(),calcularDiferencaKm();" id="km" name="km"  type="text" step="0.01" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Km" required>
         </div>
 
         <div class="input-group input-group-sm mb-3">
@@ -116,7 +116,7 @@ include 'assets/controllers/checkAcess.php';
 
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Hr:</span>
-            <input value="<?= $hr ?>" onkeyup="somenteNumeros(this),calcularDiferencaHr();" id="hr" name="hr" type="number" class="form-control" step="0.01"  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Horimetro" autofocus required>
+            <input value="<?= $hr ?>" onkeyup="somenteNumeros(this),calcularDiferencaHr();" id="hr" name="hr" type="text" class="form-control" step="0.01"  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Horimetro" autofocus required>
         </div>
 
         <div class="input-group input-group-sm mb-3">
@@ -125,12 +125,12 @@ include 'assets/controllers/checkAcess.php';
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Odometro Final:</span>
-            <input value="<?= $odometrofinal ?>" onkeyup="somenteNumeros(this),calcularLitrosOd();" id="odometrofinal" name="odometrofinal" type="number" step="0.01" class="form-control" placeholder="Odometro Final"  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+            <input value="<?= $odometrofinal ?>" onkeyup="somenteNumeros(this),calcularLitrosOd();" id="odometrofinal" name="odometrofinal" type="text" step="0.01" class="form-control" placeholder="Odometro Final"  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
         </div>
 
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Litros:</span>
-            <input value="<?= $litros ?>" onkeyup="somenteNumeros(this),calcularMedia();" id="litros" name="litros" type="number" step="0.01" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Litros" autofocus required>
+            <input value="<?= $litros ?>" onkeyup="somenteNumeros(this),calcularMedia();" id="litros" name="litros" type="text" step="0.01" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Litros" autofocus required>
         </div>
         <?php if ($permissao == 1) { ?>
         <div class="input-group input-group-sm mb-3">
