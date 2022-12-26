@@ -187,10 +187,10 @@ include 'assets/controllers/checkAcess.php';
                             <th data-tablesaw-sortable-col data-tablesaw-priority="6">
                                 <center>Prefixo Sap
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="6">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="1">
                                 <center>Placa
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="6">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="1">
                                 <center>Prefixo
                             </th>
                             <th data-tablesaw-sortable-col data-tablesaw-priority="1">
