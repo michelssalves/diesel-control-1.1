@@ -702,7 +702,7 @@ function informacoesVeiculo($id_veiculo){
 
     include 'config.php';
 
-    $id_veiculo =  intval($_REQUEST['id_veiculo']);
+   // $id_veiculo =  intval($_REQUEST['id_veiculo']);
     
     $sql = $pdo->prepare("SELECT * FROM abastecimentos 
 	WHERE id_veiculo = :id_veiculo  
