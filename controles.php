@@ -13,13 +13,12 @@ include 'assets/controllers/checkAcess.php';
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/custom.css">
-   
+    <link rel="stylesheet" href="diesel-control-1.1/assets/css/fontawesome.all.min.6.2.1.css">
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/tablesaw.css">
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/w3.min.css">
-    <script src="diesel-control-1.1/assets/js/fontawesome.all.min.js"></script>
-    <script src="diesel-control-1.1/assets/js/bootstrap.bundle.min.v5.2.3.js"></script>
     <!--  TABLESAW - DEIXA A TABELA RESPONSIVA-->
     <script src="diesel-control-1.1/assets/js/tablesawn-label.js"></script>
     <script src="diesel-control-1.1/assets/js/tablesaw.js"></script>
@@ -39,7 +38,7 @@ include 'assets/controllers/checkAcess.php';
     </div>
     <div class="container">
         <form method="POST">
-        <div class="container">
+        
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="table-responsive">
                     <table class="table table-sm">
@@ -187,5 +186,7 @@ include 'assets/controllers/checkAcess.php';
             </table>
 </div>
 <script src="diesel-control-1.1/assets/js/scripts.js"></script>
+<script src="diesel-control-1.1/assets/js/fontawesome.all.min.js"></script>
+<script src="diesel-control-1.1/assets/js/bootstrap.bundle.min.v5.2.3.js"></script>
 </body>
 </html>
