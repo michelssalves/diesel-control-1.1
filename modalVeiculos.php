@@ -1,5 +1,5 @@
 <div class="modal fade" id="<?= $modalAlterarVeiculo ?>" tabindex="-1" aria-labelledby="incluirChequeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal">
+<div class="modal-dialog modal-dialog-scrollable">
     <div class="modal-content">
       <div class="fundo-cabecalho">
         <h1>ALTERAR VEICULO</h1>
