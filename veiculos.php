@@ -1,6 +1,5 @@
 <?php
 session_start();
-include 'assets/controllers/config.php';
 include 'assets/controllers/veiculosDataBaseAcess.php';
 $nivelPremissao = 1;
 $login = $_SESSION['usuario'];
