@@ -12,43 +12,43 @@
             <input id="prefixo" value="<?= $row['prefixo']?>" name="prefixo" type="text" autofocus required>
         </div>
         <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
+            <span class="input-group-text" id="inputGroup-sizing">Prefixo Sap:</span>
             <input id="numero_equipamento"  value="<?= $row['numero_equipamento']?>" name="numero_equipamento" type="text" autofocus required >
         </div>
         <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
+            <span class="input-group-text" id="inputGroup-sizing">Placa:</span>
             <input id="placa" value="<?= $row['placa']?>" name="placa" type="text"  autofocus required>
         </div>
         <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
+            <span class="input-group-text" id="inputGroup-sizing">Descricao:</span>
             <input id="descricao_caminhao" value="<?= $row['descricao_caminhao']?>" name="descricao_caminhao" type="text" autofocus required>
         </div>
         <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
+            <span class="input-group-text" id="inputGroup-sizing">Renavam:</span>
             <input  id="renavam" value="<?= $row['renavam']?>" name="renavam" type="text"  autofocus required >
         </div>
         <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
+            <span class="input-group-text" id="inputGroup-sizing">Chassi:</span>
             <input id="chassi" value="<?= $row['chassi']?>" name="chassi" type="text" autofocus required>
         </div>
         <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
+            <span class="input-group-text" id="inputGroup-sizing">Nº Motor:</span>
             <input id="numero_motor" value="<?= $row['numero_motor']?>" name="numero_motor" type="text"  autofocus required >
         </div>
         <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
+            <span class="input-group-text" id="inputGroup-sizing">Ano:</span>
             <input id="ano" value="<?= $row['ano']?>" name="ano" type="text" autofocus required>
         </div>
         <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
+            <span class="input-group-text" id="inputGroup-sizing">Marca:</span>
             <input id="marca" value="<?= $row['marca']?>" name="marca" type="text" autofocus required >
         </div>
         <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
+            <span class="input-group-text" id="inputGroup-sizing">Modelo:</span>
             <input id="modelo" value="<?= $row['modelo']?>" name="modelo" type="text" autofocus required >
         </div>
         <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
+            <span class="input-group-text" id="inputGroup-sizing">Combustivel:</span>
             <select id="combustivel" name="combustivel"   required >
                 <option value="<?= $row['combustivel']?>"><?= $row['combustivel']?></option>
                 <option value="DIESEL S10">DIESEL S10</option>
@@ -56,7 +56,7 @@
             </select>
         </div>
         <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
+            <span class="input-group-text" id="inputGroup-sizing">Metodo:</span>
             <select id="metodo" name="metodo" required >
                 <option value="<?= $row['metodo']?>">
                 <?php if($row['metodo'] = 1){
@@ -73,7 +73,7 @@
             </select>
         </div>
         <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
+            <span class="input-group-text" id="inputGroup-sizing">Setor:</span>
             <select id="setor" name="setor" required >
                 <option value="<?= $row['setor']?>"><?= $row['setor']?></option>
                 <option value="Coleta Domiciliar">Coleta Domiciliar</option>
@@ -84,7 +84,7 @@
                 <option value="Privado">Privado</option>
             </select></div>
         <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
+            <span class="input-group-text" id="inputGroup-sizing">Status:</span>
             <select id="status_veiculo" name="status_veiculo" required >
                 <option value="<?= $row['status_veiculo']?>">
                 <?php if($row['status_veiculo'] = 1){
