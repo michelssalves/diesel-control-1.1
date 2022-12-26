@@ -188,8 +188,7 @@ include 'assets/controllers/checkAcess.php';
         </div>
     </div>
     </div>  
-    <div class="container">
-        <div class="row"> 
+
         <div class="table-responsive"> 
          <div class="tabelas-customizadas">              
             <table data-tablesaw-sortable data-tablesaw-sortable-switch class="tablesaw table-sm fs-6 mb-0" data-tablesaw-mode="columntoggle" data-tablesaw-minimap>
@@ -219,8 +218,8 @@ include 'assets/controllers/checkAcess.php';
             </table>
             </div> 
             </div> 
-        </div>
-    </div>
+        
+ 
     <script src="diesel-control-1.1/assets/js/scripts.js"></script>
     <script src="diesel-control-1.1/assets/js/fontawesome.all.min.js"></script>
     <script src="diesel-control-1.1/assets/js/bootstrap.bundle.min.v5.2.3.js"></script>
