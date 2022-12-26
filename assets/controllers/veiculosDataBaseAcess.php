@@ -131,7 +131,7 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
         ORDER BY prefixo ASC ");
         $sql->execute();
 
-        $modalAlterarVeiculo = "modalAlterarVeiculo$id";
+        $modalAlterarVeiculo = "modalAlterarVeiculo'".$row['id_veiculo']."'";
 
         $linkModalAlterar = "data-bs-toggle='modal' data-bs-target='#$modalAlterarVeiculo' style='cursor:pointer'";
        
