@@ -159,36 +159,35 @@ include 'assets/controllers/checkAcess.php';
     </form>
   </div>
 </nav>     
- 
-    <table id="t1" class="sortable table table-striped table-bordered table-hoverable">
-    <thead class="thead-dark">
-          <!-- <table id="t1" class="w3-table w3-table-all sortable " border="1">
-                <thead class="thead-dark sorttable">-->
+    <div class="table-responsive">
+        <div class="tabelas-customizadas">
+            <table id="t1" data-tablesaw-sortable data-tablesaw-sortable-switch class="tablesaw table-sm fs-6 mb-0" data-tablesaw-mode="columntoggle" data-tablesaw-minimap>
+                <thead class="fundo-cabecalho">
                     <tr>
-                    <th><center>Data</th>
-                    <th hidden ><center>Hora</th>
-                    <th hidden ><center>Mês</th>
-                    <th hidden ><center>Ano</th>
-                    <th><center>Prefixo Sap</th>
-                    <th><center>Prefixo</th>
-                    <th><center>Placa</th>
-                    <th><center>Combustivel</th>
-                    <th hidden><center>Bomba</th>
-                    <th hidden><center>Odometro Incial</th>
-                    <th hidden><center>Odometro Final</th>
-                    <th><center>Litros Od</th>
-                    <th><center>Litros</th>
-                    <th><center>Ultimo Km</th>
-                    <th><center>Km</th>
-                    <th><center>Dif Km</th>
-                    <th><center>Ultimo Hr</th>
-                    <th><center>Hr</th>
-                    <th><center>Dif Hr</th>
-                    <th><center>Frentista</th> 
-                    <th><center>Marca</th> 
-                    <th><center>Modelo</th> 
-                    <th><center>Media</th> 
-                    <th hidden><center>Setor</th> 
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Data</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="0"><center>Hora</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="0"><center>Mês</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="0"><center>Ano</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="0"><center>Prefixo Sap</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Prefixo</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Placa</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Combustivel</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="0"><center>Bomba</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="0"><center>Odometro Incial</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="0"><center>Odometro Final</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Litros Od</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Litros</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="0"><center>Ultimo Km</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Km</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Dif Km</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="0"><center>Ultimo Hr</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Hr</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Dif Hr</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Frentista</th> 
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="0"><center>Marca</th> 
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="0"><center>Modelo</th> 
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Media</th> 
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="0"><center>Setor</th> 
                     </tr>
                 </thead>
                 <tbody>
