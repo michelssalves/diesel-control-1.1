@@ -99,8 +99,6 @@ async function alterarStatusErro(idErro, id_abastecimento){
 }
 async function buscarInfoVeiculo(id){
 
-    console.log('deu boa')
-
     console.log(id)
 
 	const dados = await fetch(`diesel-control-1.1/assets/controllers/abastecimentoDataBaseAcess.php?&acao=ultimoKm&id=${id}`)
