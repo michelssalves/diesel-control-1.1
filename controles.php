@@ -47,24 +47,23 @@ include 'assets/controllers/checkAcess.php';
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="table-responsive">
                     <table class="table table-sm">
-                        <tr>
-                            <th>
-                                <label>
-                                    <center>Data 01
-                                </label><br>
-                                <input type="date" name="dataIncial" value="<?= $dataIncial ?>">
-                            </th>
-                            <th>
-                                <label>
-                                    <center>Data 02
-                                </label><br>
-                                <input type="date" name="dataFinal" value="<?= $dataFinal ?>">
-                            </th>
-                            <th>
-                                <label>
-                                    <center>Prefixo
-                                </label><br>
-                                <select onChange="this.form.submit()" name="prefixo" required>
+                        <thead class="fundo-cabecalho">
+                            <tr>
+                                <th><center>Data 01</th>
+                                <th><center>Data 02</th>
+                                <th><center>Prefixo</th>
+                                <th><center>Combustivel</th>
+                                <th><center>Marca</th>
+                                <th><center>Modelo</th>
+                                <th><center>Setor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="date" name="dataIncial" value="<?= $dataIncial ?>"></td>
+                                <td><input type="date" name="dataFinal" value="<?= $dataFinal ?>"></td>
+                                <td>
+                                    <select onChange="this.form.submit()" name="prefixo" required>
                                     <option selected><?= ($prefixo <> '' ? $prefixo : 'TODOS') ?></options>
                                     <option>TODOS</options>
                                         <?php
@@ -77,13 +76,10 @@ include 'assets/controllers/checkAcess.php';
                                             echo '<option value="' . $prefixo['prefixo'] . '">' . $prefixo['prefixo'] . '</option>';
                                         }
                                         ?>
-                                </select>
-                            </th>
-                            <th>
-                                <label>
-                                    <center>Combustivel
-                                </label><br>
-                                <select onChange="this.form.submit()" name="combustivel">
+                                    </select>
+                                </td>
+                                <td>
+                                    <select onChange="this.form.submit()" name="combustivel">
                                     <option selected><?= ($combustivel <> '' ? $combustivel : 'TODOS') ?></options>
                                     <option>TODOS</options>
                                         <?php
@@ -94,13 +90,10 @@ include 'assets/controllers/checkAcess.php';
                                             echo '<option value="' . $combustivel['combustivel'] . '">' . substr($combustivel['combustivel'], 0, 10) . '</option>';
                                         }
                                         ?>
-                                </select>
-                            </th>
-                            <th>
-                                <label>
-                                    <center>Marca
-                                </label><br>
-                                <select onChange="this.form.submit()" name="marca">
+                                    </select>        
+                                </td>
+                                <td>
+                                    <select onChange="this.form.submit()" name="marca">
                                     <option selected><?= ($marca <> '' ? $marca : 'TODOS') ?></options>
                                     <option>TODOS</options>
                                         <?php
@@ -111,13 +104,9 @@ include 'assets/controllers/checkAcess.php';
                                             echo '<option value="' . $marca['marca'] . '">' . substr($marca['marca'], 0, 10) . '</option>';
                                         }
                                         ?>
-                                </select>
-                            </th>
-                            <th>
-                                <label>
-                                    <center>Modelo
-                                </label><br>
-                                <select onChange="this.form.submit()" name="modelo">
+                                    </select>
+                                </td>
+                                <td>                                <select onChange="this.form.submit()" name="modelo">
                                     <option selected><?= ($modelo <> '' ? $modelo : 'TODOS') ?></options>
                                     <option>TODOS</options>
                                         <?php
@@ -128,13 +117,8 @@ include 'assets/controllers/checkAcess.php';
                                             echo '<option value="' . $modelo['modelo'] . '">' . substr($modelo['modelo'], 0, 15) . '</option>';
                                         }
                                         ?>
-                                </select>
-                            </th>
-                            <th>
-                                <label>
-                                    <center>Setor
-                                </label><br>
-                                <select onChange="this.form.submit()" name="setor">
+                                </select></td>
+                                <td>                      <select onChange="this.form.submit()" name="setor">
                                     <option selected><?= ($setor <> '' ? $setor : 'TODOS') ?></options>
                                     <option>TODOS</options>
                                         <?php
@@ -145,9 +129,9 @@ include 'assets/controllers/checkAcess.php';
                                             echo '<option value="' . $setor['setor'] . '">' . substr($setor['setor'], 0, 15) . '</option>';
                                         }
                                         ?>
-                                </select>
-                            </th>
-                        </tr>
+                                </select></td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
         </form>
