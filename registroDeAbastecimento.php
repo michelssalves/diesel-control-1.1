@@ -98,12 +98,12 @@ include 'assets/controllers/checkAcess.php';
                         </div>
                 </div>
                 <br>
-                <div class="mb-3">
+            <div class="mb-3">
                     <div class="input-group input-group-sm mb-3">
                      <span class="input-group-text" id="inputGroup-sizing">Setor:</span>
                         <input readonly id="setor" name="setor" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
                     </div>
-                </div>
+                
                 <div class="field">
                     <div class="control">
                         <label>Odometro Inicial</label>
@@ -181,6 +181,7 @@ include 'assets/controllers/checkAcess.php';
                         <br><input hidden name="acao" value="registrar-abastecimento" type="text"  required> 
                     </div>
                 </div>
+            </div>
                     <button type="submit" class="btn btn-primary btn-sm">Cadastrar</button>
         </form>
             </div>
