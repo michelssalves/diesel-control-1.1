@@ -1,30 +1,20 @@
-.tabela-ver-cheque{
+.tabelas-customizadas{
+  
+    font-family: 'Times New Roman', Times, serif;
 
-    font-family: 'Times New Roman', Times, serif;
-  
-  }
-  
-  .tabela-ver-cheque th, .tabela-ver-cheque td{
-  
-    border: 1px solid black;
-    
-  }
-  .tabela-ver-todos-os-cheques{
-  
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    font-size: 13px;
    
   }
   
-  .tabela-ver-todos-os-cheques th, .tabela-ver-todos-os-cheques td{
+  .tabelas-customizadas th, .tabelas-customizadas td{
     border: 1px solid black;
+    font-weight: bold;
+    font-size: 12px;
   
   }
-  .tabela-ver-todos-os-cheques tr{
+  .tabelas-customizadas tr{
       width: 100%;
   }
-  .tabela-ver-todos-os-cheques select,  .tabela-ver-todos-os-cheques label{
+  .tabelas-customizadas select,  .tabelas-customizadas label{
     font-size: 15px;
   }
   

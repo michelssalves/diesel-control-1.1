@@ -198,8 +198,8 @@ include 'assets/controllers/checkAcess.php';
     </div>  
     <div class="container">
         <div class="row"> 
-        <div class="table-responsive">
-         <div class="tabela-ver-todos-os-cheques">           
+        <div class="table-responsive"> 
+         <div class="tabela-customizadas">              
             <table data-tablesaw-sortable data-tablesaw-sortable-switch class="tablesaw table-sm fs-6 mb-0" data-tablesaw-mode="columntoggle" data-tablesaw-minimap>
               <thead class="thead-dark">
                     <tr>
