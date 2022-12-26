@@ -54,19 +54,19 @@ include 'assets/controllers/checkAcess.php';
                 <thead class="fundo-cabecalho">
                     <tr>
                         <th>
-                            <center>Prefixo
+                            Prefixo
                         </th>
                         <th>
-                            <center>Combustivel
+                            Combustivel
                         </th>
                         <th>
-                            <center>Marca
+                            Marca
                         </th>
                         <th>
-                            <center>Modelo
+                            Modelo
                         </th>
                         <th>
-                            <center>Setor
+                            Setor
                         </th>
                         <th>
                             <center>Mostrar Desativados
