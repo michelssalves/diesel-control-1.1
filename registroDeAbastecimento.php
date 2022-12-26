@@ -35,7 +35,7 @@ include 'assets/controllers/checkAcess.php';
                 <div class="container text-center">
                     <div class="row">
                         <div class="col">
-                            <label>Usuario Logado: <?= $usuario; ?></label>  
+                             
                         </div>
                         <div class="col">
                            
@@ -50,6 +50,13 @@ include 'assets/controllers/checkAcess.php';
                         <div class="col-md-auto mt-4">  
                             <a href="menu-principal" class="w3-bar-item w3-button w3-blue w3-right">Voltar</a>
                             <a href="logout"class="w3-bar-item w3-button w3-red w3-right">Sair</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-auto mt-4">  
+                            <label>Usuario Logado: <?= $usuario; ?></label> 
                         </div>
                     </div>
                 </div>
