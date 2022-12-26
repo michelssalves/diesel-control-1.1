@@ -36,7 +36,7 @@ include 'assets/controllers/checkAcess.php';
                 <table class="table table-bordered" style="border: 10px;">
                 <thead class="thead-dark" >
                     <tr>
-                    <td colspan="3" style="font-weight:bold"><center>CLIQUE EM ERROS PARA VER SEU HISTÃRICO</td>
+                    <td colspan="3" style="font-weight:bold"><center>CLIQUE EM ERROS PARA VER SEU HISTÓRICO</td>
                     </tr>
                     <tr>
                         <th class="text-success"><center>Acertos</th>
