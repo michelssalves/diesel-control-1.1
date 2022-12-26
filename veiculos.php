@@ -53,7 +53,6 @@ include 'assets/controllers/checkAcess.php';
     </div>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
                 <div class="table-responsive">
                     <table class="table table-sm">
                         <tr>
@@ -64,9 +63,7 @@ include 'assets/controllers/checkAcess.php';
                                 <select onChange="this.form.submit()" name="prefixo">
                                     <option selected><?= ($prefixo <> '' ? $prefixo : 'TODOS') ?></options>
                                         <?php
-
                                         $sql = $pdo->prepare("SELECT * FROM veiculos ORDER BY prefixo");
-
                                         $sql->execute();
                                         $fetchAll = $sql->fetchAll();
                                         foreach ($fetchAll as $prefixo) {
@@ -149,9 +146,8 @@ include 'assets/controllers/checkAcess.php';
                             </th>
                         </tr>
                     </table>
-                    </div>
-                </form>
-            </div>
+                </div>
+            </form>
         </nav>
     <!--<table id="t1" class="table table-striped table-bordered table-hoverable">
         <thead class="thead-dark">-->
@@ -216,5 +212,4 @@ include 'assets/controllers/checkAcess.php';
     </div>
     <script src="diesel-control-1.1/assets/js/scripts.js"></script>
 </body>
-
 </html>

@@ -15,25 +15,35 @@ include 'assets/controllers/checkAcess.php';
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/default.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="diesel-control-1.1/assets/js/sorttable.js"></script>
-	<script src="diesel-control-1.1/assets/js/jquery.table2excel.js"></script>  
+	<script src="diesel-control-1.1/assets/js/jquery.table2excel.js"></script>  -->$_COOKIE
+    <link rel="stylesheet" href="diesel-control-1.1/assets/css/custom.css">
+    <link rel="stylesheet" href="diesel-control-1.1/assets/css/fontawesome.all.min.6.2.1.css">
+    <link rel="stylesheet" href="diesel-control-1.1/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="diesel-control-1.1/assets/css/tablesaw.css">
+    <link rel="stylesheet" href="diesel-control-1.1/assets/css/w3.min.css">
+    <script src="diesel-control-1.1/assets/js/fontawesome.all.min.js"></script>
+    <script src="diesel-control-1.1/assets/js/bootstrap.bundle.min.v5.2.3.js"></script>
+    <!--  TABLESAW - DEIXA A TABELA RESPONSIVA-->
+    <script src="diesel-control-1.1/assets/js/tablesawn-label.js"></script>
+    <script src="diesel-control-1.1/assets/js/tablesaw.js"></script>
+    <script src="diesel-control-1.1/assets/js/tablesaw-init.js"></script>
+   <!--  /TABLESAW - DEIXA A TABELA RESPONSIVA-->
+    <script src="diesel-control-1.1/assets/js/jquery-3.6.1.min.js"></script>
+    <script src="diesel-control-1.1/assets/js/sorttable.js"></script>
+    <script src="diesel-control-1.1/assets/js/jquery.table2excel.js"></script>  
 </head>
 <body>
-<div class="container-md">
-        <div class="container-lg">
-            <div class="container-xl">
-                <div class="container-xxl">
 <div class="w3-bar w3-light-grey">
   <a href="menu-principal" class="w3-bar-item w3-button" >Menu Principal</a>
   <a href="controle-de-veiculos" class="w3-bar-item w3-button" >Veiculos</a>
   <button class="w3-button w3-green" onclick="table2excel('t1')">Excel</button>
-  <a href="relatorio-de-erros"><button class="w3-button w3-red">Erros</button></a>
   <a href="logout" class="w3-bar-item w3-button w3-red w3-right">Sair</a>
   <label class="w3-bar-item">Usuario Logado: <?= $usuario; ?></label> 
 </div>    
@@ -149,10 +159,7 @@ include 'assets/controllers/checkAcess.php';
     </form>
   </div>
 </nav>     
-</div>
-    </div>
-    </div>
-    </div> 
+ 
     <table id="t1" class="sortable table table-striped table-bordered table-hoverable">
     <thead class="thead-dark">
           <!-- <table id="t1" class="w3-table w3-table-all sortable " border="1">
