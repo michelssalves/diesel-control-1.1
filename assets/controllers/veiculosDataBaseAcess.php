@@ -131,6 +131,10 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
         ORDER BY prefixo ASC ");
         $sql->execute();
 
+        $modalAlterarVeiculo = "modalAlterarVeiculo$id";
+
+        $linkModalAlterar = "data-bs-toggle='modal' data-bs-target='#$modalAlterarVeiculo' style='cursor:pointer'";
+       
         if ($sql->rowCount() > 0) {
 
             $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -176,6 +180,8 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
                 <td>'.$row['setor'].'</td>
                 <td>'.($row['status_veiculo'] == 1 ? 'Ativo' : 'Inativo').'</td>
             </tr>';
+
+                include 'modalVeiculos.php';
             }
            
         }
