@@ -16,11 +16,6 @@ include 'assets/controllers/checkAcess.php';
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="diesel-control-1.1/assets/css/menuregistro.css">    
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/custom.css">
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/fontawesome.all.min.6.2.1.css">
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/bootstrap.min.css">
@@ -32,12 +27,27 @@ include 'assets/controllers/checkAcess.php';
         <div class="container-lg">
             <div class="container-xl">
                 <div class="container-xxl">
-                <div class="w3-bar w3-light-grey">
+               <!-- <div class="w3-bar w3-light-grey">
                     <a href="logout"class="w3-bar-item w3-button w3-red w3-right">Sair</a>
                     <a href="menu-principal" class="w3-bar-item w3-button w3-blue w3-right">Voltar</a>
                     <label class="w3-bar-item">Usuario Logado: <?= $usuario; ?></label>    
-                </div> 
-                <div class="w3-bar w3-light-grey w3-container">
+                </div> -->
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col">
+                        <label class="w3-bar-item">Usuario Logado: <?= $usuario; ?></label>  
+                        
+                        </div>
+                        <div class="col">
+                      
+                        </div>
+                        <div class="col">
+                            <a href="menu-principal" class="w3-bar-item w3-button w3-blue w3-right">Voltar</a>
+                            <a href="logout"class="w3-bar-item w3-button w3-red w3-right">Sair</a>
+                        </div>
+                    </div>
+                </div>
+         <!--        <div class="w3-bar w3-light-grey w3-container">
                 <table class="table table-bordered" style="border: 10px;">
                 <thead class="thead-dark" >
                     <tr>
@@ -51,11 +61,11 @@ include 'assets/controllers/checkAcess.php';
                 </thead>
                 <tbody>
                     <tr>
-                    <?= listarAcertos($id_funcionario) ?>
+                    <?php //listarAcertos($id_funcionario) ?>
                     </tr>
                 </tbody>
             </table>
-                </div> 
+                </div> -->
                 <?php if(isset($msgSucesso)){echo $msgSucesso;}
                          unset($_SESSION['msg']);?>
                     <form name="formCadastro" onsubmit="return validarFormulario()" class="menu" method="POST">
