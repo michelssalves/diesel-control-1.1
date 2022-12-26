@@ -46,7 +46,7 @@ include 'assets/controllers/checkAcess.php';
     <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="table-responsive">
-                    <table class="table table-sm">
+                    <table class="table table-sm fs-6 mb-0">
                         <thead class="fundo-cabecalho">
                             <tr>
                                 <th><center>Data 01</th>
