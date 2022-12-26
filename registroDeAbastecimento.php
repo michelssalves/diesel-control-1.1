@@ -64,7 +64,7 @@ include 'assets/controllers/checkAcess.php';
                 ?>
             </select>
         </div>
-        <div class="field mb-1">
+        <div class="field mb-2">
             <div class="control">
                 <div class="form-check form-check-inline">
                     <input style="height: 50px; width: 50px;" class="form-check-input" type="radio" name="bomba" id="bomba" value="GASOLINA" required>
