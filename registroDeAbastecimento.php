@@ -106,7 +106,6 @@ include 'assets/controllers/checkAcess.php';
                     <br><input value="<?= $odometroinicial ?>" onkeyup="somenteNumeros(this),calcularLitrosOd();" id="odometroinicial" name="odometroinicial" type="number" step="0.01" class="form-control" placeholder="Odometro Inicial" autofocus>
                 </div>
             </div>
-            <div class="field">
             <div class="input-group input-group-sm mb-3">
                 <span class="input-group-text" id="inputGroup-sizing">Ultimo Km:</span>
                 <input readonly id="ultimokm" name="ultimokm" placeholder="Km Anterior" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
