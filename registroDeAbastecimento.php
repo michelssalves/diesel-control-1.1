@@ -38,9 +38,17 @@ include 'assets/controllers/checkAcess.php';
                             <label>Usuario Logado: <?= $usuario; ?></label>  
                         </div>
                         <div class="col">
-                            <a href="menu-principal" class="w3-bar-item w3-button w3-blue w3-right">Voltar</a>
+                           
                         </div>
                         <div class="col">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-auto mt-4">  
+                            <a href="menu-principal" class="w3-bar-item w3-button w3-blue w3-right">Voltar</a>
                             <a href="logout"class="w3-bar-item w3-button w3-red w3-right">Sair</a>
                         </div>
                     </div>
