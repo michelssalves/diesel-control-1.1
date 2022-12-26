@@ -189,7 +189,7 @@ include 'assets/controllers/checkAcess.php';
                         <br><input hidden name="acao" value="registrar-abastecimento" type="text"  required> 
                     </div>
                 </div>
-                    <button type="submit" class="tn btn-primary btn-lg">Cadastrar</button>
+                    <button type="submit" class="btn btn-primary btn-sm">Cadastrar</button>
         </form>
             </div>
         </div>
