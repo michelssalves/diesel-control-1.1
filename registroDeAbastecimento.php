@@ -32,7 +32,7 @@ include 'assets/controllers/checkAcess.php';
                     <a href="menu-principal" class="w3-bar-item w3-button w3-blue w3-right">Voltar</a>
                     <label class="w3-bar-item">Usuario Logado: <?= $usuario; ?></label>    
                 </div> -->
-                <nav class="navbar navbar-expand-lg bg-primary">
+                <nav class="navbar navbar-expand-lg bg-light">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="#"><label>Usuario Logado: <?= $usuario; ?></label></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,10 +41,10 @@ include 'assets/controllers/checkAcess.php';
                         <div class="collapse navbar-collapse" id="navbarText">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                <a href="menu-principal" class="w3-bar-item w3-button w3-blue w3-right">Voltar</a>
+                                    <a href="menu-principal" class="btn btn-primary btn-sm">Voltar</a>
                                 </li>
                                 <li class="nav-item">
-                                <a href="logout"class="w3-bar-item w3-button w3-red w3-right">Sair</a>
+                                    <a href="logout"class="btn btn-danger btn-sm">Sair</a>
                                 </li>
     
                             </ul>
