@@ -199,7 +199,7 @@ include 'assets/controllers/checkAcess.php';
     <div class="container">
         <div class="row"> 
             <div class="table-responsive"> 
-                <div class="tabelas-ver-cheque">             
+                <div class="tabela-ver-cheque">             
             <table data-tablesaw-sortable data-tablesaw-sortable-switch class="tablesaw table-sm table-hover table-striped fs-6 mb-0" data-tablesaw-mode="columntoggle" data-tablesaw-minimap>
               <thead class="thead-dark">
                     <tr>
