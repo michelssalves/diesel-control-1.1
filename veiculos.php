@@ -54,7 +54,6 @@ include 'assets/controllers/checkAcess.php';
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-               
                 <div class="table-responsive">
                     <table class="table table-sm">
                         <tr>
@@ -159,7 +158,7 @@ include 'assets/controllers/checkAcess.php';
         <div class="table-responsive">
             <div class="tabelas-customizadas">
                 <table id="t1" data-tablesaw-sortable data-tablesaw-sortable-switch class="tablesaw table-sm fs-6 mb-0" data-tablesaw-mode="columntoggle" data-tablesaw-minimap>
-                    <thead>
+                    <thead class="fundo-cabecalho">
                         <tr>
                             <th data-tablesaw-sortable-col data-tablesaw-priority="1">
                                 <center>#
