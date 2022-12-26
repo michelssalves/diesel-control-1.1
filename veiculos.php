@@ -38,10 +38,12 @@ include 'assets/controllers/checkAcess.php';
                         <a href="logout" class="w3-bar-item w3-button w3-red w3-right">Sair</a>
                         <a class="w3-bar-item w3-button w3-right"><?= $usuario; ?></a>
                     </div>
+                    <div class="container">
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
                         <div class="container-fluid">
                             <form method="POST">
                                 <table style="margin-left:30px;">
+                        
                                     <tr>
                                         <th>
                                             <label>
@@ -160,13 +162,13 @@ include 'assets/controllers/checkAcess.php';
                         </div>
                     </nav>
      
-    <div class="container">
+    
     <!--<table id="t1" class="table table-striped table-bordered table-hoverable">
         <thead class="thead-dark">-->
         <div class="table-responsive">
             <div class="tabelas-customizadas">
                 <table id="t1" data-tablesaw-sortable data-tablesaw-sortable-switch class="tablesaw table-sm fs-6 mb-0" data-tablesaw-mode="columntoggle" data-tablesaw-minimap>
-     
+                <thead>
             <tr>
                 <th>
                     <center>#
