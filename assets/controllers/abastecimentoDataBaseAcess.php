@@ -614,7 +614,6 @@ function listarTodosErros($dataHoraIncial, $dataHoraFinal){
 
         $corDifKm = '';
         $corDifHr = '';
-        $corMedia = '';
         $corLitros = '';
             
         if($row['combustivel'] <> 'GASOLINA'){
@@ -661,7 +660,7 @@ function listarTodosErros($dataHoraIncial, $dataHoraFinal){
         </tr>';
     }    
     return $txtTable;
-}
+    }
 }
 function  alterarStatuErro($idErro, $id_abastecimento){
 

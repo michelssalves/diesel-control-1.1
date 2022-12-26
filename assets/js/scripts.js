@@ -34,12 +34,15 @@ function calcularMedia(){
 		
 }
 function somenteNumeros(num) {
-    var er = /[^0-9,\.]/;
-    er.lastIndex = 0;
-    var campo = num;
-    if (er.test(campo.value)) {
-      campo.value = "";
-    }
+	var theEvent = evento || window.event;
+	var key = theEvent.keyCode || theEvent.which;
+	key = String.fromCharCode( key );
+	//var regex = /^[0-9.,]+$/;
+	var regex = /^[0-9,]+$/;
+	if( !regex.test(key) ) {
+	   theEvent.returnValue = false;
+	   if(theEvent.preventDefault) theEvent.preventDefault();
+	}
 }
 
 function PopupCenter(url, title, w, h) {  
@@ -102,7 +105,7 @@ async function buscarInfoVeiculo(id){
 function table2excel(id) {
 
     $("#" + id).table2excel({
-		
+
         exclude: ".excludeThisClass",
         name: "export",
         filename: "export.xls", // do include extension, usar xls pra nÃ£o dar pau com o chrome
