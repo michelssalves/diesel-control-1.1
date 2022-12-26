@@ -13,7 +13,6 @@ include 'assets/controllers/checkAcess.php';
 ?>
 <!doctype html>
 <html lang="pt-br">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,7 +23,6 @@ include 'assets/controllers/checkAcess.php';
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/w3.min.css">
     <script src="diesel-control-1.1/assets/js/jquery-3.6.1.min.js"></script>
 </head>
-
 <body>
     <div class="container">
     <nav class="navbar navbar-expand-lg bg-light">
@@ -92,8 +90,7 @@ include 'assets/controllers/checkAcess.php';
                 </div>
             </div>
 
-        </div>
-        </div>
+      
         <br>
         <div class="mb-3">
             <div class="input-group input-group-sm mb-3">
