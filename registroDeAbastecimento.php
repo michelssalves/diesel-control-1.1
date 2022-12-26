@@ -64,7 +64,6 @@ include 'assets/controllers/checkAcess.php';
                 ?>
             </select>
         </div>
-        <br>
         <div class="field">
             <div class="control">
                 <div class="form-check form-check-inline">
@@ -84,8 +83,7 @@ include 'assets/controllers/checkAcess.php';
                     <label class="form-check-label mt-3" for="inlineRadio3">B03</label>
                 </div>
             </div>
-
-        <br>
+        </div>
         <div class="mb-3">
             <div class="input-group input-group-sm mb-3">
                 <span class="input-group-text" id="inputGroup-sizing">Setor:</span>
