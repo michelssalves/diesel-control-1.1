@@ -49,7 +49,7 @@ include 'assets/controllers/checkAcess.php';
             </nav>
                 <?php if(isset($msgSucesso)){echo $msgSucesso;}
                          unset($_SESSION['msg']);?>
-                    <form name="formCadastro" onsubmit="return validarFormulario()" class="menu" method="POST">
+                    <form method="POST">
                         <div class="field">
                             <div class="control">
                                 <input readonly hidden id="frentista" name="frentista" type="text" class="form-control" value="<?= $login ?>" autofocus>
@@ -59,7 +59,7 @@ include 'assets/controllers/checkAcess.php';
                         <div class="field">
                             <div class="control">
                                 <label>Prefixo</label>
-                                <select class="form-select" name="prefixo" id="prefixo" required>
+                                <select class="form-select" name="prefixo" id="prefixo" onchange="buscarInfoVeiculo()" required>
                                     <option value="">Escolha o Prefixo</option>
                                     <?php
                                     $ativado = 1;

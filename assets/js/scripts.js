@@ -97,3 +97,8 @@ async function alterarStatusErro(idErro, id_abastecimento){
 		document.getElementById(idRow).className='w3-green'
 	}
 }
+function buscarInfoVeiculo(){
+
+    console.log('deu boa')
+
+}
