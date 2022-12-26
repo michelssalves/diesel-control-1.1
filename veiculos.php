@@ -40,6 +40,7 @@ include 'assets/controllers/checkAcess.php';
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <form method="POST">
+                <div class="table-responsive">
                     <table style="margin-left:30px;">
                         <tr>
                             <th>
@@ -155,6 +156,7 @@ include 'assets/controllers/checkAcess.php';
 
                         </tr>
                     </table>
+                    </div>
                 </form>
             </div>
         </nav>
