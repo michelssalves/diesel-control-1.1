@@ -32,12 +32,16 @@ if($acao == 'excluir-abastecimento'){
 }
 if($acao == 'ultimoKm'){
     
-    echo $id_veiculo =  $_REQUEST['id'];
+    $id_veiculo =  $_REQUEST['id'];
 
     $informacoesVeiculo = informacoesVeiculo($id_veiculo);
 
-    header('Content-Type: application/json');
-    echo json_encode($informacoesVeiculo);
+    $return = ['error' => false,  'dados' => $informacoesVeiculo];
+  
+    echo json_encode($return);
+
+ //   header('Content-Type: application/json');
+   // echo json_encode($informacoesVeiculo);
 }
 $combustivel = $_REQUEST['combustivel'];
 $marca = $_REQUEST['marca'];
