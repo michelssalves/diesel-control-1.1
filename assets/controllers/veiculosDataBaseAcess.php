@@ -172,7 +172,7 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
                 <td>'.$row['marca'].'</td>
                 <td>'.$row['modelo'].'</td>
                 <td>'.$row['combustivel'].'</td>
-                <td>'.$row['metodo'].'</td>
+                <td>'.($row['metodo'] = 1 ? 'KM' : 'HR').'</td>
                 <td>'.$row['setor'].'</td>
                 <td>'.($row['status_veiculo'] = 1 ? 'Ativo' : 'Inativo').'</td>
             </tr>';
