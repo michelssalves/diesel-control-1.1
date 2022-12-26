@@ -49,13 +49,13 @@ include 'assets/controllers/checkAcess.php';
                     <table class="table table-sm fs-6 mb-0">
                         <thead class="fundo-cabecalho">
                             <tr>
-                                <th><center>Data 01</th>
-                                <th><center>Data 02</th>
-                                <th><center>Prefixo</th>
-                                <th><center>Combustivel</th>
-                                <th><center>Marca</th>
-                                <th><center>Modelo</th>
-                                <th><center>Setor</th>
+                                <th>Data 01</th>
+                                <th>Data 02</th>
+                                <th>Prefixo</th>
+                                <th>Combustivel</th>
+                                <th>Marca</th>
+                                <th>Modelo</th>
+                                <th>Setor</th>
                             </tr>
                         </thead>
                         <tbody>
