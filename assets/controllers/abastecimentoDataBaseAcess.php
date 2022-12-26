@@ -34,9 +34,9 @@ if($acao == 'ultimoKm'){
     
     $id_veiculo =  $_REQUEST['id'];
 
-    $informacoesVeiculo = informacoesVeiculo($id_veiculo);
+   // $informacoesVeiculo = informacoesVeiculo($id_veiculo);
 
-    $return = ['error' => false,  'dados' => $informacoesVeiculo];
+    $return = ['error' => false,  'dados' => informacoesVeiculo($id_veiculo)];
   
     echo json_encode($return);
 
