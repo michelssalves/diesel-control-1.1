@@ -38,9 +38,10 @@ include 'assets/controllers/checkAcess.php';
         <div class="row justify-content-md-center">
             <div class="col-md-auto mt-4">  
             <form method="POST">
-                <?php $link = "PopupCenter('cadastrar-veiculo',' Cadastrar Veiculos',400,900)"; ?>   
-                <button name="acao" value="filtrar" type="submit" class='btn btn-primary btn-sm'>Filtrar</button>
-                <button onclick="<?= $link ?>" name='filtrar-cheques' class='btn btn-success btn-sm'>Cadastrar</button>
+                <?php $link = "PopupCenter('cadastrar-veiculo',' Cadastrar Veiculos',400,900)"; ?> 
+                <button class="btn btn-success btn-sm" onclick="table2excel('t1')">Excel</button>  
+                <button name="acao" value="filtrar" type="submit" class='btn btn-secondary btn-sm'>Filtrar</button>
+                <button onclick="<?= $link ?>" name='filtrar-cheques' class='btn btn-primary btn-sm'>Cadastrar</button>
                 <button name="acao" value="limpar" type="submit" class='btn btn-warning btn-sm'>Limpar</button>
 
             </div>

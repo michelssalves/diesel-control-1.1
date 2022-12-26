@@ -39,7 +39,7 @@ include 'assets/controllers/checkAcess.php';
             <form method="POST">  
                 <button class="btn btn-success btn-sm" onclick="table2excel('t1')">Excel</button>
                 <button name="acao" value="filtrar" type="submit" class='btn btn-primary btn-sm'>Filtrar</button>
-                <button name="acao" value="limpar" type="submit" class='btn btn-warning btn-sm'>Limpar</button>
+                <button name="acao" value="limpar" type="submit" class='btn btn-secondary btn-sm'>Limpar</button>
             </div>
         </div>
     </div>
