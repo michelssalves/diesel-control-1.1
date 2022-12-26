@@ -193,26 +193,26 @@ include 'assets/controllers/checkAcess.php';
     </div>
     </div>  
     <div class="container">
-        <div class="row">
-            <table class="table table-striped table-bordered table-hoverable">
+        <div class="row">                 
+            <table data-tablesaw-sortable data-tablesaw-sortable-switch class="tablesaw table-sm table-striped table-bordered table-hoverable s-6 mb-0" data-tablesaw-mode="columntoggle" data-tablesaw-minimap>
                 <thead class="thead-dark">
                     <tr>
-                        <th><center>Data</th>
-                        <th><center>Prefixo Sap</th>
-                        <th><center>Placa</th>
-                        <th><center>Prefixo</th>
-                        <th><center>ODI</th>
-                        <th><center>ODF</th>
-                        <th><center>Litros Od</th>
-                        <th><center>Litros</th>
-                        <th><center>Media</th>
-                        <th><center>Ultimo Km</th>
-                        <th><center>Km</th>
-                        <th><center>Dif Km</th>
-                        <th><center>Ultimo Hr</th>
-                        <th><center>Hr</th>
-                        <th><center>Dif Hr</th>
-                        <th><center>Frentista</th>  
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Data</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="5"><center>Prefixo Sap</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Placa</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Prefixo</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>ODI</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>ODF</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Litros Od</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="5"><center>Litros</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Media</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="5"><center>Ultimo Km</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Km</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="5"><center>Dif Km</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="5"><center>Ultimo Hr</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Hr</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Dif Hr</th>
+                        <th data-tablesaw-sortable-col data-tablesaw-priority="1"><center>Frentista</th>  
                     </tr>
                 </thead>
                 <tbody>
