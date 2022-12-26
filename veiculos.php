@@ -41,7 +41,7 @@ include 'assets/controllers/checkAcess.php';
             <div class="container-fluid">
                 <form method="POST">
                 <div class="table-responsive">
-                    <table style="margin-left:30px;">
+                    <table class="table table-sm">
                         <tr>
                             <th>
                                 <label>
