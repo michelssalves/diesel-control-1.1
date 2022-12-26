@@ -10,13 +10,11 @@ $id_funcionario = $_SESSION['id_funcionario'];
 $token = $_SESSION['token'];
 include 'assets/controllers/checkAcess.php';
 ?>
-<!DOCTYPE html>
-<html lang="pt-br">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/custom.css">
-    <link rel="stylesheet" href="diesel-control-1.1/assets/css/fontawesome.all.min.6.2.1.css">
+   
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/tablesaw.css">
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/w3.min.css">
