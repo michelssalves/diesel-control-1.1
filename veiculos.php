@@ -24,9 +24,22 @@ include 'assets/controllers/checkAcess.php';
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/tablesaw.css">
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/w3.min.css">
-    <script src="diesel-control-1.1/assets/js/jquery-3.6.1.min.js"></script>
+    
     <script src="diesel-control-1.1/assets/js/sorttable.js"></script>
     <script src="diesel-control-1.1/assets/js/jquery.table2excel.js"></script>
+    <script src="">
+        function table2excel(id) {
+    $("#" + id).table2excel({
+        exclude: ".excludeThisClass",
+        name: "export",
+        filename: "export.xls", // do include extension, usar xls pra nÃ£o dar pau com o chrome
+        preserveColors: true // set to true if you want background colors and font colors preserved
+        
+    });
+}
+    </script>
+
+<script src="diesel-control-1.1/assets/js/jquery-3.6.1.min.js"></script>
 </head>
 <body>
     <div class="w3-bar w3-light-grey">

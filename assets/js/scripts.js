@@ -59,15 +59,6 @@ function PopupCenter(url, title, w, h) {
         newWindow.focus();  
     }  
 }  
-function table2excel(id) {
-    $("#" + id).table2excel({
-        exclude: ".excludeThisClass",
-        name: "export",
-        filename: "export.xls", // do include extension, usar xls pra nÃ£o dar pau com o chrome
-        preserveColors: true // set to true if you want background colors and font colors preserved
-        
-    });
-}
 if ( window.history.replaceState ) {
     window.history.replaceState( null, null, window.location.href );
 }
