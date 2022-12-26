@@ -200,7 +200,7 @@ include 'assets/controllers/checkAcess.php';
         <div class="row"> 
         <div class="table-responsive">
          <div class="tabela-ver-todos-os-cheques">           
-            <table data-tablesaw-sortable data-tablesaw-sortable-switch class="tablesaw table-sm table-hover table-striped fs-6 mb-0" data-tablesaw-mode="columntoggle" data-tablesaw-minimap>
+            <table data-tablesaw-sortable data-tablesaw-sortable-switch class="tablesaw table-sm fs-6 mb-0" data-tablesaw-mode="columntoggle" data-tablesaw-minimap>
               <thead class="thead-dark">
                     <tr>
                         <th data-tablesaw-sortable-col data-tablesaw-priority="3"><center>Data</th>
