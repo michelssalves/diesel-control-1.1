@@ -31,21 +31,7 @@ include 'assets/controllers/checkAcess.php';
     <!-- /TABLESAW - DEIXA A TABELA RESPONSIVA-->
 </head>
 <script src="">
-    $("#prefixo").on("change", function () {
-    $.ajax({
-        url: 'diesel-control-1.1/assets/controllers/abastecimentoDataBaseAcess.php',
-        type: 'POST',
-        dataType: "json",
-        data: {id_veiculo: $("#prefixo").val(), acao: 'ultimoKm' },
-        success: function (json) {
-            
-            $("#ultimokm").val(json.ultimoKm);
-            $("#ultimohr").val(json.ultimoHr);
-            $("#setor").val(json.setor);
-    
-        }
-    });
-});
+
 </script>
 <body>
     <div class="container-md">
