@@ -21,6 +21,7 @@ include 'assets/controllers/checkAcess.php';
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/tablesaw.css">
     <link rel="stylesheet" href="diesel-control-1.1/assets/css/w3.min.css">
+    <script src="diesel-control-1.1/assets/js/jquery-3.6.1.min.js"></script>
 </head>
 <body>
     <div class="container-md">
@@ -220,7 +221,6 @@ include 'assets/controllers/checkAcess.php';
     </div>
     <script src="diesel-control-1.1/assets/js/scripts.js"></script>
     <script src="diesel-control-1.1/assets/js/fontawesome.all.min.js"></script>
-    <script src="diesel-control-1.1/assets/js/jquery-3.6.1.min.js"></script>
     <script src="diesel-control-1.1/assets/js/bootstrap.bundle.min.v5.2.3.js"></script>
         <!-- TABLESAW - DEIXA A TABELA RESPONSIVA-->
     <script src="diesel-control-1.1/assets/js/tablesawn-label.js"></script>
