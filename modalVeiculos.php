@@ -9,48 +9,48 @@
         <input value="cadastro-veiculo" name="menu" type="hidden"required><br>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
-            <input id="prefixo" value="<?= $_REQUEST['prefixo']?>" name="prefixo" type="text" autofocus required>
+            <input id="prefixo" value="<?= $row['prefixo']?>" name="prefixo" type="text" autofocus required>
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
-            <input id="numero_equipamento"  value="<?= $_REQUEST['numero_equipamento']?>" name="numero_equipamento" type="text" autofocus required >
+            <input id="numero_equipamento"  value="<?= $row['numero_equipamento']?>" name="numero_equipamento" type="text" autofocus required >
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
-            <input id="placa" value="<?= $_REQUEST['placa']?>" name="placa" type="text"  autofocus required>
+            <input id="placa" value="<?= $row['placa']?>" name="placa" type="text"  autofocus required>
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
-            <input id="descricao_caminhao" value="<?= $_REQUEST['descricao_caminhao']?>" name="descricao_caminhao" type="text" autofocus required>
+            <input id="descricao_caminhao" value="<?= $row['descricao_caminhao']?>" name="descricao_caminhao" type="text" autofocus required>
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
-            <input  id="renavam" value="<?= $_REQUEST['renavam']?>" name="renavam" type="text"  autofocus required >
+            <input  id="renavam" value="<?= $row['renavam']?>" name="renavam" type="text"  autofocus required >
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
-            <input id="chassi" value="<?= $_REQUEST['chassi']?>" name="chassi" type="text" autofocus required>
+            <input id="chassi" value="<?= $row['chassi']?>" name="chassi" type="text" autofocus required>
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
-            <input id="numero_motor" value="<?= $_REQUEST['numero_motor']?>" name="numero_motor" type="text"  autofocus required >
+            <input id="numero_motor" value="<?= $row['numero_motor']?>" name="numero_motor" type="text"  autofocus required >
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
-            <input id="ano" value="<?= $_REQUEST['ano']?>" name="ano" type="text" autofocus required>
+            <input id="ano" value="<?= $row['ano']?>" name="ano" type="text" autofocus required>
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
-            <input id="marca" value="<?= $_REQUEST['marca']?>" name="marca" type="text" autofocus required >
+            <input id="marca" value="<?= $row['marca']?>" name="marca" type="text" autofocus required >
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
-            <input id="modelo" value="<?= $_REQUEST['modelo']?>" name="modelo" type="text" autofocus required >
+            <input id="modelo" value="<?= $row['modelo']?>" name="modelo" type="text" autofocus required >
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
             <select id="combustivel" name="combustivel"   required >
-                <option value="<?= $_REQUEST['combustivel']?>"><?= $_REQUEST['combustivel']?></option>
+                <option value="<?= $row['combustivel']?>"><?= $row['combustivel']?></option>
                 <option value="DIESEL S10">DIESEL S10</option>
                 <option value="GASOLINA">GASOLINA</option>
             </select>
@@ -58,10 +58,10 @@
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
             <select id="metodo" name="metodo" required >
-                <option value="<?= $_REQUEST['metodo']?>">
-                <?php if($_REQUEST['metodo'] = 1){
+                <option value="<?= $row['metodo']?>">
+                <?php if($row['metodo'] = 1){
                     echo 'KM';
-                }elseif($_REQUEST['metodo'] = 2){
+                }elseif($row['metodo'] = 2){
                     echo 'HR';
                 }else{
                     echo 'MM';
@@ -75,7 +75,7 @@
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
             <select id="setor" name="setor" required >
-                <option value="<?= $_REQUEST['setor']?>"><?= $_REQUEST['setor']?></option>
+                <option value="<?= $row['setor']?>"><?= $row['setor']?></option>
                 <option value="Coleta Domiciliar">Coleta Domiciliar</option>
                 <option value="Ctrss">Ctrss</option>
                 <option value="Limpeza Especial">Limpeza Especial</option>
@@ -86,8 +86,8 @@
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
             <select id="status_veiculo" name="status_veiculo" required >
-                <option value="<?= $_REQUEST['status_veiculo']?>">
-                <?php if($_REQUEST['status_veiculo'] = 1){
+                <option value="<?= $row['status_veiculo']?>">
+                <?php if($row['status_veiculo'] = 1){
                     echo 'Ativo';
                 }else{
                     echo 'Inativo';
