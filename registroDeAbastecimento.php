@@ -188,7 +188,7 @@ include 'assets/controllers/abastecimentoDataBaseAcess.php';
                         </tr>
                     </thead>
                     <tbody>
-                        <?= $txtTable ?>
+                        <?= listarAbastecimentos() ?>
                     </tbody>
                 </table>
                 </form> 
