@@ -11,13 +11,31 @@
             <span class="input-group-text" id="inputGroup-sizing">Data:</span>
             <input id="data_abastecimento" name="data_abastecimento" value="<?= ($row['data_abastecimento']);?>" type="datetime-local" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
         </div>
-        <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text" id="inputGroup-sizing">Prefixo Sap:</span>
-            <input id="numero_equipamento" value="<?= $row['numero_equipamento']?>" name="numero_equipamento"  type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >   
+        <div class="input-group input-group-sm mb-3 mt-1">
+            <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
+            <select class="form-select" name="id_veiculo" id="prefixo" onchange="buscarInfoVeiculo(this.value)" aria-describedby="inputGroup-sizing" required>
+                <option value="<?= $row['id_veiculo'] ?>"><?= $row['prefixo'] ?></option>
+                <?php
+                $ativado = 1;
+                $sql = $pdo->prepare("SELECT * FROM veiculos  WHERE status_veiculo = :ativado ORDER BY prefixo");
+                $sql->bindValue(':ativado', $ativado);
+                $sql->execute();
+                $fetchAll = $sql->fetchAll();
+                foreach ($fetchAll as $prefixo) {
+                    echo '<option value="'.$prefixo['id_veiculo'].'">' .$prefixo['prefixo'].'</option>';
+                }
+                ?>
+            </select>
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Bomba:</span>
-            <input id="bomba" value="<?= $row['bomba']?>" name="bomba" type="text"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+            <select id="bomba" name="bomba"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  required >
+                <option value="<?= $row['bomba']?>"><?= $row['bomba']?></option>
+                <option value="B01">B01</option>
+                <option value="B02">B02</option>
+                <option value="B03">B03</option>
+                <option value="GASOLINA">GASOLINA</option>
+            </select>
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Od Inicial:</span>
