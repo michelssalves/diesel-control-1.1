@@ -43,7 +43,6 @@ function subtrairConvertendo(v1, v2){
 	const n2 = parseFloat(v2.replace(',', '.'));
 	const n3 = n2 - n1
 	return n4 = n3.toFixed(2).toString().replace('.', ',')
-	
 
 }
 function dividirConvertendo(v1, v2){
@@ -52,8 +51,7 @@ function dividirConvertendo(v1, v2){
 	const litros = parseFloat(v2.replace(',', '.'))
 	const media = kmRodado / litros
 	console.log(media)
-	mediaFinal = media.toFixed(2).toString().replace('.', ',')
-	return mediaFinal
+	return mediaFinal = media.toFixed(2).toString().replace('.', ',')
 
 }
 
