@@ -175,6 +175,7 @@ if($acao == 'excluir-abastecimento'){
     $sql = $pdo->prepare("DELETE FROM abastecimentos WHERE id_abastecimento = :id_abastecimentoAlterar");
     $sql->bindValue(':id_abastecimentoAlterar', $id_abastecimentoAlterar);
     $sql->execute();
+    var_dump($sql);
 
     //excluirAbastecimento();
   
