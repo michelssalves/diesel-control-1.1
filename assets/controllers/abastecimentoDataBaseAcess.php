@@ -4,7 +4,7 @@ $acao = $_REQUEST['acao'];
 
 if($acao == 'registrar-abastecimento'){
 
-      //  registrarAbastecimento();
+    registrarAbastecimento();
 }
 if($acao == 'alterar-abastecimento'){
 
