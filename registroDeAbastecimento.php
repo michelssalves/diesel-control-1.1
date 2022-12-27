@@ -153,10 +153,10 @@ include 'assets/controllers/checkAcess.php';
                 <table data-tablesaw-sortable data-tablesaw-sortable-switch class="tablesaw table-sm" data-tablesaw-mode="columntoggle" data-tablesaw-minimap>
                     <thead>
                         <tr>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="6">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="0">
                                 <center>Data
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="6">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="0">
                                 <center>Prefixo Sap
                             </th>
                             <th data-tablesaw-sortable-col data-tablesaw-priority="1">
@@ -180,16 +180,16 @@ include 'assets/controllers/checkAcess.php';
                             <th data-tablesaw-sortable-col data-tablesaw-priority="1">
                                 <center>Media
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="6">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="0">
                                 <center>Ultimo Km
                             </th>
                             <th data-tablesaw-sortable-col data-tablesaw-priority="1">
                                 <center>Km
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="6">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="0">
                                 <center>Dif Km
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="6">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="0">
                                 <center>Ultimo Hr
                             </th>
                             <th data-tablesaw-sortable-col data-tablesaw-priority="1">
@@ -198,7 +198,7 @@ include 'assets/controllers/checkAcess.php';
                             <th data-tablesaw-sortable-col data-tablesaw-priority="1">
                                 <center>Dif Hr
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="6">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="0">
                                 <center>Frentista
                             </th>
                         </tr>
