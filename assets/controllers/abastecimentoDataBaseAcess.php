@@ -31,7 +31,7 @@ if($acao == 'registrar-abastecimento'){
       $sql = $pdo->prepare("INSERT INTO abastecimentos (id_veiculo, bomba, odometroinicial, ultimokm,	
        km, diferencakm, ultimohr, hr, diferencahr, frentista,	odometrofinal, litros, litros_od, media, data_abastecimento, dataabastecimento2) 
       VALUES (:id_veiculoRegistrar, :bombaRegistrar, :odometroinicialRegistrar,:ultimokmRegistrar,:kmRegistrar, :diferencakmRegistrar, :ultimohrRegistrar, :hrRegistrar, :diferencahrRegistrar,
-      :frentistaRegistrar, :odometrofinalRegistrar, :litrosRegistrar, :litros_odRegistrar, :mediaRegistrar, :data_abastecimento, :data_sem_hora)");
+      :frentistaRegistrar, :odometrofinalRegistrar, :litrosRegistrar, :litros_odRegistrar, :mediaRegistrar, NOW('Y-m-d H:i'), NOW('Y-m-d'))");
   
       $sql->bindValue(':id_veiculoRegistrar', $id_veiculoRegistrar);
       $sql->bindValue(':bombaRegistrar', $bombaRegistrar);
@@ -49,8 +49,6 @@ if($acao == 'registrar-abastecimento'){
       $sql->bindValue(':litros_odRegistrar', $litros_odRegistrar);
       $sql->bindValue(':mediaRegistrar', $mediaRegistrar);
       
-      $sql->bindValue(':data_abastecimento', date('Y-m-d H:i'));
-      $sql->bindValue(':data_sem_hora', date('Y-m-d'));
       $sql->execute();
       var_dump($sql);
   
