@@ -11,23 +11,23 @@ function registrarAbastecimento(){
     include 'config.php';
     include 'functions.php';
    //echo '<pre>';  echo
-   $id_veiculoRegistrar = $_POST['id_veiculoRegistrar'];
-   $bombaRegistrar = $_POST['bombaRegistrar'];
-   $odometroinicialRegistrar = $_POST['odometroinicialRegistrar'];
-   $ultimokmRegistrar = $_POST['ultimokmRegistrar']; 
-   $kmRegistrar = $_POST['kmRegistrar']; 
-   $diferencakmRegistrar = $_POST['diferencakmRegistrar'];
-   $ultimohrRegistrar = $_POST['ultimohrRegistrar'];
-   $hrRegistrar = $_POST['hrRegistrar']; 
-   $diferencahrRegistrar = $_POST['diferencahrRegistrar'];
-   $frentistaRegistrar = $_POST['frentistaRegistrar'];
-   $odometrofinalRegistrar = $_POST['odometrofinalRegistrar'];
-   $litrosRegistrar = $_POST['litrosRegistrar'];
-   $litros_odRegistrar = $_POST['litros_odRegistrar'];
-   $mediaRegistrar = $_POST['mediaRegistrar'];
-   $data_abastecimento = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
+   echo '<pre>';  echo $id_veiculoRegistrar = $_POST['id_veiculoRegistrar'];
+   echo '<pre>';  echo $bombaRegistrar = $_POST['bombaRegistrar'];
+   echo '<pre>';  echo $odometroinicialRegistrar = $_POST['odometroinicialRegistrar'];
+   echo '<pre>';  echo $ultimokmRegistrar = $_POST['ultimokmRegistrar']; 
+   echo '<pre>';  echo $kmRegistrar = $_POST['kmRegistrar']; 
+   echo '<pre>';  echo  $diferencakmRegistrar = $_POST['diferencakmRegistrar'];
+   echo '<pre>';  echo $ultimohrRegistrar = $_POST['ultimohrRegistrar'];
+   echo '<pre>';  echo  $hrRegistrar = $_POST['hrRegistrar']; 
+   echo '<pre>';  echo $diferencahrRegistrar = $_POST['diferencahrRegistrar'];
+   echo '<pre>';  echo $frentistaRegistrar = $_POST['frentistaRegistrar'];
+   echo '<pre>';  echo $odometrofinalRegistrar = $_POST['odometrofinalRegistrar'];
+   echo '<pre>';  echo $litrosRegistrar = $_POST['litrosRegistrar'];
+   echo '<pre>';  echo  $litros_odRegistrar = $_POST['litros_odRegistrar'];
+   echo '<pre>';  echo $mediaRegistrar = $_POST['mediaRegistrar'];
+   echo '<pre>';  echo  $data_abastecimento = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
    $data_abastecimento = $data_abastecimento->format('Y-m-d H:i');
-   $data_sem_hora = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
+   echo '<pre>';  echo $data_sem_hora = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
    $data_sem_hora = $data_sem_hora->format('Y-m-d');
 
     $sql = $pdo->prepare("INSERT INTO abastecimentos (id_veiculo, bomba, odometroinicial, ultimokm,	
