@@ -39,21 +39,21 @@ if($acao == 'alterar-veiculo'){
 
     include 'config.php';
     
-    $idVeiculoAlt = $_POST['idVeiculoAlt'];
-    $numero_equipamento = strtoupper($_POST['numero_equipamento']);
-    $prefixoAlt = strtoupper($_POST['prefixoAlt']);
-    $placa = strtoupper($_POST['placa']);
-    $descricao_caminhao = strtoupper($_POST['descricao_caminhao']);
-    $renavam = strtoupper($_POST['renavam']);
-    $chassi = strtoupper($_POST['chassi']);
-    $numero_motor = strtoupper($_POST['numero_motor']);
-    $ano = strtoupper($_POST['ano']);
-    $marcaAlt = strtoupper($_POST['marcaAlt']);
-    $modeloAlt = strtoupper($_POST['modeloAlt']);
-    $combustivelAlt = strtoupper($_POST['combustivelAlt']);
-    $metodo = strtoupper($_POST['metodo']);
-    $setorAlt = $_POST['setorAlt'];
-    $status_veiculo = strtoupper($_POST['status_veiculo']);
+  echo  $idVeiculoAlt = $_POST['idVeiculoAlt'];
+  echo $numero_equipamento = strtoupper($_POST['numero_equipamento']);
+  echo  $prefixoAlt = strtoupper($_POST['prefixoAlt']);
+  echo  $placa = strtoupper($_POST['placa']);
+  echo $descricao_caminhao = strtoupper($_POST['descricao_caminhao']);
+  echo $renavam = strtoupper($_POST['renavam']);
+  echo $chassi = strtoupper($_POST['chassi']);
+  echo $numero_motor = strtoupper($_POST['numero_motor']);
+  echo  $ano = strtoupper($_POST['ano']);
+  echo  $marcaAlt = strtoupper($_POST['marcaAlt']);
+  echo  $modeloAlt = strtoupper($_POST['modeloAlt']);
+  echo  $combustivelAlt = strtoupper($_POST['combustivelAlt']);
+  echo  $metodo = strtoupper($_POST['metodo']);
+  echo $setorAlt = $_POST['setorAlt'];
+  echo $status_veiculo = strtoupper($_POST['status_veiculo']);
    
 
   /*  if($menu == 'cadastro-veiculo'){
@@ -66,31 +66,31 @@ if($acao == 'alterar-veiculo'){
 
      }else{*/
             $sql = $pdo->prepare("UPDATE veiculos SET
-			numero_equipamento = :numero_equipamento, prefixo = :prefixo, placa = :placa, 
+			numero_equipamento = :numero_equipamento, prefixo = :prefixoAlt, placa = :placa, 
             descricao_caminhao = :descricao_caminhao, renavam = :renavam, chassi = :chassi, 
             numero_motor = :numero_motor,
-            ano = :ano, marca = :marca,modelo = :modelo, combustivel = :combustivel ,metodo =:metodo,
-            setor = :setor, status_veiculo = :status_veiculo
-			WHERE id_veiculo = :id_veiculo");
+            ano = :ano, marca = :marcaAlt, modelo = :modeloAlt, combustivel = :combustivelAlt ,metodo =:metodo,
+            setor = :setorAlt, status_veiculo = :status_veiculo
+			WHERE id_veiculo = :idVeiculoAlt");
 
 
-            $sql->bindValue(':id_veiculo', $idVeiculoAlt);
+            $sql->bindValue(':idVeiculoAlt', $idVeiculoAlt);
 
      //}
             
 			$sql->bindValue(':numero_equipamento', $numero_equipamento);
-			$sql->bindValue(':prefixo', $prefixoAlt);
+			$sql->bindValue(':prefixoAlt', $prefixoAlt);
 			$sql->bindValue(':placa', $placa);
 			$sql->bindValue(':descricao_caminhao', $descricao_caminhao);
 			$sql->bindValue(':renavam', $renavam);
 			$sql->bindValue(':chassi', $chassi);
 			$sql->bindValue(':numero_motor', $numero_motor);
 			$sql->bindValue(':ano', $ano);
-			$sql->bindValue(':marca', $marcaAlt);
-			$sql->bindValue(':modelo', $modeloAlt);
-			$sql->bindValue(':combustivel', $combustivelAlt);
+			$sql->bindValue(':marcaAlt', $marcaAlt);
+			$sql->bindValue(':modeloAlt', $modeloAlt);
+			$sql->bindValue(':combustivelAlt', $combustivelAlt);
 			$sql->bindValue(':metodo', $metodo);
-			$sql->bindValue(':setor', $setorAlt);
+			$sql->bindValue(':setorAlt', $setorAlt);
 			$sql->bindValue(':status_veiculo', $status_veiculo);
 			$sql1->execute();
          
