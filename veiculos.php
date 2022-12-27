@@ -205,8 +205,7 @@ include 'assets/controllers/checkAcess.php';
                     </thead>
                     <tbody>
                         <?= filtrarVeiculos($filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, $filtroSetor, $filtroStatus) ?>
-                    </tbody>
-                </table>
+             
             </div>
         </div>
     </div>
