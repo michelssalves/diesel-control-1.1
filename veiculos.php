@@ -41,7 +41,7 @@ include 'assets/controllers/checkAcess.php';
                     <?php $link = "PopupCenter('cadastrar-veiculo',' Cadastrar Veiculos',400,900)"; ?>
                     <button class="btn btn-success btn-sm" onclick="table2excel('t1')">Excel</button>
                     <button name="acao" value="filtrar" type="submit" class='btn btn-warning btn-sm'>Filtrar</button>
-                    <button onclick="<?= $link ?>" name='filtrar-cheques' class='btn btn-primary btn-sm'>Cadastrar</button>
+                    <button class='btn btn-primary btn-sm' data-bs-toggle='modal' data-bs-target='#modalCadastrarVeiculo'>Cadastrar</button>
                     <button name="acao" value="limpar" type="submit" class='btn btn-secondary btn-sm'>Limpar</button>
 
             </div>

@@ -30,153 +30,126 @@ if($status == 'checked'){
 }else{
      $filtroStatus = "WHERE status_veiculo = 1";
 }
+if($acao == 'cadastrarVeiculo'){
 
+    cadastrarVeiculo();
+}
 if($acao == 'desativar-veiculo'){
 
     desativarVeiculo();
 }
 if($acao == 'alterar-veiculo'){
-
-    include 'config.php';
-    
-  echo  $idVeiculoAlt = $_POST['idVeiculoAlt'];
-  echo $numero_equipamento = strtoupper($_POST['numero_equipamento']);
-  echo  $prefixoAlt = strtoupper($_POST['prefixoAlt']);
-  echo  $placa = strtoupper($_POST['placa']);
-  echo $descricao_caminhao = strtoupper($_POST['descricao_caminhao']);
-  echo $renavam = strtoupper($_POST['renavam']);
-  echo $chassi = strtoupper($_POST['chassi']);
-  echo $numero_motor = strtoupper($_POST['numero_motor']);
-  echo  $ano = strtoupper($_POST['ano']);
-  echo  $marcaAlt = strtoupper($_POST['marcaAlt']);
-  echo  $modeloAlt = strtoupper($_POST['modeloAlt']);
-  echo  $combustivelAlt = strtoupper($_POST['combustivelAlt']);
-  echo  $metodo = strtoupper($_POST['metodo']);
-  echo $setorAlt = $_POST['setorAlt'];
-  echo $status_veiculo = strtoupper($_POST['status_veiculo']);
-   
-
-  /*  if($menu == 'cadastro-veiculo'){
-        
-			$sql = $pdo->prepare("INSERT INTO veiculos(
-			numero_equipamento, prefixo, placa, descricao_caminhao, renavam,chassi, numero_motor,
-            ano,marca,modelo,combustivel,metodo,setor,status_veiculo)
-			VALUES(:numero_equipamento, :prefixo, :placa, :descricao_caminhao, :renavam, :chassi,
-			:numero_motor,:ano, :marca, :modelo, :combustivel, :metodo, :setor, :status_veiculo)");
-
-     }else{*/
-            $sql = $pdo->prepare("UPDATE veiculos SET
-			numero_equipamento = :numero_equipamento, prefixo = :prefixoAlt, placa = :placa, 
-            descricao_caminhao = :descricao_caminhao, renavam = :renavam, chassi = :chassi, 
-            numero_motor = :numero_motor,
-            ano = :ano, marca = :marcaAlt, modelo = :modeloAlt, combustivel = :combustivelAlt ,metodo =:metodo,
-            setor = :setorAlt, status_veiculo = :status_veiculo
-			WHERE id_veiculo = :idVeiculoAlt");
-
-
-            $sql->bindValue(':idVeiculoAlt', $idVeiculoAlt);
-
-     //}
-            
-			$sql->bindValue(':numero_equipamento', $numero_equipamento);
-			$sql->bindValue(':prefixoAlt', $prefixoAlt);
-			$sql->bindValue(':placa', $placa);
-			$sql->bindValue(':descricao_caminhao', $descricao_caminhao);
-			$sql->bindValue(':renavam', $renavam);
-			$sql->bindValue(':chassi', $chassi);
-			$sql->bindValue(':numero_motor', $numero_motor);
-			$sql->bindValue(':ano', $ano);
-			$sql->bindValue(':marcaAlt', $marcaAlt);
-			$sql->bindValue(':modeloAlt', $modeloAlt);
-			$sql->bindValue(':combustivelAlt', $combustivelAlt);
-			$sql->bindValue(':metodo', $metodo);
-			$sql->bindValue(':setorAlt', $setorAlt);
-			$sql->bindValue(':status_veiculo', $status_veiculo);
-			$sql->execute();
-         
-            
-   // cadastroAlteracaoVeiculo();
+ 
+    alterarVeiculo();
 }
-function cadastroAlteracaoVeiculo(){
+function cadastrarVeiculo(){
 
     include 'config.php';
     
-    $id_veiculo = $_POST['idVeiculoAlt'];
     $numero_equipamento = strtoupper($_POST['numero_equipamento']);
-    $prefixo = strtoupper($_POST['prefixoAlt']);
+    $prefixoCad = strtoupper($_POST['prefixoCad']);
     $placa = strtoupper($_POST['placa']);
     $descricao_caminhao = strtoupper($_POST['descricao_caminhao']);
     $renavam = strtoupper($_POST['renavam']);
     $chassi = strtoupper($_POST['chassi']);
     $numero_motor = strtoupper($_POST['numero_motor']);
     $ano = strtoupper($_POST['ano']);
-    $marca = strtoupper($_POST['marcaAlt']);
-    $modelo = strtoupper($_POST['modeloAlt']);
-    $combustivel = strtoupper($_POST['combustivelAlt']);
+    $marcaCad  = strtoupper($_POST['marcaCad ']);
+    $modeloCad  = strtoupper($_POST['modeloCad ']);
+    $combustivelCad = strtoupper($_POST['combustivelCad']);
     $metodo = strtoupper($_POST['metodo']);
-    $setor = $_POST['setorAlt'];
+    $setorCad = $_POST['setorCad'];
     $status_veiculo = strtoupper($_POST['status_veiculo']);
-   
 
-  /*  if($menu == 'cadastro-veiculo'){
-        
-			$sql = $pdo->prepare("INSERT INTO veiculos(
-			numero_equipamento, prefixo, placa, descricao_caminhao, renavam,chassi, numero_motor,
-            ano,marca,modelo,combustivel,metodo,setor,status_veiculo)
-			VALUES(:numero_equipamento, :prefixo, :placa, :descricao_caminhao, :renavam, :chassi,
-			:numero_motor,:ano, :marca, :modelo, :combustivel, :metodo, :setor, :status_veiculo)");
+    $sql = $pdo->prepare("INSERT INTO veiculos(
+        numero_equipamento, prefixo, placa, descricao_caminhao, renavam,chassi, numero_motor,
+        ano,marca,modelo,combustivel,metodo,setor,status_veiculo)
+        VALUES(:numero_equipamento, :prefixoCad, :placa, :descricao_caminhao, :renavam, :chassi,
+        :numero_motor,:ano, :marcaCad, :modeloCad, :combustivelCad, :metodo, :setorCad, :status_veiculo)");
 
-     }else{*/
-            $sql = $pdo->prepare("UPDATE veiculos SET
-			numero_equipamento = :numero_equipamento, prefixo = :prefixo, placa = :placa, 
-            descricao_caminhao = :descricao_caminhao, renavam = :renavam, chassi = :chassi, 
-            numero_motor = :numero_motor,
-            ano = :ano, marca = :marca,modelo = :modelo, combustivel = :combustivel ,metodo =:metodo,
-            setor = :setor, status_veiculo = :status_veiculo
-			WHERE id_veiculo = :id_veiculo");
-            $sql->bindValue(':id_veiculo', $id_veiculo);
+    $sql->bindValue(':numero_equipamento', $numero_equipamento);
+    $sql->bindValue(':prefixoCad', $prefixoCad);
+    $sql->bindValue(':placa', $placa);
+    $sql->bindValue(':descricao_caminhao', $descricao_caminhao);
+    $sql->bindValue(':renavam', $renavam);
+    $sql->bindValue(':chassi', $chassi);
+    $sql->bindValue(':numero_motor', $numero_motor);
+    $sql->bindValue(':ano', $ano);
+    $sql->bindValue(':marcaCad', $marcaCad);
+    $sql->bindValue(':modeloCad', $modeloCad);
+    $sql->bindValue(':combustivelCad', $combustivelCad);
+    $sql->bindValue(':metodo', $metodo);
+    $sql->bindValue(':setorCad', $setorCad);
+    $sql->bindValue(':status_veiculo', $status_veiculo);
+    $sql->execute();
 
-     //}
-            
-			$sql->bindValue(':numero_equipamento', $numero_equipamento);
-			$sql->bindValue(':prefixo', $prefixo);
-			$sql->bindValue(':placa', $placa);
-			$sql->bindValue(':descricao_caminhao', $descricao_caminhao);
-			$sql->bindValue(':renavam', $renavam);
-			$sql->bindValue(':chassi', $chassi);
-			$sql->bindValue(':numero_motor', $numero_motor);
-			$sql->bindValue(':ano', $ano);
-			$sql->bindValue(':marca', $marca);
-			$sql->bindValue(':modelo', $modelo);
-			$sql->bindValue(':combustivel', $combustivel);
-			$sql->bindValue(':metodo', $metodo);
-			$sql->bindValue(':setor', $setor);
-			$sql->bindValue(':status_veiculo', $status_veiculo);
-			$sql->execute();
+}
+function alterarVeiculo(){
 
+    include 'config.php';
+    
+    $idVeiculoAlt = $_POST['idVeiculoAlt'];
+    $numero_equipamento = strtoupper($_POST['numero_equipamento']);
+    $prefixoAlt = strtoupper($_POST['prefixoAlt']);
+    $placa = strtoupper($_POST['placa']);
+    $descricao_caminhao = strtoupper($_POST['descricao_caminhao']);
+    $renavam = strtoupper($_POST['renavam']);
+    $chassi = strtoupper($_POST['chassi']);
+    $numero_motor = strtoupper($_POST['numero_motor']);
+    $ano = strtoupper($_POST['ano']);
+    $marcaAlt = strtoupper($_POST['marcaAlt']);
+    $modeloAlt = strtoupper($_POST['modeloAlt']);
+    $combustivelAlt = strtoupper($_POST['combustivelAlt']);
+    $metodo = strtoupper($_POST['metodo']);
+    $setorAlt = $_POST['setorAlt'];
+    $status_veiculo = strtoupper($_POST['status_veiculo']);
      
+    $sql = $pdo->prepare("UPDATE veiculos SET
+    numero_equipamento = :numero_equipamento, prefixo = :prefixoAlt, placa = :placa, 
+    descricao_caminhao = :descricao_caminhao, renavam = :renavam, chassi = :chassi, 
+    numero_motor = :numero_motor,
+    ano = :ano, marca = :marcaAlt, modelo = :modeloAlt, combustivel = :combustivelAlt ,metodo =:metodo,
+    setor = :setorAlt, status_veiculo = :status_veiculo
+    WHERE id_veiculo = :idVeiculoAlt");
+
+    $sql->bindValue(':idVeiculoAlt', $idVeiculoAlt);
+    $sql->bindValue(':numero_equipamento', $numero_equipamento);
+    $sql->bindValue(':prefixoAlt', $prefixoAlt);
+    $sql->bindValue(':placa', $placa);
+    $sql->bindValue(':descricao_caminhao', $descricao_caminhao);
+    $sql->bindValue(':renavam', $renavam);
+    $sql->bindValue(':chassi', $chassi);
+    $sql->bindValue(':numero_motor', $numero_motor);
+    $sql->bindValue(':ano', $ano);
+    $sql->bindValue(':marcaAlt', $marcaAlt);
+    $sql->bindValue(':modeloAlt', $modeloAlt);
+    $sql->bindValue(':combustivelAlt', $combustivelAlt);
+    $sql->bindValue(':metodo', $metodo);
+    $sql->bindValue(':setorAlt', $setorAlt);
+    $sql->bindValue(':status_veiculo', $status_veiculo);
+    $sql->execute();
+           
 }
 function desativarVeiculo(){
 
     include 'config.php';
 
-    $id_veiculo = $_POST['id_veiculo'];
+    $idVeiculoAlt = $_POST['idVeiculoAlt'];
     $status_veiculo = '2';
     
-    $sql = $pdo->prepare("UPDATE veiculos SET status_veiculo = :status_veiculo WHERE id_veiculo = :id_veiculo");
+    $sql = $pdo->prepare("UPDATE veiculos SET status_veiculo = :status_veiculo WHERE id_veiculo = :idVeiculoAlt");
     
     $sql->bindValue(':status_veiculo', $status_veiculo);
-    $sql->bindValue(':id_veiculo', $id_veiculo);
-
+    $sql->bindValue(':idVeiculoAlt', $idVeiculoAlt);
     $sql->execute();
 
-    header("Location: veiculo-desativado?acao=desativarVeiculo");
 
 }
 function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo,$filtroSetor, $filtroStatus){
    
     include 'config.php';
     include 'functions.php';
+    include 'modalCadastrarVeiculos.php';
 
         $sql = $pdo->prepare("SELECT * FROM veiculos AS v
         $filtroStatus    
@@ -236,7 +209,7 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
                 <td>'.($row['status_veiculo'] == 1 ? 'Ativo' : 'Inativo').'</td>
             </tr>';
 
-                include 'modalVeiculos.php';
+                include 'modalAlterarVeiculos.php';
             }
            
         }
