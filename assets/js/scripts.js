@@ -1,6 +1,6 @@
 function soNumeros(num) {
 
-    var er = /[^0-9,\.]/;
+	var regex = /^[0-9,]+$/;
     er.lastIndex = 0;
     var campo = num;
     if (er.test(campo.value)) {
