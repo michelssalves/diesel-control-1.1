@@ -6,7 +6,7 @@
       </div>
       <div class="modal-body">
         <form method="POST">
-        <input type="text" value="<?= $row['id_abastecimento'] ?>">
+        <input type="hidden" value="<?= $row['id_abastecimento'] ?>">
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Data:</span>
             <input id="data_abastecimento" name="data_abastecimento" value="<?= ($row['data_abastecimento']);?>" type="datetime-local" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
