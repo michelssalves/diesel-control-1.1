@@ -36,7 +36,7 @@ include 'assets/controllers/checkAcess.php';
             </div>
         </div>
     </nav>
-    <form method="get">
+    <form method="POST">
         <input readonly id="frentista" name="frentista" type="hidden" class="form-control" value="<?= $_SESSION['nome']; ?>" autofocus>
          <div class="input-group input-group-sm mb-3 mt-1">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
@@ -131,6 +131,7 @@ include 'assets/controllers/checkAcess.php';
             <input readonly id="media" name="mediaRegistrar" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Media" autofocus required>
         </div>
         <button type="submit" action="acao" value="registrar-abastecimento" class="btn btn-primary btn-sm">Cadastrar</button>
+    </form>    
         <div class="table-responsive">
             <div class="tabelas-customizadas">
                 <table data-tablesaw-sortable data-tablesaw-sortable-switch class="tablesaw table-sm" data-tablesaw-mode="columntoggle" data-tablesaw-minimap>
