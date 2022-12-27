@@ -83,9 +83,18 @@
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Frentista:</span>
-            <input id="frentista" value="<?= $row['frentista']?>" name="frentistaAlterar" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
+            <select id="frentista" name="frentistaAlterar"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  required >
+                    <option value="<?= $row['frentista']?>"><?= $row['frentista']?></option>
+                    <?php
+                    $sql = $pdo->prepare("SELECT usuario FROM funcionarios WHERE id_permissao < 3");
+                    $sql->execute();
+                    $fetchAll = $sql->fetchAll();
+                    foreach ($fetchAll as $pessoa) {
+                        echo '<option value="'.$pessoa['id_veiculo'].'">' .$pessoa['nome'].'</option>';
+                    }
+                    ?>
+            </select>
         </div>
-      </div>
         <div class="modal-footer">
           <div class="d-flex gap-2 d-sm-flex mb-2 justify-content-md-center">
             <button type="submit" name="acao" value="alterar-abastecimento" class="btn btn-outline-primary btn-sm">Alterar</button>
