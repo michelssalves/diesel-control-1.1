@@ -149,7 +149,7 @@ function desativarVeiculo($acao){
     $sql->execute();
 
 }
-function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo,$filtroSetor, $filtroStatus, $page){
+function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo,$filtroSetor, $filtroStatus, $page="1"){
 
     $result_for_page = 25;
    // $page = 1;
