@@ -4,11 +4,11 @@ $msgSucesso = $_SESSION['msg'];
 include 'assets/controllers/config.php';
 include 'assets/controllers/abastecimentoDataBaseAcess.php';
 $nivelPremissao = 0;
-$login = $_SESSION['usuario'];
-$usuario = $_SESSION['nome'];
-$permissao =  $_SESSION['id_permissao'];
-$id_funcionario = $_SESSION['id_funcionario'];
-$token = $_SESSION['token'];
+//$login = $_SESSION['usuario'];
+//$usuario = $_SESSION['nome'];
+//$permissao =  $_SESSION['id_permissao'];
+//$id_funcionario = $_SESSION['id_funcionario'];
+//$token = $_SESSION['token'];
 include 'assets/controllers/checkAcess.php';
 ?>
 <!doctype html>
@@ -27,7 +27,7 @@ include 'assets/controllers/checkAcess.php';
     <div class="container">
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><label>Usuario Logado: <?= $usuario; ?></label></a>
+            <a class="navbar-brand" href="#"><label>Usuario Logado: <?= $_SESSION['nome']; ?></label></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
