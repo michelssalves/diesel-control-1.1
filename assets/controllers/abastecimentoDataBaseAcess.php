@@ -134,6 +134,38 @@ if($acao == 'ultimoKm'){
  //   header('Content-Type: application/json');
    // echo json_encode($informacoesVeiculo);
 }
+function informacoesVeiculo($id_veiculo){
+
+    include 'config.php';
+    
+    $sql = $pdo->prepare("SELECT * FROM abastecimentos 
+	WHERE id_veiculo = :id_veiculo  
+    ORDER BY data_abastecimento DESC LIMIT 1
+    ");
+	$sql->bindValue(':id_veiculo', $id_veiculo);
+	$sql->execute();
+	$row = $sql->fetch(PDO::FETCH_ASSOC);
+    $setor = $row['setor'];
+    $ultimoKm = $row['km'];
+    if($row['km'] < 0){$ultimoKm = 0;}
+    $ultimoHr = $row['hr'];
+    if($row['hr'] < 0){$ultimoHr = 0;}
+    
+    $sql = $pdo->prepare("SELECT * FROM veiculos WHERE id_veiculo = :id_veiculo");
+	$sql->bindValue(':id_veiculo', $id_veiculo);
+	$sql->execute();
+	$row = $sql->fetch(PDO::FETCH_ASSOC);
+    $setor = $row['setor'];
+
+    $informacoesVeiculo = [
+        'setor' => $setor,
+        'ultimoKm' => $ultimoKm,
+        'ultimoHr' => $ultimoHr
+    ];
+
+    return $informacoesVeiculo;
+
+}
 
  /*
 if($acao == 'alterar-abastecimento'){
@@ -362,38 +394,7 @@ function consultarEquipamento($id_veiculo){
     return  $lista;
  
 }
-function informacoesVeiculo($id_veiculo){
 
-    include 'config.php';
-    
-    $sql = $pdo->prepare("SELECT * FROM abastecimentos 
-	WHERE id_veiculo = :id_veiculo  
-    ORDER BY data_abastecimento DESC LIMIT 1
-    ");
-	$sql->bindValue(':id_veiculo', $id_veiculo);
-	$sql->execute();
-	$row = $sql->fetch(PDO::FETCH_ASSOC);
-    $setor = $row['setor'];
-    $ultimoKm = $row['km'];
-    if($row['km'] < 0){$ultimoKm = 0;}
-    $ultimoHr = $row['hr'];
-    if($row['hr'] < 0){$ultimoHr = 0;}
-    
-    $sql = $pdo->prepare("SELECT * FROM veiculos WHERE id_veiculo = :id_veiculo");
-	$sql->bindValue(':id_veiculo', $id_veiculo);
-	$sql->execute();
-	$row = $sql->fetch(PDO::FETCH_ASSOC);
-    $setor = $row['setor'];
-
-    $informacoesVeiculo = [
-        'setor' => $setor,
-        'ultimoKm' => $ultimoKm,
-        'ultimoHr' => $ultimoHr
-    ];
-
-    return $informacoesVeiculo;
-
-}
 
 */
 
