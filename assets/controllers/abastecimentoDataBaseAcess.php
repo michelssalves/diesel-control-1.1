@@ -2,70 +2,72 @@
 session_start();
 $acao = $_REQUEST['acao'];
 
-include 'config.php';
-include 'functions.php';
-
-    $sql = $pdo->prepare("SELECT * FROM veiculos AS v JOIN abastecimentos AS a ON a.id_veiculo = v.id_veiculo ORDER BY data_abastecimento DESC LIMIT 30 ");
-    $sql->execute();
-
-    if ($sql->rowCount() > 0) {
-
-        $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
-       
-         foreach($lista as $row){
-
-                $corDifKm = '';
-                $corDifHr = '';
-                $corMedia = '';
-                $corLitros = '';
-                    
-                if($row['combustivel'] <> 'GASOLINA'){
-
-                    if($row['setor'] == 'Coleta Domiciliar'){
-                        if($row['diferencakm'] > 400 || $row['diferencakm'] < 0){$corDifKm = 'bg-danger';}
-                        if($row['diferencahr'] > 24 || $row['diferencahr'] < 0){$corDifHr = 'bg-danger';}
-                    }elseif($row['setor'] == 'Privado'){
-                        if($row['diferencakm'] > 2000 || $row['diferencakm']  < 0){$corDifKm = 'bg-danger';}
-                        if($row['diferencahr'] > 60 || $row['diferencahr'] < 0){$corDifHr = 'bg-danger';}
-                    }else{
-                        if($row['diferencakm'] > 1000 || $row['diferencakm']  < 0){$corDifKm = 'bg-danger';}
-                        if($row['diferencahr'] > 50 || $row['diferencahr'] < 0){$corDifHr = 'bg-danger';}
-                    }    
-                }
-           
-                    if($row['media'] > 2.5 && $row['descricao_caminhao'] == 'COMPACTADOR'){$corMedia = 'bg-warning';}
-                    if($row['media'] < 1.5){$corMedia = 'bg-danger';}
-                    if($row['media'] > 17.0 ){$corMedia = 'bg-info';}
-
-                    if($row['litros_od'] <> $row['litros'] ){$corLitros = 'bg-warning';}
-
-                $txtTable = $txtTable.'<tr>
-                <td class="w3-left-align" > '.dmaH($row['data_abastecimento']).'</td>
-                <td> '.$row['numero_equipamento'].' </td>
-                <td> '.$row['placa'].' </td>
-                <td> '.$row['prefixo'].' </td>
-                <td class="w3-right-align"> '.v2($row['odometroinicial']).' </td>
-                <td class="w3-right-align" > '.v2($row['odometrofinal']).' </td>
-                <td class="'.$corLitros.' w3-right-align"> '.v2($row['litros_od']).' </td>
-                <td class="'.$corLitros.' w3-right-align"> '.v2($row['litros']).' </td>
-                <td class="'.$corMedia.' w3-right-align"> '.v2($row['media']).' </td>
-                <td> '.$row['ultimokm'].' </td>
-                <td> '.$row['km'].' </td>
-                <td class="'.$corDifKm.' class="w3-right-align"> '.$row['diferencakm'].' </td>
-                <td> '.$row['ultimohr'].'</td>
-                <td> '.$row['hr'].'</td>
-                <td class="'.$corDifHr.' class="w3-right-align"> '.$row['diferencahr'].'</td>
-                <td> '.$row['frentista'].'</td>
-                </tr>';
-                  
-            }
-        }       
-              
-       //return $txtTable;     
-
 function listarAbastecimentos(){
 
-       
+    include 'config.php';
+    include 'functions.php';
+
+        $sql = $pdo->prepare("SELECT *
+        FROM veiculos AS v  
+        JOIN abastecimentos AS a 
+        ON a.id_veiculo = v.id_veiculo
+        ORDER BY data_abastecimento DESC LIMIT 30 ");
+        $sql->execute();
+
+        if ($sql->rowCount() > 0) {
+
+            $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
+           
+             foreach($lista as $row){
+
+                    $corDifKm = '';
+                    $corDifHr = '';
+                    $corMedia = '';
+                    $corLitros = '';
+                        
+                    if($row['combustivel'] <> 'GASOLINA'){
+
+                        if($row['setor'] == 'Coleta Domiciliar'){
+                            if($row['diferencakm'] > 400 || $row['diferencakm'] < 0){$corDifKm = 'bg-danger';}
+                            if($row['diferencahr'] > 24 || $row['diferencahr'] < 0){$corDifHr = 'bg-danger';}
+                        }elseif($row['setor'] == 'Privado'){
+                            if($row['diferencakm'] > 2000 || $row['diferencakm']  < 0){$corDifKm = 'bg-danger';}
+                            if($row['diferencahr'] > 60 || $row['diferencahr'] < 0){$corDifHr = 'bg-danger';}
+                        }else{
+                            if($row['diferencakm'] > 1000 || $row['diferencakm']  < 0){$corDifKm = 'bg-danger';}
+                            if($row['diferencahr'] > 50 || $row['diferencahr'] < 0){$corDifHr = 'bg-danger';}
+                        }    
+                    }
+               
+                        if($row['media'] > 2.5 && $row['descricao_caminhao'] == 'COMPACTADOR'){$corMedia = 'bg-warning';}
+                        if($row['media'] < 1.5){$corMedia = 'bg-danger';}
+                        if($row['media'] > 17.0 ){$corMedia = 'bg-info';}
+
+                        if($row['litros_od'] <> $row['litros'] ){$corLitros = 'bg-warning';}
+    
+                    $txtTable = $txtTable.'<tr>
+                    <td class="w3-left-align" > '.dmaH($row['data_abastecimento']).'</td>
+                    <td> '.$row['numero_equipamento'].' </td>
+                    <td> '.$row['placa'].' </td>
+                    <td> '.$row['prefixo'].' </td>
+                    <td class="w3-right-align"> '.v2($row['odometroinicial']).' </td>
+                    <td class="w3-right-align" > '.v2($row['odometrofinal']).' </td>
+                    <td class="'.$corLitros.' w3-right-align"> '.v2($row['litros_od']).' </td>
+                    <td class="'.$corLitros.' w3-right-align"> '.v2($row['litros']).' </td>
+                    <td class="'.$corMedia.' w3-right-align"> '.v2($row['media']).' </td>
+                    <td> '.$row['ultimokm'].' </td>
+                    <td> '.$row['km'].' </td>
+                    <td class="'.$corDifKm.' class="w3-right-align"> '.$row['diferencakm'].' </td>
+                    <td> '.$row['ultimohr'].'</td>
+                    <td> '.$row['hr'].'</td>
+                    <td class="'.$corDifHr.' class="w3-right-align"> '.$row['diferencahr'].'</td>
+                    <td> '.$row['frentista'].'</td>
+                    </tr>';
+                      
+                }
+            }       
+                  
+           return $txtTable;            
 }
 if($acao == 'registrar-abastecimento'){
 
@@ -74,26 +76,26 @@ if($acao == 'registrar-abastecimento'){
 function registrarAbastecimento(){
 
     include 'config.php';
-    include 'functions.php';
+   // include 'functions.php';
    //echo '<pre>';  echo
-   echo '<pre>';  echo $id_veiculoRegistrar = $_POST['id_veiculoRegistrar'];
-   echo '<pre>';  echo $bombaRegistrar = $_POST['bombaRegistrar'];
-   echo '<pre>';  echo $odometroinicialRegistrar = $_POST['odometroinicialRegistrar'];
-   echo '<pre>';  echo $ultimokmRegistrar = $_POST['ultimokmRegistrar']; 
-   echo '<pre>';  echo $kmRegistrar = $_POST['kmRegistrar']; 
-   echo '<pre>';  echo  $diferencakmRegistrar = $_POST['diferencakmRegistrar'];
-   echo '<pre>';  echo $ultimohrRegistrar = $_POST['ultimohrRegistrar'];
-   echo '<pre>';  echo  $hrRegistrar = $_POST['hrRegistrar']; 
-   echo '<pre>';  echo $diferencahrRegistrar = $_POST['diferencahrRegistrar'];
-   echo '<pre>';  echo $frentistaRegistrar = $_POST['frentistaRegistrar'];
-   echo '<pre>';  echo $odometrofinalRegistrar = $_POST['odometrofinalRegistrar'];
-   echo '<pre>';  echo $litrosRegistrar = $_POST['litrosRegistrar'];
-   echo '<pre>';  echo  $litros_odRegistrar = $_POST['litros_odRegistrar'];
-   echo '<pre>';  echo $mediaRegistrar = $_POST['mediaRegistrar'];
-  $data_abastecimento = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
-   echo '<pre>';  echo$data_abastecimento = $data_abastecimento->format('Y-m-d H:i');
+    $id_veiculoRegistrar = $_POST['id_veiculoRegistrar'];
+    $bombaRegistrar = $_POST['bombaRegistrar'];
+    $odometroinicialRegistrar = $_POST['odometroinicialRegistrar'];
+    $ultimokmRegistrar = $_POST['ultimokmRegistrar']; 
+    $kmRegistrar = $_POST['kmRegistrar']; 
+    $diferencakmRegistrar = $_POST['diferencakmRegistrar'];
+    $ultimohrRegistrar = $_POST['ultimohrRegistrar'];
+    $hrRegistrar = $_POST['hrRegistrar']; 
+    $diferencahrRegistrar = $_POST['diferencahrRegistrar'];
+    $frentistaRegistrar = $_POST['frentistaRegistrar'];
+    $odometrofinalRegistrar = $_POST['odometrofinalRegistrar'];
+    $litrosRegistrar = $_POST['litrosRegistrar'];
+    $litros_odRegistrar = $_POST['litros_odRegistrar'];
+    $mediaRegistrar = $_POST['mediaRegistrar'];
+    $data_abastecimento = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
+    $data_abastecimento = $data_abastecimento->format('Y-m-d H:i');
     $data_sem_hora = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
-    echo '<pre>';  echo $data_sem_hora = $data_sem_hora->format('Y-m-d');
+    $data_sem_hora = $data_sem_hora->format('Y-m-d');
 
     $sql = $pdo->prepare("INSERT INTO abastecimentos (id_veiculo, bomba, odometroinicial, ultimokm,	
      km, diferencakm, ultimohr, hr, diferencahr, frentista,	odometrofinal, litros, litros_od, media, data_abastecimento, dataabastecimento2) 
