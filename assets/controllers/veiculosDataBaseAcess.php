@@ -162,7 +162,7 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
         $sql = $pdo->prepare("SELECT * FROM veiculos AS v
         $filtroStatus    
         $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor
-        ORDER BY prefixo DESC LIMIT $start, $result_for_page");
+        ORDER BY prefixo ASC LIMIT $start, $result_for_page");
         $sql->execute();
 
         if ($sql->rowCount() > 0) {
