@@ -1,10 +1,9 @@
 ﻿<?php
 session_start();
-$msgSucesso = $_SESSION['msg'];
 include 'assets/controllers/config.php';
 include 'assets/controllers/abastecimentoDataBaseAcess.php';
-$nivelPremissao = 0;
 include 'assets/controllers/checkAcess.php';
+$nivelPremissao = 0;
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -38,7 +37,6 @@ include 'assets/controllers/checkAcess.php';
             </div>
         </div>
     </nav>
-    <?php if (isset($msgSucesso)) { echo $msgSucesso; }unset($_SESSION['msg']); ?>
     <form method="POST">
         <input readonly id="frentista" name="frentista" type="hidden" class="form-control" value="<?= $login ?>" autofocus>
         <input readonly id="id_funcionario" name="id_funcionario" type="hidden" class="form-control" value="<?= $id_funcionario ?>" autofocus>

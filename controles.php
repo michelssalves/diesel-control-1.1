@@ -1,8 +1,8 @@
 <?php
 session_start();
 include 'assets/controllers/abastecimentoDataBaseAcess.php';
-$nivelPremissao = 1;
 include 'assets/controllers/checkAcess.php';
+$nivelPremissao = 1;
 ?>
 <head>
     <meta charset="utf-8">

@@ -108,6 +108,10 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
 
             foreach($lista as $row){
 
+                $modalAlterarAbastecimento = "modalAlterarAbastecimento".$row['id_abastecimento']."";
+
+                $linkModalAlterarAbastecimento = "data-bs-toggle='modal' data-bs-target='#$modalAlterarAbastecimento' style='cursor:pointer'";
+
                 $info = array(
                 'id_abastecimento' => $row['id_abastecimento'],
                 'bomba' => $row['bomba'],
@@ -156,7 +160,7 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
 
                     if($row['litros_od'] <> $row['litros'] ){$corLitros = 'bg-warning';}
      
-                $txtTableControles .= '<tr onclick="'.$link.'" style="cursor:pointer;">
+                $txtTableControles .= '<tr '.$linkModalAlterarAbastecimento.'>
                 <td class="w3-left-align">'.dmaH($row['data_abastecimento']).'</td>
                 <td hidden class="w3-left-align"> '.H_i($row['data_abastecimento']).'</td>
                 <td hidden class="w3-left-align"> '.Month($row['data_abastecimento']).'</td>

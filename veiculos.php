@@ -1,8 +1,8 @@
 <?php
 session_start();
 include 'assets/controllers/veiculosDataBaseAcess.php';
-$nivelPremissao = 1;
 include 'assets/controllers/checkAcess.php';
+$nivelPremissao = 1;
 ?>
 
 <head>
