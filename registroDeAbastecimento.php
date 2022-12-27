@@ -129,7 +129,7 @@ include 'assets/controllers/checkAcess.php';
             <span class="input-group-text" id="inputGroup-sizing">Media:</span>
             <input readonly id="media" name="mediaRegistrar" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Media" autofocus required>
         </div>
-        <button type="submit" name="acao" value="registrar-abastecimento class="btn btn-primary btn-sm">Cadastrar</button>
+        <button type="submit" name="acao" value="registrar-abastecimento" class="btn btn-primary btn-sm">Cadastrar</button>
     </form>    
         <div class="table-responsive">
             <div class="tabelas-customizadas">
