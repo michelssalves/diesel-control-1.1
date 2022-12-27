@@ -36,7 +36,7 @@ include 'assets/controllers/checkAcess.php';
             </div>
         </div>
     </nav>
-    <form method="POST">
+    <form method="GET">
         <input readonly id="frentista" name="frentista" type="hidden" class="form-control" value="<?= $login ?>" autofocus>
         <input readonly id="id_funcionario" name="id_funcionario" type="hidden" class="form-control" value="<?= $id_funcionario ?>" autofocus>
         <div class="input-group input-group-sm mb-3 mt-1">
