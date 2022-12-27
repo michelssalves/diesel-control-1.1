@@ -201,11 +201,13 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
 
                 include 'modalAlterarVeiculos.php';
             }
+
         $txtTableVeiculos .='</tbody></table>';
+        $resultados = $sql->rowCount();
         $number_pages = ceil($resultados / $result_for_page);
         $max_link = 2;
         
-        $resultados = $sql->rowCount();
+        
 
         $txtTableVeiculos .= '<nav aria-label="Page navigation example"><ul class="pagination pagination-sm justify-content-center">';
 
