@@ -273,16 +273,16 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
      
                 $txtTableControles .= '<tr '.$linkModalAlterarAbastecimento.'>
                 <td class="w3-left-align">'.dmaH($row['data_abastecimento']).'</td>
-                <td hidden class="w3-left-align"> '.H_i($row['data_abastecimento']).'</td>
-                <td hidden class="w3-left-align"> '.Month($row['data_abastecimento']).'</td>
-                <td hidden class="w3-left-align"> '.Year($row['data_abastecimento']).'</td>
+                <td class="w3-left-align"> '.H_i($row['data_abastecimento']).'</td>
+                <td class="w3-left-align"> '.Month($row['data_abastecimento']).'</td>
+                <td class="w3-left-align"> '.Year($row['data_abastecimento']).'</td>
                 <td> '.$row['numero_equipamento'].' </td>
                 <td> '.$row['prefixo'].' </td>
                 <td> '.$row['placa'].' </td>
                 <td> '.$row['combustivel'].' </td>
-                <td hidden> '.$row['bomba'].' </td>
-                <td hidden> '.v2($row['odometroinicial']).' </td>
-                <td hidden> '.v2($row['odometrofinal']).' </td>
+                <td> '.$row['bomba'].' </td>
+                <td> '.v2($row['odometroinicial']).' </td>
+                <td> '.v2($row['odometrofinal']).' </td>
                 <td class="'.$corLitros.' w3-right-align"> '.v2($row['litros_od']).' </td>
                 <td class="'.$corLitros.' w3-right-align"> '.v2($row['litros']).' </td>
                 <td> '.$row['ultimokm'].' </td>
@@ -295,7 +295,7 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
                 <td><center> '.$row['marca'].'</td>
                 <td><center> '.$row['modelo'].'</td>
                 <td class="'.$corMedia.' w3-right-align"><center> '.($row['media']).' </td>
-                <td hidden><center> '.$row['setor'].'</td>
+                <td><center> '.$row['setor'].'</td>
                 </tr>';
 
                 include 'modalAlterarAbastecimento.php';
