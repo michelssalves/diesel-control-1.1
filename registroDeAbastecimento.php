@@ -36,7 +36,7 @@ include 'assets/controllers/checkAcess.php';
             </div>
         </div>
     </nav>
-    <form method="POST">
+    <form method="get">
         <input readonly id="frentista" name="frentista" type="hidden" class="form-control" value="<?= $_SESSION['nome']; ?>" autofocus>
          <div class="input-group input-group-sm mb-3 mt-1">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
