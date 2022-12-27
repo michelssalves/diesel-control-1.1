@@ -4,11 +4,6 @@ $msgSucesso = $_SESSION['msg'];
 include 'assets/controllers/config.php';
 include 'assets/controllers/abastecimentoDataBaseAcess.php';
 $nivelPremissao = 0;
-//$login = $_SESSION['usuario'];
-//$usuario = $_SESSION['nome'];
-//$permissao =  $_SESSION['id_permissao'];
-//$id_funcionario = $_SESSION['id_funcionario'];
-//$token = $_SESSION['token'];
 include 'assets/controllers/checkAcess.php';
 ?>
 <!doctype html>
