@@ -55,10 +55,10 @@ $nivelPremissao = 1;
                         </thead>
                         <tbody>
                             <tr>
-                                <td><input type="date" name="dataIncial" value="<?= $dataIncial ?>"></td>
-                                <td><input type="date" name="dataFinal" value="<?= $dataFinal ?>"></td>
+                                <td><input type="date" name="dataIncialFiltro" value="<?= $dataIncial ?>"></td>
+                                <td><input type="date" name="dataFinalFiltro" value="<?= $dataFinal ?>"></td>
                                 <td>
-                                    <select onChange="this.form.submit()" name="prefixo" required>
+                                    <select onChange="this.form.submit()" name="prefixoFiltro" required>
                                     <option selected><?= ($prefixo <> '' ? $prefixo : 'TODOS') ?></options>
                                     <option>TODOS</options>
                                         <?php
@@ -74,7 +74,7 @@ $nivelPremissao = 1;
                                     </select>
                                 </td>
                                 <td>
-                                    <select onChange="this.form.submit()" name="combustivel">
+                                    <select onChange="this.form.submit()" name="combustivelFiltro">
                                     <option selected><?= ($combustivel <> '' ? $combustivel : 'TODOS') ?></options>
                                     <option>TODOS</options>
                                         <?php
@@ -88,7 +88,7 @@ $nivelPremissao = 1;
                                     </select>        
                                 </td>
                                 <td>
-                                    <select onChange="this.form.submit()" name="marca">
+                                    <select onChange="this.form.submit()" name="marcaFiltro">
                                     <option selected><?= ($marca <> '' ? $marca : 'TODOS') ?></options>
                                     <option>TODOS</options>
                                         <?php
@@ -101,7 +101,8 @@ $nivelPremissao = 1;
                                         ?>
                                     </select>
                                 </td>
-                                <td>                                <select onChange="this.form.submit()" name="modelo">
+                                <td>
+                                    <select onChange="this.form.submit()" name="modeloFiltro">
                                     <option selected><?= ($modelo <> '' ? $modelo : 'TODOS') ?></options>
                                     <option>TODOS</options>
                                         <?php
@@ -112,8 +113,10 @@ $nivelPremissao = 1;
                                             echo '<option value="' . $modelo['modelo'] . '">' . substr($modelo['modelo'], 0, 15) . '</option>';
                                         }
                                         ?>
-                                </select></td>
-                                <td>                      <select onChange="this.form.submit()" name="setor">
+                                    </select>
+                                </td>
+                                <td>
+                                    <select onChange="this.form.submit()" name="setorFiltro">
                                     <option selected><?= ($setor <> '' ? $setor : 'TODOS') ?></options>
                                     <option>TODOS</options>
                                         <?php
@@ -124,7 +127,8 @@ $nivelPremissao = 1;
                                             echo '<option value="' . $setor['setor'] . '">' . substr($setor['setor'], 0, 15) . '</option>';
                                         }
                                         ?>
-                                </select></td>
+                                    </select>
+                                </td>
                             </tr>
                         </tbody>
                     </table>

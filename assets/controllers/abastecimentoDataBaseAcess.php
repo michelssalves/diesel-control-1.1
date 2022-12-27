@@ -173,10 +173,11 @@ if($acao == 'excluir-abastecimento'){
     excluirAbastecimento();
   
 }
+
     $combustivel = $_REQUEST['combustivelFiltro'];
     $marca = $_REQUEST['marcaFiltro'];
     $modelo = $_REQUEST['modeloFiltro'];
-    $prefixo = $_REQUEST['prefixoFiltro'];
+    $prefixoFiltro = $_REQUEST['prefixoFiltro'];
     $setor = $_REQUEST['setorFiltro'];
     $dataIncial = $_REQUEST['dataIncialFiltro'];
     $dataFinal = $_REQUEST['dataFinalFiltro'];
