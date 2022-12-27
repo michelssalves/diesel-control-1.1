@@ -215,6 +215,6 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
                                 </nav>';
         
         }
-          return  $resultados;      
+          return  $txtTableVresultadoseiculos;      
 }     
 ?>
