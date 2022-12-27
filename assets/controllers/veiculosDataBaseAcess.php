@@ -160,7 +160,7 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
         $sql = $pdo->prepare("SELECT * FROM veiculos AS v
         $filtroStatus    
         $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor
-        ORDER BY prefixo DESC LIMIT $start, $result_for_pag");
+        ORDER BY prefixo ");
         $sql->execute();
 
         if ($sql->rowCount() > 0) {
@@ -199,6 +199,19 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
             }
         $txtTableVeiculos .='</tbody></table>';
 
+        $txtTableVeiculos .= '<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>';
         
         }
           return  $txtTableVeiculos;      
