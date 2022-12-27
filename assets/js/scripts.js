@@ -49,12 +49,10 @@ function subtrairConvertendo(v1, v2){
 }
 function dividirConvertendo(v1, v2){
 
-	const n1 = parseFloat(v1.replace(',', '.'));
-	const n2 = parseFloat(v2.replace(',', '.'));
-	const n3 = v1 / v2
-	n4 = n3.toFixed(2)
-	const litrosOdometro = n4.toString().replace('.', ',');
-	return litrosOdometro
+	const kmRodado = parseFloat(v1.replace(',', '.'))
+	const litros = parseFloat(v2.replace(',', '.'))
+	const media = kmRodado / litros
+	return mediaFinal = media.toFixed(2).toString().replace('.', ',')
 
 }
 
