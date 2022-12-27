@@ -37,7 +37,7 @@ function calcularLitrosOd() {
 
 	const n3 = n2 - n1
 
-	var litrosOdometro = n3.toString().replace('.', ',');
+	const litrosOdometro = n3.toString().replace('.', ',');
 
 	document.getElementById("litros_od").value = litrosOdometro.toFixed(2)
 }
