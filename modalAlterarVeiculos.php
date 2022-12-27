@@ -50,7 +50,7 @@
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Combustivel:</span>
             <select id="combustivel" name="combustivelAlt"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  required >
-                <option value="<?= $row['combustivel']?>"><?= $row['combustivelAlt']?></option>
+                <option value="<?= $row['combustivel']?>"><?= $row['combustivel']?></option>
                 <option value="DIESEL S10">DIESEL S10</option>
                 <option value="GASOLINA">GASOLINA</option>
             </select>
@@ -86,15 +86,9 @@
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Status:</span>
             <select id="status_veiculo" name="status_veiculo" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required >
-                <option value="<?= $row['status_veiculo']?>">
-                <?php if($row['status_veiculo'] = 1){
-                    echo 'Ativo';
-                }else{
-                    echo 'Inativo';
-                }
-                ?></option>
+                <option value="<?= $row['status_veiculo']?>"><?php ($row['status_veiculo'] = 1 ? 'Ativo' :'Inativo') ?></option>
                 <option value="1">Ativo</option>
-                <option value="0">Inativo</option>
+                <option value="2">Inativo</option>
             </select>
         </div>
       </div>
