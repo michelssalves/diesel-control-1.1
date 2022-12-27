@@ -90,7 +90,7 @@
                     $sql->execute();
                     $fetchAll = $sql->fetchAll();
                     foreach ($fetchAll as $pessoa) {
-                        echo '<option value="'.$pessoa['id_veiculo'].'">' .$pessoa['nome'].'</option>';
+                        echo '<option value="'.$pessoa['usuario'].'">' .$pessoa['usuario'].'</option>';
                     }
                     ?>
             </select>
