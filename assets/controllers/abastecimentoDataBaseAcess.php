@@ -25,10 +25,10 @@ function registrarAbastecimento(){
    echo '<pre>';  echo $litrosRegistrar = $_POST['litrosRegistrar'];
    echo '<pre>';  echo  $litros_odRegistrar = $_POST['litros_odRegistrar'];
    echo '<pre>';  echo $mediaRegistrar = $_POST['mediaRegistrar'];
-   echo '<pre>';  echo  $data_abastecimento = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
-   $data_abastecimento = $data_abastecimento->format('Y-m-d H:i');
-   echo '<pre>';  echo $data_sem_hora = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
-   $data_sem_hora = $data_sem_hora->format('Y-m-d');
+  $data_abastecimento = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
+   echo '<pre>';  echo$data_abastecimento = $data_abastecimento->format('Y-m-d H:i');
+    $data_sem_hora = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
+    echo '<pre>';  echo $data_sem_hora = $data_sem_hora->format('Y-m-d');
 
     $sql = $pdo->prepare("INSERT INTO abastecimentos (id_veiculo, bomba, odometroinicial, ultimokm,	
      km, diferencakm, ultimohr, hr, diferencahr, frentista,	odometrofinal, litros, litros_od, media, data_abastecimento, dataabastecimento2) 
