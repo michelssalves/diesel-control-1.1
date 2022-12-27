@@ -42,9 +42,8 @@ function subtrairConvertendo(v1, v2){
 	const n1 = parseFloat(v1.replace(',', '.'));
 	const n2 = parseFloat(v2.replace(',', '.'));
 	const n3 = n2 - n1
-	n4 = n3.toFixed(2)
-	const litrosOdometro = n4.toString().replace('.', ',');
-	return litrosOdometro
+	n4 = n3.toFixed(2).toString().replace('.', ',')
+	return n4
 
 }
 function dividirConvertendo(v1, v2){
