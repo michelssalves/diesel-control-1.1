@@ -212,7 +212,7 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
                                         <a class='page-link'>Previous</a>
                                         </li>";
                                         for($x=0; $x <= $number_pages; $x++){
-          $txtTableVeiculos .= "li class='page-item'><a class='page-link' href='page=$x'>2</a></li>";
+          $txtTableVeiculos .= "li class='page-item'><a class='page-link' href='page=$x'>$x</a></li>";
                                         }
                                         $txtTableVeiculos .= "<li class='page-item'>
                                         <a class='page-link' href='#'>Next</a>
