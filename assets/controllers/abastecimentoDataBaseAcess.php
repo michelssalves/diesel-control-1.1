@@ -7,7 +7,7 @@ if($acao == 'registrar-abastecimento'){
       //  registrarAbastecimento();
 
       include 'config.php';
-      include 'functions.php';
+     // include 'functions.php';
       
       $id_veiculoRegistrar = $_POST['id_veiculoRegistrar'];
       $bombaRegistrar = $_POST['bombaRegistrar'];
