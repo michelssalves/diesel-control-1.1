@@ -150,7 +150,7 @@ include 'assets/controllers/checkAcess.php';
     </form>
         <div class="table-responsive">
             <div class="tabelas-customizadas">
-                <table data-tablesaw-sortable data-tablesaw-sortable-switch class="tablesaw table-sm fs-6 mb-0" data-tablesaw-mode="columntoggle" data-tablesaw-minimap>
+                <table data-tablesaw-sortable data-tablesaw-sortable-switch class="tablesaw table-sm" data-tablesaw-mode="columntoggle" data-tablesaw-minimap>
                     <thead>
                         <tr>
                             <th data-tablesaw-sortable-col data-tablesaw-priority="6">
