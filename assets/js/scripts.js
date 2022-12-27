@@ -1,14 +1,11 @@
-function soNumeros(evento) {
+function soNumeros(num) {
 
-	var theEvent = evento || window.event;
-	var key = theEvent.keyCode || theEvent.which;
-	key = String.fromCharCode( key );
-	//var regex = /^[0-9.,]+$/;
-	var regex = /^[0-9,]+$/;
-	if( !regex.test(key) ) {
-	   theEvent.returnValue = false;
-	   if(theEvent.preventDefault) theEvent.preventDefault();
-	}
+    var er = /[^0-9,\.]/;
+    er.lastIndex = 0;
+    var campo = num;
+    if (er.test(campo.value)) {
+      campo.value = "";
+    }
 }
 function pontoPorVirgula(valor){
 
@@ -51,13 +48,10 @@ function calcularMedia(){
 
 	const kmRodado = document.getElementById("diferencakm").value
 	const litros = document.getElementById("litros").value
-
-		const media = kmRodado / litros
-		document.getElementById("media").value = media
+	const media = kmRodado / litros
+	document.getElementById("media").value = media
 		
 }
-
-
 function PopupCenter(url, title, w, h) {  
     // Fixes dual-screen position                         Most browsers      Firefox  
     var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;  
