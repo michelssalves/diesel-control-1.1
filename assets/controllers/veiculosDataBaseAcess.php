@@ -156,6 +156,8 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
         $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor
         ORDER BY prefixo ASC ");
         $sql->execute();
+
+        var_dump($sql);
        
         if ($sql->rowCount() > 0) {
 
