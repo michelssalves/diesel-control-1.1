@@ -148,6 +148,10 @@ function desativarVeiculo($acao){
 
 }
 function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo,$filtroSetor, $filtroStatus){
+
+    $result_for_page = 10;
+    $page = 1;
+    $start = ($page * $result_for_page) - $result_for_page;
    
     include 'config.php';
     include 'functions.php';
@@ -156,7 +160,7 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
         $sql = $pdo->prepare("SELECT * FROM veiculos AS v
         $filtroStatus    
         $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor
-        ORDER BY prefixo ASC ");
+        ORDER BY prefixo DESC LIMIT $start, $result_for_pag");
         $sql->execute();
 
         if ($sql->rowCount() > 0) {
@@ -188,10 +192,33 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
                 <td>'.($row['metodo'] == 1 ? 'KM' : 'HR').'</td>
                 <td>'.$row['setor'].'</td>
                 <td>'.($row['status_veiculo'] == 1 ? 'Ativo' :'Inativo').'</td>
-            </tr>';
+            </tr>
+        ';
 
                 include 'modalAlterarVeiculos.php';
             }
+        $txtTableVeiculos .='</tbody></table>';
+        $number_pages = ceil($row['num_pages'] / $result_for_page);
+        $max_link = 2;
+
+        $txtTableVeiculos .= '<nav aria-label="Page navigation example"><ul class="pagination pagination-sm justify-content-center">';
+
+        $txtTableVeiculos .= "<li class='page-item'><a class='page-link' href=''>First Page</a></li>";
+
+        for ($previous_page = $page - $max_link; $previous_page <= $page - 1; $previous_page++) {
+            if ($previous_page >= 1) {
+                $txtTable .= "<li class='page-item'><a class='page-link' href='#'>$previous_page</a></li>";
+            }
+        }
+        $txtTableVeiculos .= "<li class='page-item active' ><a class='page-link' href='#'>$page</a></li>";
+
+        for ($next_page = $page + 1; $next_page <= $page + $max_link; $next_page++) {
+            if ($next_page <= $number_pages) {
+                $txtTable .= "<li class='page-item'><a class='page-link' href='#'>$next_page</a></li>";
+            }
+        }
+        $txtTableVeiculos .= "<li class='page-item'><a class='page-link' href='#'>Last Page</a></li>";
+        $txtTableVeiculos .= '</ul></nav>';
            
         }
           return  $txtTableVeiculos;      
