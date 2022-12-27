@@ -124,8 +124,8 @@ if($acao == 'ultimoKm'){
 
     $return = ['error' => false,  'dados' => informacoesVeiculo($id_veiculo)];
   
-    //echo json_encode($return);
-    json_encode($return);
+    echo json_encode($return);
+  
 }
 function informacoesVeiculo($id_veiculo){
 
