@@ -121,7 +121,7 @@ function listarAbastecimentos(){
                   
            return $txtTable;            
 }
-?>
+
  /*
 if($acao == 'alterar-abastecimento'){
 
@@ -394,4 +394,7 @@ function informacoesVeiculo($id_veiculo){
     return $informacoesVeiculo;
 
 }
+
+*/
+
 ?>
