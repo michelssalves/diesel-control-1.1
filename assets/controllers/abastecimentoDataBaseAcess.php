@@ -121,19 +121,6 @@ function listarAbastecimentos(){
                   
            return $txtTable;            
 }
-
- /*
-if($acao == 'alterar-abastecimento'){
-
-    alterarAbastecimento();
-
-}
-if($acao == 'excluir-abastecimento'){
-
-    excluirAbastecimento();
-  
-}
-
 if($acao == 'ultimoKm'){
     
     $id_veiculo =  $_REQUEST['id'];
@@ -147,6 +134,19 @@ if($acao == 'ultimoKm'){
  //   header('Content-Type: application/json');
    // echo json_encode($informacoesVeiculo);
 }
+
+ /*
+if($acao == 'alterar-abastecimento'){
+
+    alterarAbastecimento();
+
+}
+if($acao == 'excluir-abastecimento'){
+
+    excluirAbastecimento();
+  
+}
+
 $combustivel = $_REQUEST['combustivelFiltro'];
 $marca = $_REQUEST['marcaFiltro'];
 $modelo = $_REQUEST['modeloFiltro'];
