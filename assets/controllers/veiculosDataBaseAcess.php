@@ -73,7 +73,7 @@ if($acao == 'alterar-veiculo'){
             setor = :setor, status_veiculo = :status_veiculo
 			WHERE id_veiculo = :id_veiculo");
 
-var_dump($sql);
+
             $sql->bindValue(':id_veiculo', $id_veiculo);
 
      //}
@@ -94,7 +94,7 @@ var_dump($sql);
 			$sql->bindValue(':status_veiculo', $status_veiculo);
 			$sql->execute();
 
-           
+            var_dump($sql);
    // cadastroAlteracaoVeiculo();
 }
 function cadastroAlteracaoVeiculo(){
