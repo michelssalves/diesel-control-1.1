@@ -12,29 +12,32 @@ function soNumeros(evento) {
 function calcularDiferencaKm() {
 	const kmAtual = document.getElementById("km").value
 	const kmAnterior = document.getElementById("ultimokm").value
-
-	const diferencaKm = kmAtual - kmAnterior
 	
-	document.getElementById("diferencakm").value = diferencaKm 
+	document.getElementById("diferencakm").value = subtrairConvertendo(kmAtual, kmAnterior) 
 	
 }
 function calcularDiferencaHr() {
 	const hrAtual = document.getElementById("hr").value
 	const hrAnterior = document.getElementById("ultimohr").value
 
-	const diferencaHr = hrAtual - hrAnterior
-		
-    document.getElementById("diferencahr").value = diferencaHr 
+    document.getElementById("diferencahr").value = subtrairConvertendo(hrAtual, hrAnterior) 
 }
 		
 function calcularLitrosOd() {
 
 	const odometroInicial = document.getElementById("odometroinicial").value
 	const odometroFinal = document.getElementById("odometrofinal").value
-	document.getElementById("litros_od").value = calcularConvertendo(odometroInicial, odometroFinal)
+	document.getElementById("litros_od").value = subtrairConvertendo(odometroInicial, odometroFinal)
 	
 }
-function calcularConvertendo(v1, v2){
+function calcularMedia(){
+
+	const kmRodado = document.getElementById("diferencakm").value
+	const litros = document.getElementById("litros").value
+	document.getElementById("media").value = dividirConvertendo(kmRodado, litros)
+		
+}
+function subtrairConvertendo(v1, v2){
 
 	const n1 = parseFloat(v1.replace(',', '.'));
 	const n2 = parseFloat(v2.replace(',', '.'));
@@ -44,14 +47,17 @@ function calcularConvertendo(v1, v2){
 	return litrosOdometro
 
 }
-function calcularMedia(){
+function dividirConvertendo(v1, v2){
 
-	const kmRodado = document.getElementById("diferencakm").value
-	const litros = document.getElementById("litros").value
-	const media = kmRodado / litros
-	document.getElementById("media").value = media
-		
+	const n1 = parseFloat(v1.replace(',', '.'));
+	const n2 = parseFloat(v2.replace(',', '.'));
+	const n3 = v1 / v2
+	n4 = n3.toFixed(2)
+	const litrosOdometro = n4.toString().replace('.', ',');
+	return litrosOdometro
+
 }
+
 function PopupCenter(url, title, w, h) {  
     // Fixes dual-screen position                         Most browsers      Firefox  
     var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;  
