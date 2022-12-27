@@ -156,9 +156,6 @@ include 'assets/controllers/checkAcess.php';
                 <table id="t1" data-tablesaw-sortable data-tablesaw-sortable-switch class="tablesaw table-sm fs-6 mb-0" data-tablesaw-mode="columntoggle" data-tablesaw-minimap>
                     <thead class="fundo-cabecalho">
                         <tr>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="1">
-                                <center>#
-                            </th>
                             <th data-tablesaw-sortable-col data-tablesaw-priority="6">
                                 <center>Nº Equip
                             </th>

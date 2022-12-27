@@ -179,9 +179,7 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
 
                 //$info = http_build_query($info);
 
-                $x++;
                 $txtTableVeiculos .= '<tr '.$linkModalAlterar.' style="cursor:pointer;">
-                <td><center>'.$x.'</td>
                 <td>'.$row['numero_equipamento'].'</td>
                 <td>'.l4($row['prefixo']).'</td>
                 <td>'.$row['placa'].'</td>
