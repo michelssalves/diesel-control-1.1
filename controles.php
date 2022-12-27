@@ -59,7 +59,7 @@ $nivelPremissao = 1;
                                 <td><input type="date" name="dataFinalFiltro" value="<?= $dataFinalFiltro ?>"></td>
                                 <td>
                                     <select onChange="this.form.submit()" name="prefixoFiltro" required>
-                                    <option selected><?= ($prefixo <> '' ? $prefixo : 'TODOS') ?></options>
+                                    <option selected><?= ($prefixoFiltro <> '' ? $prefixoFiltro : 'TODOS') ?></options>
                                     <option>TODOS</options>
                                         <?php
                                         $ativado = 1;
