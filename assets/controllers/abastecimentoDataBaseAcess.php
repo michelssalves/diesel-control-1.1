@@ -169,8 +169,12 @@ if($acao == 'alterar-abastecimento'){
     
 }
 if($acao == 'excluir-abastecimento'){
-    echo 'entrei';
-    echo $id_abastecimentoAlterar = $_POST['id_abastecimentoAlterar'];
+
+    $id_abastecimentoAlterar = $_POST['id_abastecimentoAlterar'];
+    $sql = $pdo->prepare("DELETE FROM abastecimentos WHERE id_abastecimento = :id_abastecimentoAlterar");
+    $sql->bindValue(':id_abastecimentoAlterar', $id_abastecimentoAlterar);
+    $sql->execute();
+
     //excluirAbastecimento();
   
 }
