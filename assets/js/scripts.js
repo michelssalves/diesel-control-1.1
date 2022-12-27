@@ -4,6 +4,7 @@ function pontoPorVirgula(valor){
 	return valor
 }
 function virgulaPorPonto(valor){
+
 	const valor = parseFloat(odometroInicial.replace('.', ','));
 	return valor
 }
@@ -30,9 +31,6 @@ function calcularLitrosOd() {
 	const odometroInicial = document.getElementById("odometroinicial").value
 	const odometroFinal = document.getElementById("odometrofinal").value
 
-	console.log(pontoPorVirgula(odometroFinal))
-	console.log(pontoPorVirgula(odometroInicial))
-
 	const litrosOdometro = pontoPorVirgula(odometroFinal) - pontoPorVirgula(odometroInicial)
 
 	document.getElementById("litros_od").value = virgulaPorPonto(litrosOdometro).toFixed(2)
@@ -43,10 +41,11 @@ function calcularMedia(){
 	const litros = document.getElementById("litros").value
 
 		const media = kmRodado / litros
-		document.getElementById("media").value = media.toFixed(2) 
+		document.getElementById("media").value = media
 		
 }
 function soNumeros(evento) {
+
 	var theEvent = evento || window.event;
 	var key = theEvent.keyCode || theEvent.which;
 	key = String.fromCharCode( key );
