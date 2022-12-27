@@ -12,6 +12,11 @@ if($acao == 'alterar-abastecimento'){
     alterarAbastecimento();
 
 }
+if($acao == 'excluir-abastecimento'){
+
+    excluirAbastecimento();
+  
+}
 if($acao == 'alterar-status-erro'){
 
     $id_abastecimento = $_POST['id_abastecimento'];
@@ -24,12 +29,7 @@ if($acao == 'alterar-status-erro'){
     echo json_encode($statusNovo);
 
 }
-if($acao == 'excluir-abastecimento'){
 
-    excluirAbastecimento();
-    
-
-}
 if($acao == 'ultimoKm'){
     
     $id_veiculo =  $_REQUEST['id'];

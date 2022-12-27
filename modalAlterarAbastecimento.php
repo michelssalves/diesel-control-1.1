@@ -6,7 +6,7 @@
       </div>
       <div class="modal-body">
         <form method="POST">
-        <input type="hidden" action="acao" name="alterar-abastcimento">
+        <input type="text" value="<?= $row['id_abastecimento'] ?>">
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Data:</span>
             <input id="data_abastecimento" name="data_abastecimento" value="<?= ($row['data_abastecimento']);?>" type="datetime-local" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
@@ -31,9 +31,9 @@
             <span class="input-group-text" id="inputGroup-sizing">Bomba:</span>
             <select id="bomba" name="bomba"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  required >
                 <option value="<?= $row['bomba']?>"><?= $row['bomba']?></option>
-                <option value="B01">B01</option>
-                <option value="B02">B02</option>
-                <option value="B03">B03</option>
+                <option value="BOMBA 01">BOMBA 01</option>
+                <option value="BOMBA 02">BOMBA 02</option>
+                <option value="BOMBA 03">BOMBA 03</option>
                 <option value="GASOLINA">GASOLINA</option>
             </select>
         </div>
@@ -88,7 +88,8 @@
       </div>
         <div class="modal-footer">
           <div class="d-flex gap-2 d-sm-flex mb-2 justify-content-md-center">
-            <button type="submit" name="acao" value="cadastrar-veiculo" class="btn btn-outline-primary btn-sm">Cadastrar</button>
+            <button type="submit" name="acao" value="alterar-abastecimento" class="btn btn-outline-primary btn-sm">Alterar</button>
+            <button type="submit" name="acao" value="excluir-abastecimento" class="btn btn-outline-danger btn-sm">Excluir</button>
             <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Fechar</button>
           </div>
         </div> 
