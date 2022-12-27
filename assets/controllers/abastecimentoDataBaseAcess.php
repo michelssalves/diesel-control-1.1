@@ -23,8 +23,10 @@ if($acao == 'registrar-abastecimento'){
       $litrosRegistrar = $_POST['litrosRegistrar']; 
       $litros_odRegistrar = $_POST['litros_odRegistrar'];
       $mediaRegistrar = $_POST['mediaRegistrar'];
-      $data_abastecimento = '2022-12-27 15:25';
-      $data_sem_hora = '2022-12-27';
+      $data_abastecimento = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
+      $data_abastecimento = $data_abastecimento->format('Y-m-d H:i');
+      $data_sem_hora = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
+      $data_sem_hora = $data_sem_hora->format('Y-m-d');
   
       $sql = $pdo->prepare("INSERT INTO abastecimentos (id_veiculo, bomba, odometroinicial, ultimokm,	
        km, diferencakm, ultimohr, hr, diferencahr, frentista,	odometrofinal, litros, litros_od, media, data_abastecimento, dataabastecimento2) 
@@ -39,19 +41,17 @@ if($acao == 'registrar-abastecimento'){
       $sql->bindValue(':diferencakmRegistrar', $diferencakmRegistrar);
       $sql->bindValue(':ultimohrRegistrar', $ultimohrRegistrar);
       $sql->bindValue(':hrRegistrar', $hrRegistrar);
-      
       $sql->bindValue(':diferencahrRegistrar', $diferencahrRegistrar);
       $sql->bindValue(':frentistaRegistrar', $frentistaRegistrar);
       $sql->bindValue(':odometrofinalRegistrar', $odometrofinalRegistrar);
       $sql->bindValue(':litrosRegistrar', $litrosRegistrar);
       $sql->bindValue(':litros_odRegistrar', $litros_odRegistrar);
       $sql->bindValue(':mediaRegistrar', $mediaRegistrar);
-     
-      $sql->bindValue(':data_abastecimento', $data_abastecimento );
-      var_dump($sql);
+      $sql->bindValue(':data_abastecimento', $data_abastecimento);
       $sql->bindValue(':data_sem_hora', $data_sem_hora);
+      print_r($sql);
       $sql->execute();
-    
+      
   
        
 
