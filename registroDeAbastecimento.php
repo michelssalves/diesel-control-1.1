@@ -39,7 +39,6 @@ include 'assets/controllers/checkAcess.php';
     <form method="POST">
         <input readonly id="frentista" name="frentista" type="hidden" class="form-control" value="<?= $login ?>" autofocus>
         <input readonly id="id_funcionario" name="id_funcionario" type="hidden" class="form-control" value="<?= $id_funcionario ?>" autofocus>
-        <input name="acao" value="registrar-abastecimento" type="hidden" required>
         <div class="input-group input-group-sm mb-3 mt-1">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
             <select class="form-select" name="id_veiculoRegistrar" id="prefixo" onchange="buscarInfoVeiculo(this.value)" aria-describedby="inputGroup-sizing" required>
@@ -132,7 +131,7 @@ include 'assets/controllers/checkAcess.php';
             <span class="input-group-text" id="inputGroup-sizing">Media:</span>
             <input readonly id="media" name="mediaRegistrar" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Media" autofocus required>
         </div>
-        <button type="submit" class="btn btn-primary btn-sm">Cadastrar</button>
+        <button type="submit" action="acao" name="registrar-abastecimento" class="btn btn-primary btn-sm">Cadastrar</button>
     </form>
         <div class="table-responsive">
             <div class="tabelas-customizadas">
