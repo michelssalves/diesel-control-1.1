@@ -156,8 +156,6 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
         $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor
         ORDER BY prefixo ASC ");
         $sql->execute();
-
-
        
         if ($sql->rowCount() > 0) {
 
@@ -169,27 +167,8 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
 
                 $linkModalAlterar = "data-bs-toggle='modal' data-bs-target='#$modalAlterarVeiculo' style='cursor:pointer'";
 
-                $info = array(
-                'id_veiculo' => $row['id_veiculo'],
-                'numero_equipamento' => $row['numero_equipamento'],
-                'prefixo' => $row['prefixo'],
-                'placa' =>  $row['placa'],
-                'descricao_caminhao' =>  $row['descricao_caminhao'],
-                'renavam' =>  $row['renavam'],
-                'chassi' =>  $row['chassi'],
-                'numero_motor' =>  $row['numero_motor'],
-                'ano' =>  $row['ano'],
-                'marca' =>  $row['marca'],
-                'modelo' =>  $row['modelo'],
-                'combustivel' =>  $row['combustivel'],
-                'metodo' =>  $row['metodo'],
-                'setor' => $row['setor'],
-                'status_veiculo' =>  $row['status_veiculo']   
-                );
+                //$info = http_build_query($info);
 
-                $info = http_build_query($info);
-                $url ='alterar-veiculo?'.$info;
-                $link = "PopupCenter('$url','Veiculos',400,900)";
                 $x++;
                 $txtTableVeiculos .= '<tr '.$linkModalAlterar.' style="cursor:pointer;">
                 <td><center>'.$x.'</td>
@@ -204,9 +183,9 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
                 <td>'.$row['marca'].'</td>
                 <td>'.$row['modelo'].'</td>
                 <td>'.$row['combustivel'].'</td>
-                <td>'.($row['metodo']).'</td>
+                <td>'.($row['metodo'] == 1 ? 'KM' : 'HR').'</td>
                 <td>'.$row['setor'].'</td>
-                <td>'.($row['status_veiculo']).'</td>
+                <td>'.($row['status_veiculo'] == 1 ? 'Ativo' : 'Inativo').'</td>
             </tr>';
 
                 include 'modalAlterarVeiculos.php';
