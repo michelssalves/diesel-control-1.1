@@ -91,7 +91,7 @@ include 'assets/controllers/checkAcess.php';
 
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Odometro Inicial:</span>
-            <input onkeypress="return soNumeros(), calcularLitrosOd();" id="odometroinicial" name="odometroinicial" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  placeholder="Odometro Inicial" autofocus required>
+            <input onkeyup="return soNumeros(), calcularLitrosOd();" id="odometroinicial" name="odometroinicial" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  placeholder="Odometro Inicial" autofocus required>
         </div>
 
         <div class="input-group input-group-sm mb-3">
@@ -101,7 +101,7 @@ include 'assets/controllers/checkAcess.php';
 
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Km:</span>
-            <input onkeypress="return soNumeros(),calcularMedia(),calcularDiferencaKm();" id="km" name="km"  type="text" step="0.01" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Km" required>
+            <input onkeyup="return soNumeros(),calcularMedia(),calcularDiferencaKm();" id="km" name="km"  type="text" step="0.01" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Km" required>
         </div>
 
         <div class="input-group input-group-sm mb-3">
@@ -116,7 +116,7 @@ include 'assets/controllers/checkAcess.php';
 
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Hr:</span>
-            <input onkeypress="return soNumeros(),calcularDiferencaHr();" id="hr" name="hr" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Horimetro" autofocus required>
+            <input onkeyup="return soNumeros(),calcularDiferencaHr();" id="hr" name="hr" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Horimetro" autofocus required>
         </div>
 
         <div class="input-group input-group-sm mb-3">
@@ -125,12 +125,12 @@ include 'assets/controllers/checkAcess.php';
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Odometro Final:</span>
-            <input onkeypress="return soNumeros(),calcularLitrosOd();" id="odometrofinal" name="odometrofinal" type="text" class="form-control" placeholder="Odometro Final"  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+            <input onkeyup="return soNumeros(),calcularLitrosOd();" id="odometrofinal" name="odometrofinal" type="text" class="form-control" placeholder="Odometro Final"  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
         </div>
 
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Litros:</span>
-            <input onkeypress="soNumeros(this),calcularMedia();" id="litros" name="litros" type="text" step="0.01" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Litros" autofocus required>
+            <input onkeyup="soNumeros(this),calcularMedia();" id="litros" name="litros" type="text" step="0.01" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Litros" autofocus required>
         </div>
         <?php if ($permissao == 1) { ?>
         <div class="input-group input-group-sm mb-3">
