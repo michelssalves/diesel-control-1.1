@@ -29,6 +29,8 @@ function calcularLitrosOd() {
 
 	const odometroInicial = document.getElementById("odometroinicial").value
 	const odometroFinal = document.getElementById("odometrofinal").value
+	console.log(odometroInicial)
+	console.log(odometroFinal)
 
 	const litrosOdometro = odometroFinal - odometroInicial
 
