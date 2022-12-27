@@ -6,6 +6,7 @@
       </div>
       <div class="modal-body">
         <form method="POST">
+        <input type="hidden" value="<?= $row['id_veiculo']?>" name="idVeiculoAlt" required>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
             <input id="prefixo" value="<?= $row['prefixo']?>" name="prefixoAlt" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
