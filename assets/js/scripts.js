@@ -30,6 +30,9 @@ function calcularLitrosOd() {
 	const odometroInicial = document.getElementById("odometroinicial").value
 	const odometroFinal = document.getElementById("odometrofinal").value
 
+	console.log(pontoPorVirgula(odometroFinal))
+	console.log(pontoPorVirgula(odometroInicial))
+
 	const litrosOdometro = pontoPorVirgula(odometroFinal) - pontoPorVirgula(odometroInicial)
 
 	document.getElementById("litros_od").value = virgulaPorPonto(litrosOdometro).toFixed(2)
