@@ -152,7 +152,7 @@ function desativarVeiculo($acao){
 function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo,$filtroSetor, $filtroStatus, $page){
 
     $result_for_page = 25;
-    $page = 1;
+   // $page = 1;
     $start = ($page * $result_for_page) - $result_for_page;
    
     include 'config.php';
