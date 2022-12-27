@@ -31,14 +31,18 @@ function calcularLitrosOd() {
 
 	const odometroInicial = document.getElementById("odometroinicial").value
 	const odometroFinal = document.getElementById("odometrofinal").value
+	document.getElementById("litros_od").value = calcularConvertendo(odometroInicial, odometroFinal)
+	
+}
+function calcularConvertendo(v1, v2){
 
-	const n1 = parseFloat(odometroInicial.replace(',', '.'));
-	const n2 = parseFloat(odometroFinal.replace(',', '.'));
+	const n1 = parseFloat(v1.replace(',', '.'));
+	const n2 = parseFloat(v2.replace(',', '.'));
 	const n3 = n2 - n1
 	n4 = n3.toFixed(2)
-	console.log(n4)
 	const litrosOdometro = n4.toString().replace('.', ',');
-	document.getElementById("litros_od").value = litrosOdometro
+	return litrosOdometro
+
 }
 function calcularMedia(){
 
