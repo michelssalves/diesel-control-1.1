@@ -165,12 +165,10 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
         ORDER BY prefixo DESC LIMIT $start, $result_for_page");
         $sql->execute();
 
-        var_dump($sql);
-
         if ($sql->rowCount() > 0) {
 
             $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
-            $x = 0;
+        
             foreach($lista as $row){
 
                 $modalAlterarVeiculo = "modalAlterarVeiculo".$row['id_veiculo']."";
