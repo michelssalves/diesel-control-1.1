@@ -187,7 +187,7 @@ if($acao == 'alterar-abastecimento'){
    
    $sql = $pdo->prepare("UPDATE abastecimentos SET id_veiculo = :id_veiculo, bomba = :bomba, odometroinicial = :odometroinicial, 
    ultimokm = :ultimokm, km = :km, diferencakm = :diferencakm, ultimohr = :ultimohr, hr = :hr, diferencahr = :diferencahr, 
-   frentista = :frentista,	odometrofinal = :odometrofinal, litros = :litros, litros_od = :litros_od, media = :media 
+   frentista = :frentista,	odometrofinal = :odometrofinal, litros = :litros, litros_od = :litros_od, media = :media, data_alteracao = :data_alteracao 
    WHERE id_abastecimento = :id_abastecimento");
    
    $sql->bindValue(':id_abastecimento', $id_abastecimentoAlterar);
@@ -205,6 +205,8 @@ if($acao == 'alterar-abastecimento'){
    $sql->bindValue(':litros', $litrosAlterar);
    $sql->bindValue(':litros_od', $litros_odAlterar);
    $sql->bindValue(':media', $mediaAlterar);
+   $sql->bindValue(':data_alteracao', date('Y-m-d'));
+
    $sql->execute();
 
 }
