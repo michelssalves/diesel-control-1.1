@@ -55,8 +55,8 @@ $nivelPremissao = 1;
                         </thead>
                         <tbody>
                             <tr>
-                                <td><input type="date" name="dataIncialFiltro" value="<?= $dataIncial ?>"></td>
-                                <td><input type="date" name="dataFinalFiltro" value="<?= $dataFinal ?>"></td>
+                                <td><input type="date" name="dataIncialFiltro" value="<?= $dataIncialFiltro ?>"></td>
+                                <td><input type="date" name="dataFinalFiltro" value="<?= $dataFinalFiltro ?>"></td>
                                 <td>
                                     <select onChange="this.form.submit()" name="prefixoFiltro" required>
                                     <option selected><?= ($prefixo <> '' ? $prefixo : 'TODOS') ?></options>
@@ -75,7 +75,7 @@ $nivelPremissao = 1;
                                 </td>
                                 <td>
                                     <select onChange="this.form.submit()" name="combustivelFiltro">
-                                    <option selected><?= ($combustivel <> '' ? $combustivel : 'TODOS') ?></options>
+                                    <option selected><?= ($combustivelFiltro <> '' ? $combustivelFiltro : 'TODOS') ?></options>
                                     <option>TODOS</options>
                                         <?php
                                         $sql = $pdo->prepare("SELECT DISTINCT combustivel FROM veiculos  ORDER BY combustivel");
@@ -89,7 +89,7 @@ $nivelPremissao = 1;
                                 </td>
                                 <td>
                                     <select onChange="this.form.submit()" name="marcaFiltro">
-                                    <option selected><?= ($marca <> '' ? $marca : 'TODOS') ?></options>
+                                    <option selected><?= ($marcaFiltro <> '' ? $marcaFiltro : 'TODOS') ?></options>
                                     <option>TODOS</options>
                                         <?php
                                         $sql = $pdo->prepare("SELECT DISTINCT marca FROM veiculos  ORDER BY marca");
@@ -103,7 +103,7 @@ $nivelPremissao = 1;
                                 </td>
                                 <td>
                                     <select onChange="this.form.submit()" name="modeloFiltro">
-                                    <option selected><?= ($modelo <> '' ? $modelo : 'TODOS') ?></options>
+                                    <option selected><?= ($modeloFiltro <> '' ? $modeloFiltro : 'TODOS') ?></options>
                                     <option>TODOS</options>
                                         <?php
                                         $sql = $pdo->prepare("SELECT DISTINCT modelo FROM veiculos  ORDER BY modelo");
@@ -117,7 +117,7 @@ $nivelPremissao = 1;
                                 </td>
                                 <td>
                                     <select onChange="this.form.submit()" name="setorFiltro">
-                                    <option selected><?= ($setor <> '' ? $setor : 'TODOS') ?></options>
+                                    <option selected><?= ($setorFiltro <> '' ? $setorFiltro : 'TODOS') ?></options>
                                     <option>TODOS</options>
                                         <?php
                                         $sql = $pdo->prepare("SELECT DISTINCT setor FROM veiculos  ORDER BY setor");
