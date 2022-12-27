@@ -37,14 +37,8 @@ function calcularLitrosOd() {
 		
 	n3 = n2 - n1
 
-
-	if(isNaN(n3)){
-		const litrosOdometro = n3.toString().replace('.', ',');
-		document.getElementById("litros_od").value = litrosOdometro
-	}else{
-		const litrosOdometro = 0;
-		document.getElementById("litros_od").value = litrosOdometro
-	}
+	const litrosOdometro = n3.toString().replace('.', ',');
+	document.getElementById("litros_od").value = litrosOdometro
 }
 function calcularMedia(){
 
