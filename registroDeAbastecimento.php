@@ -36,7 +36,7 @@ include 'assets/controllers/checkAcess.php';
         </div>
     </nav>
     <form method="GET">
-        <input type="hidden" action="acao" name="registrar-abastecimento">
+        <input type="hidden" name="acao" value="registrar-abastecimento">
         <input readonly id="frentista" name="frentista" type="hidden" class="form-control" value="<?= $_SESSION['nome']; ?>" autofocus>
          <div class="input-group input-group-sm mb-3 mt-1">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
