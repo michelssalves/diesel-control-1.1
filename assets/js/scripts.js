@@ -1,12 +1,24 @@
+function soNumeros(evento) {
+
+	var theEvent = evento || window.event;
+	var key = theEvent.keyCode || theEvent.which;
+	key = String.fromCharCode( key );
+	//var regex = /^[0-9.,]+$/;
+	var regex = /^[0-9,]+$/;
+	if( !regex.test(key) ) {
+	   theEvent.returnValue = false;
+	   if(theEvent.preventDefault) theEvent.preventDefault();
+	}
+}
 function pontoPorVirgula(valor){
 
 	const valor = parseFloat(string1.replace(',', '.'));
-	return valor
+	//return valor
 }
 function virgulaPorPonto(valor){
 
 	const valor = parseFloat(odometroInicial.replace('.', ','));
-	return valor
+	//return valor
 }
 function calcularDiferencaKm() {
 	const kmAtual = document.getElementById("km").value
@@ -44,18 +56,7 @@ function calcularMedia(){
 		document.getElementById("media").value = media
 		
 }
-function soNumeros(evento) {
 
-	var theEvent = evento || window.event;
-	var key = theEvent.keyCode || theEvent.which;
-	key = String.fromCharCode( key );
-	//var regex = /^[0-9.,]+$/;
-	var regex = /^[0-9,]+$/;
-	if( !regex.test(key) ) {
-	   theEvent.returnValue = false;
-	   if(theEvent.preventDefault) theEvent.preventDefault();
-	}
-}
 
 function PopupCenter(url, title, w, h) {  
     // Fixes dual-screen position                         Most browsers      Firefox  
