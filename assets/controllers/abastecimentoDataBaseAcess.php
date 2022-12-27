@@ -206,7 +206,7 @@ function registrarAbastecimento(){
     $sql->bindValue(':data_sem_hora', $data_sem_hora);
     $sql->execute();
 
-    var_dump($sql);
+    return var_dump($sql);
 
 } 
 function alterarAbastecimento(){
