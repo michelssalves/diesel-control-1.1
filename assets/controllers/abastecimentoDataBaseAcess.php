@@ -165,9 +165,8 @@ function informacoesVeiculo($id_veiculo){
 // ****** AQUI INICIA A PARTE DE CONTROLE DO MENU CONTROLES.PHP
 if($acao == 'alterar-abastecimento'){
 
-  // alterarAbastecimento();
- 
-
+    alterarAbastecimento();
+    
 }
 if($acao == 'excluir-abastecimento'){
 
