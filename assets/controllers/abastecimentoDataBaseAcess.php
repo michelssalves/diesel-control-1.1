@@ -168,21 +168,21 @@ if($acao == 'alterar-abastecimento'){
   // alterarAbastecimento();
    include 'config.php';
 
-   echo '<pre>';  echo $id_abastecimentoAlterar = $_POST['id_abastecimentoAlterar'];
-   echo '<pre>';  echo  $id_veiculoAlterar = $_POST['id_veiculoAlterar'];
-   echo '<pre>';  echo  $bombaAlterar = $_POST['bombaAlterar'];
-   echo '<pre>';  echo  $odometroinicialAlterar = $_POST['odometroinicialAlterar']; 
-   echo '<pre>';  echo  $odometrofinalAlterar = $_POST['odometrofinalAlterar']; 
-   echo '<pre>';  echo  $litros_odAlterar = $_POST['litros_odAlterar'];
-   echo '<pre>';  echo $litrosAlterar = $_POST['litrosAlterar']; 
-   echo '<pre>';  echo $ultimokmAlterar = $_POST['ultimokmAlterar']; 
-   echo '<pre>';  echo  $kmAlterar = $_POST['kmAlterar']; 
-   echo '<pre>';  echo  $diferencakmAlterar = $_POST['diferencakmAlterar'];
-   echo '<pre>';  echo $mediaAlterar = $_POST['mediaAlterar'];
-   echo '<pre>';  echo $ultimohrAlterar = $_POST['ultimohrAlterar']; 
-   echo '<pre>';  echo $hrAlterar = $_POST['hrAlterar']; 
-   echo '<pre>';  echo $diferencahrAlterar = $_POST['diferencahrAlterar']; 
-   echo '<pre>';  echo$frentistaAlterar = $_POST['frentistaAlterar'];
+    $id_abastecimentoAlterar = $_POST['id_abastecimentoAlterar'];
+    $id_veiculoAlterar = $_POST['id_veiculoAlterar'];
+    $bombaAlterar = $_POST['bombaAlterar'];
+    $odometroinicialAlterar = $_POST['odometroinicialAlterar']; 
+    $odometrofinalAlterar = $_POST['odometrofinalAlterar']; 
+    $litros_odAlterar = $_POST['litros_odAlterar'];
+    $litrosAlterar = $_POST['litrosAlterar']; 
+    $ultimokmAlterar = $_POST['ultimokmAlterar']; 
+    $kmAlterar = $_POST['kmAlterar']; 
+    $diferencakmAlterar = $_POST['diferencakmAlterar'];
+    $mediaAlterar = $_POST['mediaAlterar'];
+    $ultimohrAlterar = $_POST['ultimohrAlterar']; 
+    $hrAlterar = $_POST['hrAlterar']; 
+    $diferencahrAlterar = $_POST['diferencahrAlterar']; 
+    $frentistaAlterar = $_POST['frentistaAlterar'];
    
    
    $sql = $pdo->prepare("UPDATE abastecimentos SET id_veiculo = :id_veiculo, bomba = :bomba, odometroinicial = :odometroinicial, 
