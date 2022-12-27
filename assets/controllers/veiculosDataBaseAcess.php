@@ -206,19 +206,26 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
         $max_link = 2;
         
         $resultados = $sql->rowCount();
-        $txtTableVeiculos .= "<nav aria-label='Page navigation example'>
-                                    <ul class='pagination justify-content-center'>
-                                        <li class='page-item disabled'>
-                                        <a class='page-link'>Previous</a>
-                                        </li>";
-                                        for($x=0; $x <= $number_pages; $x++){
-          $txtTableVeiculos .= "<li class='page-item'><a class='page-link' href='page=$x'>$x</a></li>";
-                                        }
-                                        $txtTableVeiculos .= "<li class='page-item'>
-                                        <a class='page-link' href='#'>Next</a>
-                                        </li>
-                                    </ul>
-                                </nav>";
+
+        $txtTableVeiculos .= '<nav aria-label="Page navigation example"><ul class="pagination pagination-sm justify-content-center">';
+
+        $txtTableVeiculos .= "<li class='page-item'><a class='page-link' onclick='listUsers(1)'>First Page</a></li>";
+
+        for ($previous_page = $page - $max_link; $previous_page <= $page - 1; $previous_page++) {
+            if ($previous_page >= 1) {
+                $txtTableVeiculos .= "<li class='page-item'><a class='page-link' href='#'onclick='listUsers($previous_page)'>$previous_page</a></li>";
+            }
+        }
+        $txtTableVeiculos .= "<li class='page-item active' ><a class='page-link' href='#'>$page</a></li>";
+
+        for ($next_page = $page + 1; $next_page <= $page + $max_link; $next_page++) {
+            if ($next_page <= $number_pages) {
+                $txtTableVeiculos .= "<li class='page-item'><a class='page-link' href='#' onclick='listUsers($next_page)'>$next_page</a></li>";
+            }
+        }
+        $txtTableVeiculos .= "<li class='page-item'><a class='page-link' href='#' onclick='listUsers($number_pages)'>Last Page</a></li>";
+        $txtTableVeiculos .= '</ul></nav>';
+
         
         }
           return  $txtTableVeiculos;      
