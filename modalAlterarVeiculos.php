@@ -86,7 +86,7 @@
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Status:</span>
             <select id="status_veiculo" name="status_veiculo" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required >
-                <option value="<?= $row['status_veiculo']?>"><?php ($row['status_veiculo'] = 1 ? 'Ativo' :'Inativo') ?></option>
+                <option value="<?= $row['status_veiculo']?>"><?= ($row['status_veiculo'] == 1 ? 'Ativo' :'Inativo') ?></option>
                 <option value="1">Ativo</option>
                 <option value="2">Inativo</option>
             </select>
