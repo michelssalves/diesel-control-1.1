@@ -31,11 +31,11 @@ if($status == 'checked'){
      $filtroStatus = "WHERE status_veiculo = 1";
 }
 
-if($acao == 'excluir-veiculo'){
+if($acao == 'desativar-veiculo'){
 
     desativarVeiculo();
 }
-if($acao == 'cadastro-alteracao-veiculo'){
+if($acao == 'alterar-veiculo'){
 
     cadastroAlteracaoVeiculo();
 }
@@ -43,7 +43,6 @@ function cadastroAlteracaoVeiculo(){
 
     include 'config.php';
     
-    $menu = $_POST['menu'];
     $id_veiculo = $_POST['id_veiculo'];
     $numero_equipamento = strtoupper($_POST['numero_equipamento']);
     $prefixo = strtoupper($_POST['prefixo']);
@@ -61,7 +60,7 @@ function cadastroAlteracaoVeiculo(){
     $status_veiculo = strtoupper($_POST['status_veiculo']);
    
 
-    if($menu == 'cadastro-veiculo'){
+  /*  if($menu == 'cadastro-veiculo'){
         
 			$sql = $pdo->prepare("INSERT INTO veiculos(
 			numero_equipamento, prefixo, placa, descricao_caminhao, renavam,chassi, numero_motor,
@@ -69,7 +68,7 @@ function cadastroAlteracaoVeiculo(){
 			VALUES(:numero_equipamento, :prefixo, :placa, :descricao_caminhao, :renavam, :chassi,
 			:numero_motor,:ano, :marca, :modelo, :combustivel, :metodo, :setor, :status_veiculo)");
 
-     }else{
+     }else{*/
             $sql = $pdo->prepare("UPDATE veiculos SET
 			numero_equipamento = :numero_equipamento, prefixo = :prefixo, placa = :placa, 
             descricao_caminhao = :descricao_caminhao, renavam = :renavam, chassi = :chassi, 
@@ -79,7 +78,7 @@ function cadastroAlteracaoVeiculo(){
 			WHERE id_veiculo = :id_veiculo");
             $sql->bindValue(':id_veiculo', $id_veiculo);
 
-     }
+     //}
             
 			$sql->bindValue(':numero_equipamento', $numero_equipamento);
 			$sql->bindValue(':prefixo', $prefixo);
@@ -96,12 +95,8 @@ function cadastroAlteracaoVeiculo(){
 			$sql->bindValue(':setor', $setor);
 			$sql->bindValue(':status_veiculo', $status_veiculo);
 			$sql->execute();
-        if($menu){
-            header("Location: veiculo-cadastrado");
-        }else{
-            header("Location: veiculo-alterado");
-        }
-        
+
+     
 }
 function desativarVeiculo(){
 

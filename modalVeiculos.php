@@ -5,8 +5,7 @@
         <h1>ALTERAR VEICULO</h1>
       </div>
       <div class="modal-body">
-        <form method="GET">
-        <input value="cadastro-veiculo" action="acao" type="hidden"required><br>
+        <form method="POST">
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
             <input id="prefixo" value="<?= $row['prefixo']?>" name="prefixo" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
@@ -100,7 +99,8 @@
       </div>
         <div class="modal-footer">
           <div class="d-flex gap-2 d-sm-flex mb-2 justify-content-md-center">
-            <button type="submit" class="btn btn-outline-primary btn-sm">Alterar</button>
+            <button type="submit" action="acao" value="alterar-veiculo" class="btn btn-outline-primary btn-sm">Alterar</button>
+            <button type="submit" action="acao" value="desativar-veiculo" class="btn btn-outline-primary btn-sm">Desativar</button>
             <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Fechar</button>
           </div>
         </div>
