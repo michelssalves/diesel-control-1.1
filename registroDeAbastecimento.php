@@ -188,7 +188,7 @@ include 'assets/controllers/checkAcess.php';
                         </tr>
                     </thead>
                     <tbody>
-                        <?= listarAbastecimentos() ?>
+                        <?= $txtTabFrentista ?>
                     </tbody>
                 </table>
             </div>

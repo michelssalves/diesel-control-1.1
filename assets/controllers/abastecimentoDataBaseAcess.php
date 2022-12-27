@@ -1,7 +1,7 @@
 ﻿<?php
 session_start();
 $acao = $_REQUEST['acao'];
-
+$txtTabFrentista = listarAbastecimentos();
 if($acao == 'registrar-abastecimento'){
 
     registrarAbastecimento();
