@@ -208,6 +208,8 @@ if($acao == 'alterar-abastecimento'){
    $sql->bindValue(':data_alteracao', date('Y-m-d'));
    $sql->execute();
 
+   var_dump($sql);
+
 }
 if($acao == 'excluir-abastecimento'){
 
