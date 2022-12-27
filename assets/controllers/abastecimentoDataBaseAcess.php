@@ -41,7 +41,7 @@ if($acao == 'registrar-abastecimento'){
       $sql->bindValue(':diferencakmRegistrar', $diferencakmRegistrar);
       $sql->bindValue(':ultimohrRegistrar', $ultimohrRegistrar);
       $sql->bindValue(':hrRegistrar', $hrRegistrar);
-      var_dump($sql);
+      
       $sql->bindValue(':diferencahrRegistrar', $diferencahrRegistrar);
       $sql->bindValue(':frentistaRegistrar', $frentistaRegistrar);
       $sql->bindValue(':odometrofinalRegistrar', $odometrofinalRegistrar);
@@ -51,6 +51,7 @@ if($acao == 'registrar-abastecimento'){
       $sql->bindValue(':data_abastecimento', $data_abastecimento);
       $sql->bindValue(':data_sem_hora', $data_sem_hora);
       $sql->execute();
+      var_dump($sql);
   
        
 
