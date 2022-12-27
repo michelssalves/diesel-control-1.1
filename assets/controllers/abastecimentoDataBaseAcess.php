@@ -111,29 +111,6 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
                 $modalAlterarAbastecimento = "modalAlterarAbastecimento".$row['id_abastecimento']."";
 
                 $linkModalAlterarAbastecimento = "data-bs-toggle='modal' data-bs-target='#$modalAlterarAbastecimento' style='cursor:pointer'";
-
-                $info = array(
-                'id_abastecimento' => $row['id_abastecimento'],
-                'bomba' => $row['bomba'],
-                'data_abastecimento' => dmaHLocal($row['data_abastecimento']),
-                'numero_equipamento' =>  $row['numero_equipamento'],
-                'odometroinicial' =>  $row['odometroinicial'],
-                'odometrofinal' =>  $row['odometrofinal'],
-                'litros_od' =>  $row['litros_od'],
-                'litros' =>  $row['litros'],
-                'media' =>  $row['media'],
-                'ultimokm' =>  $row['ultimokm'],
-                'km' =>  $row['km'],
-                'diferencakm' => $row['diferencakm'],
-                'ultimohr' =>  $row['ultimohr'],
-                'hr' =>  $row['hr'],
-                'diferencahr' =>  $row['diferencahr'],
-                'frentista' =>  $row['frentista']
-                );
-
-                $info = http_build_query($info);
-                $url ='alterar-abastecimento?'.$info;
-                $link = "PopupCenter('$url','Upload',400,900)";
                 
                 $corDifKm = '';
                 $corDifHr = '';
@@ -186,7 +163,7 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
                 <td class="'.$corMedia.' w3-right-align"><center> '.($row['media']).' </td>
                 <td hidden><center> '.$row['setor'].'</td>
                 </tr>';
-                
+
                 include 'modalAlterarAbastecimento.php';
             }
            
