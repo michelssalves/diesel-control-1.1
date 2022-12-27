@@ -165,7 +165,47 @@ function informacoesVeiculo($id_veiculo){
 // ****** AQUI INICIA A PARTE DE CONTROLE DO MENU CONTROLES.PHP
 if($acao == 'alterar-abastecimento'){
 
-   alterarAbastecimento();
+  // alterarAbastecimento();
+   include 'config.php';
+
+   $id_abastecimento = $_POST['id_abastecimento'];
+   $id_veiculo = $_POST['id_veiculo'];
+   $bomba = $_POST['bomba'];
+   $odometroinicial = $_POST['odometroinicial']; 
+   $odometrofinal = $_POST['odometrofinal']; 
+   $litros_od = $_POST['litros_od'];
+   $litros = $_POST['litros']; 
+   $ultimokm = $_POST['ultimokm']; 
+   $km = $_POST['km']; 
+   $diferencakm = $_POST['diferencakm'];
+   $media = $_POST['media'];
+   $ultimohr = $_POST['ultimohr']; 
+   $hr = $_POST['hr']; 
+   $diferencahr = $_POST['diferencahr']; 
+   $frentista = $_POST['frentista'];
+   
+   
+   $sql = $pdo->prepare("UPDATE abastecimentos SET id_veiculo = :id_veiculo, bomba = :bomba, odometroinicial = :odometroinicial, 
+   ultimokm = :ultimokm, km = :km, diferencakm = :diferencakm, ultimohr = :ultimohr, hr = :hr, diferencahr = :diferencahr, 
+   frentista = :frentista,	odometrofinal = :odometrofinal, litros = :litros, litros_od = :litros_od, media = :media 
+   WHERE id_abastecimento = :id_abastecimento");
+   
+   $sql->bindValue(':id_abastecimento', $id_abastecimento);
+   $sql->bindValue(':id_veiculo', $id_veiculo);
+   $sql->bindValue(':bomba', $bomba);
+   $sql->bindValue(':odometroinicial', $odometroinicial);
+   $sql->bindValue(':ultimokm', $ultimokm);
+   $sql->bindValue(':km', $km);
+   $sql->bindValue(':diferencakm', $diferencakm);
+   $sql->bindValue(':ultimohr', $ultimohr);
+   $sql->bindValue(':hr', $hr);
+   $sql->bindValue(':diferencahr', $diferencahr);
+   $sql->bindValue(':frentista', $frentista);
+   $sql->bindValue(':odometrofinal', $odometrofinal);
+   $sql->bindValue(':litros', $litros);
+   $sql->bindValue(':litros_od', $litros_od);
+   $sql->bindValue(':media', $media);
+   $sql->execute();
 
 }
 if($acao == 'excluir-abastecimento'){
@@ -307,47 +347,7 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
 
 function alterarAbastecimento(){
 
-    include 'config.php';
-
-    $id_abastecimento = $_POST['id_abastecimento'];
-    $numero_equipamento = $_POST['numero_equipamento'];
-    $bomba = $_POST['bomba'];
-    $odometroinicial = $_POST['odometroinicial']; 
-    $ultimokm = $_POST['ultimokm']; 
-    $km = $_POST['km']; 
-    $diferencakm = $_POST['diferencakm'];
-    $ultimohr = $_POST['ultimohr']; 
-    $hr = $_POST['hr']; 
-    $diferencahr = $_POST['diferencahr']; 
-    $frentista = $_POST['frentista'];
-    $odometrofinal = $_POST['odometrofinal']; 
-    $litros = $_POST['litros']; 
-    $litros_od = $_POST['litros_od'];
-    $media = $_POST['media'];
-
-    $id_veiculo = consultarIdEquipamento($numero_equipamento);
-    
-    $sql = $pdo->prepare("UPDATE abastecimentos SET id_veiculo = :id_veiculo, bomba = :bomba, odometroinicial = :odometroinicial, 
-    ultimokm = :ultimokm, km = :km, diferencakm = :diferencakm, ultimohr = :ultimohr, hr = :hr, diferencahr = :diferencahr, 
-    frentista = :frentista,	odometrofinal = :odometrofinal, litros = :litros, litros_od = :litros_od, media = :media 
-    WHERE id_abastecimento = :id_abastecimento");
-    
-    $sql->bindValue(':id_abastecimento', $id_abastecimento);
-    $sql->bindValue(':id_veiculo', $id_veiculo);
-    $sql->bindValue(':bomba', $bomba);
-    $sql->bindValue(':odometroinicial', $odometroinicial);
-    $sql->bindValue(':ultimokm', $ultimokm);
-    $sql->bindValue(':km', $km);
-    $sql->bindValue(':diferencakm', $diferencakm);
-    $sql->bindValue(':ultimohr', $ultimohr);
-    $sql->bindValue(':hr', $hr);
-    $sql->bindValue(':diferencahr', $diferencahr);
-    $sql->bindValue(':frentista', $frentista);
-    $sql->bindValue(':odometrofinal', $odometrofinal);
-    $sql->bindValue(':litros', $litros);
-    $sql->bindValue(':litros_od', $litros_od);
-    $sql->bindValue(':media', $media);
-    $sql->execute();
+  
 
 }   
 function excluirAbastecimento(){
