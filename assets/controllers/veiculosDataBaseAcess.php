@@ -37,13 +37,71 @@ if($acao == 'desativar-veiculo'){
 }
 if($acao == 'alterar-veiculo'){
 
-    cadastroAlteracaoVeiculo();
+    include 'config.php';
+    
+    $id_veiculo = $_POST['idVeiculoAlt'];
+    $numero_equipamento = strtoupper($_POST['numero_equipamento']);
+    $prefixo = strtoupper($_POST['prefixoAlt']);
+    $placa = strtoupper($_POST['placa']);
+    $descricao_caminhao = strtoupper($_POST['descricao_caminhao']);
+    $renavam = strtoupper($_POST['renavam']);
+    $chassi = strtoupper($_POST['chassi']);
+    $numero_motor = strtoupper($_POST['numero_motor']);
+    $ano = strtoupper($_POST['ano']);
+    $marca = strtoupper($_POST['marcaAlt']);
+    $modelo = strtoupper($_POST['modeloAlt']);
+    $combustivel = strtoupper($_POST['combustivelAlt']);
+    $metodo = strtoupper($_POST['metodo']);
+    $setor = $_POST['setorAlt'];
+    $status_veiculo = strtoupper($_POST['status_veiculo']);
+   
+
+  /*  if($menu == 'cadastro-veiculo'){
+        
+			$sql = $pdo->prepare("INSERT INTO veiculos(
+			numero_equipamento, prefixo, placa, descricao_caminhao, renavam,chassi, numero_motor,
+            ano,marca,modelo,combustivel,metodo,setor,status_veiculo)
+			VALUES(:numero_equipamento, :prefixo, :placa, :descricao_caminhao, :renavam, :chassi,
+			:numero_motor,:ano, :marca, :modelo, :combustivel, :metodo, :setor, :status_veiculo)");
+
+     }else{*/
+            $sql = $pdo->prepare("UPDATE veiculos SET
+			numero_equipamento = :numero_equipamento, prefixo = :prefixo, placa = :placa, 
+            descricao_caminhao = :descricao_caminhao, renavam = :renavam, chassi = :chassi, 
+            numero_motor = :numero_motor,
+            ano = :ano, marca = :marca,modelo = :modelo, combustivel = :combustivel ,metodo =:metodo,
+            setor = :setor, status_veiculo = :status_veiculo
+			WHERE id_veiculo = :id_veiculo");
+
+var_dump($sql);
+            $sql->bindValue(':id_veiculo', $id_veiculo);
+
+     //}
+            
+			$sql->bindValue(':numero_equipamento', $numero_equipamento);
+			$sql->bindValue(':prefixo', $prefixo);
+			$sql->bindValue(':placa', $placa);
+			$sql->bindValue(':descricao_caminhao', $descricao_caminhao);
+			$sql->bindValue(':renavam', $renavam);
+			$sql->bindValue(':chassi', $chassi);
+			$sql->bindValue(':numero_motor', $numero_motor);
+			$sql->bindValue(':ano', $ano);
+			$sql->bindValue(':marca', $marca);
+			$sql->bindValue(':modelo', $modelo);
+			$sql->bindValue(':combustivel', $combustivel);
+			$sql->bindValue(':metodo', $metodo);
+			$sql->bindValue(':setor', $setor);
+			$sql->bindValue(':status_veiculo', $status_veiculo);
+			$sql->execute();
+
+           
+   // cadastroAlteracaoVeiculo();
 }
 function cadastroAlteracaoVeiculo(){
 
     include 'config.php';
     
-    $id_veiculo = $_POST['id_veiculo'];
+    $id_veiculo = $_POST['idVeiculoAlt'];
     $numero_equipamento = strtoupper($_POST['numero_equipamento']);
     $prefixo = strtoupper($_POST['prefixoAlt']);
     $placa = strtoupper($_POST['placa']);
