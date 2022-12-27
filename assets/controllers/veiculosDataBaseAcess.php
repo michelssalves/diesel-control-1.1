@@ -45,18 +45,18 @@ function cadastroAlteracaoVeiculo(){
     
     $id_veiculo = $_POST['id_veiculo'];
     $numero_equipamento = strtoupper($_POST['numero_equipamento']);
-    $prefixo = strtoupper($_POST['prefixo']);
+    $prefixo = strtoupper($_POST['prefixoAlt']);
     $placa = strtoupper($_POST['placa']);
     $descricao_caminhao = strtoupper($_POST['descricao_caminhao']);
     $renavam = strtoupper($_POST['renavam']);
     $chassi = strtoupper($_POST['chassi']);
     $numero_motor = strtoupper($_POST['numero_motor']);
     $ano = strtoupper($_POST['ano']);
-    $marca = strtoupper($_POST['marca']);
-    $modelo = strtoupper($_POST['modelo']);
-    $combustivel = strtoupper($_POST['combustivel']);
+    $marca = strtoupper($_POST['marcaAlt']);
+    $modelo = strtoupper($_POST['modeloAlt']);
+    $combustivel = strtoupper($_POST['combustivelAlt']);
     $metodo = strtoupper($_POST['metodo']);
-    $setor = $_POST['setor'];
+    $setor = $_POST['setorAlt'];
     $status_veiculo = strtoupper($_POST['status_veiculo']);
    
 
