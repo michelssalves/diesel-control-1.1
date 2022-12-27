@@ -164,8 +164,8 @@ function informacoesVeiculo($id_veiculo){
 
 // ****** AQUI INICIA A PARTE DE CONTROLE DO MENU CONTROLES.PHP
 if($acao == 'alterar-abastecimento'){
-echo 'entrei';
-   // alterarAbastecimento();
+
+   alterarAbastecimento();
 
 }
 if($acao == 'excluir-abastecimento'){
@@ -174,50 +174,50 @@ if($acao == 'excluir-abastecimento'){
   
 }
 
-    $combustivel = $_REQUEST['combustivelFiltro'];
-    $marca = $_REQUEST['marcaFiltro'];
-    $modelo = $_REQUEST['modeloFiltro'];
-    $prefixo = $_REQUEST['prefixoFiltro'];
-    $setor = $_REQUEST['setorFiltro'];
-    $dataIncial = $_REQUEST['dataIncialFiltro'];
-    $dataFinal = $_REQUEST['dataFinalFiltro'];
+    $combustivelFiltro = $_REQUEST['combustivelFiltro'];
+    $marcaFiltro = $_REQUEST['marcaFiltro'];
+    $modeloFiltro = $_REQUEST['modeloFiltro'];
+    $prefixoFiltro = $_REQUEST['prefixoFiltro'];
+    $setorFiltro = $_REQUEST['setorFiltro'];
+    $dataIncialFiltro = $_REQUEST['dataIncialFiltro'];
+    $dataFinalFiltro = $_REQUEST['dataFinalFiltro'];
 
     if($acao == 'limpar'){
 
         $x = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
-        $$dataIncial = $x->format('Y-m-d 00:00');
+        $dataIncialFiltro = $x->format('Y-m-d 00:00');
         $x = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
-        $dataFinal = $x->format('Y-m-d 23:59');
-        $prefixo = '';
-        $combustivel = '';
-        $marca = '';
-        $modelo = '';
-        $setor = '';
+        $dataFinalFiltro = $x->format('Y-m-d 23:59');
+        $prefixoFiltro = '';
+        $combustivelFiltro = '';
+        $marcaFiltro = '';
+        $modeloFiltro = '';
+        $setorFiltro = '';
 
     }
 
-    if($prefixo && $prefixo <> 'TODOS'){$filtroPrefixo = "AND v.prefixo = '$prefixo'";};
-    if($combustivel && $combustivel <> 'TODOS' ){$filtroCombustivel = "AND v.combustivel = '$combustivel'";}
-    if($marca && $marca <> 'TODOS'){$filtroMarca = "AND v.marca = '$marca'";}
-    if($modelo && $modelo <> 'TODOS'){$filtroModelo = "AND v.modelo = '$modelo'";}
-    if($setor && $setor <> 'TODOS'){$filtroSetor = "AND v.setor = '$setor'";}
-    if($dataIncial  == ''){
+    if($prefixoFiltro && $prefixoFiltro <> 'TODOS'){$filtroPrefixo = "AND v.prefixo = '$prefixoFiltro'";};
+    if($combustivelFiltro && $combustivelFiltro <> 'TODOS' ){$filtroCombustivel = "AND v.combustivel = '$combustivelFiltro'";}
+    if($marcaFiltro && $marcaFiltro <> 'TODOS'){$filtroMarca = "AND v.marca = '$marcaFiltro'";}
+    if($modeloFiltro && $modeloFiltro <> 'TODOS'){$filtroModelo = "AND v.modelo = '$modeloFiltro'";}
+    if($setorFiltro && $setorFiltro <> 'TODOS'){$filtroSetor = "AND v.setor = '$setorFiltro'";}
+    if($dataIncialFiltro  == ''){
 
         $x = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
         $dataHoraIncial = $x->format('Y-m-d 00:00');
 
     }else{
         $horaInicial = '00:00';
-        $dataHoraIncial = $dataIncial.' '.$horaInicial;
+        $dataHoraIncial = $dataIncialFiltro.' '.$horaInicial;
     }
-    if($dataFinal == ''){ 
+    if($dataFinalFiltro == ''){ 
 
         $x = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
         $dataHoraFinal = $x->format('Y-m-d 23:59');
 
     }else{
         $horaFinal = '23:59';
-        $dataHoraFinal = $dataFinal.' '.$horaFinal;
+        $dataHoraFinal = $dataFinalFiltro.' '.$horaFinal;
     }
 
 function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataHoraIncial, $dataHoraFinal){
