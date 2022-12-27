@@ -13,7 +13,7 @@
         </div>
         <div class="input-group input-group-sm mb-3 mt-1">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
-            <select class="form-select" name="id_veiculo" id="prefixo" onchange="buscarInfoVeiculo(this.value)" aria-describedby="inputGroup-sizing" required>
+            <select class="form-select" name="id_veiculoAlterar" id="prefixo" onchange="buscarInfoVeiculo(this.value)" aria-describedby="inputGroup-sizing" required>
                 <option value="<?= $row['id_veiculo'] ?>"><?= $row['prefixo'] ?></option>
                 <?php
                 $ativado = 1;
@@ -29,7 +29,7 @@
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Bomba:</span>
-            <select id="bomba" name="bomba"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  required >
+            <select id="bomba" name="bombaAlterar"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  required >
                 <option value="<?= $row['bomba']?>"><?= $row['bomba']?></option>
                 <option value="BOMBA 01">BOMBA 01</option>
                 <option value="BOMBA 02">BOMBA 02</option>
@@ -39,51 +39,51 @@
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Od Inicial:</span>
-            <input onkeypress="return soNumeros()" onkeyup="calcularLitrosOd()" id="odometroinicial" value="<?= $row['odometroinicial']?>" name="odometroinicial" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  autofocus required>
+            <input onkeypress="return soNumeros()" onkeyup="calcularLitrosOd()" id="odometroinicial" value="<?= $row['odometroinicial']?>" name="odometroinicialAlterar" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  autofocus required>
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Od Final:</span>
-            <input onkeypress="return soNumeros()" onkeyup="calcularLitrosOd();" id="odometrofinal" value="<?= $row['odometrofinal']?>" name="odometrofinal" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >  
+            <input onkeypress="return soNumeros()" onkeyup="calcularLitrosOd();" id="odometrofinal" value="<?= $row['odometrofinal']?>" name="odometrofinalAlterar" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >  
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Litros Od:</span>
-            <input id="litros_od" value="<?= $row['litros_od']?>" name="litros_od" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+            <input id="litros_od" value="<?= $row['litros_od']?>" name="litros_odAlterar" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Litros:</span>
-            <input onkeypress="return soNumeros()" onkeyup="calcularMedia()"  id="litros" value="<?= $row['litros']?>" name="litros" type="text"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
+            <input onkeypress="return soNumeros()" onkeyup="calcularMedia()"  id="litros" value="<?= $row['litros']?>" name="litrosAlterar" type="text"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Ultimo KM:</span>
-            <input onkeypress="return soNumeros()" onkeyup="calcularMedia();" id="ultimokm" value="<?= $row['ultimokm']?>" name="ultimokm" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+            <input onkeypress="return soNumeros()" onkeyup="calcularMedia();" id="ultimokm" value="<?= $row['ultimokm']?>" name="ultimokmAlterar" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">KM:</span>
-            <input onkeypress="return soNumeros()" onkeyup="calcularDiferencaKm(),calcularMedia()" id="km" value="<?= $row['km']?>" name="km" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
+            <input onkeypress="return soNumeros()" onkeyup="calcularDiferencaKm(),calcularMedia()" id="km" value="<?= $row['km']?>" name="kmAlterar" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Dif KM:</span>
-            <input readonly id="diferencakm" value="<?= $row['diferencakm']?>" name="diferencakm" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
+            <input readonly id="diferencakm" value="<?= $row['diferencakm']?>" name="diferencakmAlterar" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Média:</span>
-            <input readonly id="media" value="<?= $row['media']?>" name="media" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
+            <input readonly id="media" value="<?= $row['media']?>" name="mediaAlterar" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Ult HR:</span>
-            <input onkeypress="return soNumeros()" onkeyup="calcularDiferencaHr()" id="ultimohr" value="<?= $row['ultimohr']?>" name="ultimohr" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
+            <input onkeypress="return soNumeros()" onkeyup="calcularDiferencaHr()" id="ultimohr" value="<?= $row['ultimohr']?>" name="ultimohrAlterar" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">HR:</span>
-            <input onkeypress="return soNumeros()" onkeyup="calcularDiferencaHr();" id="hr" value="<?= $row['hr']?>" name="hr"  type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
+            <input onkeypress="return soNumeros()" onkeyup="calcularDiferencaHr();" id="hr" value="<?= $row['hr']?>" name="hrAlterar"  type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
         </div>
             <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Dif Hr:</span>
-            <input readonly id="diferencahr" value="<?= $row['diferencahr']?>" name="diferencahr"  type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
+            <input readonly id="diferencahr" value="<?= $row['diferencahr']?>" name="diferencahrAlterar"  type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Frentista:</span>
-            <input id="frentista" value="<?= $row['frentista']?>" name="frentista" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
+            <input id="frentista" value="<?= $row['frentista']?>" name="frentistaAlterar" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
         </div>
       </div>
         <div class="modal-footer">

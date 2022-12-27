@@ -168,21 +168,21 @@ if($acao == 'alterar-abastecimento'){
   // alterarAbastecimento();
    include 'config.php';
 
-   $id_abastecimento = $_POST['id_abastecimento'];
-   $id_veiculo = $_POST['id_veiculo'];
-   $bomba = $_POST['bomba'];
-   $odometroinicial = $_POST['odometroinicial']; 
-   $odometrofinal = $_POST['odometrofinal']; 
-   $litros_od = $_POST['litros_od'];
-   $litros = $_POST['litros']; 
-   $ultimokm = $_POST['ultimokm']; 
-   $km = $_POST['km']; 
-   $diferencakm = $_POST['diferencakm'];
-   $media = $_POST['media'];
-   $ultimohr = $_POST['ultimohr']; 
-   $hr = $_POST['hr']; 
-   $diferencahr = $_POST['diferencahr']; 
-   $frentista = $_POST['frentista'];
+   $id_abastecimentoAlterar = $_POST['id_abastecimentoAlterar'];
+   $id_veiculoAlterar = $_POST['id_veiculoAlterar'];
+   $bombaAlterar = $_POST['bombaAlterar'];
+   $odometroinicialAlterar = $_POST['odometroinicialAlterar']; 
+   $odometrofinalAlterar = $_POST['odometrofinalAlterar']; 
+   $litros_odAlterar = $_POST['litros_odAlterar'];
+   $litrosAlterar = $_POST['litrosAlterar']; 
+   $ultimokmAlterar = $_POST['ultimokmAlterar']; 
+   $kmAlterar = $_POST['kmAlterar']; 
+   $diferencakmAlterar = $_POST['diferencakmAlterar'];
+   $mediaAlterar = $_POST['mediaAlterar'];
+   $ultimohrAlterar = $_POST['ultimohrAlterar']; 
+   $hrAlterar = $_POST['hrAlterar']; 
+   $diferencahrAlterar = $_POST['diferencahrAlterar']; 
+   $frentistaAlterar = $_POST['frentistaAlterar'];
    
    
    $sql = $pdo->prepare("UPDATE abastecimentos SET id_veiculo = :id_veiculo, bomba = :bomba, odometroinicial = :odometroinicial, 
@@ -190,21 +190,21 @@ if($acao == 'alterar-abastecimento'){
    frentista = :frentista,	odometrofinal = :odometrofinal, litros = :litros, litros_od = :litros_od, media = :media 
    WHERE id_abastecimento = :id_abastecimento");
    
-   $sql->bindValue(':id_abastecimento', $id_abastecimento);
+   $sql->bindValue(':id_abastecimento', $id_abastecimentoAlterar);
    $sql->bindValue(':id_veiculo', $id_veiculo);
-   $sql->bindValue(':bomba', $bomba);
-   $sql->bindValue(':odometroinicial', $odometroinicial);
-   $sql->bindValue(':ultimokm', $ultimokm);
-   $sql->bindValue(':km', $km);
-   $sql->bindValue(':diferencakm', $diferencakm);
-   $sql->bindValue(':ultimohr', $ultimohr);
-   $sql->bindValue(':hr', $hr);
-   $sql->bindValue(':diferencahr', $diferencahr);
-   $sql->bindValue(':frentista', $frentista);
-   $sql->bindValue(':odometrofinal', $odometrofinal);
-   $sql->bindValue(':litros', $litros);
-   $sql->bindValue(':litros_od', $litros_od);
-   $sql->bindValue(':media', $media);
+   $sql->bindValue(':bomba', $bombaAlterar);
+   $sql->bindValue(':odometroinicial', $odometroinicialAlterar);
+   $sql->bindValue(':ultimokm', $ultimokmAlterar);
+   $sql->bindValue(':km', $kmAlterar);
+   $sql->bindValue(':diferencakm', $diferencakmAlterar);
+   $sql->bindValue(':ultimohr', $ultimohrAlterar);
+   $sql->bindValue(':hr', $hrAlterar);
+   $sql->bindValue(':diferencahr', $diferencahrAlterar);
+   $sql->bindValue(':frentista', $frentistaAlterar);
+   $sql->bindValue(':odometrofinal', $odometrofinalAlterar);
+   $sql->bindValue(':litros', $litrosAlterar);
+   $sql->bindValue(':litros_od', $litros_odAlterar);
+   $sql->bindValue(':media', $mediaAlterar);
    $sql->execute();
 
 }
