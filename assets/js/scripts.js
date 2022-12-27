@@ -13,14 +13,14 @@ function calcularDiferencaKm() {
 	const kmAtual = document.getElementById("km").value
 	const kmAnterior = document.getElementById("ultimokm").value
 	
-	document.getElementById("diferencakm").value = subtrairConvertendo(kmAtual, kmAnterior) 
+	document.getElementById("diferencakm").value = subtrairConvertendo(kmAnterior, kmAtual) 
 	
 }
 function calcularDiferencaHr() {
 	const hrAtual = document.getElementById("hr").value
 	const hrAnterior = document.getElementById("ultimohr").value
 
-    document.getElementById("diferencahr").value = subtrairConvertendo(hrAtual, hrAnterior) 
+    document.getElementById("diferencahr").value = subtrairConvertendo(hrAnterior, hrAtual) 
 }
 		
 function calcularLitrosOd() {
