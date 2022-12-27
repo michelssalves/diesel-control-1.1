@@ -32,12 +32,12 @@ function calcularLitrosOd() {
 	const odometroInicial = document.getElementById("odometroinicial").value
 	const odometroFinal = document.getElementById("odometrofinal").value
 	
-	var n1 = parseFloat(odometroInicial.replace(',', '.'));
-	var n2 = parseFloat(odometroFinal.replace(',', '.'));
+	const n1 = parseFloat(odometroInicial.replace(',', '.'));
+	const n2 = parseFloat(odometroFinal.replace(',', '.'));
 
 	const n3 = n2 - n1
 
-	var litrosOdometro = parseFloat(n3.replace('.', ','));
+	var litrosOdometro = n3.toString().replace('.', ',');
 
 	document.getElementById("litros_od").value = litrosOdometro.toFixed(2)
 }
