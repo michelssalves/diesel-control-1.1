@@ -46,8 +46,9 @@ if($acao == 'registrar-abastecimento'){
       $sql->bindValue(':litrosRegistrar', $litrosRegistrar);
       $sql->bindValue(':litros_odRegistrar', $litros_odRegistrar);
       $sql->bindValue(':mediaRegistrar', $mediaRegistrar);
-      var_dump($sql);
+     
       $sql->bindValue(':data_abastecimento', $data_abastecimento );
+      var_dump($sql);
       $sql->bindValue(':data_sem_hora', $data_sem_hora);
       $sql->execute();
     
