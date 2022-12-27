@@ -7,8 +7,8 @@ if($acao == 'registrar-abastecimento'){
       //  registrarAbastecimento();
 
       include 'config.php';
-     // include 'functions.php';
-     echo '<pre>';  echo
+      include 'functions.php';
+     //echo '<pre>';  echo
      $id_veiculoRegistrar = $_POST['id_veiculoRegistrar'];
      $bombaRegistrar = $_POST['bombaRegistrar'];
      $odometroinicialRegistrar = $_POST['odometroinicialRegistrar'];
@@ -48,8 +48,7 @@ if($acao == 'registrar-abastecimento'){
       $sql->bindValue(':litros_odRegistrar', $litros_odRegistrar);
       $sql->bindValue(':mediaRegistrar', $mediaRegistrar);
       $sql->bindValue(':data_abastecimento', date('Y-m-d H:i'));
-      $sql->bindValue(':data_sem_hora', date('Y-m-d H:i'));
-
+      $sql->bindValue(':data_sem_hora', date('Y-m-d'));
       $sql->execute();
 }
 if($acao == 'alterar-abastecimento'){
