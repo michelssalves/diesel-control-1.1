@@ -91,7 +91,7 @@ include 'assets/controllers/checkAcess.php';
 
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Odometro Inicial:</span>
-            <input onkeyup="return soNumeros(), calcularLitrosOd();" id="odometroinicial" name="odometroinicial" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  placeholder="Odometro Inicial" autofocus required>
+            <input onkeyup="calcularLitrosOd()" onkeypress="return soNumeros()" id="odometroinicial" name="odometroinicial" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  placeholder="Odometro Inicial" autofocus required>
         </div>
 
         <div class="input-group input-group-sm mb-3">
