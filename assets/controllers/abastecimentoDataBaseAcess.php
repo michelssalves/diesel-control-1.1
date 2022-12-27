@@ -357,8 +357,6 @@ function excluirAbastecimento(){
 
     $sql->execute();
 
-    header("Location: abastecida-excluida");
-
 }
 function listarAbastecimentos(){
 

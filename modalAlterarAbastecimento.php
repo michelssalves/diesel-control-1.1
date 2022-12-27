@@ -1,4 +1,4 @@
-<div class="modal fade" id="<?= $modalAlterarAbastecimento ?>" tabindex="-1" aria-labelledby="incluirChequeModalLabel" aria-hidden="true">
+<div class="modal fade" id="<?= $modalAlterarAbastecimento ?>" tabindex="-1" aria-labelledby="alterarAbastecimentoModalLabel" aria-hidden="true">
 <div class="modal-dialog modal-dialog-scrollable">
     <div class="modal-content">
       <div class="fundo-cabecalho">
