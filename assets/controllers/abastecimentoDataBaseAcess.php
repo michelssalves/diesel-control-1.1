@@ -49,9 +49,10 @@ if($acao == 'registrar-abastecimento'){
       $sql->bindValue(':mediaRegistrar', $mediaRegistrar);
       $sql->bindValue(':data_abastecimento', $data_abastecimento);
       $sql->bindValue(':data_sem_hora', $data_sem_hora);
-      print_r($sql);
+   
       $sql->execute();
       
+      $sql->debugDumpParams();
   
        
 
