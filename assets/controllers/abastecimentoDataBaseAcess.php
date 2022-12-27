@@ -51,7 +51,7 @@ if($acao == 'registrar-abastecimento'){
       $sql->bindValue(':data_sem_hora', $data_sem_hora);
       $sql->execute();
   
-      return var_dump($sql);
+       var_dump($sql);
 
 }
 if($acao == 'alterar-abastecimento'){
