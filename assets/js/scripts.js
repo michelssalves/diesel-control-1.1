@@ -34,17 +34,18 @@ function calcularLitrosOd() {
 
 	const n1 = parseFloat(odometroInicial.replace(',', '.'));
 	const n2 = parseFloat(odometroFinal.replace(',', '.'));
+	
 	if(n1 == ''){
 		
-		const n3 = n2 - 0
+		n3 = n2 - 0
 
 	}else if(n2 == '') {
 
-		const n3 = 0 - n1
+		n3 = 0 - n1
 		
 	} else {
 
-		const n3 = n2 - n1
+		n3 = n2 - n1
 	}
 
 	const litrosOdometro = n3.toString().replace('.', ',');
