@@ -27,7 +27,7 @@ function calcularDiferencaHr() {
     document.getElementById("diferencahr").value = diferencaHr 
 }
 		
-function calcularLitrosOd(n2=0, n1=0) {
+function calcularLitrosOd(n2 = 0) {
 
 	const odometroInicial = document.getElementById("odometroinicial").value
 	const odometroFinal = document.getElementById("odometrofinal").value
