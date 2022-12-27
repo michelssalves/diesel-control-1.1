@@ -354,9 +354,9 @@ function excluirAbastecimento(){
 
     include 'config.php';
 
-    $id_abastecimento = $_POST['id_abastecimento'];
-    $sql = $pdo->prepare("DELETE FROM abastecimentos WHERE id_abastecimento = :id_abastecimento");
-    $sql->bindValue(':id_abastecimento', $id_abastecimento);
+    $id_abastecimentoAlterar = $_POST['id_abastecimentoAlterar'];
+    $sql = $pdo->prepare("DELETE FROM abastecimentos WHERE id_abastecimento = :id_abastecimentoAlterar");
+    $sql->bindValue(':id_abastecimentoAlterar', $id_abastecimentoAlterar);
     $sql->execute();
 
 }
