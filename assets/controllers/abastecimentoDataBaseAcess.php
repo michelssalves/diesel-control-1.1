@@ -32,7 +32,7 @@ if($acao == 'registrar-abastecimento'){
        km, diferencakm, ultimohr, hr, diferencahr, frentista,	odometrofinal, litros, litros_od, media, data_abastecimento, dataabastecimento2) 
       VALUES (:id_veiculoRegistrar, :bombaRegistrar, :odometroinicialRegistrar,:ultimokmRegistrar,:kmRegistrar, :diferencakmRegistrar, :ultimohrRegistrar, :hrRegistrar, :diferencahrRegistrar,
       :frentistaRegistrar, :odometrofinalRegistrar, :litrosRegistrar, :litros_odRegistrar, :mediaRegistrar, :data_abastecimento, :data_sem_hora)");
-  
+    var_dump($sql);
       $sql->bindValue(':id_veiculoRegistrar', $id_veiculoRegistrar);
       $sql->bindValue(':bombaRegistrar', $bombaRegistrar);
       $sql->bindValue(':odometroinicialRegistrar', $odometroinicialRegistrar);
@@ -51,7 +51,7 @@ if($acao == 'registrar-abastecimento'){
       $sql->bindValue(':data_sem_hora', $data_sem_hora);
       $sql->execute();
   
-       var_dump($sql);
+       
 
 }
 if($acao == 'alterar-abastecimento'){
