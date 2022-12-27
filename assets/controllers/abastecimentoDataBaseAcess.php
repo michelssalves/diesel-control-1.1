@@ -50,6 +50,7 @@ if($acao == 'limpar'){
     $setor = '';
 
 }
+
 if($prefixo && $prefixo <> 'TODOS'){$filtroPrefixo = "AND v.prefixo = '$prefixo'";};
 if($combustivel && $combustivel <> 'TODOS' ){$filtroCombustivel = "AND v.combustivel = '$combustivel'";}
 if($marca && $marca <> 'TODOS'){$filtroMarca = "AND v.marca = '$marca'";}
