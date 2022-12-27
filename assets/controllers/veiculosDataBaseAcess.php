@@ -149,7 +149,7 @@ function desativarVeiculo($acao){
 }
 function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo,$filtroSetor, $filtroStatus){
 
-    $result_for_page = 10;
+    $result_for_page = 25;
     $page = 1;
     $start = ($page * $result_for_page) - $result_for_page;
    
@@ -160,8 +160,10 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
         $sql = $pdo->prepare("SELECT * FROM veiculos AS v
         $filtroStatus    
         $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor
-        ORDER BY prefixo ");
+        ORDER BY prefixo DESC LIMIT $start, $result_for_page");
         $sql->execute();
+
+        var_dump($sql);
 
         if ($sql->rowCount() > 0) {
 
@@ -198,6 +200,8 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
                 include 'modalAlterarVeiculos.php';
             }
         $txtTableVeiculos .='</tbody></table>';
+        $number_pages = ceil($resultados / $result_for_page);
+        $max_link = 2;
         
         $resultados = $sql->rowCount();
         $txtTableVeiculos .= '<nav aria-label="Page navigation example">
