@@ -92,10 +92,6 @@ function registrarAbastecimento(){
     $litrosRegistrar = $_POST['litrosRegistrar'];
     $litros_odRegistrar = $_POST['litros_odRegistrar'];
     $mediaRegistrar = $_POST['mediaRegistrar'];
-    /*$data_abastecimento = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
-    $data_abastecimento = $data_abastecimento->format('Y-m-d H:i');
-    $data_sem_hora = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
-    $data_sem_hora = $data_sem_hora->format('Y-m-d');*/
 
     $sql = $pdo->prepare("INSERT INTO abastecimentos (id_veiculo, bomba, odometroinicial, ultimokm,	
      km, diferencakm, ultimohr, hr, diferencahr, frentista,	odometrofinal, litros, litros_od, media, data_abastecimento, dataabastecimento2) 
@@ -126,14 +122,10 @@ if($acao == 'ultimoKm'){
     
     $id_veiculo =  $_REQUEST['id'];
 
-   // $informacoesVeiculo = informacoesVeiculo($id_veiculo);
-
     $return = ['error' => false,  'dados' => informacoesVeiculo($id_veiculo)];
   
-    echo json_encode($return);
-
- //   header('Content-Type: application/json');
-   // echo json_encode($informacoesVeiculo);
+    //echo json_encode($return);
+    json_encode($return);
 }
 function informacoesVeiculo($id_veiculo){
 
@@ -168,7 +160,6 @@ function informacoesVeiculo($id_veiculo){
 
 }
 
-
 if($acao == 'alterar-abastecimento'){
 
     alterarAbastecimento();
@@ -179,7 +170,6 @@ if($acao == 'excluir-abastecimento'){
     excluirAbastecimento();
   
 }
-
 $combustivel = $_REQUEST['combustivelFiltro'];
 $marca = $_REQUEST['marcaFiltro'];
 $modelo = $_REQUEST['modeloFiltro'];
