@@ -1,14 +1,11 @@
 ﻿<?php
 session_start();
 $acao = $_REQUEST['acao'];
+
 include 'config.php';
 include 'functions.php';
 
-    $sql = $pdo->prepare("SELECT *
-    FROM veiculos AS v  
-    JOIN abastecimentos AS a 
-    ON a.id_veiculo = v.id_veiculo
-    ORDER BY data_abastecimento DESC LIMIT 30 ");
+    $sql = $pdo->prepare("SELECT * FROM veiculos AS v JOIN abastecimentos AS a ON a.id_veiculo = v.id_veiculo ORDER BY data_abastecimento DESC LIMIT 30 ");
     $sql->execute();
 
     if ($sql->rowCount() > 0) {
