@@ -39,12 +39,10 @@ function calcularLitrosOd() {
 
 
 	if(isNaN(n3)){
-
-		const litrosOdometro = 0;
-		document.getElementById("litros_od").value = litrosOdometro
-
-	}else{
 		const litrosOdometro = n3.toString().replace('.', ',');
+		document.getElementById("litros_od").value = litrosOdometro
+	}else{
+		const litrosOdometro = 0;
 		document.getElementById("litros_od").value = litrosOdometro
 	}
 }
