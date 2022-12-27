@@ -39,20 +39,20 @@ if($acao == 'alterar-veiculo'){
 
     include 'config.php';
     
-    $id_veiculo = $_POST['idVeiculoAlt'];
+    $idVeiculoAlt = $_POST['idVeiculoAlt'];
     $numero_equipamento = strtoupper($_POST['numero_equipamento']);
-    $prefixo = strtoupper($_POST['prefixoAlt']);
+    $prefixoAlt = strtoupper($_POST['prefixoAlt']);
     $placa = strtoupper($_POST['placa']);
     $descricao_caminhao = strtoupper($_POST['descricao_caminhao']);
     $renavam = strtoupper($_POST['renavam']);
     $chassi = strtoupper($_POST['chassi']);
     $numero_motor = strtoupper($_POST['numero_motor']);
     $ano = strtoupper($_POST['ano']);
-    $marca = strtoupper($_POST['marcaAlt']);
-    $modelo = strtoupper($_POST['modeloAlt']);
-    $combustivel = strtoupper($_POST['combustivelAlt']);
+    $marcaAlt = strtoupper($_POST['marcaAlt']);
+    $modeloAlt = strtoupper($_POST['modeloAlt']);
+    $combustivelAlt = strtoupper($_POST['combustivelAlt']);
     $metodo = strtoupper($_POST['metodo']);
-    $setor = $_POST['setorAlt'];
+    $setorAlt = $_POST['setorAlt'];
     $status_veiculo = strtoupper($_POST['status_veiculo']);
    
 
@@ -74,27 +74,27 @@ if($acao == 'alterar-veiculo'){
 			WHERE id_veiculo = :id_veiculo");
 
 
-            $sql->bindValue(':id_veiculo', $id_veiculo);
+            $sql->bindValue(':id_veiculo', $idVeiculoAlt);
 
      //}
             
 			$sql->bindValue(':numero_equipamento', $numero_equipamento);
-			$sql->bindValue(':prefixo', $prefixo);
+			$sql->bindValue(':prefixo', $prefixoAlt);
 			$sql->bindValue(':placa', $placa);
 			$sql->bindValue(':descricao_caminhao', $descricao_caminhao);
 			$sql->bindValue(':renavam', $renavam);
 			$sql->bindValue(':chassi', $chassi);
 			$sql->bindValue(':numero_motor', $numero_motor);
 			$sql->bindValue(':ano', $ano);
-			$sql->bindValue(':marca', $marca);
-			$sql->bindValue(':modelo', $modelo);
-			$sql->bindValue(':combustivel', $combustivel);
+			$sql->bindValue(':marca', $marcaAlt);
+			$sql->bindValue(':modelo', $modeloAlt);
+			$sql->bindValue(':combustivel', $combustivelAlt);
 			$sql->bindValue(':metodo', $metodo);
-			$sql->bindValue(':setor', $setor);
+			$sql->bindValue(':setor', $setorAlt);
 			$sql->bindValue(':status_veiculo', $status_veiculo);
-			$sql->execute();
-
-            var_dump($sql);
+			$sql1->execute();
+         
+            
    // cadastroAlteracaoVeiculo();
 }
 function cadastroAlteracaoVeiculo(){
