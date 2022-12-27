@@ -34,9 +34,9 @@ if($acao == 'cadastrarVeiculo'){
 
     cadastrarVeiculo();
 }
-if($acao == 'desativar-veiculo'){
+if($acao == 'desativar-veiculo' || $acao == 'ativar-veiculo'){
 
-    desativarVeiculo();
+    desativarVeiculo($acao);
 }
 if($acao == 'alterar-veiculo'){
  
@@ -130,19 +130,21 @@ function alterarVeiculo(){
     $sql->execute();
            
 }
-function desativarVeiculo(){
+function desativarVeiculo($acao){
 
     include 'config.php';
+    if($acao == 'desativar-veiculo'){
+        $status_veiculo = '2';
+    }else{
+        $status_veiculo = '1';
+    }
 
     $idVeiculoAlt = $_POST['idVeiculoAlt'];
-    $status_veiculo = '2';
     
     $sql = $pdo->prepare("UPDATE veiculos SET status_veiculo = :status_veiculo WHERE id_veiculo = :idVeiculoAlt");
-    
     $sql->bindValue(':status_veiculo', $status_veiculo);
     $sql->bindValue(':idVeiculoAlt', $idVeiculoAlt);
     $sql->execute();
-
 
 }
 function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo,$filtroSetor, $filtroStatus){

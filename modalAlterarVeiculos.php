@@ -101,7 +101,11 @@
         <div class="modal-footer">
           <div class="d-flex gap-2 d-sm-flex mb-2 justify-content-md-center">
             <button type="submit" name="acao" value="alterar-veiculo" class="btn btn-outline-primary btn-sm">Alterar</button>
-            <button type="submit" name="acao" value="desativar-veiculo" class="btn btn-outline-primary btn-sm">Desativar</button>
+            <?php if($row['status_veiculo'] == 1){ ?>
+            <button type="submit" name="acao" value="desativar-veiculo" class="btn btn-outline-danger btn-sm">Desativar</button>
+            <?php }else{ ?>
+            <button type="submit" name="acao" value="ativar-veiculo" class="btn btn-outline-success btn-sm">Ativar</button>
+            <?php } ?>
             <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Fechar</button>
           </div>
         </div> 
