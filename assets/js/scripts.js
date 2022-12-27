@@ -27,7 +27,7 @@ function calcularDiferencaHr() {
     document.getElementById("diferencahr").value = diferencaHr 
 }
 		
-function calcularLitrosOd() {
+function calcularLitrosOd(n2=0, n1=0) {
 
 	const odometroInicial = document.getElementById("odometroinicial").value
 	const odometroFinal = document.getElementById("odometrofinal").value
@@ -35,16 +35,9 @@ function calcularLitrosOd() {
 	const n1 = parseFloat(odometroInicial.replace(',', '.'));
 	const n2 = parseFloat(odometroFinal.replace(',', '.'));
 
-	console.log(n1)
-	console.log(n2)
-
 	const n3 = n2 - n1
 
-	console.log(n3)
-
 	const litrosOdometro = n3.toString().replace('.', ',');
-
-	console.log(litrosOdometro)
 
 	document.getElementById("litros_od").value = litrosOdometro
 }
