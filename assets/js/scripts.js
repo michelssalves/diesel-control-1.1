@@ -1,3 +1,12 @@
+function pontoPorVirgula(valor){
+
+	const valor = parseFloat(string1.replace(',', '.'));
+	return valor
+}
+function virgulaPorPonto(valor){
+	const valor = parseFloat(odometroInicial.replace('.', ','));
+	return valor
+}
 function calcularDiferencaKm() {
 	const kmAtual = document.getElementById("km").value
 	const kmAnterior = document.getElementById("ultimokm").value
@@ -17,12 +26,13 @@ function calcularDiferencaHr() {
 }
 		
 function calcularLitrosOd() {
+
 	const odometroInicial = document.getElementById("odometroinicial").value
 	const odometroFinal = document.getElementById("odometrofinal").value
 
-	const litrosOdometro = odometroFinal - odometroInicial
+	const litrosOdometro = pontoPorVirgula(odometroFinal) - pontoPorVirgula(odometroInicial)
 
-		document.getElementById("litros_od").value = litrosOdometro.toFixed(2)
+	document.getElementById("litros_od").value = virgulaPorPonto(litrosOdometro).toFixed(2)
 }
 function calcularMedia(){
 
