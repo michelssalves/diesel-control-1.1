@@ -191,7 +191,7 @@ if($acao == 'alterar-abastecimento'){
    WHERE id_abastecimento = :id_abastecimento");
    
    $sql->bindValue(':id_abastecimento', $id_abastecimentoAlterar);
-   $sql->bindValue(':id_veiculo', $id_veiculo);
+   $sql->bindValue(':id_veiculo', $id_veiculoAlterar);
    $sql->bindValue(':bomba', $bombaAlterar);
    $sql->bindValue(':odometroinicial', $odometroinicialAlterar);
    $sql->bindValue(':ultimokm', $ultimokmAlterar);
