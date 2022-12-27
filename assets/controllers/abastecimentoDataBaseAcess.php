@@ -1,59 +1,7 @@
 ﻿<?php
 session_start();
 $acao = $_REQUEST['acao'];
-$txtTabFrentista = listarAbastecimentos();
-if($acao == 'registrar-abastecimento'){
 
-    registrarAbastecimento();
-}
-function registrarAbastecimento(){
-
-    include 'config.php';
-    include 'functions.php';
-   //echo '<pre>';  echo
-   echo '<pre>';  echo $id_veiculoRegistrar = $_POST['id_veiculoRegistrar'];
-   echo '<pre>';  echo $bombaRegistrar = $_POST['bombaRegistrar'];
-   echo '<pre>';  echo $odometroinicialRegistrar = $_POST['odometroinicialRegistrar'];
-   echo '<pre>';  echo $ultimokmRegistrar = $_POST['ultimokmRegistrar']; 
-   echo '<pre>';  echo $kmRegistrar = $_POST['kmRegistrar']; 
-   echo '<pre>';  echo  $diferencakmRegistrar = $_POST['diferencakmRegistrar'];
-   echo '<pre>';  echo $ultimohrRegistrar = $_POST['ultimohrRegistrar'];
-   echo '<pre>';  echo  $hrRegistrar = $_POST['hrRegistrar']; 
-   echo '<pre>';  echo $diferencahrRegistrar = $_POST['diferencahrRegistrar'];
-   echo '<pre>';  echo $frentistaRegistrar = $_POST['frentistaRegistrar'];
-   echo '<pre>';  echo $odometrofinalRegistrar = $_POST['odometrofinalRegistrar'];
-   echo '<pre>';  echo $litrosRegistrar = $_POST['litrosRegistrar'];
-   echo '<pre>';  echo  $litros_odRegistrar = $_POST['litros_odRegistrar'];
-   echo '<pre>';  echo $mediaRegistrar = $_POST['mediaRegistrar'];
-  $data_abastecimento = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
-   echo '<pre>';  echo$data_abastecimento = $data_abastecimento->format('Y-m-d H:i');
-    $data_sem_hora = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
-    echo '<pre>';  echo $data_sem_hora = $data_sem_hora->format('Y-m-d');
-
-    $sql = $pdo->prepare("INSERT INTO abastecimentos (id_veiculo, bomba, odometroinicial, ultimokm,	
-     km, diferencakm, ultimohr, hr, diferencahr, frentista,	odometrofinal, litros, litros_od, media, data_abastecimento, dataabastecimento2) 
-    VALUES (:id_veiculoRegistrar, :bombaRegistrar, :odometroinicialRegistrar,:ultimokmRegistrar,:kmRegistrar, :diferencakmRegistrar, :ultimohrRegistrar, :hrRegistrar, :diferencahrRegistrar,
-    :frentistaRegistrar, :odometrofinalRegistrar, :litrosRegistrar, :litros_odRegistrar, :mediaRegistrar, :data_abastecimento, :data_sem_hora)");
-
-    $sql->bindValue(':id_veiculoRegistrar', $id_veiculoRegistrar);
-    $sql->bindValue(':bombaRegistrar', $bombaRegistrar);
-    $sql->bindValue(':odometroinicialRegistrar', $odometroinicialRegistrar);
-    $sql->bindValue(':ultimokmRegistrar', $ultimokmRegistrar);
-    $sql->bindValue(':kmRegistrar', $kmRegistrar);
-    $sql->bindValue(':diferencakmRegistrar', $diferencakmRegistrar);
-    $sql->bindValue(':ultimohrRegistrar', $ultimohrRegistrar);
-    $sql->bindValue(':hrRegistrar', $hrRegistrar);
-    $sql->bindValue(':diferencahrRegistrar', $diferencahrRegistrar);
-    $sql->bindValue(':frentistaRegistrar', $frentistaRegistrar);
-    $sql->bindValue(':odometrofinalRegistrar', $odometrofinalRegistrar);
-    $sql->bindValue(':litrosRegistrar', $litrosRegistrar);
-    $sql->bindValue(':litros_odRegistrar', $litros_odRegistrar);
-    $sql->bindValue(':mediaRegistrar', $mediaRegistrar);
-    $sql->bindValue(':data_abastecimento', $data_abastecimento);
-    $sql->bindValue(':data_sem_hora', $data_sem_hora);
-    $sql->execute();
-
-}
 function listarAbastecimentos(){
 
     include 'config.php';
@@ -121,6 +69,59 @@ function listarAbastecimentos(){
                   
            return $txtTable;            
 }
+if($acao == 'registrar-abastecimento'){
+
+    registrarAbastecimento();
+}
+function registrarAbastecimento(){
+
+    include 'config.php';
+    include 'functions.php';
+   //echo '<pre>';  echo
+   echo '<pre>';  echo $id_veiculoRegistrar = $_POST['id_veiculoRegistrar'];
+   echo '<pre>';  echo $bombaRegistrar = $_POST['bombaRegistrar'];
+   echo '<pre>';  echo $odometroinicialRegistrar = $_POST['odometroinicialRegistrar'];
+   echo '<pre>';  echo $ultimokmRegistrar = $_POST['ultimokmRegistrar']; 
+   echo '<pre>';  echo $kmRegistrar = $_POST['kmRegistrar']; 
+   echo '<pre>';  echo  $diferencakmRegistrar = $_POST['diferencakmRegistrar'];
+   echo '<pre>';  echo $ultimohrRegistrar = $_POST['ultimohrRegistrar'];
+   echo '<pre>';  echo  $hrRegistrar = $_POST['hrRegistrar']; 
+   echo '<pre>';  echo $diferencahrRegistrar = $_POST['diferencahrRegistrar'];
+   echo '<pre>';  echo $frentistaRegistrar = $_POST['frentistaRegistrar'];
+   echo '<pre>';  echo $odometrofinalRegistrar = $_POST['odometrofinalRegistrar'];
+   echo '<pre>';  echo $litrosRegistrar = $_POST['litrosRegistrar'];
+   echo '<pre>';  echo  $litros_odRegistrar = $_POST['litros_odRegistrar'];
+   echo '<pre>';  echo $mediaRegistrar = $_POST['mediaRegistrar'];
+  $data_abastecimento = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
+   echo '<pre>';  echo$data_abastecimento = $data_abastecimento->format('Y-m-d H:i');
+    $data_sem_hora = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
+    echo '<pre>';  echo $data_sem_hora = $data_sem_hora->format('Y-m-d');
+
+    $sql = $pdo->prepare("INSERT INTO abastecimentos (id_veiculo, bomba, odometroinicial, ultimokm,	
+     km, diferencakm, ultimohr, hr, diferencahr, frentista,	odometrofinal, litros, litros_od, media, data_abastecimento, dataabastecimento2) 
+    VALUES (:id_veiculoRegistrar, :bombaRegistrar, :odometroinicialRegistrar,:ultimokmRegistrar,:kmRegistrar, :diferencakmRegistrar, :ultimohrRegistrar, :hrRegistrar, :diferencahrRegistrar,
+    :frentistaRegistrar, :odometrofinalRegistrar, :litrosRegistrar, :litros_odRegistrar, :mediaRegistrar, :data_abastecimento, :data_sem_hora)");
+
+    $sql->bindValue(':id_veiculoRegistrar', $id_veiculoRegistrar);
+    $sql->bindValue(':bombaRegistrar', $bombaRegistrar);
+    $sql->bindValue(':odometroinicialRegistrar', $odometroinicialRegistrar);
+    $sql->bindValue(':ultimokmRegistrar', $ultimokmRegistrar);
+    $sql->bindValue(':kmRegistrar', $kmRegistrar);
+    $sql->bindValue(':diferencakmRegistrar', $diferencakmRegistrar);
+    $sql->bindValue(':ultimohrRegistrar', $ultimohrRegistrar);
+    $sql->bindValue(':hrRegistrar', $hrRegistrar);
+    $sql->bindValue(':diferencahrRegistrar', $diferencahrRegistrar);
+    $sql->bindValue(':frentistaRegistrar', $frentistaRegistrar);
+    $sql->bindValue(':odometrofinalRegistrar', $odometrofinalRegistrar);
+    $sql->bindValue(':litrosRegistrar', $litrosRegistrar);
+    $sql->bindValue(':litros_odRegistrar', $litros_odRegistrar);
+    $sql->bindValue(':mediaRegistrar', $mediaRegistrar);
+    $sql->bindValue(':data_abastecimento', $data_abastecimento);
+    $sql->bindValue(':data_sem_hora', $data_sem_hora);
+    $sql->execute();
+
+}
+
 if($acao == 'ultimoKm'){
     
     $id_veiculo =  $_REQUEST['id'];
