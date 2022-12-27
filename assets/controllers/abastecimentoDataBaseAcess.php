@@ -164,8 +164,8 @@ function informacoesVeiculo($id_veiculo){
 
 // ****** AQUI INICIA A PARTE DE CONTROLE DO MENU CONTROLES.PHP
 if($acao == 'alterar-abastecimento'){
-
-    alterarAbastecimento();
+echo 'entrei';
+   // alterarAbastecimento();
 
 }
 if($acao == 'excluir-abastecimento'){
@@ -181,7 +181,7 @@ if($acao == 'excluir-abastecimento'){
     $setor = $_REQUEST['setorFiltro'];
     $dataIncial = $_REQUEST['dataIncialFiltro'];
     $dataFinal = $_REQUEST['dataFinalFiltro'];
-    
+
     if($acao == 'limpar'){
 
         $x = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
