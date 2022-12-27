@@ -159,8 +159,6 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
         ORDER BY prefixo ASC ");
         $sql->execute();
 
-        var_dump($sql);
-       
         if ($sql->rowCount() > 0) {
 
             $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
