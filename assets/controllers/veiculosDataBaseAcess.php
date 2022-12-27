@@ -3,6 +3,8 @@ session_start();
 
 $acao = $_REQUEST['acao'];
 
+$page = $_REQUEST['page'];
+
 $combustivel = $_REQUEST['combustivel'];
 $marca = $_REQUEST['marca'];
 $modelo = $_REQUEST['modelo'];
@@ -147,7 +149,7 @@ function desativarVeiculo($acao){
     $sql->execute();
 
 }
-function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo,$filtroSetor, $filtroStatus){
+function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo,$filtroSetor, $filtroStatus, $page){
 
     $result_for_page = 25;
     $page = 1;
@@ -204,19 +206,19 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
         $max_link = 2;
         
         $resultados = $sql->rowCount();
-        $txtTableVeiculos .= '<nav aria-label="Page navigation example">
-                                    <ul class="pagination justify-content-center">
-                                        <li class="page-item disabled">
-                                        <a class="page-link">Previous</a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="#">'.$resultados.'</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                        <li class="page-item">
-                                        <a class="page-link" href="#">Next</a>
+        $txtTableVeiculos .= "<nav aria-label='Page navigation example'>
+                                    <ul class='pagination justify-content-center'>
+                                        <li class='page-item disabled'>
+                                        <a class='page-link'>Previous</a>
+                                        </li>";
+                                        for($x=0; $x <= $number_pages; $x++){
+          $txtTableVeiculos .= "li class='page-item'><a class='page-link' href='page=$x'>2</a></li>";
+                                        }
+                                        $txtTableVeiculos .= "<li class='page-item'>
+                                        <a class='page-link' href='#'>Next</a>
                                         </li>
                                     </ul>
-                                </nav>';
+                                </nav>";
         
         }
           return  $txtTableVeiculos;      
