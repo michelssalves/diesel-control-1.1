@@ -26,7 +26,7 @@ if($marca && $marca <> 'TODOS'){$filtroMarca = "AND marca = '$marca'";}
 if($modelo && $modelo <> 'TODOS'){$filtroModelo = "AND modelo = '$modelo'";}
 if($setor && $setor <> 'TODOS'){$filtroSetor = "AND setor = '$setor'";}
 if($status == 'checked'){
-    $filtroStatus = "WHERE status_veiculo <= 1";
+    $filtroStatus = "WHERE status_veiculo <= 2";
 }else{
      $filtroStatus = "WHERE status_veiculo = 1";
 }
