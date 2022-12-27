@@ -166,49 +166,7 @@ function informacoesVeiculo($id_veiculo){
 if($acao == 'alterar-abastecimento'){
 
   // alterarAbastecimento();
-   include 'config.php';
-
-    $id_abastecimentoAlterar = $_POST['id_abastecimentoAlterar'];
-    $id_veiculoAlterar = $_POST['id_veiculoAlterar'];
-    $bombaAlterar = $_POST['bombaAlterar'];
-    $odometroinicialAlterar = $_POST['odometroinicialAlterar']; 
-    $odometrofinalAlterar = $_POST['odometrofinalAlterar']; 
-    $litros_odAlterar = $_POST['litros_odAlterar'];
-    $litrosAlterar = $_POST['litrosAlterar']; 
-    $ultimokmAlterar = $_POST['ultimokmAlterar']; 
-    $kmAlterar = $_POST['kmAlterar']; 
-    $diferencakmAlterar = $_POST['diferencakmAlterar'];
-    $mediaAlterar = $_POST['mediaAlterar'];
-    $ultimohrAlterar = $_POST['ultimohrAlterar']; 
-    $hrAlterar = $_POST['hrAlterar']; 
-    $diferencahrAlterar = $_POST['diferencahrAlterar']; 
-    $frentistaAlterar = $_POST['frentistaAlterar'];
-   
-   
-   $sql = $pdo->prepare("UPDATE abastecimentos SET id_veiculo = :id_veiculo, bomba = :bomba, odometroinicial = :odometroinicial, 
-   ultimokm = :ultimokm, km = :km, diferencakm = :diferencakm, ultimohr = :ultimohr, hr = :hr, diferencahr = :diferencahr, 
-   frentista = :frentista,	odometrofinal = :odometrofinal, litros = :litros, litros_od = :litros_od, media = :media, data_alteracao = :data_alteracao 
-   WHERE id_abastecimento = :id_abastecimento");
-   
-   $sql->bindValue(':id_abastecimento', $id_abastecimentoAlterar);
-   $sql->bindValue(':id_veiculo', $id_veiculoAlterar);
-   $sql->bindValue(':bomba', $bombaAlterar);
-   $sql->bindValue(':odometroinicial', $odometroinicialAlterar);
-   $sql->bindValue(':ultimokm', $ultimokmAlterar);
-   $sql->bindValue(':km', $kmAlterar);
-   $sql->bindValue(':diferencakm', $diferencakmAlterar);
-   $sql->bindValue(':ultimohr', $ultimohrAlterar);
-   $sql->bindValue(':hr', $hrAlterar);
-   $sql->bindValue(':diferencahr', $diferencahrAlterar);
-   $sql->bindValue(':frentista', $frentistaAlterar);
-   $sql->bindValue(':odometrofinal', $odometrofinalAlterar);
-   $sql->bindValue(':litros', $litrosAlterar);
-   $sql->bindValue(':litros_od', $litros_odAlterar);
-   $sql->bindValue(':media', $mediaAlterar);
-   $sql->bindValue(':data_alteracao', date('Y-m-d'));
-   $sql->execute();
-
-   var_dump($sql);
+ 
 
 }
 if($acao == 'excluir-abastecimento'){
@@ -350,24 +308,63 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
 
 function alterarAbastecimento(){
 
-  
+    include 'config.php';
+
+    $id_abastecimentoAlterar = $_POST['id_abastecimentoAlterar'];
+    $id_veiculoAlterar = $_POST['id_veiculoAlterar'];
+    $bombaAlterar = $_POST['bombaAlterar'];
+    $odometroinicialAlterar = $_POST['odometroinicialAlterar']; 
+    $odometrofinalAlterar = $_POST['odometrofinalAlterar']; 
+    $litros_odAlterar = $_POST['litros_odAlterar'];
+    $litrosAlterar = $_POST['litrosAlterar']; 
+    $ultimokmAlterar = $_POST['ultimokmAlterar']; 
+    $kmAlterar = $_POST['kmAlterar']; 
+    $diferencakmAlterar = $_POST['diferencakmAlterar'];
+    $mediaAlterar = $_POST['mediaAlterar'];
+    $ultimohrAlterar = $_POST['ultimohrAlterar']; 
+    $hrAlterar = $_POST['hrAlterar']; 
+    $diferencahrAlterar = $_POST['diferencahrAlterar']; 
+    $frentistaAlterar = $_POST['frentistaAlterar'];
+   
+   
+   $sql = $pdo->prepare("UPDATE abastecimentos SET id_veiculo = :id_veiculo, bomba = :bomba, odometroinicial = :odometroinicial, 
+   ultimokm = :ultimokm, km = :km, diferencakm = :diferencakm, ultimohr = :ultimohr, hr = :hr, diferencahr = :diferencahr, 
+   frentista = :frentista,	odometrofinal = :odometrofinal, litros = :litros, litros_od = :litros_od, media = :media, data_alteracao = :data_alteracao 
+   WHERE id_abastecimento = :id_abastecimento");
+   
+   $sql->bindValue(':id_abastecimento', $id_abastecimentoAlterar);
+   $sql->bindValue(':id_veiculo', $id_veiculoAlterar);
+   $sql->bindValue(':bomba', $bombaAlterar);
+   $sql->bindValue(':odometroinicial', $odometroinicialAlterar);
+   $sql->bindValue(':ultimokm', $ultimokmAlterar);
+   $sql->bindValue(':km', $kmAlterar);
+   $sql->bindValue(':diferencakm', $diferencakmAlterar);
+   $sql->bindValue(':ultimohr', $ultimohrAlterar);
+   $sql->bindValue(':hr', $hrAlterar);
+   $sql->bindValue(':diferencahr', $diferencahrAlterar);
+   $sql->bindValue(':frentista', $frentistaAlterar);
+   $sql->bindValue(':odometrofinal', $odometrofinalAlterar);
+   $sql->bindValue(':litros', $litrosAlterar);
+   $sql->bindValue(':litros_od', $litros_odAlterar);
+   $sql->bindValue(':media', $mediaAlterar);
+   $sql->bindValue(':data_alteracao', date('Y-m-d H:i'));
+   $sql->execute();
 
 }   
 function excluirAbastecimento(){
 
-/*    include 'config.php';
+    include 'config.php';
 
     $id_abastecimento = $_POST['id_abastecimento'];
     $sql = $pdo->prepare("DELETE FROM abastecimentos WHERE id_abastecimento = :id_abastecimento");
     $sql->bindValue(':id_abastecimento', $id_abastecimento);
-    $sql->execute();*/
+    $sql->execute();
 
 }
 
 function consultarIdEquipamento($numero_equipamento){
 
     include 'config.php';
-    include 'functions.php';
     
     $sql = $pdo->prepare("SELECT id_veiculo FROM veiculos WHERE numero_equipamento = :numero_equipamento");
     $sql->bindValue(':numero_equipamento', $numero_equipamento);
@@ -379,15 +376,5 @@ function consultarIdEquipamento($numero_equipamento){
     return  $id_veiculo;
  
 }
-/*function consultarEquipamento($id_veiculo){
-    include 'config.php';
-   
-    $sql = $pdo->prepare("SELECT * FROM veiculos WHERE id_veiculo = :id_veiculo");
-    $sql->bindValue(':id_veiculo', $id_veiculo);
-    $sql->execute();
-    $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
-    return  $lista;
- 
-}*/
 
 ?>

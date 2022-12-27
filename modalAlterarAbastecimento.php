@@ -89,7 +89,8 @@
         <div class="modal-footer">
           <div class="d-flex gap-2 d-sm-flex mb-2 justify-content-md-center">
             <button type="submit" name="acao" value="alterar-abastecimento" class="btn btn-outline-primary btn-sm">Alterar</button>
-              <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Fechar</button>
+            <button type="submit" name="acao" value="excluir-abastecimento" class="btn btn-outline-danger btn-sm">Excluir</button>
+            <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Fechar</button>
           </div>
         </div> 
       </form>
