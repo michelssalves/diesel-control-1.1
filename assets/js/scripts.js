@@ -27,16 +27,26 @@ function calcularDiferencaHr() {
     document.getElementById("diferencahr").value = diferencaHr 
 }
 		
-function calcularLitrosOd(n1, n2, n3) {
+function calcularLitrosOd() {
 
 	const odometroInicial = document.getElementById("odometroinicial").value
 	const odometroFinal = document.getElementById("odometrofinal").value
-	
+
 	const n1 = parseFloat(odometroInicial.replace(',', '.'));
 	const n2 = parseFloat(odometroFinal.replace(',', '.'));
+	if(n1 = ''){
+		
+		const n3 = n2 - 0
 
-	const n3 = n2 - n1
+	}else if(n2 == '') {
 
+		const n3 = 0 - n1
+		
+	} else {
+
+		const n3 = n2 - n1
+	}
+	
 	const litrosOdometro = n3.toString().replace('.', ',');
 
 	document.getElementById("litros_od").value = litrosOdometro

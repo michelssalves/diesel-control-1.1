@@ -125,7 +125,7 @@ include 'assets/controllers/checkAcess.php';
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Odometro Final:</span>
-            <input onkeyup="calcularLitrosOd(n1 =0, n2=0, n3=0)" onkeypress="return soNumeros()" id="odometrofinal" name="odometrofinal" type="text" class="form-control" placeholder="Odometro Final"  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+            <input onkeyup="calcularLitrosOd()" onkeypress="return soNumeros()" id="odometrofinal" name="odometrofinal" type="text" class="form-control" placeholder="Odometro Final"  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
         </div>
 
         <div class="input-group input-group-sm mb-3">
