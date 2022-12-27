@@ -93,7 +93,7 @@ include 'assets/controllers/checkAcess.php';
 
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Km:</span>
-            <input onkeyup="calcularMedia()" onkeypress="return soNumeros(),calcularDiferencaKm();" id="km" name="kmRegistrar"  type="text" step="0.01" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Km" required>
+            <input onkeyup="calcularMedia()" onkeypress="return soNumeros()" onkeydown="calcularDiferencaKm()" id="km" name="kmRegistrar"  type="text" step="0.01" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Km" required>
         </div>
 
         <div class="input-group input-group-sm mb-3">
