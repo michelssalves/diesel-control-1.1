@@ -49,7 +49,7 @@
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Combustivel:</span>
-            <select id="combustivel" name="combustivel"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  required >
+            <select id="combustivel" name="combustivelAlt"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  required >
                 <option value="<?= $row['combustivel']?>"><?= $row['combustivelAlt']?></option>
                 <option value="DIESEL S10">DIESEL S10</option>
                 <option value="GASOLINA">GASOLINA</option>
