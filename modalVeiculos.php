@@ -5,8 +5,8 @@
         <h1>ALTERAR VEICULO</h1>
       </div>
       <div class="modal-body">
-        <form method="POST">
-        <input value="cadastro-veiculo" name="menu" type="hidden"required><br>
+        <form method="GET">
+        <input value="cadastro-veiculo" action="acao" type="hidden"required><br>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
             <input id="prefixo" value="<?= $row['prefixo']?>" name="prefixo" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
