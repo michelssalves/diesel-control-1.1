@@ -1,12 +1,14 @@
-function soNumeros(num) {
-
-	var er = /^[0-9,]+$/;
-    er.lastIndex = 0;
-    var campo = num;
-    if (er.test(campo.value)) {
-      campo.value = "";
-    }
-}
+function soNumeros(evento) {
+	var theEvent = evento || window.event;
+	var key = theEvent.keyCode || theEvent.which;
+	key = String.fromCharCode( key );
+	//var regex = /^[0-9.,]+$/;
+	var regex = /^[0-9,]+$/;
+	if( !regex.test(key) ) {
+	   theEvent.returnValue = false;
+	   if(theEvent.preventDefault) theEvent.preventDefault();
+	}
+ }
 function calcularDiferencaKm() {
 	const kmAtual = document.getElementById("km").value
 	const kmAnterior = document.getElementById("ultimokm").value
