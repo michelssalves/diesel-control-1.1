@@ -33,7 +33,7 @@ function calcularMedia(){
 		document.getElementById("media").value = media.toFixed(2) 
 		
 }
-function somenteNumeros(num) {
+function soNumeros(evento) {
 	var theEvent = evento || window.event;
 	var key = theEvent.keyCode || theEvent.which;
 	key = String.fromCharCode( key );
