@@ -1,8 +1,8 @@
 ﻿<?php
 session_start();
+include 'assets/controllers/checkAcess.php';
 include 'assets/controllers/config.php';
 include 'assets/controllers/abastecimentoDataBaseAcess.php';
-include 'assets/controllers/checkAcess.php';
 ?>
 <!doctype html>
 <html lang="pt-br">
