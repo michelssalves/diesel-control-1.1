@@ -169,8 +169,9 @@ if($acao == 'alterar-abastecimento'){
     
 }
 if($acao == 'excluir-abastecimento'){
-
-    excluirAbastecimento();
+    echo 'entrei';
+    echo $id_abastecimentoAlterar = $_POST['id_abastecimentoAlterar'];
+    //excluirAbastecimento();
   
 }
 
