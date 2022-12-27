@@ -92,7 +92,7 @@ if($acao == 'alterar-veiculo'){
 			$sql->bindValue(':metodo', $metodo);
 			$sql->bindValue(':setorAlt', $setorAlt);
 			$sql->bindValue(':status_veiculo', $status_veiculo);
-			$sql1->execute();
+			$sql->execute();
          
             
    // cadastroAlteracaoVeiculo();
