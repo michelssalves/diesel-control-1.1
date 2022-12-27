@@ -206,7 +206,6 @@ if($acao == 'alterar-abastecimento'){
    $sql->bindValue(':litros_od', $litros_odAlterar);
    $sql->bindValue(':media', $mediaAlterar);
    $sql->bindValue(':data_alteracao', date('Y-m-d'));
-
    $sql->execute();
 
 }
@@ -354,12 +353,12 @@ function alterarAbastecimento(){
 }   
 function excluirAbastecimento(){
 
-    include 'config.php';
+/*    include 'config.php';
 
     $id_abastecimento = $_POST['id_abastecimento'];
     $sql = $pdo->prepare("DELETE FROM abastecimentos WHERE id_abastecimento = :id_abastecimento");
     $sql->bindValue(':id_abastecimento', $id_abastecimento);
-    $sql->execute();
+    $sql->execute();*/
 
 }
 
