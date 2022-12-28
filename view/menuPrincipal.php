@@ -2,11 +2,6 @@
 session_start();
 include '../model/Funcionarios.php';
 include '../controller/userDataBaseAcess.php';
-/*$login = $_SESSION['usuario'];
-$usuario = $_SESSION['nome'] ;
-$permissao =  $_SESSION['id_permissao'] ;
-$id_funcionario = $_SESSION['id_funcionario'];
-$token = $_SESSION['token'];*/
 include '../controller/checkAcess.php';
 ?>
 <!DOCTYPE html>

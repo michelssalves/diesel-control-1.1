@@ -254,8 +254,6 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
             
 function alterarAbastecimento(){
 
-    include 'config.php';
-
     $id_abastecimentoAlterar = $_POST['id_abastecimentoAlterar'];
     $id_veiculoAlterar = $_POST['id_veiculoAlterar'];
     $bombaAlterar = $_POST['bombaAlterar'];
@@ -279,8 +277,6 @@ function alterarAbastecimento(){
 
 }   
 function excluirAbastecimento(){
-
-    include 'config.php';
 
     $id_abastecimentoAlterar = $_POST['id_abastecimentoAlterar'];
 

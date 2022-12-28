@@ -2,8 +2,6 @@
 session_start();
 include '../model/Funcionarios.php';
 include '../controller/userDataBaseAcess.php';
-
-
 ?>
 <!doctype html>
 <html lang="en">
