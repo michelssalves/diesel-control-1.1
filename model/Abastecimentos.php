@@ -92,6 +92,7 @@ $litrosOdAlt,$litrosAlt,$ultimoKmAlt, $kmAlt, $diferencaKmAlt,$mediaAlt,$ultimoH
      $sql->bindValue(':mediaAlt', $mediaAlt);
      $sql->bindValue(':data_alteracao', date('Y-m-d H:i'));
      $sql->execute();
+     return $sql;
  }
 
  function deleteAbastecimento($idAbastecimentoAlt){

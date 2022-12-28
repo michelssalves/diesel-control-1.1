@@ -75,8 +75,8 @@ if($acao == 'alterar-abastecimento'){
    echo '<pre>'; echo $diferencaHrAlt = $_POST['diferencaHrAlt']; 
    echo '<pre>'; echo $frentistaAlt = $_POST['frentistaAlt'];
 
-   echo '<pre>'; echo updateAbastecimentoAlterar($idAbastecimentoAlt, $idVeiculoAlt, $bombaAlt,$odometroInicialAlt,$odometroFinalAlt,$litrosOdAlt,$litrosAlt,
-   $ultimoKmAlt, $kmAlt, $diferencaKmAlt,$mediaAlt,$ultimoHrAlt ,$hrAlt,$diferencaHrAlt, $frentistaAlt);
+   echo '<pre>'; echo updateAbastecimentoAlterar($idAbastecimentoAlt, $idVeiculoAlt, $bombaAlt,$odometroInicialAlt,$odometroFinalAlt,
+   $litrosOdAlt,$litrosAlt,$ultimoKmAlt, $kmAlt, $diferencaKmAlt,$mediaAlt,$ultimoHrAlt ,$hrAlt,$diferencaHrAlt, $frentistaAlt);
     
 }
 if($acao == 'excluir-abastecimento'){
