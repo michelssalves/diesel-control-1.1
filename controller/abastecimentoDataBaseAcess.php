@@ -44,7 +44,7 @@ if($acao == 'excluir-abastecimento'){
     excluirAbastecimento();
   
 }
-
+$tabelaFiltrada = filtrarAbastecimentos($dataInicial, $dataFinal, $marca, $modelo, $prefixo, $setor);
 function filtrarAbastecimentos($dataInicial, $dataFinal, $marca, $modelo, $prefixo, $setor){
 
     include 'config.php';
