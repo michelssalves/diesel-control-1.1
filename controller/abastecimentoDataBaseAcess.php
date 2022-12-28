@@ -28,7 +28,8 @@ if($combustivel && $combustivel <> 'TODOS' ){$filtroCombustivel = "AND v.combust
 if($marca && $marca <> 'TODOS'){$filtroMarca = "AND v.marca = '$marca'";}
 if($modelo && $modelo <> 'TODOS'){$filtroModelo = "AND v.modelo = '$modelo'";}
 if($setor && $setor <> 'TODOS'){$filtroSetor = "AND v.setor = '$setor'";}
-
+$sql = selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataInicial, $dataFinal);
+var_dump($sql);
 if($acao == 'registrar-abastecimento'){
 
     registrarAbastecimento();
