@@ -5,7 +5,7 @@ function selectCountVeiculos(){
 
     $sql = $pdo->prepare("SELECT COUNT(id_veiculo) AS numeroDePaginas FROM veiculos");
     $sql->execute();
-    $row = $qry->fetch(PDO::FETCH_ASSOC);
+    $row = $sql->fetch(PDO::FETCH_ASSOC);
     return $row['numeroDePaginas'];
 
 }
