@@ -1,7 +1,7 @@
 <?php
 session_start();
 //include '../controller/checkAcess.php';
-include '../controller/config.php';
+//include '../controller/config.php';
 include '../model/Abastecimentos.php';
 include '../controller/abastecimentoDataBaseAcess.php';
 ?>
