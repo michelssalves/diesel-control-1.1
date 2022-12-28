@@ -38,34 +38,35 @@ $numero_motor, $ano, $marcaCad, $modeloCad, $combustivelCad, $metodo, $setorCad,
     
 
 }
-function updateTabeleaVeiculosAlterarVeiculo($idVeiculoAlt, $numero_equipamento, $prefixoAlt, $placa, $descricao_caminha, $renavam, $chassi, 
-$numero_motor, $ano, $marcaAlt, $modeloAlt, $metodo, $setorAlt, $status_veiculo){
+function  updateTabeleaVeiculosAlterarVeiculo($idVeiculoAlt, $prefixoAlt, $numeroEquipamentoAlt, $placaAlt, $descricaoCaminhaoAlt,
+$renavamAlt, $chassiAlt, $numeroMotorAlt, $anoAlt, $marcaAlt, $modeloAlt, $combustivelAlt, $metodoAlt, $setorAlt, 
+$statusVeiculoAlt){
 
     include 'config.php';
 
     $sql = $pdo->prepare("UPDATE veiculos SET
-    numero_equipamento = :numero_equipamento, prefixo = :prefixoAlt, placa = :placa, 
-    descricao_caminhao = :descricao_caminhao, renavam = :renavam, chassi = :chassi, 
+    numero_equipamento = :numeroEquipamentoAlt, prefixo = :prefixoAlt, placa = :placaAlt, 
+    descricao_caminhao = :descricaoCaminhaoAlt, renavam = :renavamAlt, chassi = :chassiAlt, 
     numero_motor = :numero_motor,
-    ano = :ano, marca = :marcaAlt, modelo = :modeloAlt, combustivel = :combustivelAlt ,metodo =:metodo,
-    setor = :setorAlt, status_veiculo = :status_veiculo
+    ano = :anoAlt, marca = :marcaAlt, modelo = :modeloAlt, combustivelAlt = :combustivelAlt ,metodo =:metodoAlt,
+    setor = :setorAlt, status_veiculo = :statusVeiculoAlt
     WHERE id_veiculo = :idVeiculoAlt");
 
     $sql->bindValue(':idVeiculoAlt', $idVeiculoAlt);
-    $sql->bindValue(':numero_equipamento', $numero_equipamento);
+    $sql->bindValue(':numeroEquipamentoAlt', $numeroEquipamentoAlt);
     $sql->bindValue(':prefixoAlt', $prefixoAlt);
-    $sql->bindValue(':placa', $placa);
-    $sql->bindValue(':descricao_caminhao', $descricao_caminhao);
-    $sql->bindValue(':renavam', $renavam);
-    $sql->bindValue(':chassi', $chassi);
-    $sql->bindValue(':numero_motor', $numero_motor);
-    $sql->bindValue(':ano', $ano);
+    $sql->bindValue(':placaAlt', $placaAlt);
+    $sql->bindValue(':descricaoCaminhaoAlt', $descricaoCaminhaoAlt);
+    $sql->bindValue(':renavamAlt', $renavamAlt);
+    $sql->bindValue(':chassiAlt', $chassiAlt);
+    $sql->bindValue(':numeroMotorAlt', $numeroMotorAlt);
+    $sql->bindValue(':anoAlt', $anoAlt);
     $sql->bindValue(':marcaAlt', $marcaAlt);
     $sql->bindValue(':modeloAlt', $modeloAlt);
     $sql->bindValue(':combustivelAlt', $combustivelAlt);
-    $sql->bindValue(':metodo', $metodo);
+    $sql->bindValue(':metodoAlt', $metodoAlt);
     $sql->bindValue(':setorAlt', $setorAlt);
-    $sql->bindValue(':status_veiculo', $status_veiculo);
+    $sql->bindValue(':statusVeiculoAlt', $statusVeiculoAlt);
     $sql->execute();
     }    
 

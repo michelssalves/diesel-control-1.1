@@ -6,50 +6,50 @@
       </div>
       <div class="modal-body">
         <form method="POST">
-        <input type="hidden" value="<?= $row['id_veiculo']?>" name="idVeiculoAlt" required>
+        <input type="hidden" value="<?= $row['id_veiculo']?>" name="idVeiculo" required>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
-            <input id="prefixo" value="<?= $row['prefixo']?>" name="prefixoAlt" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+            <input id="prefixo" value="<?= $row['prefixo']?>" name="prefixo" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo Sap:</span>
-            <input id="numeroEquipamento"  value="<?= $row['numero_equipamento']?>" name="numeroEquipamentoAlt" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
+            <input id="numeroEquipamento"  value="<?= $row['numero_equipamento']?>" name="numeroEquipamento" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Placa:</span>
-            <input id="placa" value="<?= $row['placa']?>" name="placaAlt" type="text"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+            <input id="placa" value="<?= $row['placa']?>" name="placa" type="text"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Descricao:</span>
-            <input id="descricaoCaminhao" value="<?= $row['descricao_caminhao']?>" name="descricaoCaminhaoAlt" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  autofocus required>
+            <input id="descricaoCaminhao" value="<?= $row['descricao_caminhao']?>" name="descricaoCaminhao" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  autofocus required>
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Renavam:</span>
-            <input  id="renavam" value="<?= $row['renavam']?>" name="renavamAlt" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
+            <input  id="renavam" value="<?= $row['renavam']?>" name="renavam" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Chassi:</span>
-            <input id="chassi" value="<?= $row['chassi']?>" name="chassiAlt" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+            <input id="chassi" value="<?= $row['chassi']?>" name="chassi" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Nº Motor:</span>
-            <input id="numeroMotor" value="<?= $row['numero_motor']?>" name="numeroMotorAlt" type="text"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
+            <input id="numeroMotor" value="<?= $row['numero_motor']?>" name="numeroMotor" type="text"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Ano:</span>
-            <input id="ano" value="<?= $row['ano']?>" name="anoAlt" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+            <input id="ano" value="<?= $row['ano']?>" name="ano" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Marca:</span>
-            <input id="marca" value="<?= $row['marca']?>" name="marcaAlt" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
+            <input id="marca" value="<?= $row['marca']?>" name="marca" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Modelo:</span>
-            <input id="modelo" value="<?= $row['modelo']?>" name="modeloAlt" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
+            <input id="modelo" value="<?= $row['modelo']?>" name="modelo" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Combustivel:</span>
-            <select id="combustivel" name="combustivelAlt"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  required >
+            <select id="combustivel" name="combustivel"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  required >
                 <option value="<?= $row['combustivel']?>"><?= $row['combustivel']?></option>
                 <option value="DIESEL S10">DIESEL S10</option>
                 <option value="GASOLINA">GASOLINA</option>
@@ -57,7 +57,7 @@
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Metodo:</span>
-            <select id="metodo" name="metodoAlt" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required >
+            <select id="metodo" name="metodo" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required >
                 <option value="<?= $row['metodo']?>">
                 <?php if($row['metodo'] = 1){
                     echo 'KM';
@@ -74,7 +74,7 @@
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Setor:</span>
-            <select id="setor" name="setorAlt" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  required >
+            <select id="setor" name="setor" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  required >
                 <option value="<?= $row['setor']?>"><?= $row['setor']?></option>
                 <option value="Coleta Domiciliar">Coleta Domiciliar</option>
                 <option value="Ctrss">Ctrss</option>
@@ -85,7 +85,7 @@
             </select></div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Status:</span>
-            <select id="statusVeiculo" name="statusVeiculoAlt" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required >
+            <select id="statusVeiculo" name="statusVeiculo" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required >
                 <option value="<?= $row['status_veiculo']?>"><?= ($row['status_veiculo'] == 1 ? 'Ativo' :'Inativo') ?></option>
                 <option value="1">Ativo</option>
                 <option value="2">Inativo</option>

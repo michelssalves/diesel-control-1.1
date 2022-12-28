@@ -1,22 +1,32 @@
 <?php
 $acao = $_REQUEST['acao'];
 
-$page = $_REQUEST['page'];
-$idVeiculo = $_POST['idVeiculo'];
-$prefixo = $_REQUEST['prefixo'];
-$numeroEquipamento = $_POST['numeroEquipamento'];
-$placa = $_POST['placa'];
-$descricaoCaminhao = $_POST['descricaoCaminhao'];
-$combustivel = $_REQUEST['combustivel'];
-$renavam = $_POST['renavam'];
-$chassi = $_POST['chassi'];
-$numeroMotor = $_POST['numeroMotor'];
-$ano = $_POST['ano'];
-$marca = $_REQUEST['marca'];
-$modelo = $_REQUEST['modelo'];
-$setor = $_REQUEST['setor'];
+$page = $_POST['page'];
+
+$prefixo = $_POST['prefixo'];
+$combustivel = $_POST['combustivel'];
+$marca = $_POST['marca'];
+$modelo = $_POST['modelo'];
 $statusVeiculo = $_POST['statusVeiculo'];
-$metodo = $_POST['metodo'];
+
+
+$idVeiculoAlt = $_POST['idVeiculoAlt'];
+$prefixoAlt = $_POST['prefixoAlt'];
+$numeroEquipamentoAlt = $_POST['numeroEquipamentoAlt'];
+$placaAlt = $_POST['placaAlt'];
+$descricaoCaminhaoAlt = $_POST['descricaoCaminhaoAlt'];
+$renavamAlt = $_POST['renavamAlt'];
+$chassiAlt = $_POST['chassiAlt'];
+$numeroMotorAlt = $_POST['numeroMotorAlt'];
+$anoAlt = $_POST['anoAlt'];
+$marcaAlt = $_POST['marcaAlt'];
+$modeloAlt = $_POST['modeloAlt'];
+$combustivelAlt = $_POST['combustivelAlt'];
+$metodoAlt = $_POST['metodoAlt'];
+$setorAlt = $_POST['setorAlt'];
+$statusVeiculoAlt = $_POST['statusVeiculoAlt'];
+
+
 
 if($acao == 'limpar'){
 
@@ -64,8 +74,9 @@ function alterarVeiculo(){
 
     include 'config.php';
     
-    updateTabeleaVeiculosAlterarVeiculo($idVeiculo, $numeroEquipamento, $prefixo, $placa, $descricaoCaminhao, $renavam, $chassi, 
-     $numeroMotor, $ano, $marca, $modelo, $combustivel, $metodo, $setor, $statusVeiculo);
+    updateTabeleaVeiculosAlterarVeiculo($idVeiculoAlt, $prefixoAlt, $numeroEquipamentoAlt, $placaAlt, $descricaoCaminhaoAlt,
+     $renavamAlt, $chassiAlt, $numeroMotorAlt, $anoAlt, $marcaAlt, $modeloAlt, $combustivelAlt, $metodoAlt, $setorAlt, 
+     $statusVeiculoAlt);
      
 }
 function desativarVeiculo($acao, $idVeiculo, $statusVeiculo){
