@@ -180,9 +180,10 @@ function alterarAbastecimento(){
     $diferencaHrAlt = $_POST['diferencaHrAlt']; 
     $frentistaAlt = $_POST['frentistaAlt'];
     $mediaAlt = $_POST['mediaAlt'];
+    $dataAbastecimentoAlt = $_POST['dataAbastecimentoAlt'];
  
   updateAbastecimentoAlterar($idAbastecimentoAlt, $idVeiculoAlt, $bombaAlt,$odometroInicialAlt,$odometroFinalAlt,
-  $litrosOdAlt,$litrosAlt,$ultimoKmAlt, $kmAlt, $diferencaKmAlt,$mediaAlt,$ultimoHrAlt ,$hrAlt,$diferencaHrAlt, $frentistaAlt);
+  $litrosOdAlt,$litrosAlt,$ultimoKmAlt, $kmAlt, $diferencaKmAlt,$mediaAlt,$ultimoHrAlt ,$hrAlt,$diferencaHrAlt, $frentistaAlt, $dataAbastecimentoAlt);
    
 } 
 function informacoesVeiculo($idVeiculo){

@@ -66,13 +66,14 @@ $hrCad, $diferencaHrCad, $frentistaCad, $odometroFinalCad, $litrosCad, $litrosOd
 }
 
 function updateAbastecimentoAlterar($idAbastecimentoAlt, $idVeiculoAlt, $bombaAlt,$odometroInicialAlt,$odometroFinalAlt,
-$litrosOdAlt,$litrosAlt,$ultimoKmAlt, $kmAlt, $diferencaKmAlt,$mediaAlt,$ultimoHrAlt ,$hrAlt,$diferencaHrAlt, $frentistaAlt){
+$litrosOdAlt,$litrosAlt,$ultimoKmAlt, $kmAlt, $diferencaKmAlt,$mediaAlt,$ultimoHrAlt ,$hrAlt,$diferencaHrAlt, $frentistaAlt, $dataAbastecimentoAlt){
 
     include '../controller/config.php';
 
     $sql = $pdo->prepare("UPDATE abastecimentos SET id_veiculo = :idVeiculoAlt, bomba = :bombaAlt, odometroinicial = :odometroInicialAlt, 
     odometrofinal = :odometroFinalAlt, litros_od = :litrosOdAlt, litros = :litrosAlt, ultimokm = :ultimoKmAlt, km = :kmAlt, diferencakm = :diferencaKmAlt, 
-    ultimohr = :ultimoHrAlt, hr = :hrAlt, diferencahr = :diferencaHrAlt, frentista = :frentistaAlt,  media = :mediaAlt, data_alteracao = :data_alteracao 
+    ultimohr = :ultimoHrAlt, hr = :hrAlt, diferencahr = :diferencaHrAlt, frentista = :frentistaAlt,  media = :mediaAlt, data_alteracao = :data_alteracao,
+    dataabastecimento2 = :dataAbastecimentoAlt 
     WHERE id_abastecimento = :idAbastecimentoAlt");
  
     $sql->bindValue(':idAbastecimentoAlt', $idAbastecimentoAlt);
@@ -91,6 +92,7 @@ $litrosOdAlt,$litrosAlt,$ultimoKmAlt, $kmAlt, $diferencaKmAlt,$mediaAlt,$ultimoH
     $sql->bindValue(':frentistaAlt', $frentistaAlt);
     $sql->bindValue(':mediaAlt', $mediaAlt);
     $sql->bindValue(':data_alteracao', date('Y-m-d H:i'));
+    $sql->bindValue(':dataAbastecimentoAlt', $dataAbastecimentoAlt);
     $sql->execute();
 
  }
