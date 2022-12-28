@@ -48,7 +48,7 @@ if($acao == 'limpar'){
        $filtroStatus $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor
        ORDER BY prefixo ASC LIMIT $start, $result_for_page");
 
-        if ($sql->rowCount() > 0) {
+        if ($resultados > 0) {
 
         echo    $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
         
