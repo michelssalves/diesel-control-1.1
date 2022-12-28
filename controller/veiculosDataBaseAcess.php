@@ -53,7 +53,7 @@ if($acao == 'limpar'){
         if ($resultados > 0) {
 
         $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
-        var_dump($lista);
+      
             foreach($lista as $row){
 
                 $modalAlterarVeiculo = "modalAlterarVeiculo".$row['id_veiculo']."";
