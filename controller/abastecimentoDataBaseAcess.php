@@ -2,14 +2,29 @@
 session_start();
 $acao = $_REQUEST['acao'];
 
-$dataInicial = $_POST['dataInicial'];
-$dataFinal = $_POST['dataFinal'];
-$combustivel = $_POST['combustivel'];
+$dataInicial = ($_POST['dataInicial'] ? $_POST['dataInicial'] : date('Y-m-d'));
+$dataFinal = ($_POST['dataFinal'] ? $_POST['dataFinal'] : date('Y-m-d')))
+$combustivel = ($_POST['combustivel'] ? $_POST['combustivel'] : 'TODOS');
 $marca = $_POST['marca'];
 $modelo = $_POST['modelo'];
 $prefixo = $_POST['prefixo'];
 $setor = $_POST['setor'];
 
+if($dataInicial && $dataInicial <> ''){ 
+    $filtrodataInicial = $dataInicial;
+}else{
+    $filtrodataInicial = date('Y-m-d');
+}
+if($dataFinal && $dataFinal <> ''){ 
+    $filtrodataFinal = $dataFinal;
+}else{
+    $filtrodataFinal = date('Y-m-d');
+}
+if($prefixo && $prefixo <> 'TODOS'){$filtroPrefixo = "AND v.prefixo = '$prefixo'";};
+if($combustivel && $combustivel <> 'TODOS' ){$filtroCombustivel = "AND v.combustivel = '$combustivel'";}
+if($marca && $marca <> 'TODOS'){$filtroMarca = "AND v.marca = '$marca'";}
+if($modelo && $modelo <> 'TODOS'){$filtroModelo = "AND v.modelo = '$modelo'";}
+if($setor && $setor <> 'TODOS'){$filtroSetor = "AND v.setor = '$setor'";}
 
 if($acao == 'limpar'){
 
@@ -53,19 +68,7 @@ function filtrarAbastecimentos($dataInicial, $dataFinal, $combustivel, $marca, $
     include 'functions.php';
     include 'modal/modalCadastrarAbastecimento.php'; 
 
-    if($dataInicial && $dataInicial <> ''){ $filtrodataInicial = $dataInicial;
-    }else{
-        $filtrodataInicial = date('Y-m-d');
-    }
-    if($dataFinal && $dataFinal <> ''){ $filtrodataFinal = $dataFinal;
-    }else{
-        $filtrodataFinal = date('Y-m-d');
-    }
-    if($prefixo && $prefixo <> 'TODOS'){$filtroPrefixo = "AND v.prefixo = '$prefixo'";};
-    if($combustivel && $combustivel <> 'TODOS' ){$filtroCombustivel = "AND v.combustivel = '$combustivel'";}
-    if($marca && $marca <> 'TODOS'){$filtroMarca = "AND v.marca = '$marca'";}
-    if($modelo && $modelo <> 'TODOS'){$filtroModelo = "AND v.modelo = '$modelo'";}
-    if($setor && $setor <> 'TODOS'){$filtroSetor = "AND v.setor = '$setor'";}
+
 
 
         $sql = selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $filtrodataInicial, $filtrodataFinal);
