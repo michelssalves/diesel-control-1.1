@@ -38,7 +38,7 @@ if($acao == 'cadastrarVeiculo'){
 }
 if($acao == 'desativar-veiculo' || $acao == 'ativar-veiculo'){
 
-    desativarVeiculo($acao, $idVeiculo, $statusVeiculo);
+    desativarVeiculo($acao);
 }
 if($acao == 'alterar-veiculo'){
     
