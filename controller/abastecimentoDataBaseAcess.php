@@ -48,7 +48,6 @@ function filtrarAbastecimentos(){
     $dataInicial = ($_POST['dataInicial'] <> '' ? $_POST['dataInicial'] : date('Y-m-d'));
     $dataFinal = ($_POST['dataFinal'] <> '' ? $_POST['dataFinal'] : date('Y-m-d'));
 
-
     if($prefixo && $prefixo <> 'TODOS'){$filtroPrefixo = "AND v.prefixo = '$prefixo'";};
     if($combustivel && $combustivel <> 'TODOS' ){$filtroCombustivel = "AND v.combustivel = '$combustivel'";}
     if($marca && $marca <> 'TODOS'){$filtroMarca = "AND v.marca = '$marca'";}

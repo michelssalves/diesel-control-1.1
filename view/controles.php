@@ -1,7 +1,6 @@
 <?php session_start(); 
 include '../controller/checkAcess.php';
 include '../model/Abastecimentos.php';
-include '../controller/abastecimentoDataBaseAcess.php';
 ?>
 <head>
     <meta charset="utf-8">
@@ -30,11 +29,7 @@ include '../controller/abastecimentoDataBaseAcess.php';
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-md-auto mt-4">  
-            <?php
-                
-                
-                
-            ?>
+            <?php include '../controller/abastecimentoDataBaseAcess.php'; ?>
             <form method="POST">  
                 <button class="btn btn-success btn-sm" onclick="table2excel('t1')">Excel</button>
                 <button name="acao" value="filtrar" type="submit" class='btn btn-primary btn-sm'>Filtrar</button>
