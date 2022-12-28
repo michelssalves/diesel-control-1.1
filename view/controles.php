@@ -1,4 +1,5 @@
 <?php session_start(); 
+include '../controller/config.php';
 include '../controller/checkAcess.php';
 include '../model/Abastecimentos.php';
 ?>
@@ -30,7 +31,7 @@ include '../model/Abastecimentos.php';
         <div class="row justify-content-md-center">
             <div class="col-md-auto mt-4">  
             <?php 
-            include '../controller/config.php';
+            
             include '../controller/abastecimentoDataBaseAcess.php';
             ?>
             <form method="POST">  
