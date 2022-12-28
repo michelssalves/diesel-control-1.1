@@ -1,6 +1,6 @@
 <?php session_start(); 
 include '../controller/checkAcess.php';
-include '../model/Abastecimentos.php';
+
 ?>
 <head>
     <meta charset="utf-8">

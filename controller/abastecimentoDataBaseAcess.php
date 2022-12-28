@@ -48,6 +48,7 @@ if($acao == 'excluir-abastecimento'){
 function filtrarAbastecimentos(){
 
     include 'config.php';
+    include '../model/Abastecimentos.php';
     include 'functions.php';
     include 'modal/modalCadastrarAbastecimento.php'; 
 
