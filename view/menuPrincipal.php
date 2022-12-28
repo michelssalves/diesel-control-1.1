@@ -1,7 +1,7 @@
 <?php
 session_start();
 include '../controller/userDataBaseAcess.php';
-//include '../controller/checkAcess.php';
+include '../controller/checkAcess.php';
 ?>
 <!DOCTYPE html>
 <html>
