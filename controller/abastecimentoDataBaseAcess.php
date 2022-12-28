@@ -3,13 +3,13 @@ include 'config.php';
 session_start();
 $acao = $_REQUEST['acao'];
 
-$dataInicial = ($_POST['dataInicial'] ? $_POST['dataInicial'] : date('Y-m-d'));
-$dataFinal = ($_POST['dataFinal'] ? $_POST['dataFinal'] : date('Y-m-d'));
-$combustivel = $_POST['combustivel'];
-$marca = $_POST['marca'];
-$modelo = $_POST['modelo'];
-$prefixo = $_POST['prefixo'];
-$setor = $_POST['setor'];
+echo '<pre>'; echo $dataInicial = ($_POST['dataInicial'] ? $_POST['dataInicial'] : date('Y-m-d'));
+echo '<pre>'; echo $dataFinal = ($_POST['dataFinal'] ? $_POST['dataFinal'] : date('Y-m-d'));
+echo '<pre>'; echo $combustivel = $_POST['combustivel'];
+echo '<pre>'; echo $marca = $_POST['marca'];
+echo '<pre>'; echo $modelo = $_POST['modelo'];
+echo '<pre>'; echo $prefixo = $_POST['prefixo'];
+echo '<pre>'; echo $setor = $_POST['setor'];
 
 if($acao == 'limpar'){
 
