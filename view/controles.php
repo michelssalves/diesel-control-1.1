@@ -1,9 +1,6 @@
 <?php
 session_start();
 //include '../controller/checkAcess.php';
-//include '../controller/config.php';
-include '../model/Abastecimentos.php';
-include '../controller/abastecimentoDataBaseAcess.php';
 ?>
 <head>
     <meta charset="utf-8">
@@ -39,6 +36,12 @@ include '../controller/abastecimentoDataBaseAcess.php';
             </div>
         </div>
     </div>
+    <?php
+
+include '../controller/config.php';
+include '../model/Abastecimentos.php';
+include '../controller/abastecimentoDataBaseAcess.php';
+?>
     <div class="container">
       
                 <div class="table-responsive">
