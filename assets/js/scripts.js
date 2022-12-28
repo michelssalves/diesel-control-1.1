@@ -35,6 +35,7 @@ function calcularDiferencaHrAlt() {
 	const hrAtualAlt = document.getElementById("hrAlt").value
 	const hrAnteriorAlt = document.getElementById("ultimoHrAlt").value
 	console.log(hrAnteriorAlt)
+	console.log(hrAtualAlt)
 
     document.getElementById("diferencaHrAlt").value = subtrairConvertendo(hrAnteriorAlt, hrAtualAlt) 
 }		
