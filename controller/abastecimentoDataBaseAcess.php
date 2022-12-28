@@ -1,4 +1,5 @@
 ﻿<?php
+include 'config.php';
 session_start();
 $acao = $_REQUEST['acao'];
 
