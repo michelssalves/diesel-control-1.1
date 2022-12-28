@@ -1,5 +1,6 @@
 <?php session_start(); 
 include '../controller/checkAcess.php';
+include '../model/Abastecimentos.php';
 ?>
 <head>
     <meta charset="utf-8">
@@ -30,7 +31,7 @@ include '../controller/checkAcess.php';
             <div class="col-md-auto mt-4">  
             <?php
                 
-                include '../model/Abastecimentos.php';
+                
                 include '../controller/abastecimentoDataBaseAcess.php';
             ?>
             <form method="POST">  
