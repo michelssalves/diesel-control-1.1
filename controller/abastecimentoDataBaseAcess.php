@@ -45,7 +45,7 @@ if($acao == 'excluir-abastecimento'){
   
 }
 
-function filtrarAbastecimentos($dataInicial, $dataFinal, $marca, $modelo, $prefixo, $setor ){
+function filtrarAbastecimentos($dataInicial, $dataFinal, $marca, $modelo, $prefixo, $setor){
 
     include 'config.php';
     include 'functions.php';
@@ -57,8 +57,7 @@ function filtrarAbastecimentos($dataInicial, $dataFinal, $marca, $modelo, $prefi
     if($modelo && $modelo <> 'TODOS'){$filtroModelo = "AND v.modelo = '$modelo'";}
     if($setor && $setor <> 'TODOS'){$filtroSetor = "AND v.setor = '$setor'";}
 
-    
-    
+
         $sql = selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataInicial, $dataFinal);
 
         if ($sql->rowCount() > 0) {
