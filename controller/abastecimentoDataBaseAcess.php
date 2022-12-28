@@ -1,39 +1,8 @@
 ﻿<?php
-include 'config.php';
+//include 'config.php';
 session_start();
 $acao = $_REQUEST['acao'];
 
-if($acao == 'alterar-abastecimento'){
-
-    alterarAbastecimento();
-
-    
-}
-function alterarAbastecimento(){
-
-    include '../model/Abastecimentos.php';
- 
-    $idAbastecimentoAlt = $_POST['idAbastecimentoAlt'];
-    $idVeiculoAlt = $_POST['idVeiculoAlt'];
-    $bombaAlt = $_POST['bombaAlt'];
-    $odometroInicialAlt = $_POST['odometroInicialAlt']; 
-    $odometroFinalAlt = $_POST['odometroFinalAlt']; 
-    $litrosOdAlt = $_POST['litrosOdAlt'];
-    $litrosAlt = $_POST['litrosAlt']; 
-    $ultimoKmAlt = $_POST['ultimoKmAlt']; 
-    $kmAlt = $_POST['kmAlt']; 
-    $diferencaKmAlt = $_POST['diferencaKmAlt'];
-    $ultimoHrAlt = $_POST['ultimoHrAlt']; 
-    $hrAlt = $_POST['hrAlt']; 
-    $diferencaHrAlt = $_POST['diferencaHrAlt']; 
-    $frentistaAlt = $_POST['frentistaAlt'];
-    $mediaAlt = $_POST['mediaAlt'];
- 
-  updateAbastecimentoAlterar($idAbastecimentoAlt, $idVeiculoAlt, $bombaAlt,$odometroInicialAlt,$odometroFinalAlt,
-  $litrosOdAlt,$litrosAlt,$ultimoKmAlt, $kmAlt, $diferencaKmAlt,$mediaAlt,$ultimoHrAlt ,$hrAlt,$diferencaHrAlt, $frentistaAlt);
-   
-
-} 
 $dataInicial = ($_POST['dataInicial'] ? $_POST['dataInicial'] : date('Y-m-d'));
 $dataFinal = ($_POST['dataFinal'] ? $_POST['dataFinal'] : date('Y-m-d'));
 $combustivel = ($_POST['combustivel'] <> '' ? $_POST['combustivel'] : 'TODOS');
@@ -74,7 +43,13 @@ if($setor && $setor <> 'TODOS'){$filtroSetor = "AND v.setor = '$setor'";}
 if($acao == 'registrar-abastecimento'){
 
     registrarAbastecimento();
-    filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $filtrodataInicial, $filtrodataFinal);
+
+}
+if($acao == 'alterar-abastecimento'){
+
+    alterarAbastecimento();
+
+    
 }
 if($acao == 'ultimoKm'){
     
@@ -195,6 +170,31 @@ function registrarAbastecimento(){
     insertAbastecimentoNovo($idVeiculoCad,$bombaCad, $odometroInicialCad, $ultimoKmCad, $kmCad, $diferencaKmCad, $ultimoHrCad,
     $hrCad, $diferencaHrCad, $frentistaCad, $odometroFinalCad, $litrosCad, $litrosOdCad, $mediaCad);
 }
+function alterarAbastecimento(){
+
+    include '../model/Abastecimentos.php';
+ 
+    $idAbastecimentoAlt = $_POST['idAbastecimentoAlt'];
+    $idVeiculoAlt = $_POST['idVeiculoAlt'];
+    $bombaAlt = $_POST['bombaAlt'];
+    $odometroInicialAlt = $_POST['odometroInicialAlt']; 
+    $odometroFinalAlt = $_POST['odometroFinalAlt']; 
+    $litrosOdAlt = $_POST['litrosOdAlt'];
+    $litrosAlt = $_POST['litrosAlt']; 
+    $ultimoKmAlt = $_POST['ultimoKmAlt']; 
+    $kmAlt = $_POST['kmAlt']; 
+    $diferencaKmAlt = $_POST['diferencaKmAlt'];
+    $ultimoHrAlt = $_POST['ultimoHrAlt']; 
+    $hrAlt = $_POST['hrAlt']; 
+    $diferencaHrAlt = $_POST['diferencaHrAlt']; 
+    $frentistaAlt = $_POST['frentistaAlt'];
+    $mediaAlt = $_POST['mediaAlt'];
+ 
+  updateAbastecimentoAlterar($idAbastecimentoAlt, $idVeiculoAlt, $bombaAlt,$odometroInicialAlt,$odometroFinalAlt,
+  $litrosOdAlt,$litrosAlt,$ultimoKmAlt, $kmAlt, $diferencaKmAlt,$mediaAlt,$ultimoHrAlt ,$hrAlt,$diferencaHrAlt, $frentistaAlt);
+   
+
+} 
 function informacoesVeiculo($idVeiculo){
 
     $sql = selectAbastecimentosPorVeiculo($idVeiculo);
