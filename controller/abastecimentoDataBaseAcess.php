@@ -5,11 +5,11 @@ $acao = $_REQUEST['acao'];
 
 $dataInicial = ($_POST['dataInicial'] ? $_POST['dataInicial'] : date('Y-m-d'));
 $dataFinal = ($_POST['dataFinal'] ? $_POST['dataFinal'] : date('Y-m-d'));
-$combustivel = ($_POST['combustivel'] ? $_POST['combustivel'] : 'TODOS');
-$marca = ($_POST['marca'] ? $_POST['marca'] : 'TODOS');
-$modelo = ($_POST['modelo'] ? $_POST['modelo'] : 'TODOS');
-$prefixo = ($_POST['prefixo'] ? $_POST['prefixo'] : 'TODOS');
-$setor = ($_POST['setor']? $_POST['setor'] : 'TODOS');
+$combustivel = ($_POST['combustivel'] <> '' ? $_POST['combustivel'] : 'TODOS');
+$marca = ($_POST['marca'] <> '' ? $_POST['marca'] : 'TODOS');
+$modelo = ($_POST['modelo'] <> '' ? $_POST['modelo'] : 'TODOS');
+$prefixo = ($_POST['prefixo'] <> '' ? $_POST['prefixo'] : 'TODOS');
+$setor = ($_POST['setor'] <> '' ? $_POST['setor'] : 'TODOS');
 
 if($acao == 'limpar'){
 

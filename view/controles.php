@@ -34,7 +34,7 @@ include '../controller/abastecimentoDataBaseAcess.php';
             <form method="GET">  
                 <button type="button" class='btn btn-primary btn-sm' data-bs-toggle='modal' data-bs-target='#modalCadastrarAbastecimento'>Cadastrar</button>
                 <button class="btn btn-success btn-sm" onclick="table2excel('t1')">Excel</button>
-                <button name="acao" value="filtrar" type="submit" class='btn btn-primary btn-sm'>Filtrar</button>
+                <button type="submit" class='btn btn-primary btn-sm'>Filtrar</button>
                 <button name="acao" value="limpar" type="submit" class='btn btn-secondary btn-sm'>Limpar</button>
             </div>
         </div>
