@@ -1,7 +1,4 @@
 <?php
-
-echo 'oi';
-
 $db_name = 'u338658684_controle';
 $db_host= 'localhost';
 $db_user= 'u338658684_controle';
