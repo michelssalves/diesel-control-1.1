@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'config.php';
 
 $acao = $_REQUEST['acao'];
 $id_funcionario = $_SESSION['id_funcionario'];
