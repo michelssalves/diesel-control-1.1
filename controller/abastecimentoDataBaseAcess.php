@@ -124,7 +124,7 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
            
         }
           //return $txtTableControles;  
-          
+          $dataInicial = $dataInicial;
           return $dataInicial;
 } 
 function listarAbastecimentos(){
