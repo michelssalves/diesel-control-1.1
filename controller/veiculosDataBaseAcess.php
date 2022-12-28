@@ -1,7 +1,7 @@
 <?php
 $acao = $_REQUEST['acao'];
 
-$page = $_POST['page'];
+$page = $_REQUEST['page'];
 
 $prefixo = $_POST['prefixo'];
 $combustivel = $_POST['combustivel'];
