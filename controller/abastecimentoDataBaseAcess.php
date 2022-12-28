@@ -104,7 +104,7 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
    $sql->bindValue(':mediaAlt', $mediaAlt);
    $sql->bindValue(':data_alteracao', date('Y-m-d H:i'));
    $sql->execute();
-    var_dump($sql);
+
  //  echo '<pre>'; echo updateAbastecimentoAlterar($idAbastecimentoAlt, $idVeiculoAlt, $bombaAlt,$odometroInicialAlt,$odometroFinalAlt,
  //  $litrosOdAlt,$litrosAlt,$ultimoKmAlt, $kmAlt, $diferencaKmAlt,$mediaAlt,$ultimoHrAlt ,$hrAlt,$diferencaHrAlt, $frentistaAlt);
     
