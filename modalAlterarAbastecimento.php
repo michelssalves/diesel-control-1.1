@@ -95,6 +95,7 @@
                     ?>
             </select>
         </div>
+        </div>
         <div class="modal-footer">
           <div class="d-flex gap-2 d-sm-flex mb-2 justify-content-md-center">
             <button type="submit" name="acao" value="alterar-abastecimento" class="btn btn-outline-primary btn-sm">Alterar</button>
