@@ -48,7 +48,7 @@ $statusVeiculoAlt){
     prefixo = :prefixoAlt, numero_equipamento = :numeroEquipamentoAlt, placa = :placaAlt, 
     descricao_caminhao = :descricaoCaminhaoAlt, renavam = :renavamAlt, chassi = :chassiAlt, 
     numero_motor = :numeroMotorAlt,
-    ano = :anoAlt, marca = :marcaAlt, modelo = :modeloAlt, combustivelAlt = :combustivelAlt ,metodo =:metodoAlt,
+    ano = :anoAlt, marca = :marcaAlt, modelo = :modeloAlt, combustivel = :combustivelAlt ,metodo =:metodoAlt,
     setor = :setorAlt, status_veiculo = :statusVeiculoAlt
     WHERE id_veiculo = :idVeiculoAlt");
 
