@@ -26,16 +26,17 @@ function calcularDiferencaKmAlt() {
 	
 }
 function calcularDiferencaHrCad() {
-	const hrAtual = document.getElementById("hrCad").value
-	const hrAnterior = document.getElementById("ultimoHrCad").value
+	const hrAtualCad = document.getElementById("hrCad").value
+	const hrAnteriorCad = document.getElementById("ultimoHrCad").value
 
-    document.getElementById("diferencaHrCad").value = subtrairConvertendo(hrAnterior, hrAtual) 
+    document.getElementById("diferencaHrCad").value = subtrairConvertendo(hrAnteriorCad, hrAtualCad) 
 }
 function calcularDiferencaHrAlt() {
-	const hrAtual = document.getElementById("hrAlt").value
-	const hrAnterior = document.getElementById("ultimoHrAlt").value
+	const hrAtualAlt = document.getElementById("hrAlt").value
+	const hrAnteriorAlt = document.getElementById("ultimoHrAlt").value
+	console.log(hrAnteriorAlt)
 
-    document.getElementById("diferencaHrAlt").value = subtrairConvertendo(hrAnterior, hrAtual) 
+    document.getElementById("diferencaHrAlt").value = subtrairConvertendo(hrAnteriorAlt, hrAtualAlt) 
 }		
 function calcularLitrosOdCad() {
 
