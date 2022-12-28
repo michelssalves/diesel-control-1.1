@@ -11,18 +11,18 @@ function soNumeros(evento) {
  }
 function calcularDiferencaKmCad() {
 
-	const kmAtual = document.getElementById("kmCad").value
-	const kmAnterior = document.getElementById("ultimoKmCad").value
+	const kmAtualCad = document.getElementById("kmCad").value
+	const kmAnteriorCad = document.getElementById("ultimoKmCad").value
 	
-	document.getElementById("diferencaKmCad").value = subtrairConvertendo(kmAnterior, kmAtual) 
+	document.getElementById("diferencaKmCad").value = subtrairConvertendo(kmAnteriorCad, kmAtualCad) 
 	
 }
 function calcularDiferencaKmAlt() {
 	
-	const kmAtual = document.getElementById("kmAlt").value
-	const kmAnterior = document.getElementById("ultimoKmAlt").value
+	const kmAtualAlt = document.getElementById("kmAlt").value
+	const kmAnteriorAlt = document.getElementById("ultimoKmAlt").value
 	
-	document.getElementById("diferencaKmAlt").value = subtrairConvertendo(kmAnterior, kmAtual) 
+	document.getElementById("diferencaKmAlt").value = subtrairConvertendo(kmAnteriorAlt, kmAtualAlt) 
 	
 }
 function calcularDiferencaHrCad() {
@@ -41,30 +41,30 @@ function calcularDiferencaHrAlt() {
 }		
 function calcularLitrosOdCad() {
 
-	const odometroInicial = document.getElementById("odometroInicialCad").value
-	const odometroFinal = document.getElementById("odometroFinalCad").value
-	document.getElementById("litrosOdCad").value = subtrairConvertendo(odometroInicial, odometroFinal)
+	const odometroInicialCad = document.getElementById("odometroInicialCad").value
+	const odometroFinalCad = document.getElementById("odometroFinalCad").value
+	document.getElementById("litrosOdCad").value = subtrairConvertendo(odometroInicialCad, odometroFinalCad)
 	
 }
 function calcularLitrosAlt() {
 
-	const odometroInicial = document.getElementById("odometroInicialAlt").value
-	const odometroFinal = document.getElementById("odometrofinalAlt").value
-	document.getElementById("litrosOdAlt").value = subtrairConvertendo(odometroInicial, odometroFinal)
+	const odometroInicialAlt = document.getElementById("odometroInicialAlt").value
+	const odometroFinalAlt = document.getElementById("odometrofinalAlt").value
+	document.getElementById("litrosOdAlt").value = subtrairConvertendo(odometroInicialAlt, odometroFinalAlt)
 	
 }
 function calcularMediaCad(){
 
-	const kmRodado = document.getElementById("diferencaKmCad").value
-	const litros = document.getElementById("litrosCad").value
-	document.getElementById("mediaCad").value = dividirConvertendo(kmRodado, litros)
+	const kmRodadoCad = document.getElementById("diferencaKmCad").value
+	const litrosCad = document.getElementById("litrosCad").value
+	document.getElementById("mediaCad").value = dividirConvertendo(kmRodadoCad, litrosCad)
 		
 }
 function calcularMediaAlt(){
 
-	const kmRodado = document.getElementById("diferencaKmAlt").value
-	const litros = document.getElementById("litrosAlt").value
-	document.getElementById("mediaAlt").value = dividirConvertendo(kmRodado, litros)
+	const kmRodadoAlt = document.getElementById("diferencaKmAlt").value
+	const litrosAlt = document.getElementById("litrosAlt").value
+	document.getElementById("mediaAlt").value = dividirConvertendo(kmRodadoAlt, litrosAlt)
 		
 }
 function subtrairConvertendo(v1, v2){
