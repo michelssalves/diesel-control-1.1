@@ -2,6 +2,7 @@
 $acao = $_REQUEST['acao'];
 
 $page = $_POST['page'];
+$filtrar = $_POST['filtrar'];
 
 $prefixo = $_POST['prefixo'];
 $combustivel = $_POST['combustivel'];
@@ -17,6 +18,8 @@ if($acao == 'limpar'){
     $modelo = '';
     $setor = '';
     $status = '';
+    $filtrar = '';
+    
 }
     if($prefixo && $prefixo <> 'TODOS'){$filtroPrefixo = "AND prefixo = '$prefixo'";};
     if($combustivel && $combustivel <> 'TODOS' ){$filtroCombustivel = "AND combustivel = '$combustivel'";}
@@ -71,7 +74,7 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
                 }
     
             $txtTableVeiculos .='</tbody></table>';
-
+            if($filtrar == ''){    
             $resultados = selectCountVeiculos();  
 
             $number_pages = ceil($resultados / $result_for_page);
@@ -98,7 +101,7 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
     
             
             }
-    
+        }
         return  $txtTableVeiculos;      
     } 
 if($acao == 'cadastrar-veiculo'){

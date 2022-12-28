@@ -32,7 +32,7 @@ include '../controller/veiculosDataBaseAcess.php';
         <div class="row justify-content-md-center">
             <div class="col-md-auto mt-4">
                 <form action="controle-de-veiculos-novo?page=1" method="POST">
-                    <input type="hidden" name="page" value="1">
+                    <input type="hidden" name="filtrar" value="1">
                     <?php $link = "PopupCenter('cadastrar-veiculo',' Cadastrar Veiculos',400,900)"; ?>
                     <button class="btn btn-success btn-sm" onclick="table2excel('t1')">Excel</button>
                   <button name="page" value="1" type="submit" class='btn btn-warning btn-sm'>Filtrar</button>
