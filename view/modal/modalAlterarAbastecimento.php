@@ -39,27 +39,27 @@
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Od Inicial:</span>
-                        <input name="odometroInicialAlt" id="odometroinicialAlt" onkeypress="return soNumeros()" onkeyup="calcularLitrosOd()"  value="<?= $row['odometroinicial'] ?>" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+                        <input name="odometroInicialAlt" id="odometroinicialAlt" onkeypress="return soNumeros()" onkeyup="calcularLitrosOdAlt()"  value="<?= $row['odometroinicial'] ?>" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Od Final:</span>
-                        <input name="odometroFinalAlt" id="odometrofinalAlt" onkeypress="return soNumeros()" onkeyup="calcularLitrosOd();"  value="<?= $row['odometrofinal'] ?>" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+                        <input name="odometroFinalAlt" id="odometrofinalAlt" onkeypress="return soNumeros()" onkeyup="calcularLitrosOdAlt();"  value="<?= $row['odometrofinal'] ?>" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Litros Od:</span>
-                        <input id="litros_od" value="<?= $row['litros_od'] ?>" name="litrosOdAlt" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+                        <input id="litrosOdAlt" value="<?= $row['litros_od'] ?>" name="litrosOdAlt" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Litros:</span>
-                        <input name="litrosAlt" id="litros" onkeypress="return soNumeros()" onkeyup="calcularMedia()"  value="<?= $row['litros'] ?>" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+                        <input name="litrosAlt" id="litros" onkeypress="return soNumeros()" onkeyup="calcularMediaAlt()"  value="<?= $row['litros'] ?>" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Ultimo KM:</span>
-                        <input name="ultimoKmAlt"  id="ultimoKmAlt" onkeypress="return soNumeros()" onkeyup="calcularMedia();" name="ultimoKmAlt"  id="ultimoKmCad" value="<?= $row['ultimokm'] ?>" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+                        <input name="ultimoKmAlt"  id="ultimoKmAlt" onkeypress="return soNumeros()" onkeyup="calcularDiferencaKmAlt(),calcularMediaAlt()" name="ultimoKmAlt"  id="ultimoKmCad" value="<?= $row['ultimokm'] ?>" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">KM:</span>
-                        <input name="kmAlt" id="kmAlt" onkeypress="return soNumeros()" onkeyup="calcularDiferencaKmAlt(),calcularMedia()"  value="<?= $row['km'] ?>" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+                        <input name="kmAlt" id="kmAlt" onkeypress="return soNumeros()" onkeyup="calcularDiferencaKmAlt(),calcularMediaAlt()"  value="<?= $row['km'] ?>" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Dif KM:</span>
@@ -67,19 +67,19 @@
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Média:</span>
-                        <input readonly id="media" value="<?= $row['media'] ?>" name="mediaAlt" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+                        <input readonly id="mediaAlt" value="<?= $row['media'] ?>" name="mediaAlt" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Ult HR:</span>
-                        <input name="ultimoHrAlt" id="ultimoHrCad" onkeypress="return soNumeros()" onkeyup="calcularDiferencaHr()"  value="<?= $row['ultimohr'] ?>"  type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+                        <input name="ultimoHrAlt" id="ultimoHrAlt" onkeypress="return soNumeros()" onkeyup="calcularDiferencaHrAlt()"  value="<?= $row['ultimohr'] ?>"  type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">HR:</span>
-                        <input name="hrAlt" id="hr"  onkeypress="return soNumeros()" onkeyup="calcularDiferencaHr();" value="<?= $row['hr'] ?>" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+                        <input name="hrAlt" id="hrAlt"  onkeypress="return soNumeros()" onkeyup="calcularDiferencaHrAlt();" value="<?= $row['hr'] ?>" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Dif Hr:</span>
-                        <input readonly id="diferencaHrCad" value="<?= $row['diferencahr'] ?>" name="diferencaHrAlt" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+                        <input name="diferencaHrAlt" id="diferencaHrAlt" readonly  value="<?= $row['diferencahr'] ?>" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Frentista:</span>
