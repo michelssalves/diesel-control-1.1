@@ -129,8 +129,10 @@ function filtrarAbastecimentos($dataInicial, $dataFinal){
             }
            
         }
-          
-        return $txtTableControles;  
+        $dados[0] =  $txtTableControles;
+        $dados[1]  = $combustivel;
+        
+        return  $dados;  
 
 } 
 function registrarAbastecimento(){
