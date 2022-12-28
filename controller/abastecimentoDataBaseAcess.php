@@ -8,7 +8,7 @@ $marca = $_POST['marca'];
 $modelo = $_POST['modelo'];
 $prefixo = $_POST['prefixo'];
 $setor = $_POST['setor'];
-$dataIncial = $_POST['dataIncial'];
+$dataInicial = $_POST['dataInicial'];
 $dataFinal = $_POST['dataFinal'];
 
 if($acao == 'limpar'){
@@ -30,14 +30,14 @@ if($combustivel && $combustivel <> 'TODOS' ){$filtroCombustivel = "AND v.combust
 if($marca && $marca <> 'TODOS'){$filtroMarca = "AND v.marca = '$marca'";}
 if($modelo && $modelo <> 'TODOS'){$filtroModelo = "AND v.modelo = '$modelo'";}
 if($setor && $setor <> 'TODOS'){$filtroSetor = "AND v.setor = '$setor'";}
-if($dataIncial  == ''){
+if($dataInicial  == ''){
 
     $x = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
-    $dataHoraIncial = $x->format('Y-m-d 00:00');
+    $dataHoraInicial = $x->format('Y-m-d 00:00');
 
 }else{
     $horaInicial = '00:00';
-    $dataHoraIncial = $dataIncial.' '.$horaInicial;
+    $dataHoraIncial = $dataInicial.' '.$horaInicial;
 }
 if($dataFinalFiltro == ''){ 
 
