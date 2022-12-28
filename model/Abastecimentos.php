@@ -30,8 +30,7 @@ function selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroM
     JOIN abastecimentos AS a 
     ON a.id_veiculo = v.id_veiculo
     WHERE a.dataabastecimento2 BETWEEN '$dataInicial' AND '$dataFinal'
-    $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor
-    ORDER BY a.data_abastecimento ASC ");
+    $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor");
     $sql->execute();
 
     return $sql;
