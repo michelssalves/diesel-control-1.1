@@ -41,7 +41,6 @@ if($setor && $setor <> 'TODOS'){$filtroSetor = "AND v.setor = '$setor'";}
 function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $filtrodataInicial, $filtrodataFinal){
 
     include 'config.php';
-    include '../model/Abastecimentos.php';
     include 'functions.php';
  
 
@@ -174,8 +173,7 @@ function registrarAbastecimento(){
 }
 function alterarAbastecimento(){
 
-    include '../model/Abastecimentos.php';
- 
+
     $idAbastecimentoAlt = $_POST['idAbastecimentoAlt'];
     $idVeiculoAlt = $_POST['idVeiculoAlt'];
     $bombaAlt = $_POST['bombaAlt'];
