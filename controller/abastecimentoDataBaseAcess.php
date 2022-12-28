@@ -3,6 +3,8 @@ session_start();
 
 $acao = $_REQUEST['acao'];
 
+filtrarAbastecimentos();
+
 if($acao == 'limpar'){
 
     $dataIncial = date('Y-m-d'); 
