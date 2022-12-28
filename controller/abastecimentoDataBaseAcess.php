@@ -46,8 +46,8 @@ function filtrarAbastecimentos(){
     $modelo = $_POST['modelo'];
     $prefixo = $_POST['prefixo'];
     $setor = $_POST['setor'];
-    echo '<pre>'; echo  $dataInicial = ($_POST['dataInicial'] <> '' ? $_POST['dataInicial'] : date('Y-m-d'));
-    echo '<pre>'; echo  $dataFinal = ($_POST['dataFinal'] <> '' ? $_POST['dataFinal'] : date('Y-m-d'));
+    $dataInicial = ($_POST['dataInicial'] <> '' ? $_POST['dataInicial'] : date('Y-m-d'));
+    $dataFinal = ($_POST['dataFinal'] <> '' ? $_POST['dataFinal'] : date('Y-m-d'));
 
 
     if($prefixo && $prefixo <> 'TODOS'){$filtroPrefixo = "AND v.prefixo = '$prefixo'";};
