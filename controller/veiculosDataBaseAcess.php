@@ -127,7 +127,7 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
         $txtTableVeiculos .='</tbody></table>';
 
         $resultados = $sql->rowCount();
-        $number_pages = ceil($resultados / $result_for_page);
+        $number_pages = ceil(250 / $result_for_page);
         $max_link = 2;
 
         $txtTableVeiculos .= '<nav aria-label="Page navigation example"><ul class="pagination pagination-sm justify-content-center">';
