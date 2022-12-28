@@ -44,13 +44,15 @@ if($acao == 'limpar'){
 
        echo $resultados = $sql->rowCount();
 
-       $sql2 = $pdo->prepare("SELECT * FROM veiculos AS v 
+       $sql = $pdo->prepare("SELECT * FROM veiculos AS v 
        $filtroStatus $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor
        ORDER BY prefixo ASC LIMIT $start, $result_for_page");
+        $sql->execute();
+
 
         if ($resultados > 0) {
 
-        $lista = $sql2->fetchAll(PDO::FETCH_ASSOC);
+        $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
         var_dump($lista);
             foreach($lista as $row){
 
