@@ -53,7 +53,7 @@ if($acao == 'excluir-abastecimento'){
 }
 function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataInicial, $dataFinal){
 
-    include 'functions.php';
+   /* include 'functions.php';
 
         $sql = selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataInicial, $dataFinal);
 
@@ -123,7 +123,7 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
             }
            
         }
-          //return $txtTableControles;  
+          //return $txtTableControles;  */
           $dataInicial = $dataInicial;
           return $dataInicial;
 } 
