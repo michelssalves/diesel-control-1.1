@@ -7,7 +7,7 @@ $senha = addslashes($_POST['senha']);
 
 if($acao == 'login'){
     if (isset($_POST['usuario']) && !empty($_POST['usuario']) && isset($_POST['senha']) && !empty($_POST['senha'])) {
-        
+        echo 'entrei';
         login($usuario, $senha, $msg);
     }
 }
