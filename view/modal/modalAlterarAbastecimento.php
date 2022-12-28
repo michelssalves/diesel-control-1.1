@@ -39,15 +39,15 @@
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Od Inicial:</span>
-                        <input name="odometroInicialAlt" id="odometroinicialAlt" onkeypress="return soNumeros()" onkeyup="calcularLitrosOdAlt()"  value="<?= $row['odometroinicial'] ?>" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+                        <input name="odometroInicialAlt" id="odometroinicialCad" onkeypress="return soNumeros()" onkeyup="calcularLitrosOdCad()"  value="<?= $row['odometroinicial'] ?>" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Od Final:</span>
-                        <input name="odometroFinalAlt" id="odometrofinalAlt" onkeypress="return soNumeros()" onkeyup="calcularLitrosOdAlt();"  value="<?= $row['odometrofinal'] ?>" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+                        <input name="odometroFinalAlt" id="odometrofinalCad" onkeypress="return soNumeros()" onkeyup="calcularLitrosOdCad();"  value="<?= $row['odometrofinal'] ?>" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Litros Od:</span>
-                        <input name="litrosOdAlt" id="litrosOdAlt" value="<?= $row['litros_od'] ?>" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+                        <input name="litrosOdAlt" id="litrosOdCad" value="<?= $row['litros_od'] ?>" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Litros:</span>
