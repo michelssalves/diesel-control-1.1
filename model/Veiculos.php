@@ -9,31 +9,31 @@ function selectTodosOsVeiculosComFiltro($filtroStatus, $filtroPrefixo, $filtroCo
         $sql->execute();
         return $sql;
     }
-function insertTableVeiculosCadastrarNovo($numero_equipamento, $prefixoCad, $placa, $descricao_caminhao, $renavam, $chassi, 
-$numero_motor, $ano, $marcaCad, $modeloCad, $combustivelCad, $metodo, $setorCad, $status_veiculo){
+function insertTableVeiculosCadastrarNovo($numeroEquipamentoCad, $prefixoCad, $placaCad, $descricaoCaminhaoCad, $renavamCad, $chassiCad, 
+$numeroMotorCad, $anoCad, $marcaCad, $modeloCad, $combustivelCad, $metodoCad, $setorCad, $statusVeiculoCad){
 
     include 'config.php';
 
     $sql = $pdo->prepare("INSERT INTO veiculos(
         numero_equipamento, prefixo, placa, descricao_caminhao, renavam,chassi, numero_motor,
         ano,marca,modelo,combustivel,metodo,setor,status_veiculo)
-        VALUES(:numero_equipamento, :prefixoCad, :placa, :descricao_caminhao, :renavam, :chassi,
-        :numero_motor,:ano, :marcaCad, :modeloCad, :combustivelCad, :metodo, :setorCad, :status_veiculo)");
+        VALUES(:numeroEquipamentoCad, :prefixoCad, :placaCad, :descricaoCaminhaoCad, :renavamCad, :chassiCad,
+        :numeroMotorCad, :anoCad, :marcaCad, :modeloCad, :combustivelCad, :metodoCad, :setorCad, :statusVeiculoCad)");
 
-    $sql->bindValue(':numero_equipamento', $numero_equipamento);
+    $sql->bindValue(':numeroEquipamentoCad', $numeroEquipamentoCad);
     $sql->bindValue(':prefixoCad', $prefixoCad);
-    $sql->bindValue(':placa', $placa);
-    $sql->bindValue(':descricao_caminhao', $descricao_caminhao);
-    $sql->bindValue(':renavam', $renavam);
-    $sql->bindValue(':chassi', $chassi);
-    $sql->bindValue(':numero_motor', $numero_motor);
-    $sql->bindValue(':ano', $ano);
+    $sql->bindValue(':placaCad', $placaCad);
+    $sql->bindValue(':descricaoCaminhaoCad', $descricaoCaminhaoCad);
+    $sql->bindValue(':renavamCad', $renavamCad);
+    $sql->bindValue(':chassiCad', $chassiCad);
+    $sql->bindValue(':numeroMotorCad', $numeroMotorCad);
+    $sql->bindValue(':anoCad', $anoCad);
     $sql->bindValue(':marcaCad', $marcaCad);
     $sql->bindValue(':modeloCad', $modeloCad);
     $sql->bindValue(':combustivelCad', $combustivelCad);
-    $sql->bindValue(':metodo', $metodo);
+    $sql->bindValue(':metodoCad', $metodoCad);
     $sql->bindValue(':setorCad', $setorCad);
-    $sql->bindValue(':status_veiculo', $status_veiculo);
+    $sql->bindValue(':statusVeiculoCad', $statusVeiculoCad);
     $sql->execute();
     
 

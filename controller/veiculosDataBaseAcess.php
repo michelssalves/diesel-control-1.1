@@ -47,9 +47,24 @@ if($acao == 'alterar-veiculo'){
 }
 function cadastrarVeiculo(){
     include 'config.php';
+    
+    $numeroEquipamentoCad = $_POST['numeroEquipamentoCad'];
+    $prefixoCad = $_POST['prefixoCad'];
+    $placaCad = $_POST['placaCad'];
+    $descricaoCaminhaoCad = $_POST['descricaoCaminhaoCad'];
+    $renavamCad = $_POST['renavamCad'];
+    $chassiCad = $_POST['chassiCad'];
+    $numeroMotorCad = $_POST['numeroMotorCad'];
+    $anoCad = $_POST['anoCad'];
+    $marcaCad = $_POST['marcaCad'];
+    $modeloCad = $_POST['modeloCad'];
+    $combustivelCad = $_POST['combustivelCad'];
+    $metodoCad = $_POST['metodoCad'];
+    $setorCad = $_POST['setorCad'];
+    $statusVeiculoCad = $_POST['statusVeiculoCad'];
 
-    insertTableVeiculosCadastrarNovo($numeroEquipamento, $prefixo, $placa, $descricaoCaminhao, $renavam, $chassi, 
-    $numeroMotor, $ano, $marca, $modelo, $combustivel, $metodo, $setor, $statusVeiculo);
+    insertTableVeiculosCadastrarNovo($numeroEquipamentoCad, $prefixoCad, $placaCad, $descricaoCaminhaoCad, $renavamCad, $chassiCad, 
+    $numeroMotorCad, $anoCad, $marcaCad, $modeloCad, $combustivelCad, $metodoCad, $setorCad, $statusVeiculoCad);
 
 }
 function alterarVeiculo(){

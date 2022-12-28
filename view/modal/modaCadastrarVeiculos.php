@@ -8,39 +8,39 @@
         <form method="POST">
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
-            <input id="prefixo" name="prefixoAlt" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+            <input id="prefixo" name="prefixoCad" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Prefixo Sap:</span>
-            <input id="numero_equipamento" name="numero_equipamento" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
+            <input id="numeroEquipamentoCad" name="numeroEquipamentoCad" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Placa:</span>
-            <input id="placa" name="placa" type="text"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+            <input id="placa" name="placaCad" type="text"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Descricao:</span>
-            <input id="descricao_caminhao" name="descricao_caminhao" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  autofocus required>
+            <input id="descricaoCaminhao" name="descricaoCaminhaoCad" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  autofocus required>
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Renavam:</span>
-            <input  id="renavam" name="renavam" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
+            <input  id="renavam" name="renavamCad" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Chassi:</span>
-            <input id="chassi" name="chassi" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+            <input id="chassi" name="chassiCad" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Nº Motor:</span>
-            <input id="numero_motor" name="numero_motor" type="text"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
+            <input id="numero_motor" name="numeroMotorCad" type="text"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Ano:</span>
-            <input id="ano" name="ano" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+            <input id="ano" name="anoCad" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Marca:</span>
-              <select id="marca" name="marcaAlt" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required >
+              <select id="marca" name="marcaCad" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required >
                 <option value="VOLVO">VOLVO</option>
                 <option value="MERCEDEZ">MERCEDEZ</option>
                 <option value="VOLKSWAGEN">VOLKSWAGEN</option>
@@ -52,18 +52,18 @@
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Modelo:</span>
-            <input id="modelo" name="modeloAlt" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
+            <input id="modelo" name="modeloCad" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required >
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Combustivel:</span>
-            <select id="combustivel" name="combustivelAlt"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  required >
+            <select id="combustivel" name="combustivelCad"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  required >
                 <option value="DIESEL S10">DIESEL S10</option>
                 <option value="GASOLINA">GASOLINA</option>
             </select>
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Metodo:</span>
-            <select id="metodo" name="metodo" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required >
+            <select id="metodo" name="metodoCad" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required >
                 <option value="1">KM</option>
                 <option value="3">HR</option>
                 <option value="MM">MM</option>
@@ -71,7 +71,7 @@
         </div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Setor:</span>
-            <select id="setor" name="setorAlt" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  required >
+            <select id="setor" name="setorCad" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  required >
                 <option value="Coleta Domiciliar">Coleta Domiciliar</option>
                 <option value="Ctrss">Ctrss</option>
                 <option value="Limpeza Especial">Limpeza Especial</option>
@@ -81,7 +81,7 @@
             </select></div>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing">Status:</span>
-            <select id="status_veiculo" name="status_veiculo" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required >
+            <select id="statusVeiculo" name="statusVeiculoCad" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required >
                 <option value="1">Ativo</option>
                 <option value="0">Inativo</option>
             </select>
