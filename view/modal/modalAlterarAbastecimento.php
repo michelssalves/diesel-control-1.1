@@ -39,11 +39,11 @@
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Od Inicial:</span>
-                        <input onkeypress="return soNumeros()" onkeyup="calcularLitrosOd()" id="odometroinicialAlt" value="<?= $row['odometroinicial'] ?>" name="odometroinicialAlterar" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+                        <input onkeypress="return soNumeros()" onkeyup="calcularLitrosOd()" id="odometroinicialAlt" value="<?= $row['odometroinicial'] ?>" name="odometroInicialAlt" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Od Final:</span>
-                        <input onkeypress="return soNumeros()" onkeyup="calcularLitrosOd();" id="odometrofinalAlt" value="<?= $row['odometrofinal'] ?>" name="odometrofinalAlterar" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+                        <input onkeypress="return soNumeros()" onkeyup="calcularLitrosOd();" id="odometrofinalAlt" value="<?= $row['odometrofinal'] ?>" name="odometroFinalAlt" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Litros Od:</span>
