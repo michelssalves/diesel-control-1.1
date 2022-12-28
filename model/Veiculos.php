@@ -1,4 +1,14 @@
 <?php
+function selectCountVeiculos(){
+
+    include 'config.php';
+
+    $sql = $pdo->prepare("SELECT COUNT(id_veiculo) AS numeroDePaginas FROM veiculos");
+    $sql->execute();
+    $row = $qry->fetch(PDO::FETCH_ASSOC);
+    return $row['numeroDePaginas'];
+
+}
 function selectTodosOsVeiculosComFiltro($filtroStatus, $filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, $filtroSetor, $start, $result_for_page){        
     
     include 'config.php';

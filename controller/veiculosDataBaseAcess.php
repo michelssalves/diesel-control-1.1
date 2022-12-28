@@ -39,8 +39,6 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
         $sql = selectTodosOsVeiculosComFiltro($filtroStatus, $filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, 
         $filtroSetor, $start, $result_for_page);        
     
-        $resultados = $sql->rowCount();
-    
             if ($sql->rowCount() > 0) {
     
                 $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -72,8 +70,10 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
                 }
     
             $txtTableVeiculos .='</tbody></table>';
-    
-            $number_pages = ceil(250 / $result_for_page);
+
+            $resultados = selectCountVeiculos();  
+
+            $number_pages = ceil($resultados / $result_for_page);
             $max_link = 2;
     
             $txtTableVeiculos .= '<nav aria-label="Page navigation example"><ul class="pagination pagination-sm justify-content-center">';
