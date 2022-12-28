@@ -53,8 +53,6 @@ if($acao == 'excluir-abastecimento'){
 }
 function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataInicial, $dataFinal){
 
-    echo '<pre>'; echo  $dataInicial;
-    
     include 'functions.php';
 
         $sql = selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataInicial, $dataFinal);
@@ -125,7 +123,9 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
             }
            
         }
-          return  $txtTableControles;      
+          //return $txtTableControles;  
+          
+          return $dataInicial;
 } 
 function listarAbastecimentos(){
 
