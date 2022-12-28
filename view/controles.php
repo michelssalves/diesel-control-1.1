@@ -216,7 +216,7 @@ include '../model/Abastecimentos.php';
                         </tr>
                     </thead>
                     <tbody>
-                        <?= $tabelaFiltrada ?>
+                        <?= filtrarAbastecimentos() ?>
                     </tbody>
                 </table>
             </div>
