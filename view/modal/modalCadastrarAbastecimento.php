@@ -55,7 +55,7 @@
 
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Ultimo Km:</span>
-                        <input readonly id="ultimoKmCad" name="ultimoKmCad" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Km Anterior" autofocus required>
+                        <input readonly id="setor1" name="ultimoKmCad" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Km Anterior" autofocus required>
                     </div>
 
                     <div class="input-group input-group-sm mb-3">
@@ -70,7 +70,7 @@
 
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Ultimo Hr:</span>
-                        <input readonly id="ultimoHrCad" name="ultimoHrCad" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ultimo Horimetro" autofocus required>
+                        <input readonly id="setor2" name="ultimoHrCad" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ultimo Horimetro" autofocus required>
                     </div>
 
                     <div class="input-group input-group-sm mb-3">

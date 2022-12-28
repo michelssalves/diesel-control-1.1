@@ -106,8 +106,8 @@ async function buscarInfoVeiculo(id){
     const response = await dados.json()
     console.log(response)
 	document.getElementById("setor").value = response['dados'].setor
-	document.getElementById("ultimoKmCad").value = response['dados'].ultimoKm
-	document.getElementById("ultimoHrCad").value = response['dados'].ultimoHr
+	document.getElementById("setor2").value = response['dados'].ultimoKm
+	document.getElementById("setor1").value = response['dados'].ultimoHr
 
 
 }
