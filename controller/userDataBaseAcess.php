@@ -14,7 +14,7 @@ if($acao == 'login'){
 
           // $sql = selectFuncionariosByUserMaster($usuario);
   
-            if ($sql->rowCount() == 1) {
+          /*  if ($sql->rowCount() == 1) {
                 
                 $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
                 foreach($lista as $row){
@@ -25,10 +25,10 @@ if($acao == 'login'){
                     $_SESSION['id_permissao'] = $row['id_permissao'];
                     $_SESSION['token'] = $row['token'];
 
-                }                 
+                }     */           
                 header("Location: menu-principal-novo");            
              } 
-     }
+    // }
     }
 }
 function login($usuario, $senha){
