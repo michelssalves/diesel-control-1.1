@@ -3,6 +3,7 @@ session_start();
 include '../controller/checkAcess.php';
 include '../model/Veiculos.php';
 include '../controller/veiculosDataBaseAcess.php';
+include '../view/modal/modalCadastrarVeiculos.php';
 ?>
 <head>
     <meta charset="utf-8">
