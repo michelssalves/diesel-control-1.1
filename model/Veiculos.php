@@ -70,13 +70,13 @@ $statusVeiculoAlt){
     $sql->execute();
     }    
 
-    function updateVeiculosStatus($idVeiculo, $statusVeiculo){
+    function updateVeiculosStatus($idVeiculoAlt, $statusVeiculoAlt){
 
     include 'config.php';
 
     $sql = $pdo->prepare("UPDATE veiculos SET status_veiculo = :statusVeiculo WHERE id_veiculo = :idVeiculo");
-    $sql->bindValue(':statusVeiculo', $statusVeiculo);
-    $sql->bindValue(':idVeiculo', $idVeiculo);
+    $sql->bindValue(':statusVeiculoAlt', $statusVeiculoAlt);
+    $sql->bindValue(':idVeiculoAlt', $idVeiculoAlt);
     $sql->execute();
     }
 

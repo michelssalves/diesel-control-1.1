@@ -41,6 +41,7 @@ if($acao == 'desativar-veiculo' || $acao == 'ativar-veiculo'){
     desativarVeiculo($acao, $idVeiculo, $statusVeiculo);
 }
 if($acao == 'alterar-veiculo'){
+    
  
     alterarVeiculo();
 }
@@ -74,20 +75,17 @@ function alterarVeiculo(){
      $statusVeiculoAlt);
      
 }
-function desativarVeiculo($acao, $idVeiculo, $statusVeiculo){
+function desativarVeiculo($acao){
 
-    include 'config.php';
+    $idVeiculoAlt = $_POST['idVeiculoAlt'];
 
     if($acao == 'desativar-veiculo'){
-        $statusVeiculo = '2';
+        $statusVeiculoAlt = '2';
     }else{
-        $statusVeiculo = '1';
+        $statusVeiculoAlt = '1';
     }
 
- 
-
-    updateVeiculosStatus($idVeiculo, $statusVeiculo);
-
+    updateVeiculosStatus($idVeiculoAlt, $statusVeiculoAlt);
 
 }
 function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo,$filtroSetor, $filtroStatus, $page){
