@@ -142,8 +142,6 @@ if($acao == 'excluir-abastecimento'){
     excluirAbastecimento();
   
 }
-
-
 function registrarAbastecimento(){
 
     $idVeiculoCad = $_POST['idVeiculoCad'];
@@ -211,8 +209,6 @@ function informacoesVeiculo($idVeiculo){
 }       
   
 function excluirAbastecimento(){
-
-    include 'config.php';
 
     $idAbastecimentoAlt = $_POST['idAbastecimentoAlt'];
 
