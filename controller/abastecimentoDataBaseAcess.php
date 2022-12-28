@@ -56,7 +56,7 @@ if($acao == 'alterar-abastecimento'){
 
    // alterarAbastecimento();
 
-   include 'config.php';
+   include '../controller/config.php';
    include '../model/Abastecimentos.php';
  
    echo '<pre>'; echo $idAbastecimentoAlt = $_POST['idAbastecimentoAlt'];
