@@ -43,7 +43,6 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
     include 'config.php';
     include 'functions.php';
  
-
         $sql = selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $filtrodataInicial, $filtrodataFinal);
 
         if ($sql->rowCount() > 0) {
@@ -115,10 +114,7 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
 
         return $txtTableControles;  
 
-        
-
 } 
-
 if($acao == 'registrar-abastecimento'){
 
     registrarAbastecimento();
@@ -173,7 +169,6 @@ function registrarAbastecimento(){
 }
 function alterarAbastecimento(){
 
-
     $idAbastecimentoAlt = $_POST['idAbastecimentoAlt'];
     $idVeiculoAlt = $_POST['idVeiculoAlt'];
     $bombaAlt = $_POST['bombaAlt'];
@@ -197,6 +192,8 @@ function alterarAbastecimento(){
 } 
 function informacoesVeiculo($idVeiculo){
 
+    include 'config.php';
+
     $sql = selectAbastecimentosPorVeiculo($idVeiculo);
 
 	$row = $sql->fetch(PDO::FETCH_ASSOC);
@@ -217,6 +214,8 @@ function informacoesVeiculo($idVeiculo){
 }       
   
 function excluirAbastecimento(){
+
+    include 'config.php';
 
     $idAbastecimentoAlt = $_POST['idAbastecimentoAlt'];
 
