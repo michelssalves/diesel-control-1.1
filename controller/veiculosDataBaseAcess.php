@@ -32,7 +32,7 @@ if($acao == 'limpar'){
         $filtroStatus = "WHERE status_veiculo = 1";
     }
  
-function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo,$filtroSetor, $filtroStatus, $page){
+function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo,$filtroSetor, $filtroStatus, $page, $filtrar){
 
         $result_for_page = 25;
         if($page == ''){$page = 1;}
