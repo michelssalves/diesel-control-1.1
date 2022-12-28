@@ -74,7 +74,7 @@ $litrosOdAlt,$litrosAlt,$ultimoKmAlt, $kmAlt, $diferencaKmAlt,$mediaAlt,$ultimoH
      ultimokm = :ultimoKmAlt, km = :kmAlt, diferencakm = :diferencaKmAlt, ultimohr = :ultimoHrAlt, hr = :hrAlt, diferencahr = :diferencaHrAlt, 
      frentista = :frentista, odometrofinal = :odometroFinalAlt, litros = :litrosAlt, litros_od = :litrosOdAlt, media = :mediaAlt, data_alteracao = :data_alteracao 
      WHERE id_abastecimento = :idAbastecimentoAlt");
-     return $sql;
+     
      $sql->bindValue(':idAbastecimentoAlt', $idAbastecimentoAlt);
      $sql->bindValue(':idVeiculoAlt', $idVeiculoAlt);
      $sql->bindValue(':bombaAlt', $bombaAlt);
@@ -92,7 +92,7 @@ $litrosOdAlt,$litrosAlt,$ultimoKmAlt, $kmAlt, $diferencaKmAlt,$mediaAlt,$ultimoH
      $sql->bindValue(':mediaAlt', $mediaAlt);
      $sql->bindValue(':data_alteracao', date('Y-m-d H:i'));
      $sql->execute();
-     
+
  }
 
  function deleteAbastecimento($idAbastecimentoAlt){
