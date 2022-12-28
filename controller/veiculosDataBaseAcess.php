@@ -50,7 +50,7 @@ if($acao == 'limpar'){
 
         if ($sql->rowCount() > 0) {
 
-            $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
+        echo    $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
         
             foreach($lista as $row){
 
