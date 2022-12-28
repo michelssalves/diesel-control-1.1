@@ -216,7 +216,7 @@ include '../controller/checkAcess.php';
                         </tr>
                     </thead>
                     <tbody>
-                        <?= filtrarAbastecimentos() ?>
+                        <?= filtrarAbastecimentos($dataInicial, $dataFinal) ?>
                     </tbody>
                 </table>
             </div>
