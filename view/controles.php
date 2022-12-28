@@ -216,7 +216,7 @@ session_start();
                         </tr>
                     </thead>
                     <tbody>
-                        <?= filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, $filtroSetor, $dataHoraIncial, $dataHoraFinal) ?>
+                        <?= filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, $filtroSetor, $dataIncial, $dataFinal) ?>
                     </tbody>
                 </table>
             </div>
