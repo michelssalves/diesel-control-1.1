@@ -74,6 +74,7 @@ if($setor && $setor <> 'TODOS'){$filtroSetor = "AND v.setor = '$setor'";}
 if($acao == 'registrar-abastecimento'){
 
     registrarAbastecimento();
+    filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $filtrodataInicial, $filtrodataFinal);
 }
 if($acao == 'ultimoKm'){
     
