@@ -71,7 +71,80 @@ if($acao == 'excluir-abastecimento'){
     excluirAbastecimento();
   
 }
+function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataHoraIncial, $dataHoraFinal){
+    
+    include 'functions.php';
 
+        $sql = selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataHoraIncial, $dataHoraFinal);
+
+        if ($sql->rowCount() > 0) {
+
+            $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+            foreach($lista as $row){
+
+                $modalAlterarAbastecimento = "modalAlterarAbastecimento".$row['id_abastecimento']."";
+
+                $linkModalAlterarAbastecimento = "data-bs-toggle='modal' data-bs-target='#$modalAlterarAbastecimento' style='cursor:pointer'";
+                
+                $corDifKm = '';
+                $corDifHr = '';
+                $corMedia = '';
+                $corLitros = '';
+                    
+                if($row['combustivel'] <> 'GASOLINA'){
+
+                    if($row['setor'] == 'Coleta Domiciliar'){
+                        if($row['diferencakm'] > 400 || $row['diferencakm'] < 0){$corDifKm = 'bg-danger';}
+                        if($row['diferencahr'] > 24 || $row['diferencahr'] < 0){$corDifHr = 'bg-danger';}
+                    }elseif($row['setor'] == 'Privado'){
+                        if($row['diferencakm'] > 2000 || $row['diferencakm']  < 0){$corDifKm = 'bg-danger';}
+                        if($row['diferencahr'] > 60 || $row['diferencahr'] < 0){$corDifHr = 'bg-danger';}
+                    }else{
+                        if($row['diferencakm'] > 1000 || $row['diferencakm']  < 0){$corDifKm = 'bg-danger';}
+                        if($row['diferencahr'] > 50 || $row['diferencahr'] < 0){$corDifHr = 'bg-danger';}
+                    }    
+                }
+           
+                    if($row['media'] > 2.5 && $row['descricao_caminhao'] == 'COMPACTADOR'){$corMedia = 'bg-warning';}
+                    if($row['media'] < 1.5){$corMedia = 'bg-danger';}
+                    if($row['media'] > 17.0 ){$corMedia = 'bg-info';}
+
+                    if($row['litros_od'] <> $row['litros'] ){$corLitros = 'bg-warning';}
+     
+                $txtTableControles .= '<tr '.$linkModalAlterarAbastecimento.'>
+                <td class="w3-left-align">'.dmaH($row['data_abastecimento']).'</td>
+                <td class="w3-left-align"> '.H_i($row['data_abastecimento']).'</td>
+                <td class="w3-left-align"> '.Month($row['data_abastecimento']).'</td>
+                <td class="w3-left-align"> '.Year($row['data_abastecimento']).'</td>
+                <td> '.$row['numero_equipamento'].' </td>
+                <td> '.$row['prefixo'].' </td>
+                <td> '.$row['placa'].' </td>
+                <td> '.$row['combustivel'].' </td>
+                <td> '.$row['bomba'].' </td>
+                <td> '.v2($row['odometroinicial']).' </td>
+                <td> '.v2($row['odometrofinal']).' </td>
+                <td class="'.$corLitros.' w3-right-align"> '.v2($row['litros_od']).' </td>
+                <td class="'.$corLitros.' w3-right-align"> '.v2($row['litros']).' </td>
+                <td> '.$row['ultimokm'].' </td>
+                <td> '.$row['km'].' </td>
+                <td class="'.$corDifKm.' class="w3-right-align"> '.$row['diferencakm'].' </td>
+                <td> '.$row['ultimohr'].'</td>
+                <td> '.$row['hr'].'</td>
+                <td class="'.$corDifHr.' class="w3-right-align"> '.$row['diferencahr'].'</td>
+                <td><center> '.$row['frentista'].'</td>
+                <td><center> '.$row['marca'].'</td>
+                <td><center> '.$row['modelo'].'</td>
+                <td class="'.$corMedia.' w3-right-align"><center> '.($row['media']).' </td>
+                <td><center> '.$row['setor'].'</td>
+                </tr>';
+
+                include 'modal/modalAlterarAbastecimento.php';
+            }
+           
+        }
+          return  $txtTableControles;      
+} 
 function listarAbastecimentos(){
 
     include 'functions.php';
@@ -173,80 +246,7 @@ function informacoesVeiculo($id_veiculo){
     return $informacoesVeiculo;
 
 }
-function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataHoraIncial, $dataHoraFinal){
-    
-    include 'functions.php';
-
-        $sql = selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataHoraIncial, $dataHoraFinal);
-
-        if ($sql->rowCount() > 0) {
-
-            $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
-
-            foreach($lista as $row){
-
-                $modalAlterarAbastecimento = "modalAlterarAbastecimento".$row['id_abastecimento']."";
-
-                $linkModalAlterarAbastecimento = "data-bs-toggle='modal' data-bs-target='#$modalAlterarAbastecimento' style='cursor:pointer'";
-                
-                $corDifKm = '';
-                $corDifHr = '';
-                $corMedia = '';
-                $corLitros = '';
-                    
-                if($row['combustivel'] <> 'GASOLINA'){
-
-                    if($row['setor'] == 'Coleta Domiciliar'){
-                        if($row['diferencakm'] > 400 || $row['diferencakm'] < 0){$corDifKm = 'bg-danger';}
-                        if($row['diferencahr'] > 24 || $row['diferencahr'] < 0){$corDifHr = 'bg-danger';}
-                    }elseif($row['setor'] == 'Privado'){
-                        if($row['diferencakm'] > 2000 || $row['diferencakm']  < 0){$corDifKm = 'bg-danger';}
-                        if($row['diferencahr'] > 60 || $row['diferencahr'] < 0){$corDifHr = 'bg-danger';}
-                    }else{
-                        if($row['diferencakm'] > 1000 || $row['diferencakm']  < 0){$corDifKm = 'bg-danger';}
-                        if($row['diferencahr'] > 50 || $row['diferencahr'] < 0){$corDifHr = 'bg-danger';}
-                    }    
-                }
-           
-                    if($row['media'] > 2.5 && $row['descricao_caminhao'] == 'COMPACTADOR'){$corMedia = 'bg-warning';}
-                    if($row['media'] < 1.5){$corMedia = 'bg-danger';}
-                    if($row['media'] > 17.0 ){$corMedia = 'bg-info';}
-
-                    if($row['litros_od'] <> $row['litros'] ){$corLitros = 'bg-warning';}
-     
-                $txtTableControles .= '<tr '.$linkModalAlterarAbastecimento.'>
-                <td class="w3-left-align">'.dmaH($row['data_abastecimento']).'</td>
-                <td class="w3-left-align"> '.H_i($row['data_abastecimento']).'</td>
-                <td class="w3-left-align"> '.Month($row['data_abastecimento']).'</td>
-                <td class="w3-left-align"> '.Year($row['data_abastecimento']).'</td>
-                <td> '.$row['numero_equipamento'].' </td>
-                <td> '.$row['prefixo'].' </td>
-                <td> '.$row['placa'].' </td>
-                <td> '.$row['combustivel'].' </td>
-                <td> '.$row['bomba'].' </td>
-                <td> '.v2($row['odometroinicial']).' </td>
-                <td> '.v2($row['odometrofinal']).' </td>
-                <td class="'.$corLitros.' w3-right-align"> '.v2($row['litros_od']).' </td>
-                <td class="'.$corLitros.' w3-right-align"> '.v2($row['litros']).' </td>
-                <td> '.$row['ultimokm'].' </td>
-                <td> '.$row['km'].' </td>
-                <td class="'.$corDifKm.' class="w3-right-align"> '.$row['diferencakm'].' </td>
-                <td> '.$row['ultimohr'].'</td>
-                <td> '.$row['hr'].'</td>
-                <td class="'.$corDifHr.' class="w3-right-align"> '.$row['diferencahr'].'</td>
-                <td><center> '.$row['frentista'].'</td>
-                <td><center> '.$row['marca'].'</td>
-                <td><center> '.$row['modelo'].'</td>
-                <td class="'.$corMedia.' w3-right-align"><center> '.($row['media']).' </td>
-                <td><center> '.$row['setor'].'</td>
-                </tr>';
-
-                include 'modal/modalAlterarAbastecimento.php';
-            }
-           
-        }
-          return  $txtTableControles;      
-}              
+             
 function alterarAbastecimento(){
 
     $id_abastecimentoAlterar = $_POST['id_abastecimentoAlterar'];
