@@ -58,7 +58,7 @@ $hrCad, $diferencaHrCad, $frentistaCad, $odometroFinalCad, $litrosCad, $litrosOd
     $sql->bindValue(':frentistaCad', $frentistaCad);
     $sql->bindValue(':odometroFinalCad', $odometroFinalCad);
     $sql->bindValue(':litrosCad', $litrosCad);
-    $sql->bindValue(':litrosCad', $litrosCad);
+    $sql->bindValue(':litrosOdCad', $litrosOdCad);
     $sql->bindValue(':mediaCad', $mediaCad);
     $sql->bindValue(':data_abastecimento', date('Y-m-d H:i'));
     $sql->bindValue(':data_sem_hora', date('Y-m-d'));
