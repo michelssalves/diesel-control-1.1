@@ -57,7 +57,7 @@ if($acao == 'alterar-abastecimento'){
    // alterarAbastecimento();
 
    include 'config.php';
-   include 'model/Abastecimentos.php';
+   include '../model/Abastecimentos.php';
  
    echo '<pre>'; echo $idAbastecimentoAlt = $_POST['idAbastecimentoAlt'];
    echo '<pre>'; echo $idVeiculoAlt = $_POST['idVeiculoAlt'];
@@ -75,7 +75,7 @@ if($acao == 'alterar-abastecimento'){
    echo '<pre>'; echo $diferencaHrAlt = $_POST['diferencaHrAlt']; 
    echo '<pre>'; echo $frentistaAlt = $_POST['frentistaAlt'];
 
-   updateAbastecimentoAlterar($idAbastecimentoAlt, $idVeiculoAlt, $bombaAlt,$odometroInicialAlt,$odometroFinalAlt,$litrosOdAlt,$litrosAlt,
+   echo '<pre>'; echo updateAbastecimentoAlterar($idAbastecimentoAlt, $idVeiculoAlt, $bombaAlt,$odometroInicialAlt,$odometroFinalAlt,$litrosOdAlt,$litrosAlt,
    $ultimoKmAlt, $kmAlt, $diferencaKmAlt,$mediaAlt,$ultimoHrAlt ,$hrAlt,$diferencaHrAlt, $frentistaAlt);
     
 }
