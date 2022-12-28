@@ -10,6 +10,18 @@ $modelo = $_POST['modelo'];
 $prefixo = $_POST['prefixo'];
 $setor = $_POST['setor'];
 
+if($acao == 'limpar'){
+
+    $dataInicial = date('Y-m-d'); 
+    $dataFinal = date('Y-m-d');
+    $prefixo = '';
+    $combustivel = '';
+    $marca = '';
+    $modelo = '';
+    $setor = '';
+
+}
+
 if($dataInicial && $dataInicial <> ''){ 
     $filtrodataInicial = $dataInicial;
 }else{
@@ -26,17 +38,7 @@ if($marca && $marca <> 'TODOS'){$filtroMarca = "AND v.marca = '$marca'";}
 if($modelo && $modelo <> 'TODOS'){$filtroModelo = "AND v.modelo = '$modelo'";}
 if($setor && $setor <> 'TODOS'){$filtroSetor = "AND v.setor = '$setor'";}
 
-if($acao == 'limpar'){
 
-    $dataInicial = date('Y-m-d'); 
-    $dataFinal = date('Y-m-d');
-    $prefixo = '';
-    $combustivel = '';
-    $marca = '';
-    $modelo = '';
-    $setor = '';
-
-}
 if($acao == 'registrar-abastecimento'){
 
     registrarAbastecimento();
