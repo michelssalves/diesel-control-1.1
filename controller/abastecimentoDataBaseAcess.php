@@ -6,7 +6,7 @@ $tabelaFiltrada = filtrarAbastecimentos();
 
 if($acao == 'limpar'){
 
-    $dataIncial = date('Y-m-d'); 
+    $dataInicial = date('Y-m-d'); 
     $dataFinal = date('Y-m-d');
     $prefixo = '';
     $combustivel = '';
