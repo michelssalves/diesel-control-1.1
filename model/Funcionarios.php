@@ -1,7 +1,7 @@
 <?php
 function selectFuncionariosByUser($usuario, $senha){
 
-    include 'config.php';
+    include '../controller/config.php';
 
         $sql = $pdo->prepare("SELECT * FROM funcionarios WHERE usuario = :usuario AND senha = :senha");
         $sql->bindValue(':usuario', $usuario);
@@ -12,7 +12,7 @@ function selectFuncionariosByUser($usuario, $senha){
     }
 function selectFuncionariosByUserMaster($usuario){
 
-    include 'config.php';
+    include '../controller/config.php';
 
         $sql = $pdo->prepare("SELECT * FROM funcionarios WHERE usuario = :usuario");
         $sql->bindValue(':usuario', $usuario);
@@ -22,7 +22,7 @@ function selectFuncionariosByUserMaster($usuario){
     }
 function selectMenuUser($permissao){
 
-    include 'config.php';
+    include '../controller/config.php';
 
         $sql = $pdo->query("SELECT * FROM menu_principal WHERE id_permissao <= $permissao");
         $sql->execute();  
@@ -31,7 +31,7 @@ function selectMenuUser($permissao){
         }
 function updateFuncionariosToken(){
 
-    include 'config.php';
+    include '../controller/config.php';
 
         $token = md5(time() . rand(0, 9999) . time());
         $sql = $pdo->prepare("UPDATE funcionarios SET token = :token WHERE usuario = :usuario AND senha = :senha");

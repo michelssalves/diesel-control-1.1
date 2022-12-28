@@ -1,7 +1,7 @@
 <?php
 function selectCountVeiculos(){
 
-    include 'config.php';
+    include '../controller/config.php';
 
     $sql = $pdo->prepare("SELECT COUNT(id_veiculo) AS numeroDePaginas FROM veiculos");
     $sql->execute();
@@ -11,7 +11,7 @@ function selectCountVeiculos(){
 }
 function selectTodosOsVeiculosComFiltro($filtroStatus, $filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, $filtroSetor, $start, $result_for_page){        
     
-    include 'config.php';
+    include '../controller/config.php';
 
     $sql = $pdo->prepare("SELECT * FROM veiculos AS v 
         $filtroStatus $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor
@@ -22,7 +22,7 @@ function selectTodosOsVeiculosComFiltro($filtroStatus, $filtroPrefixo, $filtroCo
 function insertTableVeiculosCadastrarNovo($numeroEquipamentoCad, $prefixoCad, $placaCad, $descricaoCaminhaoCad, $renavamCad, $chassiCad, 
 $numeroMotorCad, $anoCad, $marcaCad, $modeloCad, $combustivelCad, $metodoCad, $setorCad, $statusVeiculoCad){
 
-    include 'config.php';
+    include '../controller/config.php';
 
     $sql = $pdo->prepare("INSERT INTO veiculos(
         numero_equipamento, prefixo, placa, descricao_caminhao, renavam,chassi, numero_motor,
@@ -52,7 +52,7 @@ function  updateTabeleaVeiculosAlterarVeiculo($idVeiculoAlt, $prefixoAlt, $numer
 $renavamAlt, $chassiAlt, $numeroMotorAlt, $anoAlt, $marcaAlt, $modeloAlt, $combustivelAlt, $metodoAlt, $setorAlt, 
 $statusVeiculoAlt){
 
-    include 'config.php';
+    include '../controller/config.php';
 
     $sql = $pdo->prepare("UPDATE veiculos SET
     prefixo = :prefixoAlt, numero_equipamento = :numeroEquipamentoAlt, placa = :placaAlt, 
@@ -82,7 +82,7 @@ $statusVeiculoAlt){
 
     function updateVeiculosStatus($idVeiculoAlt, $statusVeiculoAlt){
 
-    include 'config.php';
+    include '../controller/config.php';
 
     $sql = $pdo->prepare("UPDATE veiculos SET status_veiculo = :statusVeiculoAlt WHERE id_veiculo = :idVeiculoAlt");
     $sql->bindValue(':statusVeiculoAlt', $statusVeiculoAlt);

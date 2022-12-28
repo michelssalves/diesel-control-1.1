@@ -1,7 +1,7 @@
 <?php
 
 function selectAbastecimentosTodosVeiculos(){
-    include 'config.php';
+    include '../controller/config.php';
 
     $sql = $pdo->prepare("SELECT *FROM veiculos AS v  
     JOIN abastecimentos AS a 
@@ -12,7 +12,7 @@ function selectAbastecimentosTodosVeiculos(){
     return $sql;
 }
 function selectAbastecimentosPorVeiculo($id_veiculo){
-    include 'config.php';
+    include '../controller/config.php';
     
     $sql = $pdo->prepare("SELECT * FROM abastecimentos 
 	WHERE id_veiculo = :id_veiculo  
@@ -24,7 +24,7 @@ function selectAbastecimentosPorVeiculo($id_veiculo){
 }
 function selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataHoraIncial, $dataHoraFinal){
     
-    include 'config.php';
+    include '../controller/config.php';
 
     $sql = $pdo->prepare("SELECT *FROM veiculos AS v  
     JOIN abastecimentos AS a 
@@ -40,7 +40,7 @@ function insertAbastecimentoNovo( $id_veiculoRegistrar, $bombaRegistrar ,$odomet
 $diferencakmRegistrar ,$ultimohrRegistrar ,$hrRegistrar ,$diferencahrRegistrar ,$frentistaRegistrar ,$odometrofinalRegistrar ,
 $litrosRegistrar, $litros_odRegistrar, $mediaRegistrar){
 
-    include 'config.php';
+    include '../controller/config.php';
 
     $sql = $pdo->prepare("INSERT INTO abastecimentos (id_veiculo, bomba, odometroinicial, ultimokm,	
     km, diferencakm, ultimohr, hr, diferencahr, frentista,	odometrofinal, litros, litros_od, media, data_abastecimento, dataabastecimento2) 
@@ -71,7 +71,7 @@ function updateAbastecimentoAlterar($id_abastecimentoAlterar, $id_veiculoAlterar
 $litros_odAlterar, $litrosAlterar, $ultimokmAlterar, $kmAlterar, $diferencakmAlterar, $mediaAlterar, $ultimohrAlterar, $hrAlterar, 
 $diferencahrAlterar, $frentistaAlterar){
 
-    include 'config.php';
+    include '../controller/config.php';
 
      $sql = $pdo->prepare("UPDATE abastecimentos SET id_veiculo = :id_veiculo, bomba = :bomba, odometroinicial = :odometroinicial, 
      ultimokm = :ultimokm, km = :km, diferencakm = :diferencakm, ultimohr = :ultimohr, hr = :hr, diferencahr = :diferencahr, 
@@ -99,7 +99,7 @@ $diferencahrAlterar, $frentistaAlterar){
 
  function deleteAbastecimento($id_abastecimentoAlterar){
 
-    include 'config.php';
+    include '../controller/config.php';
 
     $sql = $pdo->prepare("DELETE FROM abastecimentos WHERE id_abastecimento = :id_abastecimentoAlterar");
     $sql->bindValue(':id_abastecimentoAlterar', $id_abastecimentoAlterar);
