@@ -1,5 +1,4 @@
 ﻿<?php
-include 'config.php';
 $acao = $_REQUEST['acao'];
 
 $dataInicial = ($_POST['dataInicial'] ? $_POST['dataInicial'] : date('Y-m-d'));
