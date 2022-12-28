@@ -40,7 +40,7 @@ if($acao == 'excluir-abastecimento'){
 }
 function filtrarAbastecimentos(){
 
-    include 'modal/modalCadastrarAbastecimentos.php'; 
+    include 'modal/modalCadastrarAbastecimento.php'; 
 
     $combustivel = $_POST['combustivel'];
     $marca = $_POST['marca'];
