@@ -53,8 +53,8 @@ function filtrarAbastecimentos($dataInicial, $dataFinal, $combustivel, $marca, $
     include 'functions.php';
     include 'modal/modalCadastrarAbastecimento.php'; 
 
-
-
+    $dataInicial2 = $dataInicial;
+    $dataFinal2 = $dataFinal;
     if($prefixo && $prefixo <> 'TODOS'){$filtroPrefixo = "AND v.prefixo = '$prefixo'";};
     if($combustivel && $combustivel <> 'TODOS' ){$filtroCombustivel = "AND v.combustivel = '$combustivel'";}
     if($marca && $marca <> 'TODOS'){$filtroMarca = "AND v.marca = '$marca'";}
@@ -62,7 +62,7 @@ function filtrarAbastecimentos($dataInicial, $dataFinal, $combustivel, $marca, $
     if($setor && $setor <> 'TODOS'){$filtroSetor = "AND v.setor = '$setor'";}
 
 
-        $sql = selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataInicial, $dataFinal);
+        $sql = selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataInicial2, $dataFinal2);
 
         if ($sql->rowCount() > 0) {
 
