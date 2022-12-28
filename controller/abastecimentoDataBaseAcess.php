@@ -188,6 +188,7 @@ function informacoesVeiculo($idVeiculo){
 }       
 function alterarAbastecimento(){
 
+    include 'config.php';
     include '../model/Abastecimentos.php';
   
     $idAbastecimentoAlt = $_POST['idAbastecimentoAlt'];
