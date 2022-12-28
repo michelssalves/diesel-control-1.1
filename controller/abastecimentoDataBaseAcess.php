@@ -3,7 +3,7 @@ session_start();
 $acao = $_REQUEST['acao'];
 
 $dataInicial = ($_POST['dataInicial'] ? $_POST['dataInicial'] : date('Y-m-d'));
-$dataFinal = ($_POST['dataFinal'] ? $_POST['dataFinal'] : date('Y-m-d')))
+$dataFinal = ($_POST['dataFinal'] ? $_POST['dataFinal'] : date('Y-m-d'));
 $combustivel = ($_POST['combustivel'] ? $_POST['combustivel'] : 'TODOS');
 $marca = $_POST['marca'];
 $modelo = $_POST['modelo'];
