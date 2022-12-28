@@ -45,16 +45,16 @@ $statusVeiculoAlt){
     include 'config.php';
 
     $sql = $pdo->prepare("UPDATE veiculos SET
-    numero_equipamento = :numeroEquipamentoAlt, prefixo = :prefixoAlt, placa = :placaAlt, 
+    prefixo = :prefixoAlt, numero_equipamento = :numeroEquipamentoAlt, placa = :placaAlt, 
     descricao_caminhao = :descricaoCaminhaoAlt, renavam = :renavamAlt, chassi = :chassiAlt, 
-    numero_motor = :numero_motor,
+    numero_motor = :numeroMotorAlt,
     ano = :anoAlt, marca = :marcaAlt, modelo = :modeloAlt, combustivelAlt = :combustivelAlt ,metodo =:metodoAlt,
     setor = :setorAlt, status_veiculo = :statusVeiculoAlt
     WHERE id_veiculo = :idVeiculoAlt");
 
     $sql->bindValue(':idVeiculoAlt', $idVeiculoAlt);
-    $sql->bindValue(':numeroEquipamentoAlt', $numeroEquipamentoAlt);
     $sql->bindValue(':prefixoAlt', $prefixoAlt);
+    $sql->bindValue(':numeroEquipamentoAlt', $numeroEquipamentoAlt);
     $sql->bindValue(':placaAlt', $placaAlt);
     $sql->bindValue(':descricaoCaminhaoAlt', $descricaoCaminhaoAlt);
     $sql->bindValue(':renavamAlt', $renavamAlt);

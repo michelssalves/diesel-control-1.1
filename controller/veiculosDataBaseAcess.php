@@ -9,24 +9,21 @@ $marca = $_POST['marca'];
 $modelo = $_POST['modelo'];
 $statusVeiculo = $_POST['statusVeiculo'];
 
-
-echo '<pre>'; echo $idVeiculoAlt = $_POST['idVeiculoAlt'];
-echo '<pre>'; echo $prefixoAlt = $_POST['prefixoAlt'];
-echo '<pre>'; echo$numeroEquipamentoAlt = $_POST['numeroEquipamentoAlt'];
-echo '<pre>'; echo$placaAlt = $_POST['placaAlt'];
-echo '<pre>'; echo$descricaoCaminhaoAlt = $_POST['descricaoCaminhaoAlt'];
-echo '<pre>'; echo$renavamAlt = $_POST['renavamAlt'];
-echo '<pre>'; echo$chassiAlt = $_POST['chassiAlt'];
-echo '<pre>'; echo$numeroMotorAlt = $_POST['numeroMotorAlt'];
-echo '<pre>'; echo$anoAlt = $_POST['anoAlt'];
-echo '<pre>'; echo$marcaAlt = $_POST['marcaAlt'];
-echo '<pre>'; echo$modeloAlt = $_POST['modeloAlt'];
-echo '<pre>'; echo$combustivelAlt = $_POST['combustivelAlt'];
-echo '<pre>'; echo$metodoAlt = $_POST['metodoAlt'];
-echo '<pre>'; echo$setorAlt = $_POST['setorAlt'];
-echo '<pre>'; echo$statusVeiculoAlt = $_POST['statusVeiculoAlt'];
-
-
+$idVeiculoAlt = $_POST['idVeiculoAlt'];
+$prefixoAlt = $_POST['prefixoAlt'];
+$numeroEquipamentoAlt = $_POST['numeroEquipamentoAlt'];
+$placaAlt = $_POST['placaAlt'];
+$descricaoCaminhaoAlt = $_POST['descricaoCaminhaoAlt'];
+$renavamAlt = $_POST['renavamAlt'];
+$chassiAlt = $_POST['chassiAlt'];
+$numeroMotorAlt = $_POST['numeroMotorAlt'];
+$anoAlt = $_POST['anoAlt'];
+$marcaAlt = $_POST['marcaAlt'];
+$modeloAlt = $_POST['modeloAlt'];
+$combustivelAlt = $_POST['combustivelAlt'];
+$metodoAlt = $_POST['metodoAlt'];
+$setorAlt = $_POST['setorAlt'];
+$statusVeiculoAlt = $_POST['statusVeiculoAlt'];
 
 if($acao == 'limpar'){
 
