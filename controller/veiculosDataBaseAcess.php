@@ -27,16 +27,19 @@ if($acao == 'limpar'){
     $setor = '';
     $status = '';
 }
+if($action == 'filtrar-veiculos'){
 
-if($prefixo && $prefixo <> 'TODOS'){$filtroPrefixo = "AND prefixo = '$prefixo'";};
-if($combustivel && $combustivel <> 'TODOS' ){$filtroCombustivel = "AND combustivel = '$combustivel'";}
-if($marca && $marca <> 'TODOS'){$filtroMarca = "AND marca = '$marca'";}
-if($modelo && $modelo <> 'TODOS'){$filtroModelo = "AND modelo = '$modelo'";}
-if($setor && $setor <> 'TODOS'){$filtroSetor = "AND setor = '$setor'";}
-if($status == 'checked'){
-    $filtroStatus = "WHERE status_veiculo <= 2";
-}else{
-     $filtroStatus = "WHERE status_veiculo = 1";
+    if($prefixo && $prefixo <> 'TODOS'){$filtroPrefixo = "AND prefixo = '$prefixo'";};
+    if($combustivel && $combustivel <> 'TODOS' ){$filtroCombustivel = "AND combustivel = '$combustivel'";}
+    if($marca && $marca <> 'TODOS'){$filtroMarca = "AND marca = '$marca'";}
+    if($modelo && $modelo <> 'TODOS'){$filtroModelo = "AND modelo = '$modelo'";}
+    if($setor && $setor <> 'TODOS'){$filtroSetor = "AND setor = '$setor'";}
+    if($status == 'checked'){
+        $filtroStatus = "WHERE status_veiculo <= 2";
+    }else{
+        $filtroStatus = "WHERE status_veiculo = 1";
+    }
+
 }
 if($acao == 'cadastrarVeiculo'){
 
@@ -92,7 +95,7 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
 
     $sql = selectTodosOsVeiculosComFiltro($filtroStatus, $filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, 
     $filtroSetor, $start, $result_for_page);        
-    var_dump($sql);
+
     $resultados = $sql->rowCount();
 
         if ($sql->rowCount() > 0) {
