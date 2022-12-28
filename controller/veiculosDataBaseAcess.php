@@ -79,21 +79,21 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
     
             $txtTableVeiculos .= '<nav aria-label="Page navigation example"><ul class="pagination pagination-sm justify-content-center">';
     
-            $txtTableVeiculos .= "<li class='page-item'><a class='page-link' href='controle-de-veiculos?page=1'>First Page</a></li>";
+            $txtTableVeiculos .= "<li class='page-item'><a class='page-link' href='controle-de-veiculos-novo?page=1'>First Page</a></li>";
     
             for ($previous_page = $page - $max_link; $previous_page <= $page - 1; $previous_page++) {
                 if ($previous_page >= 1) {
-                    $txtTableVeiculos .= "<li class='page-item'><a class='page-link' href='controle-de-veiculos?page=$previous_page'>$previous_page</a></li>";
+                    $txtTableVeiculos .= "<li class='page-item'><a class='page-link' href='controle-de-veiculos-novo?page=$previous_page'>$previous_page</a></li>";
                 }
             }
             $txtTableVeiculos .= "<li class='page-item active' ><a class='page-link' href='#'>$page</a></li>";
     
             for ($next_page = $page + 1; $next_page <= $page + $max_link; $next_page++) {
                 if ($next_page <= $number_pages) {
-                    $txtTableVeiculos .= "<li class='page-item'><a class='page-link' href='controle-de-veiculos?page=$next_page' >$next_page</a></li>";
+                    $txtTableVeiculos .= "<li class='page-item'><a class='page-link' href='controle-de-veiculos-novo?page=$next_page' >$next_page</a></li>";
                 }
             }
-            $txtTableVeiculos .= "<li class='page-item'><a class='page-link' href='controle-de-veiculos?page=$number_pages'>Last Page</a></li>";
+            $txtTableVeiculos .= "<li class='page-item'><a class='page-link' href='controle-de-veiculos-novo?page=$number_pages'>Last Page</a></li>";
             $txtTableVeiculos .= '</ul></nav>';
     
             
