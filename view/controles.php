@@ -41,9 +41,7 @@ session_start();
             </div>
         </div>
     </div>
-
     <div class="container">
-      
                 <div class="table-responsive">
                     <table class="table table-sm fs-6 mb-0">
                         <thead class="fundo-cabecalho">

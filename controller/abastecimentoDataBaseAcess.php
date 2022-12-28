@@ -71,11 +71,11 @@ if($acao == 'excluir-abastecimento'){
     excluirAbastecimento();
   
 }
-function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataHoraIncial, $dataHoraFinal){
+function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataHoraInicial, $dataHoraFinal){
     
     include 'functions.php';
 
-        $sql = selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataHoraIncial, $dataHoraFinal);
+        $sql = selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataHoraInicial, $dataHoraFinal);
 
         if ($sql->rowCount() > 0) {
 
