@@ -133,7 +133,7 @@ function informacoesVeiculo($id_veiculo){
 }
 function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataHoraIncial, $dataHoraFinal){
     
-    include '../controller/functions.php';
+    include 'functions.php';
 
         $sql = selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataHoraIncial, $dataHoraFinal);
 
@@ -199,7 +199,7 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
                 <td><center> '.$row['setor'].'</td>
                 </tr>';
 
-                include '../view/modal/modalAlterarAbastecimento.php';
+                include 'modal/modalAlterarAbastecimento.php';
             }
            
         }

@@ -108,7 +108,7 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
     $start = ($page * $result_for_page) - $result_for_page;
    
     include 'controller/functions.php';
-    include '../view/modal/modalCadastrarVeiculos.php';
+    include 'modal/modalCadastrarVeiculos.php';
 
     $sql = selectTodosOsVeiculosComFiltro($filtroStatus, $filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, 
     $filtroSetor, $start, $result_for_page);        
@@ -141,7 +141,7 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
                 <td>'.($row['status_veiculo'] == 1 ? 'Ativo' :'Inativo').'</td>
             </tr>';
 
-            include '../view/modal/modalAlterarVeiculos.php';
+            include 'modal/modalAlterarVeiculos.php';
             }
 
         $txtTableVeiculos .='</tbody></table>';
