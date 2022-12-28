@@ -80,10 +80,6 @@ if($acao == 'limpar'){
 
         $txtTableVeiculos .='</tbody></table>';
 
-   /*     $sql1 = $pdo->prepare("SELECT COUNT(id_veiculo) AS numeroDePaginas FROM veiculos");
-        $sql1->execute();
-        $row1 = $sql1->fetch(PDO::FETCH_ASSOC);
-       echo $resultados  = $row1['numeroDePaginas'];*/
 
         $number_pages = ceil($resultados / $result_for_page);
         $max_link = 2;
