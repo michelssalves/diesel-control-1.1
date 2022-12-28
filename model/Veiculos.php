@@ -74,7 +74,7 @@ $statusVeiculoAlt){
 
     include 'config.php';
 
-    $sql = $pdo->prepare("UPDATE veiculos SET status_veiculo = :statusVeiculo WHERE id_veiculo = :idVeiculo");
+    $sql = $pdo->prepare("UPDATE veiculos SET status_veiculo = :statusVeiculoAlt WHERE id_veiculo = :idVeiculoAlt");
     $sql->bindValue(':statusVeiculoAlt', $statusVeiculoAlt);
     $sql->bindValue(':idVeiculoAlt', $idVeiculoAlt);
     $sql->execute();
