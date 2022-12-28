@@ -3,7 +3,7 @@ session_start();
 include '../controller/checkAcess.php';
 include '../model/Veiculos.php';
 include '../controller/veiculosDataBaseAcess.php';
-include '../view/modal/modalCadastrarVeiculos.php';
+
 ?>
 <head>
     <meta charset="utf-8">
@@ -36,7 +36,7 @@ include '../view/modal/modalCadastrarVeiculos.php';
                     <?php $link = "PopupCenter('cadastrar-veiculo',' Cadastrar Veiculos',400,900)"; ?>
                     <button class="btn btn-success btn-sm" onclick="table2excel('t1')">Excel</button>
                     <button name="acao" value="filtrar" type="submit" class='btn btn-warning btn-sm'>Filtrar</button>
-                    <button class='btn btn-primary btn-sm' data-bs-toggle='modal' data-bs-target='#modalCadastrarVeiculo'>Cadastrar</button>
+                    <button type="button" class='btn btn-primary btn-sm' data-bs-toggle='modal' data-bs-target='#modalCadastrarVeiculo'>Cadastrar</button>
                     <button name="acao" value="limpar" type="submit" class='btn btn-secondary btn-sm'>Limpar</button>
 
             </div>
