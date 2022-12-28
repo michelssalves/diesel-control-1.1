@@ -55,7 +55,7 @@
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Ultimo KM:</span>
-                        <input onkeypress="return soNumeros()" onkeyup="calcularMedia();" name="ultimoKmAlt"  id="ultimokm" value="<?= $row['ultimokm'] ?>" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+                        <input onkeypress="return soNumeros()" onkeyup="calcularMedia();" name="ultimoKmAlt"  id="ultimoKmCad" value="<?= $row['ultimokm'] ?>" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">KM:</span>
@@ -63,7 +63,7 @@
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Dif KM:</span>
-                        <input readonly id="diferencakm" value="<?= $row['diferencakm'] ?>" name="diferencaKmAlt" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+                        <input readonly id="diferencaKmCad" value="<?= $row['diferencakm'] ?>" name="diferencaKmAlt" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Média:</span>
@@ -71,7 +71,7 @@
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Ult HR:</span>
-                        <input onkeypress="return soNumeros()" onkeyup="calcularDiferencaHr()" name="ultimoHrAlt" id="ultimohr" value="<?= $row['ultimohr'] ?>"  type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+                        <input onkeypress="return soNumeros()" onkeyup="calcularDiferencaHr()" name="ultimoHrAlt" id="ultimoHrCad" value="<?= $row['ultimohr'] ?>"  type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">HR:</span>
@@ -79,7 +79,7 @@
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Dif Hr:</span>
-                        <input readonly id="diferencahr" value="<?= $row['diferencahr'] ?>" name="diferencaHrAlt" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+                        <input readonly id="diferencaHrCad" value="<?= $row['diferencahr'] ?>" name="diferencaHrAlt" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Frentista:</span>
