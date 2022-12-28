@@ -18,8 +18,6 @@ if($acao == 'limpar'){
     $setor = '';
     $status = '';
 }
-if($action == 'filtrar-veiculos'){
-
     if($prefixo && $prefixo <> 'TODOS'){$filtroPrefixo = "AND prefixo = '$prefixo'";};
     if($combustivel && $combustivel <> 'TODOS' ){$filtroCombustivel = "AND combustivel = '$combustivel'";}
     if($marca && $marca <> 'TODOS'){$filtroMarca = "AND marca = '$marca'";}
@@ -30,8 +28,7 @@ if($action == 'filtrar-veiculos'){
     }else{
         $filtroStatus = "WHERE status_veiculo = 1";
     }
-
-}
+    
 if($acao == 'cadastrar-veiculo'){
 
     cadastrarVeiculo();
@@ -148,7 +145,6 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
 
         $txtTableVeiculos .='</tbody></table>';
 
-       
         $number_pages = ceil($resultados / $result_for_page);
         $max_link = 2;
 
