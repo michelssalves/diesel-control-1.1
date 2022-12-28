@@ -45,51 +45,51 @@
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Setor:</span>
-                        <input readonly id="setor" name="setorCad" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+                        <input readonly name="setorCad" id="setor" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
                     </div>
 
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Odometro Inicial:</span>
-                        <input onkeyup="calcularLitrosOd()" onkeypress="return soNumeros()" name="odometroInicialCad" id="odometroinicial" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Odometro Inicial" autofocus required>
+                        <input name="odometroInicialCad" id="odometroinicial" onkeyup="calcularLitrosOd()" onkeypress="return soNumeros()" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Odometro Inicial" autofocus required>
                     </div>
 
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Ultimo Km:</span>
-                        <input readonly id="ultimoKmCad" name="ultimoKmCad" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Km Anterior" autofocus required>
+                        <input readonly name="ultimoKmCad" id="ultimoKmCad" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Km Anterior" autofocus required>
                     </div>
 
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Km:</span>
-                        <input onkeyup="calcularDiferencaKm(),calcularMedia()" onkeypress="return soNumeros()" name="kmCad" id="km" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Km" required>
+                        <input name="kmCad" id="kmCad" onkeyup="calcularDiferencaKmCad(),calcularMedia()" onkeypress="return soNumeros()" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Km" required>
                     </div>
 
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Diferenca Km:</span>
-                        <input readonly id="diferencaKmCad" name="diferencaKmCad" type="text" class="form-control" autofocus aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Diferenca Km" autofocus required>
+                        <input readonly name="diferencaKmCad" id="diferencaKmCad"  type="text" class="form-control" autofocus aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Diferenca Km" autofocus required>
                     </div>
 
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Ultimo Hr:</span>
-                        <input readonly id="ultimoHrCad" name="ultimoHrCad" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ultimo Horimetro" autofocus required>
+                        <input readonly name="ultimoHrCad" id="ultimoHrCad"  type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ultimo Horimetro" autofocus required>
                     </div>
 
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Hr:</span>
-                        <input onkeyup="calcularDiferencaHr()" onkeypress="return soNumeros()" name="hrCad" id="hr" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Horimetro" autofocus required>
+                        <input name="hrCad" id="hr" onkeyup="calcularDiferencaHr()" onkeypress="return soNumeros()" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Horimetro" autofocus required>
                     </div>
 
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Diferenca Hr:</span>
-                        <input readonly id="diferencaHrCad" name="diferencaHrCad" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Diferenca Horimetro" autofocus required>
+                        <input name="diferencaHrCad" id="diferencaHrCad"  readonly type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Diferenca Horimetro" autofocus required>
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Odometro Final:</span>
-                        <input onkeyup="calcularLitrosOd()" onkeypress="return soNumeros()" name="odometroFinalCad" id="odometrofinal" type="text" class="form-control" placeholder="Odometro Final" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+                        <input name="odometroFinalCad" id="odometrofinal" onkeyup="calcularLitrosOd()" onkeypress="return soNumeros()" type="text" class="form-control" placeholder="Odometro Final" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
                     </div>
 
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Litros:</span>
-                        <input onkeyup="calcularMedia()" onkeypress="return soNumeros()" id="litros" name="litrosCad" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Litros" autofocus required>
+                        <input name="litrosCad" id="litros" onkeyup="calcularMedia()" onkeypress="return soNumeros()"  type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Litros" autofocus required>
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Litros Odometro:</span>
@@ -97,7 +97,7 @@
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Media:</span>
-                        <input readonly id="media" name="mediaCad" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Media" autofocus required>
+                        <input readonly name="mediaCad" id="media" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Media" autofocus required>
                     </div>
             </div>
             <div class="modal-footer">

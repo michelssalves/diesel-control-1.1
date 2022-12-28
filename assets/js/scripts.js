@@ -9,8 +9,9 @@ function soNumeros(evento) {
 	   if(theEvent.preventDefault) theEvent.preventDefault();
 	}
  }
-function calcularDiferencaKm() {
-	const kmAtual = document.getElementById("km").value
+function calcularDiferencaKmCad() {
+
+	const kmAtual = document.getElementById("kmCad").value
 	const kmAnterior = document.getElementById("ultimoKmCad").value
 	
 	document.getElementById("diferencaKmCad").value = subtrairConvertendo(kmAnterior, kmAtual) 
