@@ -77,7 +77,7 @@ include '../controller/checkAcess.php';
                                 </td>
                                 <td>
                                     <select onChange="this.form.submit()" name="combustivel">
-                                    <option selected><?= ($dados[1] <> '' ? $dados[1] : 'TODOS') ?></options>
+                                    <option selected><?= ($combustivel <> '' ? $combustivel : 'TODOS') ?></options>
                                     <option>TODOS</options>
                                         <?php
                                         $sql = $pdo->prepare("SELECT DISTINCT combustivel FROM veiculos  ORDER BY combustivel");
@@ -91,7 +91,7 @@ include '../controller/checkAcess.php';
                                 </td>
                                 <td>
                                     <select onChange="this.form.submit()" name="marca">
-                                    <option selected><?= ($marcaFiltro <> '' ? $marcaFiltro : 'TODOS') ?></options>
+                                    <option selected><?= ($marca <> '' ? $marca : 'TODOS') ?></options>
                                     <option>TODOS</options>
                                         <?php
                                         $sql = $pdo->prepare("SELECT DISTINCT marca FROM veiculos  ORDER BY marca");
@@ -105,7 +105,7 @@ include '../controller/checkAcess.php';
                                 </td>
                                 <td>
                                     <select onChange="this.form.submit()" name="modelo">
-                                    <option selected><?= ($modeloFiltro <> '' ? $modeloFiltro : 'TODOS') ?></options>
+                                    <option selected><?= ($modelo <> '' ? $modelo : 'TODOS') ?></options>
                                     <option>TODOS</options>
                                         <?php
                                         $sql = $pdo->prepare("SELECT DISTINCT modelo FROM veiculos  ORDER BY modelo");
@@ -119,7 +119,7 @@ include '../controller/checkAcess.php';
                                 </td>
                                 <td>
                                     <select onChange="this.form.submit()" name="setor">
-                                    <option selected><?= ($setorFiltro <> '' ? $setorFiltro : 'TODOS') ?></options>
+                                    <option selected><?= ($setor <> '' ? $setor : 'TODOS') ?></options>
                                     <option>TODOS</options>
                                         <?php
                                         $sql = $pdo->prepare("SELECT DISTINCT setor FROM veiculos  ORDER BY setor");
@@ -216,7 +216,7 @@ include '../controller/checkAcess.php';
                         </tr>
                     </thead>
                     <tbody>
-                        <?php $dados = filtrarAbastecimentos($dataInicial, $dataFinal);  echo $dados[0];?>
+                        <?php $dados = filtrarAbastecimentos($dataInicial, $dataFinal, $combustivel, $marca, $modelo,$prefixo ,$setor);  echo $dados[0];?>
                     </tbody>
                 </table>
             </div>
