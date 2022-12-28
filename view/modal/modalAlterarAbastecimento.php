@@ -1,13 +1,3 @@
-<script>
-    function calcularDiferencaKmAlt() {
-	
-	const kmAtual = document.getElementById("kmAlt").value
-	const kmAnterior = document.getElementById("ultimoKmAlt").value
-	
-	document.getElementById("diferencaKmAlt").value = subtrairConvertendo(kmAnterior, kmAtual) 
-	
-}
-</script>
 <div class="modal fade" id="<?= $modalAlterarAbastecimento ?>" tabindex="-1" aria-labelledby="alterarAbastecimentoModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
