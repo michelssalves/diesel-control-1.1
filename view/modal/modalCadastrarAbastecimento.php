@@ -80,7 +80,7 @@
 
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Diferenca Hr:</span>
-                        <input readonly id="diferencahr" name="diferencaHrCad" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Diferenca Horimetro" autofocus required>
+                        <input readonly id="diferencaHrCad" name="diferencaHrCad" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Diferenca Horimetro" autofocus required>
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Odometro Final:</span>

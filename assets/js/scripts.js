@@ -11,16 +11,16 @@ function soNumeros(evento) {
  }
 function calcularDiferencaKm() {
 	const kmAtual = document.getElementById("km").value
-	const kmAnterior = document.getElementById("ultimokm").value
+	const kmAnterior = document.getElementById("ultimoKmCad").value
 	
-	document.getElementById("diferencakm").value = subtrairConvertendo(kmAnterior, kmAtual) 
+	document.getElementById("diferencaKmCad").value = subtrairConvertendo(kmAnterior, kmAtual) 
 	
 }
 function calcularDiferencaHr() {
 	const hrAtual = document.getElementById("hr").value
-	const hrAnterior = document.getElementById("ultimohr").value
+	const hrAnterior = document.getElementById("ultimoHrCad").value
 
-    document.getElementById("diferencahr").value = subtrairConvertendo(hrAnterior, hrAtual) 
+    document.getElementById("diferencaHrCad").value = subtrairConvertendo(hrAnterior, hrAtual) 
 }
 		
 function calcularLitrosOd() {
@@ -32,7 +32,7 @@ function calcularLitrosOd() {
 }
 function calcularMedia(){
 
-	const kmRodado = document.getElementById("diferencakm").value
+	const kmRodado = document.getElementById("diferencaKmCad").value
 	const litros = document.getElementById("litros").value
 	document.getElementById("media").value = dividirConvertendo(kmRodado, litros)
 		
