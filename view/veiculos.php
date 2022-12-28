@@ -196,7 +196,7 @@ include '../controller/veiculosDataBaseAcess.php';
                         </tr>
                     </thead>
                     <tbody>
-                        <?php echo $txtTableVeiculos //filtrarVeiculos($filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, $filtroSetor, $filtroStatus, $page) ?>
+                        <?php filtrarVeiculos($filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, $filtroSetor, $filtroStatus, $page) ?>
              
             </div>
         </div>
