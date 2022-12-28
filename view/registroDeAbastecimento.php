@@ -195,13 +195,13 @@ include '../controller/abastecimentoDataBaseAcess.php';
             </div>
         </div>
     </div>
-    <script src="../assets/js/scripts.js"></script>
-    <script src="../assets/js/fontawesome.all.min.js"></script>
-    <script src="../assets/js/bootstrap.bundle.min.v5.2.3.js"></script>
+    <script src="../diesel-control-1.1/assets/js/scripts.js"></script>
+    <script src="diesel-control-1.1/assets/js/fontawesome.all.min.js"></script>
+    <script src="diesel-control-1.1/assets/js/bootstrap.bundle.min.v5.2.3.js"></script>
     <!-- TABLESAW - DEIXA A TABELA RESPONSIVA-->
-    <script src="../assets/js/tablesawn-label.js"></script>
-    <script src="../assets/js/tablesaw.js"></script>
-    <script src="../assets/js/tablesaw-init.js"></script>
+    <script src="diesel-control-1.1/assets/js/tablesawn-label.js"></script>
+    <script src="diesel-control-1.1/assets/js/tablesaw.js"></script>
+    <script src="diesel-control-1.1/assets/js/tablesaw-init.js"></script>
     <!-- /TABLESAW - DEIXA A TABELA RESPONSIVA-->
 </body>
 </html>
