@@ -56,7 +56,7 @@ if($acao == 'alterar-abastecimento'){
 
    // alterarAbastecimento();
 
-   include '../controller/config.php';
+  // include '../controller/config.php';
    include '../model/Abastecimentos.php';
  
    echo '<pre>'; echo $idAbastecimentoAlt = $_POST['idAbastecimentoAlt'];
@@ -69,21 +69,31 @@ if($acao == 'alterar-abastecimento'){
    echo '<pre>'; echo $ultimoKmAlt = $_POST['ultimoKmAlt']; 
    echo '<pre>'; echo $kmAlt = $_POST['kmAlt']; 
    echo '<pre>'; echo $diferencaKmAlt = $_POST['diferencaKmAlt'];
-   echo '<pre>'; echo $mediaAlt = $_POST['mediaAlt'];
    echo '<pre>'; echo $ultimoHrAlt = $_POST['ultimoHrAlt']; 
    echo '<pre>'; echo $hrAlt = $_POST['hrAlt']; 
    echo '<pre>'; echo $diferencaHrAlt = $_POST['diferencaHrAlt']; 
    echo '<pre>'; echo $frentistaAlt = $_POST['frentistaAlt'];
+   echo '<pre>'; echo $mediaAlt = $_POST['mediaAlt'];
+
+   $db_name = 'u338658684_controle';
+$db_host= 'localhost';
+$db_user= 'u338658684_controle';
+$db_pass= 'Inf0%beo893fq';
+$pdo = new PDO("mysql:dbname=".$db_name.";host=".$db_host, $db_user, $db_pass);
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 
    $sql = $pdo->prepare("UPDATE abastecimentos SET id_veiculo = :idVeiculoAlt, bomba = :bombaAlt, odometroinicial = :odometroInicialAlt, 
-   ultimokm = :ultimoKmAlt, km = :kmAlt, diferencakm = :diferencaKmAlt, ultimohr = :ultimoHrAlt, hr = :hrAlt, diferencahr = :diferencaHrAlt, 
-   frentista = :frentista, odometrofinal = :odometroFinalAlt, litros = :litrosAlt, litros_od = :litrosOdAlt, media = :mediaAlt, data_alteracao = :data_alteracao 
+   odometrofinal = :odometroFinalAlt, litros_od = :litrosOdAlt, litros = :litrosAlt, ultimokm = :ultimoKmAlt, km = :kmAlt, diferencakm = :diferencaKmAlt, 
+   ultimohr = :ultimoHrAlt, hr = :hrAlt, diferencahr = :diferencaHrAlt, frentista = :frentista,  media = :mediaAlt, data_alteracao = :data_alteracao 
    WHERE id_abastecimento = :idAbastecimentoAlt");
    
    $sql->bindValue(':idAbastecimentoAlt', $idAbastecimentoAlt);
    $sql->bindValue(':idVeiculoAlt', $idVeiculoAlt);
    $sql->bindValue(':bombaAlt', $bombaAlt);
    $sql->bindValue(':odometroInicialAlt', $odometroInicialAlt);
+   $sql->bindValue(':odometroFinalAlt', $odometroFinalAlt);
+   $sql->bindValue(':litrosOdAlt', $litrosOdAlt);
+   $sql->bindValue(':litrosAlt', $litrosAlt);
    $sql->bindValue(':ultimoKmAlt', $ultimoKmAlt);
    $sql->bindValue(':kmAlt', $kmAlt);
    $sql->bindValue(':diferencaKmAlt', $diferencaKmAlt);
@@ -91,9 +101,6 @@ if($acao == 'alterar-abastecimento'){
    $sql->bindValue(':hrAlt', $hrAlt);
    $sql->bindValue(':diferencaHrAlt', $diferencaHrAlt);
    $sql->bindValue(':frentistaAlt', $frentistaAlt);
-   $sql->bindValue(':odometroFinalAlt', $odometroFinalAlt);
-   $sql->bindValue(':litrosAlt', $litrosAlt);
-   $sql->bindValue(':litrosOdAlt', $litrosOdAlt);
    $sql->bindValue(':mediaAlt', $mediaAlt);
    $sql->bindValue(':data_alteracao', date('Y-m-d H:i'));
    $sql->execute();
