@@ -1,6 +1,6 @@
 <?php
 session_start();
-//include '../controller/checkAcess.php';
+
 ?>
 <head>
     <meta charset="utf-8">
@@ -38,7 +38,7 @@ session_start();
     </div>
     <?php
 
-include '../controller/config.php';
+include '../controller/checkAcess.php';
 include '../model/Abastecimentos.php';
 include '../controller/abastecimentoDataBaseAcess.php';
 ?>
