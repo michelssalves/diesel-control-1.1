@@ -92,7 +92,7 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
 
     $sql = selectTodosOsVeiculosComFiltro($filtroStatus, $filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, 
     $filtroSetor, $start, $result_for_page);        
-
+    var_dump($sql);
     $resultados = $sql->rowCount();
 
         if ($sql->rowCount() > 0) {

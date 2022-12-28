@@ -35,6 +35,7 @@ $numero_motor, $ano, $marcaCad, $modeloCad, $combustivelCad, $metodo, $setorCad,
     $sql->bindValue(':setorCad', $setorCad);
     $sql->bindValue(':status_veiculo', $status_veiculo);
     $sql->execute();
+    
 
 }
 function updateTabeleaVeiculosAlterarVeiculo($idVeiculoAlt, $numero_equipamento, $prefixoAlt, $placa, $descricao_caminha, $renavam, $chassi, 
