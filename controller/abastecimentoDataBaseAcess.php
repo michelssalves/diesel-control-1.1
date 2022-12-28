@@ -72,7 +72,7 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
     include 'config.php';
     include '../model/Abastecimentos.php';
     include 'functions.php';
-    include 'modal/modalCadastrarAbastecimento.php'; 
+ 
 
         $sql = selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $filtrodataInicial, $filtrodataFinal);
 
@@ -140,7 +140,7 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
 
                 include 'modal/modalAlterarAbastecimento.php';
             }
-           
+            include 'modal/modalCadastrarAbastecimento.php'; 
         }
 
         return $txtTableControles;  
