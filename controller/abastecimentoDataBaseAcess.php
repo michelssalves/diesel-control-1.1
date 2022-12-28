@@ -188,6 +188,8 @@ function informacoesVeiculo($idVeiculo){
 }       
 function alterarAbastecimento(){
 
+    include '../model/Abastecimentos.php';
+  
     $idAbastecimentoAlt = $_POST['idAbastecimentoAlt'];
     $idVeiculoAlt = $_POST['idVeiculoAlt'];
     $bombaAlt = $_POST['bombaAlt'];
