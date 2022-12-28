@@ -28,9 +28,7 @@ if($acao == 'limpar'){
     }else{
         $filtroStatus = "WHERE status_veiculo = 1";
     }
-
-   echo  $sql = selectTodosOsVeiculosComFiltro($filtroStatus, $filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, 
-    $filtroSetor, $start, $result_for_page);    
+ 
 function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo,$filtroSetor, $filtroStatus, $page){
 
         $result_for_page = 25;
