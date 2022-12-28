@@ -1,6 +1,5 @@
 <?php
 session_start();
-include '../controller/checkAcess.php';
 include '../model/Veiculos.php';
 include '../controller/veiculosDataBaseAcess.php';
 ?>

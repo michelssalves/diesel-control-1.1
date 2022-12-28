@@ -1,4 +1,5 @@
 <?php
+include 'config.php';
 $acao = $_REQUEST['acao'];
 
 $page = $_REQUEST['page'];
