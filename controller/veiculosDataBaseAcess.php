@@ -74,7 +74,8 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
                 }
     
             $txtTableVeiculos .='</tbody></table>';
-            if($filtrar == ''){    
+
+            if($filtrar <> ''){    
             $resultados = selectCountVeiculos();  
 
             $number_pages = ceil($resultados / $result_for_page);
