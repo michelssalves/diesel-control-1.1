@@ -1,8 +1,8 @@
 <?php
 session_start();
+include '../controller/checkAcess.php';
 include '../model/Funcionarios.php';
 include '../controller/userDataBaseAcess.php';
-include '../controller/checkAcess.php';
 ?>
 <!DOCTYPE html>
 <html>
