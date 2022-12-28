@@ -18,6 +18,7 @@ function calcularDiferencaKmCad() {
 	
 }
 function calcularDiferencaKmAlt() {
+	
 	const kmAtual = document.getElementById("kmAlt").value
 	const kmAnterior = document.getElementById("ultimoKmAlt").value
 	
