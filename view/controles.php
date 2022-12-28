@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php session_start(); 
+include '../controller/checkAcess.php';
+?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,7 +29,7 @@
         <div class="row justify-content-md-center">
             <div class="col-md-auto mt-4">  
             <?php
-                include '../controller/checkAcess.php';
+                
                 include '../model/Abastecimentos.php';
                 include '../controller/abastecimentoDataBaseAcess.php';
             ?>
