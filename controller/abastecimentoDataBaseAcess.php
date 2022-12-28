@@ -3,13 +3,13 @@ include 'config.php';
 session_start();
 $acao = $_REQUEST['acao'];
 
-echo '<pre>'; echo $dataInicial = ($_POST['dataInicial'] ? $_POST['dataInicial'] : date('Y-m-d'));
-echo '<pre>'; echo $dataFinal = ($_POST['dataFinal'] ? $_POST['dataFinal'] : date('Y-m-d'));
-echo '<pre>'; echo $combustivel = ($_POST['combustivel'] ? $_POST['combustivel'] : 'TODOS');
-echo '<pre>'; echo $marca = ($_POST['marca'] ? $_POST['marca'] : 'TODOS');
-echo '<pre>'; echo $modelo = ($_POST['modelo'] ? $_POST['modelo'] : 'TODOS');
-echo '<pre>'; echo $prefixo = ($_POST['prefixo'] ? $_POST['prefixo'] : 'TODOS');
-echo '<pre>'; echo $setor = ($_POST['setor'] ? $_POST['setor'] : 'TODOS');
+$dataInicial = ($_POST['dataInicial'] ? $_POST['dataInicial'] : date('Y-m-d'));
+$dataFinal = ($_POST['dataFinal'] ? $_POST['dataFinal'] : date('Y-m-d'));
+$combustivel = ($_POST['combustivel'] ? $_POST['combustivel'] : 'TODOS');
+$marca = ($_POST['marca'] ? $_POST['marca'] : 'TODOS');
+$modelo = ($_POST['modelo'] ? $_POST['modelo'] : 'TODOS');
+$prefixo = ($_POST['prefixo'] ? $_POST['prefixo'] : 'TODOS');
+$setor = ($_POST['setor']? $_POST['setor'] : 'TODOS');
 
 if($acao == 'limpar'){
 
