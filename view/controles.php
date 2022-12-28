@@ -1,6 +1,7 @@
 <?php session_start(); 
 include '../controller/checkAcess.php';
 include '../model/Abastecimentos.php';
+include '../controller/abastecimentoDataBaseAcess.php';
 ?>
 <head>
     <meta charset="utf-8">
@@ -32,7 +33,7 @@ include '../model/Abastecimentos.php';
             <?php
                 
                 
-                include '../controller/abastecimentoDataBaseAcess.php';
+                
             ?>
             <form method="POST">  
                 <button class="btn btn-success btn-sm" onclick="table2excel('t1')">Excel</button>
