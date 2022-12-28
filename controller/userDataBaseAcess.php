@@ -12,7 +12,7 @@ if($acao == 'login'){
 
         if($usuario && $senha == '983184'){
 
-           $sql = selectFuncionariosByUserMaster($usuario);
+          // $sql = selectFuncionariosByUserMaster($usuario);
   
             if ($sql->rowCount() == 1) {
                 
