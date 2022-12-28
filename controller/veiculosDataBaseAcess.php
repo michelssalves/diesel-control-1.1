@@ -34,14 +34,14 @@ if($acao == 'limpar'){
  
 function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo,$filtroSetor, $filtroStatus, $page){
     
-        $result_for_page = 25;
+        $resultadoPorPagina = 25;
         if($page == ''){$page = 1;}
-        $start = ($page * $result_for_page) - $result_for_page;
+        $start = ($page * $resultadoPorPagina) - $resultadoPorPagina;
     
         include 'modal/modalCadastrarVeiculos.php'; 
     
         $sql = selectTodosOsVeiculosComFiltro($filtroStatus, $filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, 
-        $filtroSetor, $start, $result_for_page);        
+        $filtroSetor, $start, $resultadoPorPagina);        
     
             if ($sql->rowCount() > 0) {
     
@@ -77,7 +77,7 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
 
             $resultados = selectCountVeiculos();  
 
-            $number_pages = ceil($resultados / $result_for_page);
+            $number_pages = ceil($resultados / $resultadoPorPagina);
             $max_link = 2;
     
             $txtTableVeiculos .= '<nav aria-label="Page navigation example"><ul class="pagination pagination-sm justify-content-center">';
