@@ -1,8 +1,6 @@
 <?php
 session_start();
-include '../controller/checkAcess.php';
-include '../model/Abastecimentos.php';
-include '../controller/abastecimentoDataBaseAcess.php';
+
 ?>
 <head>
     <meta charset="utf-8">
@@ -22,6 +20,12 @@ include '../controller/abastecimentoDataBaseAcess.php';
     <script src="diesel-control-1.1/assets/js/jquery.table2excel.js"></script>  
 </head>
 <body>
+    <?php
+
+include '../controller/checkAcess.php';
+include '../model/Abastecimentos.php';
+include '../controller/abastecimentoDataBaseAcess.php';
+?>
     <div class="w3-bar w3-light-grey">
         <a href="menu-principal-novo" class="w3-bar-item w3-button">Menu Principal</a>
         <a href="controle-de-veiculos-novo" class="w3-bar-item w3-button">Veiculos</a>

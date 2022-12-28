@@ -29,7 +29,7 @@ function selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroM
     $sql = $pdo->prepare("SELECT *FROM veiculos AS v  
     JOIN abastecimentos AS a 
     ON a.id_veiculo = v.id_veiculo
-    WHERE a.dataabastecimento2 BETWEEN '$dataInicial' AND '$dataFinal'
+    WHERE a.dataabastecimento2 BETWEEN '2022-12-13' AND '2022-12-13''
     $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor");
     $sql->execute();
 
