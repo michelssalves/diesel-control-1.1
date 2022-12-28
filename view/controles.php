@@ -1,5 +1,6 @@
-<?php session_start(); 
-include '../controller/checkAcess.php';
+<?php 
+session_start(); 
+//include '../controller/checkAcess.php';
 include '../controller/abastecimentoDataBaseAcess.php';
 ?>
 <head>
