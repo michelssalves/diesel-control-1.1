@@ -32,7 +32,7 @@ if($action == 'filtrar-veiculos'){
     }
 
 }
-if($acao == 'cadastrarVeiculo'){
+if($acao == 'cadastrar-veiculo'){
 
     cadastrarVeiculo();
 }
@@ -42,10 +42,10 @@ if($acao == 'desativar-veiculo' || $acao == 'ativar-veiculo'){
 }
 if($acao == 'alterar-veiculo'){
     
- 
     alterarVeiculo();
 }
 function cadastrarVeiculo(){
+
     include 'config.php';
     
     $numeroEquipamentoCad = $_POST['numeroEquipamentoCad'];
