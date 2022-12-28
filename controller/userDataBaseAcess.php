@@ -1,5 +1,6 @@
 <?php
 session_start();
+include '../model/Funcionarios.php';
 
 
 $acao = $_REQUEST['acao'];
