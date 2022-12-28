@@ -2,19 +2,9 @@
 session_start();
 $acao = $_REQUEST['acao'];
 
-$tabelaFiltrada = filtrarAbastecimentos();
+$dataInicial = ($_POST['dataInicial'] <> '' ? $_POST['dataInicial'] : date('Y-m-d'));
+$dataFinal = ($_POST['dataFinal'] <> '' ? $_POST['dataFinal'] : date('Y-m-d'));
 
-if($acao == 'limpar'){
-
-    $dataInicial = date('Y-m-d'); 
-    $dataFinal = date('Y-m-d');
-    $prefixo = '';
-    $combustivel = '';
-    $marca = '';
-    $modelo = '';
-    $setor = '';
-
-}
 if($acao == 'registrar-abastecimento'){
 
     registrarAbastecimento();
@@ -37,6 +27,20 @@ if($acao == 'excluir-abastecimento'){
 
     excluirAbastecimento();
   
+}
+
+$tabelaFiltrada = filtrarAbastecimentos();
+
+if($acao == 'limpar'){
+
+    $dataInicial = date('Y-m-d'); 
+    $dataFinal = date('Y-m-d');
+    $prefixo = '';
+    $combustivel = '';
+    $marca = '';
+    $modelo = '';
+    $setor = '';
+
 }
 function filtrarAbastecimentos(){
 
