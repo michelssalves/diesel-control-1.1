@@ -31,7 +31,7 @@ include '../controller/abastecimentoDataBaseAcess.php';
         <div class="row justify-content-md-center">
             <div class="col-md-auto mt-4">  
 
-            <form method="GET">  
+            <form method="POST">  
                 <button type="button" class='btn btn-primary btn-sm' data-bs-toggle='modal' data-bs-target='#modalCadastrarAbastecimento'>Cadastrar</button>
                 <button class="btn btn-success btn-sm" onclick="table2excel('t1')">Excel</button>
                 <button type="submit" class='btn btn-primary btn-sm'>Filtrar</button>
