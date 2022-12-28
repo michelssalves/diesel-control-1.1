@@ -77,7 +77,7 @@ function login($usuario, $senha){
         }  
         
     }
-function menuPrincipal(){
+/*function menuPrincipal(){
     
     include 'config.php';
 
@@ -92,7 +92,22 @@ function menuPrincipal(){
     </tr>';
     }
     return $tableMenu;
-}
+}*/
+function menuPrincipal(){
+    
+    include 'config.php';
 
+   // $permissao = $_SESSION['id_permissao'];
+
+    $sql = selectMenuUser(3);
+ 
+    while($row = $sql->fetch(PDO::FETCH_ASSOC)){
+
+    $tableMenu = $tableMenu.'<tr>
+        <th>'.$row['botao_menu'].'</th>
+    </tr>';
+    }
+    return $tableMenu;
+}
 
 ?>
