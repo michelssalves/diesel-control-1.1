@@ -107,7 +107,7 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
     if($page == ''){$page = 1;}
     $start = ($page * $result_for_page) - $result_for_page;
    
-    include '../controller/functions.php';
+    include 'controller/functions.php';
     include '../view/modal/modalCadastrarVeiculos.php';
 
     $sql = selectTodosOsVeiculosComFiltro($filtroStatus, $filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, 
