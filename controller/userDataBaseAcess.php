@@ -103,19 +103,20 @@ function login($usuario, $senha){
     }
 
 function menuPrincipal(){
-    
-    include 'config.php';
 
+    include 'config.php';
+    
     $permissao = $_SESSION['id_permissao'];
 
     $sql = selectMenuUser($permissao);
  
     while($row = $sql->fetch(PDO::FETCH_ASSOC)){
 
-    $tableMenu = $tableMenu.'<tr>
+    $tableMenu .='<tr>
         <th>'.$row['botao_menu'].'</th>
     </tr>';
     }
+
     return $tableMenu;
 }
 
