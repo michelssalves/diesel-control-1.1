@@ -218,7 +218,7 @@ include '../controller/abastecimentoDataBaseAcess.php';
                         </tr>
                     </thead>
                     <tbody>
-                        <?= filtrarAbastecimentos() ?>
+                        <?= $tabela ?>
                     </tbody>
                 </table>
             </div>
