@@ -70,28 +70,28 @@ $litrosOdAlt,$litrosAlt,$ultimoKmAlt, $kmAlt, $diferencaKmAlt,$mediaAlt,$ultimoH
 
     include '../controller/config.php';
 
-     $sql = $pdo->prepare("UPDATE abastecimentos SET id_veiculo = :idVeiculoAlt, bomba = :bombaAlt, odometroinicial = :odometroInicialAlt, 
-     ultimokm = :ultimoKmAlt, km = :kmAlt, diferencakm = :diferencaKmAlt, ultimohr = :ultimoHrAlt, hr = :hrAlt, diferencahr = :diferencaHrAlt, 
-     frentista = :frentista, odometrofinal = :odometroFinalAlt, litros = :litrosAlt, litros_od = :litrosOdAlt, media = :mediaAlt, data_alteracao = :data_alteracao 
-     WHERE id_abastecimento = :idAbastecimentoAlt");
-     
-     $sql->bindValue(':idAbastecimentoAlt', $idAbastecimentoAlt);
-     $sql->bindValue(':idVeiculoAlt', $idVeiculoAlt);
-     $sql->bindValue(':bombaAlt', $bombaAlt);
-     $sql->bindValue(':odometroInicialAlt', $odometroInicialAlt);
-     $sql->bindValue(':ultimoKmAlt', $ultimoKmAlt);
-     $sql->bindValue(':kmAlt', $kmAlt);
-     $sql->bindValue(':diferencaKmAlt', $diferencaKmAlt);
-     $sql->bindValue(':ultimoHrAlt', $ultimoHrAlt);
-     $sql->bindValue(':hrAlt', $hrAlt);
-     $sql->bindValue(':diferencaHrAlt', $diferencaHrAlt);
-     $sql->bindValue(':frentistaAlt', $frentistaAlt);
-     $sql->bindValue(':odometroFinalAlt', $odometroFinalAlt);
-     $sql->bindValue(':litrosAlt', $litrosAlt);
-     $sql->bindValue(':litrosOdAlt', $litrosOdAlt);
-     $sql->bindValue(':mediaAlt', $mediaAlt);
-     $sql->bindValue(':data_alteracao', date('Y-m-d H:i'));
-     $sql->execute();
+    $sql = $pdo->prepare("UPDATE abastecimentos SET id_veiculo = :idVeiculoAlt, bomba = :bombaAlt, odometroinicial = :odometroInicialAlt, 
+    odometrofinal = :odometroFinalAlt, litros_od = :litrosOdAlt, litros = :litrosAlt, ultimokm = :ultimoKmAlt, km = :kmAlt, diferencakm = :diferencaKmAlt, 
+    ultimohr = :ultimoHrAlt, hr = :hrAlt, diferencahr = :diferencaHrAlt, frentista = :frentistaAlt,  media = :mediaAlt, data_alteracao = :data_alteracao 
+    WHERE id_abastecimento = :idAbastecimentoAlt");
+ 
+    $sql->bindValue(':idAbastecimentoAlt', $idAbastecimentoAlt);
+    $sql->bindValue(':idVeiculoAlt', $idVeiculoAlt);
+    $sql->bindValue(':bombaAlt', $bombaAlt);
+    $sql->bindValue(':odometroInicialAlt', $odometroInicialAlt);
+    $sql->bindValue(':odometroFinalAlt', $odometroFinalAlt);
+    $sql->bindValue(':litrosOdAlt', $litrosOdAlt);
+    $sql->bindValue(':litrosAlt', $litrosAlt);
+    $sql->bindValue(':ultimoKmAlt', $ultimoKmAlt);
+    $sql->bindValue(':kmAlt', $kmAlt);
+    $sql->bindValue(':diferencaKmAlt', $diferencaKmAlt);
+    $sql->bindValue(':ultimoHrAlt', $ultimoHrAlt);
+    $sql->bindValue(':hrAlt', $hrAlt);
+    $sql->bindValue(':diferencaHrAlt', $diferencaHrAlt);
+    $sql->bindValue(':frentistaAlt', $frentistaAlt);
+    $sql->bindValue(':mediaAlt', $mediaAlt);
+    $sql->bindValue(':data_alteracao', date('Y-m-d H:i'));
+    $sql->execute();
 
  }
 
