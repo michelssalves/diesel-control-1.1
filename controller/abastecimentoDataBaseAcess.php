@@ -130,7 +130,7 @@ function filtrarAbastecimentos($dataInicial, $dataFinal){
            
         }
           
-        return $sql;  
+        return $txtTableControles;  
 
 } 
 function registrarAbastecimento(){
