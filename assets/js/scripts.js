@@ -16,6 +16,13 @@ function calcularDiferencaKm() {
 	document.getElementById("diferencaKmCad").value = subtrairConvertendo(kmAnterior, kmAtual) 
 	
 }
+function calcularDiferencaKmAlt() {
+	const kmAtual = document.getElementById("kmAlt").value
+	const kmAnterior = document.getElementById("ultimoKmAlt").value
+	
+	document.getElementById("diferencaKmAlt").value = subtrairConvertendo(kmAnterior, kmAtual) 
+	
+}
 function calcularDiferencaHr() {
 	const hrAtual = document.getElementById("hr").value
 	const hrAnterior = document.getElementById("ultimoHrCad").value

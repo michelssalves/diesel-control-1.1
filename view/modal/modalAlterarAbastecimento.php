@@ -55,15 +55,15 @@
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Ultimo KM:</span>
-                        <input onkeypress="return soNumeros()" onkeyup="calcularMedia();" name="ultimoKmAlt"  id="ultimoKmCad" value="<?= $row['ultimokm'] ?>" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+                        <input name="ultimoKmAlt"  id="ultimoKmAlt" onkeypress="return soNumeros()" onkeyup="calcularMedia();" name="ultimoKmAlt"  id="ultimoKmCad" value="<?= $row['ultimokm'] ?>" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">KM:</span>
-                        <input onkeypress="return soNumeros()" onkeyup="calcularDiferencaKm(),calcularMedia()" name="kmAlt" id="km" value="<?= $row['km'] ?>" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+                        <input name="kmAlt" id="kmAlt" onkeypress="return soNumeros()" onkeyup="calcularDiferencaKmAlt(),calcularMedia()"  value="<?= $row['km'] ?>" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Dif KM:</span>
-                        <input readonly id="diferencaKmCad" value="<?= $row['diferencakm'] ?>" name="diferencaKmAlt" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+                        <input name="diferencaKmAlt" id="diferencaKmAlt" readonly  value="<?= $row['diferencakm'] ?>"  type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Média:</span>
