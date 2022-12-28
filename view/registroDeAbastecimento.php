@@ -1,9 +1,8 @@
 ﻿<?php
 session_start();
-include '../controller/config.php';
-//include '../controller/checkAcess.php';
-//include '../model/Abastecimentos.php';
-//include '../controller/abastecimentoDataBaseAcess.php';
+include '../controller/checkAcess.php';
+include '../model/Abastecimentos.php';
+include '../controller/abastecimentoDataBaseAcess.php';
 ?>
 <!doctype html>
 <html lang="pt-br">
