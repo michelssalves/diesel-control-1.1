@@ -9,7 +9,7 @@
                     <input type="hidden" name="idAbastecimentoAlt" value="<?= $row['id_abastecimento'] ?>">
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Data:</span>
-                        <input id="dataAbastecimentoAlt" name="dataAbastecimentoAlt" value="<?= ($row['dataabastecimento2']); ?>" type="datetime-local" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
+                        <input id="dataAbastecimentoAlt" name="dataAbastecimentoAlt" value="<?= ($row['dataabastecimento2']); ?>" type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autofocus required>
                     </div>
                     <div class="input-group input-group-sm mb-3 mt-1">
                         <span class="input-group-text" id="inputGroup-sizing">Prefixo:</span>
