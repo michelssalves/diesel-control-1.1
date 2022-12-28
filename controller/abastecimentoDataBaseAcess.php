@@ -1,6 +1,5 @@
 ﻿<?php
 include 'config.php';
-session_start();
 $acao = $_REQUEST['acao'];
 
 $dataInicial = ($_POST['dataInicial'] ? $_POST['dataInicial'] : date('Y-m-d'));
@@ -38,34 +37,6 @@ if($combustivel && $combustivel <> 'TODOS' ){$filtroCombustivel = "AND v.combust
 if($marca && $marca <> 'TODOS'){$filtroMarca = "AND v.marca = '$marca'";}
 if($modelo && $modelo <> 'TODOS'){$filtroModelo = "AND v.modelo = '$modelo'";}
 if($setor && $setor <> 'TODOS'){$filtroSetor = "AND v.setor = '$setor'";}
-
-
-if($acao == 'registrar-abastecimento'){
-
-    registrarAbastecimento();
-
-}
-if($acao == 'alterar-abastecimento'){
-
-    alterarAbastecimento();
-
-    
-}
-if($acao == 'ultimoKm'){
-    
-    $idVeiculo =  $_REQUEST['id'];
-
-    $return = ['error' => false,  'dados' => informacoesVeiculo($idVeiculo)];
-  
-    echo json_encode($return);
-  
-}
-
-if($acao == 'excluir-abastecimento'){
-
-    excluirAbastecimento();
-  
-}
 
 function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $filtrodataInicial, $filtrodataFinal){
 
@@ -145,7 +116,38 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
 
         return $txtTableControles;  
 
+        
+
 } 
+
+if($acao == 'registrar-abastecimento'){
+
+    registrarAbastecimento();
+
+}
+if($acao == 'alterar-abastecimento'){
+
+    alterarAbastecimento();
+
+    
+}
+if($acao == 'ultimoKm'){
+    
+    $idVeiculo =  $_REQUEST['id'];
+
+    $return = ['error' => false,  'dados' => informacoesVeiculo($idVeiculo)];
+  
+    echo json_encode($return);
+  
+}
+
+if($acao == 'excluir-abastecimento'){
+
+    excluirAbastecimento();
+  
+}
+
+
 function registrarAbastecimento(){
 
     include 'config.php';
