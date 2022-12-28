@@ -199,7 +199,7 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
                 <td><center> '.$row['setor'].'</td>
                 </tr>';
 
-                include 'view/modal/modalAlterarAbastecimento.php';
+                include 'modal/modalAlterarAbastecimento.php';
             }
            
         }
@@ -251,9 +251,7 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
         $dataHoraFinal = $dataFinalFiltro.' '.$horaFinal;
     }
 
-             
-
-
+            
 function alterarAbastecimento(){
 
     include 'config.php';
