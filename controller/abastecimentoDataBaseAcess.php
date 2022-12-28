@@ -1,6 +1,5 @@
 ﻿<?php
 session_start();
-include 'checkAcess.php';
 $acao = $_REQUEST['acao'];
 
 $dataInicial = ($_POST['dataInicial'] <> '' ? $_POST['dataInicial'] : date('Y-m-d'));
@@ -43,6 +42,7 @@ if($acao == 'excluir-abastecimento'){
 }
 
 function filtrarAbastecimentos($dataInicial, $dataFinal){
+    include 'config.php';
 
     include 'modal/modalCadastrarAbastecimento.php'; 
 
