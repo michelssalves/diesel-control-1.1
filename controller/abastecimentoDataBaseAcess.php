@@ -41,8 +41,6 @@ if($acao == 'excluir-abastecimento'){
   
 }
 
-$tabelaFiltrada = filtrarAbastecimentos($dataInicial, $dataFinal);
-
 function filtrarAbastecimentos($dataInicial, $dataFinal){
 
     include 'modal/modalCadastrarAbastecimento.php'; 
