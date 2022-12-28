@@ -22,14 +22,14 @@ function selectAbastecimentosPorVeiculo($idVeiculo){
 
     return $sql;
 }
-function selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataInicial, $dataFinal){
+function selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $filtrodataInicial, $filtrodataFinal){
     
     include '../controller/config.php';
 
     $sql = $pdo->prepare("SELECT *FROM veiculos AS v  
     JOIN abastecimentos AS a 
     ON a.id_veiculo = v.id_veiculo
-    WHERE a.dataabastecimento2 BETWEEN '$dataInicial' AND '$dataFinal'
+    WHERE a.dataabastecimento2 BETWEEN '$filtrodataInicial' AND '$filtrodataFinal'
     $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor");
     $sql->execute();
 
