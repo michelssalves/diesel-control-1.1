@@ -55,6 +55,8 @@ if($acao == 'ultimoKm'){
 }
 if($acao == 'alterar-abastecimento'){
 
+
+
    // alterarAbastecimento();
 
   // include '../controller/config.php';
@@ -85,9 +87,9 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
    $sql = $pdo->prepare("UPDATE abastecimentos SET id_veiculo = :idVeiculoAlt, bomba = :bombaAlt, odometroinicial = :odometroInicialAlt, 
    odometrofinal = :odometroFinalAlt, litros_od = :litrosOdAlt, litros = :litrosAlt, ultimokm = :ultimoKmAlt, km = :kmAlt, diferencakm = :diferencaKmAlt, 
-   ultimohr = :ultimoHrAlt, hr = :hrAlt, diferencahr = :diferencaHrAlt, frentista = :frentista,  media = :mediaAlt, data_alteracao = :data_alteracao 
+   ultimohr = :ultimoHrAlt, hr = :hrAlt, diferencahr = :diferencaHrAlt, frentista = :frentistaAlt,  media = :mediaAlt, data_alteracao = :data_alteracao 
    WHERE id_abastecimento = :idAbastecimentoAlt");
-   
+
    $sql->bindValue(':idAbastecimentoAlt', $idAbastecimentoAlt);
    $sql->bindValue(':idVeiculoAlt', $idVeiculoAlt);
    $sql->bindValue(':bombaAlt', $bombaAlt);
