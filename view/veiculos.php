@@ -145,7 +145,7 @@ include '../controller/veiculosDataBaseAcess.php';
                 </tbody>
             </table>
         </div>
-        
+        </form>
         <div class="table-responsive">
             <div class="tabelas-customizadas">
                 <table id="t1" data-tablesaw-sortable data-tablesaw-sortable-switch class="tablesaw table-sm fs-6 mb-0" data-tablesaw-mode="columntoggle" data-tablesaw-minimap>
@@ -197,7 +197,7 @@ include '../controller/veiculosDataBaseAcess.php';
                     </thead>
                     <tbody>
                         <?= filtrarVeiculos($filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, $filtroSetor, $filtroStatus, $page) ?>
-             </form>
+             
             </div>
         </div>
     </div>
