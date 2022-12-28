@@ -205,7 +205,7 @@ include '../controller/veiculosDataBaseAcess.php';
     <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
             <div class="fundo-cabecalho">
-                <h1>ALTERAR VEICULO</h1>
+                <h1>CADASTRAR VEICULO</h1>
             </div>
             <div class="modal-body">
                 <form method="POST">
