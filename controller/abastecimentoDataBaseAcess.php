@@ -54,7 +54,29 @@ if($acao == 'ultimoKm'){
 }
 if($acao == 'alterar-abastecimento'){
 
-    alterarAbastecimento();
+   // alterarAbastecimento();
+
+   include 'config.php';
+   include '../model/Abastecimentos.php';
+ 
+   echo '<pre>'; echo $idAbastecimentoAlt = $_POST['idAbastecimentoAlt'];
+   echo '<pre>'; echo $idVeiculoAlt = $_POST['idVeiculoAlt'];
+   echo '<pre>'; echo $bombaAlt = $_POST['bombaAlt'];
+   echo '<pre>'; echo $odometroInicialAlt = $_POST['odometroInicialAlt']; 
+   echo '<pre>'; echo $odometroFinalAlt = $_POST['odometroFinalAlt']; 
+   echo '<pre>'; echo $litrosOdAlt = $_POST['litrosOdAlt'];
+   echo '<pre>'; echo $litrosAlt = $_POST['litrosAlt']; 
+   echo '<pre>'; echo $ultimoKmAlt = $_POST['ultimoKmAlt']; 
+   echo '<pre>'; echo $kmAlt = $_POST['kmAlt']; 
+   echo '<pre>'; echo $diferencaKmAlt = $_POST['diferencaKmAlt'];
+   echo '<pre>'; echo $mediaAlt = $_POST['mediaAlt'];
+   echo '<pre>'; echo $ultimoHrAlt = $_POST['ultimoHrAlt']; 
+   echo '<pre>'; echo $hrAlt = $_POST['hrAlt']; 
+   echo '<pre>'; echo $diferencaHrAlt = $_POST['diferencaHrAlt']; 
+   echo '<pre>'; echo $frentistaAlt = $_POST['frentistaAlt'];
+
+   updateAbastecimentoAlterar($idAbastecimentoAlt, $idVeiculoAlt, $bombaAlt,$odometroInicialAlt,$odometroFinalAlt,$litrosOdAlt,$litrosAlt,
+   $ultimoKmAlt, $kmAlt, $diferencaKmAlt,$mediaAlt,$ultimoHrAlt ,$hrAlt,$diferencaHrAlt, $frentistaAlt);
     
 }
 if($acao == 'excluir-abastecimento'){
@@ -188,27 +210,7 @@ function informacoesVeiculo($idVeiculo){
 }       
 function alterarAbastecimento(){
 
-    include 'config.php';
-    include '../model/Abastecimentos.php';
-  
-    $idAbastecimentoAlt = $_POST['idAbastecimentoAlt'];
-    $idVeiculoAlt = $_POST['idVeiculoAlt'];
-    $bombaAlt = $_POST['bombaAlt'];
-    $odometroInicialAlt = $_POST['odometroInicialAlt']; 
-    $odometroFinalAlt = $_POST['odometroFinalAlt']; 
-    $litrosOdAlt = $_POST['litrosOdAlt'];
-    $litrosAlt = $_POST['litrosAlt']; 
-    $ultimoKmAlt = $_POST['ultimoKmAlt']; 
-    $kmAlt = $_POST['kmAlt']; 
-    $diferencaKmAlt = $_POST['diferencaKmAlt'];
-    $mediaAlt = $_POST['mediaAlt'];
-    $ultimoHrAlt = $_POST['ultimoHrAlt']; 
-    $hrAlt = $_POST['hrAlt']; 
-    $diferencaHrAlt = $_POST['diferencaHrAlt']; 
-    $frentistaAlt = $_POST['frentistaAlt'];
 
-    updateAbastecimentoAlterar($idAbastecimentoAlt, $idVeiculoAlt, $bombaAlt,$odometroInicialAlt,$odometroFinalAlt,$litrosOdAlt,$litrosAlt,
-    $ultimoKmAlt, $kmAlt, $diferencaKmAlt,$mediaAlt,$ultimoHrAlt ,$hrAlt,$diferencaHrAlt, $frentistaAlt);
    
 
 }   
