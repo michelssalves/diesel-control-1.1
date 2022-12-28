@@ -215,7 +215,8 @@ include '../controller/abastecimentoDataBaseAcess.php';
                     </thead>
                     <tbody>
                         <?= filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, $filtroSetor, $dataHoraIncial, $dataHoraFinal) ?>
-              
+                    </tbody>
+                </table>
             </div>
         </div>  
     </div>  

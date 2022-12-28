@@ -197,9 +197,7 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
                 <td><center> '.$row['modelo'].'</td>
                 <td class="'.$corMedia.' w3-right-align"><center> '.($row['media']).' </td>
                 <td><center> '.$row['setor'].'</td>
-                </tr>
-                </tbody>
-                </table>';
+                </tr>';
 
                 include 'modal/modalAlterarAbastecimento.php';
             }
