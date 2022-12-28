@@ -2,7 +2,6 @@
 $acao = $_REQUEST['acao'];
 
 $page = $_POST['page'];
-$filtrar = $_POST['filtrar'];
 
 $prefixo = $_POST['prefixo'];
 $combustivel = $_POST['combustivel'];
@@ -32,12 +31,12 @@ if($acao == 'limpar'){
         $filtroStatus = "WHERE status_veiculo = 1";
     }
  
-function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo,$filtroSetor, $filtroStatus, $page, $filtrar){
-    if($filtrar <> '1'){  
-        $result_for_page = 25;
+function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo,$filtroSetor, $filtroStatus, $page){
+    
+        $result_for_page = 50;
         if($page == ''){$page = 1;}
         $start = ($page * $result_for_page) - $result_for_page;
-    }
+    
         include 'modal/modalCadastrarVeiculos.php'; 
     
         $sql = selectTodosOsVeiculosComFiltro($filtroStatus, $filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, 
@@ -75,7 +74,6 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
     
             $txtTableVeiculos .='</tbody></table>';
 
-            if($filtrar <> '1'){    
             $resultados = selectCountVeiculos();  
 
             $number_pages = ceil($resultados / $result_for_page);
@@ -99,9 +97,7 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
             }
             $txtTableVeiculos .= "<li class='page-item'><a class='page-link' href='controle-de-veiculos-novo?page=$number_pages'>Last Page</a></li>";
             $txtTableVeiculos .= '</ul></nav>';
-    
             
-            }
         }
         return  $txtTableVeiculos;      
     } 
