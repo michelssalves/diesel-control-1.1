@@ -130,8 +130,8 @@ function filtrarAbastecimentos($dataInicial, $dataFinal){
            
         }
         $dados[0] =  $txtTableControles;
-        $dados[1]  = $combustivel;
-        
+        $dados[1]  = 999;
+
         return  $dados;  
 
 } 
