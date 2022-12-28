@@ -48,7 +48,7 @@ function calcularLitrosOdCad() {
 }
 function calcularLitrosOdAlt() {
 
-	const odometroInicialAlt = document.getElementById("odometroInicialAlt").value
+	const odometroInicialAlt = document.getElementById("odometroinicialAlt").value
 	const odometroFinalAlt = document.getElementById("odometrofinalAlt").value
 	document.getElementById("litrosOdAlt").value = subtrairConvertendo(odometroInicialAlt, odometroFinalAlt)
 	
