@@ -1,5 +1,6 @@
 ﻿<?php
 include 'config.php';
+
 $acao = $_REQUEST['acao'];
 
 $dataInicial = ($_POST['dataInicial'] ? $_POST['dataInicial'] : date('Y-m-d'));
@@ -183,7 +184,6 @@ function alterarAbastecimento(){
   updateAbastecimentoAlterar($idAbastecimentoAlt, $idVeiculoAlt, $bombaAlt,$odometroInicialAlt,$odometroFinalAlt,
   $litrosOdAlt,$litrosAlt,$ultimoKmAlt, $kmAlt, $diferencaKmAlt,$mediaAlt,$ultimoHrAlt ,$hrAlt,$diferencaHrAlt, $frentistaAlt);
    
-
 } 
 function informacoesVeiculo($idVeiculo){
 
@@ -207,7 +207,6 @@ function informacoesVeiculo($idVeiculo){
     return $informacoesVeiculo;
 
 }       
-  
 function excluirAbastecimento(){
 
     $idAbastecimentoAlt = $_POST['idAbastecimentoAlt'];
@@ -215,6 +214,4 @@ function excluirAbastecimento(){
     deleteAbastecimento($idAbastecimentoAlt);
 
 }    
-
-
 ?>
