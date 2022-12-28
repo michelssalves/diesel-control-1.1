@@ -138,7 +138,7 @@ include '../controller/veiculosDataBaseAcess.php';
                             </select>
                         </td>
                         <td>
-                            <center><input onChange="this.form.submit()" type="checkbox" id="status" name="status" value="checked" <?= $status ?>>
+                            <center><input onChange="this.form.submit()" type="checkbox" id="status" name="statusVeiculo" value="checked" <?= $statusVeiculo ?>>
                         </td>
                     </tr>
                 </tbody>

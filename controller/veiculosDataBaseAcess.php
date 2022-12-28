@@ -2,41 +2,21 @@
 $acao = $_REQUEST['acao'];
 
 $page = $_REQUEST['page'];
-$combustivel = $_REQUEST['combustivel'];
-$combustivelAlt = strtoupper($_POST['combustivelAlt']);
-$combustivelCad = strtoupper($_POST['combustivelCad']);
-$marca = $_REQUEST['marca'];
-$marcaCad  = strtoupper($_POST['marcaCad ']);
-$marcaAlt = strtoupper($_POST['marcaAlt']);
-$modelo = $_REQUEST['modelo'];
-$modeloCad  = strtoupper($_POST['modeloCad ']);
-$modeloAlt = strtoupper($_POST['modeloAlt']);
-$idVeiculoAlt = $_POST['idVeiculoAlt'];
+$idVeiculo = $_POST['idVeiculo'];
 $prefixo = $_REQUEST['prefixo'];
-$prefixoAlt = strtoupper($_POST['prefixoAlt']);
-$prefixoCad = strtoupper($_POST['prefixoCad']);
-$ano = strtoupper($_POST['ano']);
-$ano = strtoupper($_POST['ano']);
-$placa = strtoupper($_POST['placa']);
-$placa = strtoupper($_POST['placa']);
-$numero_equipamento = strtoupper($_POST['numero_equipamento']);
-$numero_equipamento = strtoupper($_POST['numero_equipamento']);
-$descricao_caminhao = strtoupper($_POST['descricao_caminhao']);
-$descricao_caminhao = strtoupper($_POST['descricao_caminhao']);
+$numeroEquipamento = $_POST['numeroEquipamento'];
+$placa = $_POST['placa'];
+$descricaoCaminhao = $_POST['descricaoCaminhao'];
+$combustivel = $_REQUEST['combustivel'];
+$renavam = $_POST['renavam'];
+$chassi = $_POST['chassi'];
+$numeroMotor = $_POST['numeroMotor'];
+$ano = $_POST['ano'];
+$marca = $_REQUEST['marca'];
+$modelo = $_REQUEST['modelo'];
 $setor = $_REQUEST['setor'];
-$setorAlt = $_POST['setorAlt'];
-$setorCad = $_POST['setorCad'];
-$status = $_REQUEST['status'];
-$status_veiculo = strtoupper($_POST['status_veiculo']);
-$status_veiculo = strtoupper($_POST['status_veiculo']);
-$renavam = strtoupper($_POST['renavam']);
-$renavam = strtoupper($_POST['renavam']);
-$chassi = strtoupper($_POST['chassi']);
-$chassi = strtoupper($_POST['chassi']);
-$numero_motor = strtoupper($_POST['numero_motor']);
-$numero_motor = strtoupper($_POST['numero_motor']);
-$metodo = strtoupper($_POST['metodo']);
-$metodo = strtoupper($_POST['metodo']);
+$statusVeiculo = $_POST['statusVeiculo'];
+$metodo = $_POST['metodo'];
 
 if($acao == 'limpar'){
 
@@ -64,7 +44,7 @@ if($acao == 'cadastrarVeiculo'){
 }
 if($acao == 'desativar-veiculo' || $acao == 'ativar-veiculo'){
 
-    desativarVeiculo($acao);
+    desativarVeiculo($acao, $idVeiculo, $statusVeiculo);
 }
 if($acao == 'alterar-veiculo'){
  
@@ -73,31 +53,31 @@ if($acao == 'alterar-veiculo'){
 function cadastrarVeiculo(){
     include 'config.php';
 
-    insertTableVeiculosCadastrarNovo($numero_equipamento, $prefixoCad, $placa, $descricao_caminhao, $renavam, $chassi, 
-    $numero_motor, $ano, $marcaCad, $modeloCad, $combustivelCad, $metodo, $setorCad, $status_veiculo);
+    insertTableVeiculosCadastrarNovo($numeroEquipamento, $prefixo, $placa, $descricaoCaminhao, $renavam, $chassi, 
+    $numeroMotor, $ano, $marca, $modelo, $combustivel, $metodo, $setor, $statusVeiculo);
 
 }
 function alterarVeiculo(){
 
     include 'config.php';
     
-    updateTabeleaVeiculosAlterarVeiculo($idVeiculoAlt, $numero_equipamento, $prefixoAlt, $placa, $descricao_caminhao, $renavam, $chassi, 
-     $numero_motor, $ano, $marcaAlt, $modeloAlt, $combustivelAlt, $metodo, $setorAlt, $status_veiculo);
+    updateTabeleaVeiculosAlterarVeiculo($idVeiculo, $numeroEquipamento, $prefixo, $placa, $descricaoCaminhao, $renavam, $chassi, 
+     $numeroMotor, $ano, $marca, $modelo, $combustivel, $metodo, $setor, $statusVeiculo);
      
 }
-function desativarVeiculo($acao){
+function desativarVeiculo($acao, $idVeiculo, $statusVeiculo){
 
     include 'config.php';
 
     if($acao == 'desativar-veiculo'){
-        $status_veiculo = '2';
+        $statusVeiculo = '2';
     }else{
-        $status_veiculo = '1';
+        $statusVeiculo = '1';
     }
 
-    $idVeiculoAlt = $_POST['idVeiculoAlt'];
+ 
 
-    updateVeiculosStatus($idVeiculoAlt, $status_veiculo);
+    updateVeiculosStatus($idVeiculo, $statusVeiculo);
 
 
 }

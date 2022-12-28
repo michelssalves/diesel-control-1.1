@@ -68,13 +68,13 @@ $numero_motor, $ano, $marcaAlt, $modeloAlt, $metodo, $setorAlt, $status_veiculo)
     $sql->execute();
     }    
 
-    function updateVeiculosStatus($idVeiculoAlt, $status_veiculo){
+    function updateVeiculosStatus($idVeiculo, $statusVeiculo){
 
     include 'config.php';
 
-    $sql = $pdo->prepare("UPDATE veiculos SET status_veiculo = :status_veiculo WHERE id_veiculo = :idVeiculoAlt");
-    $sql->bindValue(':status_veiculo', $status_veiculo);
-    $sql->bindValue(':idVeiculoAlt', $idVeiculoAlt);
+    $sql = $pdo->prepare("UPDATE veiculos SET status_veiculo = :statusVeiculo WHERE id_veiculo = :idVeiculo");
+    $sql->bindValue(':statusVeiculo', $statusVeiculo);
+    $sql->bindValue(':idVeiculo', $idVeiculo);
     $sql->execute();
     }
 
