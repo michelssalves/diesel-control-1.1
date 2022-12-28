@@ -7,6 +7,7 @@ $prefixo = $_POST['prefixo'];
 $combustivel = $_POST['combustivel'];
 $marca = $_POST['marca'];
 $modelo = $_POST['modelo'];
+$setor = $_POST['setor'];
 $statusVeiculo = $_POST['statusVeiculo'];
 
 if($acao == 'limpar'){
@@ -17,7 +18,7 @@ if($acao == 'limpar'){
     $modelo = '';
     $setor = '';
     $status = '';
-    $filtrar = '';
+   
     
 }
     if($prefixo && $prefixo <> 'TODOS'){$filtroPrefixo = "AND prefixo = '$prefixo'";};
@@ -33,7 +34,7 @@ if($acao == 'limpar'){
  
 function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo,$filtroSetor, $filtroStatus, $page){
     
-        $result_for_page = 50;
+        $result_for_page = 25;
         if($page == ''){$page = 1;}
         $start = ($page * $result_for_page) - $result_for_page;
     
