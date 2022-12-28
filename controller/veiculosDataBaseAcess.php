@@ -39,11 +39,14 @@ if($acao == 'limpar'){
     include 'modal/modalCadastrarVeiculos.php'; 
 
     $sql = $pdo->prepare("SELECT * FROM veiculos AS v 
-        $filtroStatus $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor
-        ORDER BY prefixo ASC");
+        $filtroStatus $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor");
         $sql->execute();
 
        echo $resultados = $sql->rowCount();
+
+       $sql = $pdo->prepare("SELECT * FROM veiculos AS v 
+       $filtroStatus $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor
+       ORDER BY prefixo ASC LIMIT $start, $result_for_page");
 
         if ($sql->rowCount() > 0) {
 
