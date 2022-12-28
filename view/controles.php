@@ -216,7 +216,7 @@ include '../controller/checkAcess.php';
                         </tr>
                     </thead>
                     <tbody>
-                        <?php $dados = filtrarAbastecimentos($dataInicial, $dataFinal, $combustivel, $marca, $modelo,$prefixo ,$setor);  echo $dados[0];?>
+                        <?= filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $filtrodataInicial, $filtrodataFinal);?>
                     </tbody>
                 </table>
             </div>

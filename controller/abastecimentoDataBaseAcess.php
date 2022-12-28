@@ -61,15 +61,12 @@ if($acao == 'excluir-abastecimento'){
   
 }
 
-function filtrarAbastecimentos($dataInicial, $dataFinal, $combustivel, $marca, $modelo,$prefixo ,$setor){
+function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $filtrodataInicial, $filtrodataFinal){
 
     include 'config.php';
     include '../model/Abastecimentos.php';
     include 'functions.php';
     include 'modal/modalCadastrarAbastecimento.php'; 
-
-
-
 
         $sql = selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $filtrodataInicial, $filtrodataFinal);
 
@@ -139,10 +136,8 @@ function filtrarAbastecimentos($dataInicial, $dataFinal, $combustivel, $marca, $
             }
            
         }
-        $dados[0] =  $txtTableControles;
-        $dados[1]  = 999;
 
-        return  $dados;  
+        return $txtTableControles;  
 
 } 
 function registrarAbastecimento(){
