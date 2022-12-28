@@ -30,9 +30,10 @@ if($acao == 'limpar'){
     }else{
         $filtroStatus = "WHERE status_veiculo = 1";
     }
+    if($page == ''){$page = 1;}
 
     $result_for_page = 50;
-    if($page == ''){$page = 1;}
+
     $start = ($page * $result_for_page) - $result_for_page;
 
     include 'modal/modalCadastrarVeiculos.php'; 
@@ -41,8 +42,7 @@ if($acao == 'limpar'){
         $filtroStatus $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor
         ORDER BY prefixo ASC LIMIT $start, $result_for_page");
         $sql->execute();
-        return $sql;
-          
+      
 
         if ($sql->rowCount() > 0) {
 
@@ -76,10 +76,10 @@ if($acao == 'limpar'){
 
         $txtTableVeiculos .='</tbody></table>';
 
-        $sql = $pdo->prepare("SELECT COUNT(id_veiculo) AS numeroDePaginas FROM veiculos");
-        $sql->execute();
-        $row = $sql->fetch(PDO::FETCH_ASSOC);
-       echo $resultados  = $row['numeroDePaginas'];
+        $sql1 = $pdo->prepare("SELECT COUNT(id_veiculo) AS numeroDePaginas FROM veiculos");
+        $sql1->execute();
+        $row1 = $sql1->fetch(PDO::FETCH_ASSOC);
+       echo $resultados  = $row1['numeroDePaginas'];
 
         $number_pages = ceil($resultados / $result_for_page);
         $max_link = 2;
