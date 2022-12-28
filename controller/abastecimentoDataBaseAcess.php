@@ -39,7 +39,7 @@ if($dataInicial  == ''){
     $horaInicial = '00:00';
     $dataHoraIncial = $dataInicial.' '.$horaInicial;
 }
-if($dataFinalFiltro == ''){ 
+if($dataFinal == ''){ 
 
     $x = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
     $dataHoraFinal = $x->format('Y-m-d 23:59');
