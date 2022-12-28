@@ -59,7 +59,7 @@ function filtrarAbastecimentos($dataInicial, $dataFinal){
     if($setor && $setor <> 'TODOS'){$filtroSetor = "AND v.setor = '$setor'";}
 
     include 'functions.php';
-
+    include 'config.php';
 
         $sql = selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataInicial, $dataFinal);
 
