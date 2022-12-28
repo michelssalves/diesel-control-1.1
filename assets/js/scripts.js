@@ -24,8 +24,8 @@ function calcularDiferencaKmAlt() {
 	document.getElementById("diferencaKmAlt").value = subtrairConvertendo(kmAnterior, kmAtual) 
 	
 }
-function calcularDiferencaHr() {
-	const hrAtual = document.getElementById("hr").value
+function calcularDiferencaHrCad() {
+	const hrAtual = document.getElementById("hrCad").value
 	const hrAnterior = document.getElementById("ultimoHrCad").value
 
     document.getElementById("diferencaHrCad").value = subtrairConvertendo(hrAnterior, hrAtual) 
@@ -36,11 +36,11 @@ function calcularDiferencaHrAlt() {
 
     document.getElementById("diferencaHrAlt").value = subtrairConvertendo(hrAnterior, hrAtual) 
 }		
-function calcularLitrosOd() {
+function calcularLitrosOdCad() {
 
-	const odometroInicial = document.getElementById("odometroinicial").value
-	const odometroFinal = document.getElementById("odometrofinal").value
-	document.getElementById("litros_od").value = subtrairConvertendo(odometroInicial, odometroFinal)
+	const odometroInicial = document.getElementById("odometroInicialCad").value
+	const odometroFinal = document.getElementById("odometroFinalCad").value
+	document.getElementById("litrosOdCad").value = subtrairConvertendo(odometroInicial, odometroFinal)
 	
 }
 function calcularLitrosAlt() {
@@ -50,11 +50,11 @@ function calcularLitrosAlt() {
 	document.getElementById("litrosOdAlt").value = subtrairConvertendo(odometroInicial, odometroFinal)
 	
 }
-function calcularMedia(){
+function calcularMediaCad(){
 
 	const kmRodado = document.getElementById("diferencaKmCad").value
-	const litros = document.getElementById("litros").value
-	document.getElementById("media").value = dividirConvertendo(kmRodado, litros)
+	const litros = document.getElementById("litrosCad").value
+	document.getElementById("mediaCad").value = dividirConvertendo(kmRodado, litros)
 		
 }
 function calcularMediaAlt(){
