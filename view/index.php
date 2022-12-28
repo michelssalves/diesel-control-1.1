@@ -1,7 +1,8 @@
 <?php
 session_start();
-include '../controller/userDataBaseAcess.php';
 include '../model/Funcionarios.php';
+include '../controller/userDataBaseAcess.php';
+
 
 ?>
 <!doctype html>
