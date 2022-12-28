@@ -1,6 +1,5 @@
 ﻿<?php
 session_start();
-include 'model/Abastecimentos.php';
 
 $acao = $_REQUEST['acao'];
 // ****** AQUI É FEITA A PARTE DE CONTROLE DO MENU REGISTRO DE ABASTECIMENTOS 

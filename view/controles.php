@@ -1,7 +1,8 @@
 <?php
 session_start();
-include 'controller/checkAcess.php';
-include 'controller/abastecimentoDataBaseAcess.php';
+include '../controller/checkAcess.php';
+include '../model/Abastecimentos.php';
+include '../controller/abastecimentoDataBaseAcess.php';
 ?>
 <head>
     <meta charset="utf-8">

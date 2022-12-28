@@ -1,6 +1,4 @@
 <?php
-include 'model/Veiculos.php';
-
 $acao = $_REQUEST['acao'];
 
 $page = $_REQUEST['page'];
