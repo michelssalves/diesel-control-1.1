@@ -39,6 +39,8 @@ function updateFuncionariosToken(){
         $sql->bindValue(':usuario', $usuario);
         $sql->bindValue(':senha', md5($senha));
         $sql->execute();
+
+        return $sql;
     }
 
 ?>
