@@ -4,6 +4,11 @@ $acao = $_REQUEST['acao'];
 
 $dataInicial = ($_POST['dataInicial'] <> '' ? $_POST['dataInicial'] : date('Y-m-d'));
 $dataFinal = ($_POST['dataFinal'] <> '' ? $_POST['dataFinal'] : date('Y-m-d'));
+$combustivel = $_POST['combustivel'];
+$marca = $_POST['marca'];
+$modelo = $_POST['modelo'];
+$prefixo = $_POST['prefixo'];
+$setor = $_POST['setor'];
 
 if($acao == 'limpar'){
 
@@ -40,18 +45,11 @@ if($acao == 'excluir-abastecimento'){
   
 }
 
-function filtrarAbastecimentos($dataInicial, $dataFinal){
+function filtrarAbastecimentos($dataInicial, $dataFinal, $marca, $modelo, $prefixo, $setor ){
 
     include 'config.php';
     include 'functions.php';
     include 'modal/modalCadastrarAbastecimento.php'; 
-
-    $combustivel = $_POST['combustivel'];
-    $marca = $_POST['marca'];
-    $modelo = $_POST['modelo'];
-    $prefixo = $_POST['prefixo'];
-    $setor = $_POST['setor'];
- 
 
     if($prefixo && $prefixo <> 'TODOS'){$filtroPrefixo = "AND v.prefixo = '$prefixo'";};
     if($combustivel && $combustivel <> 'TODOS' ){$filtroCombustivel = "AND v.combustivel = '$combustivel'";}
