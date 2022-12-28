@@ -52,6 +52,8 @@ if($acao == 'excluir-abastecimento'){
   
 }
 function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataInicial, $dataFinal){
+
+    echo '<pre>'; echo  $dataInicial;
     
     include 'functions.php';
 
