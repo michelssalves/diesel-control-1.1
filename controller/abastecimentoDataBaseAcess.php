@@ -3,41 +3,41 @@ session_start();
 
 $acao = $_REQUEST['acao'];
 
-$combustivelFiltro = $_REQUEST['combustivelFiltro'];
-$marcaFiltro = $_REQUEST['marcaFiltro'];
-$modeloFiltro = $_REQUEST['modeloFiltro'];
-$prefixoFiltro = $_REQUEST['prefixoFiltro'];
-$setorFiltro = $_REQUEST['setorFiltro'];
-$dataIncialFiltro = $_REQUEST['dataIncialFiltro'];
-$dataFinalFiltro = $_REQUEST['dataFinalFiltro'];
+$combustivel = $_POST['combustivel'];
+$marca = $_POST['marca'];
+$modelo = $_POST['modelo'];
+$prefixo = $_POST['prefixo'];
+$setor = $_POST['setor'];
+$dataIncial = $_POST['dataIncial'];
+$dataFinal = $_POST['dataFinal'];
 
 if($acao == 'limpar'){
 
     $x = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
-    $dataIncialFiltro = $x->format('Y-m-d 00:00');
+    $dataIncial = $x->format('Y-m-d 00:00');
     $x = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
-    $dataFinalFiltro = $x->format('Y-m-d 23:59');
-    $prefixoFiltro = '';
-    $combustivelFiltro = '';
-    $marcaFiltro = '';
-    $modeloFiltro = '';
-    $setorFiltro = '';
+    $data = $x->format('Y-m-d 23:59');
+    $prefixo = '';
+    $combustivel = '';
+    $marca = '';
+    $modelo = '';
+    $setor = '';
 
 }
 
-if($prefixoFiltro && $prefixoFiltro <> 'TODOS'){$filtroPrefixo = "AND v.prefixo = '$prefixoFiltro'";};
-if($combustivelFiltro && $combustivelFiltro <> 'TODOS' ){$filtroCombustivel = "AND v.combustivel = '$combustivelFiltro'";}
-if($marcaFiltro && $marcaFiltro <> 'TODOS'){$filtroMarca = "AND v.marca = '$marcaFiltro'";}
-if($modeloFiltro && $modeloFiltro <> 'TODOS'){$filtroModelo = "AND v.modelo = '$modeloFiltro'";}
-if($setorFiltro && $setorFiltro <> 'TODOS'){$filtroSetor = "AND v.setor = '$setorFiltro'";}
-if($dataIncialFiltro  == ''){
+if($prefixo && $prefixo <> 'TODOS'){$filtroPrefixo = "AND v.prefixo = '$prefixo'";};
+if($combustivel && $combustivel <> 'TODOS' ){$filtroCombustivel = "AND v.combustivel = '$combustivel'";}
+if($marca && $marca <> 'TODOS'){$filtroMarca = "AND v.marca = '$marca'";}
+if($modelo && $modelo <> 'TODOS'){$filtroModelo = "AND v.modelo = '$modelo'";}
+if($setor && $setor <> 'TODOS'){$filtroSetor = "AND v.setor = '$setor'";}
+if($dataIncial  == ''){
 
     $x = new DateTime('NOW', new DateTimeZone('America/Sao_Paulo'));
     $dataHoraIncial = $x->format('Y-m-d 00:00');
 
 }else{
     $horaInicial = '00:00';
-    $dataHoraIncial = $dataIncialFiltro.' '.$horaInicial;
+    $dataHoraIncial = $dataIncial.' '.$horaInicial;
 }
 if($dataFinalFiltro == ''){ 
 
@@ -46,7 +46,7 @@ if($dataFinalFiltro == ''){
 
 }else{
     $horaFinal = '23:59';
-    $dataHoraFinal = $dataFinalFiltro.' '.$horaFinal;
+    $dataHoraFinal = $dataFinal.' '.$horaFinal;
 }
 if($acao == 'registrar-abastecimento'){
 
@@ -54,9 +54,9 @@ if($acao == 'registrar-abastecimento'){
 }
 if($acao == 'ultimoKm'){
     
-    $id_veiculo =  $_REQUEST['id'];
+    $idVeiculo =  $_REQUEST['id'];
 
-    $return = ['error' => false,  'dados' => informacoesVeiculo($id_veiculo)];
+    $return = ['error' => false,  'dados' => informacoesVeiculo($idVeiculo)];
   
     echo json_encode($return);
   
@@ -207,28 +207,27 @@ function listarAbastecimentos(){
 }
 function registrarAbastecimento(){
 
-    $id_veiculoRegistrar = $_POST['id_veiculoRegistrar'];
-    $bombaRegistrar = $_POST['bombaRegistrar'];
-    $odometroinicialRegistrar = $_POST['odometroinicialRegistrar'];
-    $ultimokmRegistrar = $_POST['ultimokmRegistrar']; 
-    $kmRegistrar = $_POST['kmRegistrar']; 
-    $diferencakmRegistrar = $_POST['diferencakmRegistrar'];
-    $ultimohrRegistrar = $_POST['ultimohrRegistrar'];
-    $hrRegistrar = $_POST['hrRegistrar']; 
-    $diferencahrRegistrar = $_POST['diferencahrRegistrar'];
-    $frentistaRegistrar = $_POST['frentistaRegistrar'];
-    $odometrofinalRegistrar = $_POST['odometrofinalRegistrar'];
-    $litrosRegistrar = $_POST['litrosRegistrar'];
-    $litros_odRegistrar = $_POST['litros_odRegistrar'];
-    $mediaRegistrar = $_POST['mediaRegistrar'];
+    $idVeiculoCad = $_POST['idVeiculoCad'];
+    $bombaCad = $_POST['bombaCad'];
+    $odometroInicialCad = $_POST['odometroInicialCad'];
+    $ultimoKmCad = $_POST['ultimoKmCad']; 
+    $kmCad = $_POST['kmCad']; 
+    $diferencaKmCad = $_POST['diferencaKmCad'];
+    $ultimoHrCad = $_POST['ultimoHrCad'];
+    $hrCad = $_POST['hrCad']; 
+    $diferencaHrCad = $_POST['diferencaHrCad'];
+    $frentistaCad = $_POST['frentistaCad'];
+    $odometroFinalCad = $_POST['odometroFinalCad'];
+    $litrosCad = $_POST['litrosCad'];
+    $litrosOdCad = $_POST['litrosOdCad'];
+    $mediaCad = $_POST['mediaCad'];
 
-    insertAbastecimentoNovo( $id_veiculoRegistrar, $bombaRegistrar ,$odometroinicialRegistrar ,$ultimokmRegistrar ,$kmRegistrar ,
-    $diferencakmRegistrar ,$ultimohrRegistrar ,$hrRegistrar ,$diferencahrRegistrar ,$frentistaRegistrar ,$odometrofinalRegistrar ,
-    $litrosRegistrar, $litros_odRegistrar, $mediaRegistrar);
+    insertAbastecimentoNovo($idVeiculoCad,$bombaCad, $odometroInicialCad, $ultimoKmCad, $kmCad, $diferencaKmCad, $ultimoHrCad,
+    $hrCad, $diferencaHrCad, $frentistaCad, $odometroFinalCad, $litrosCad, $litrosOdCad, $mediaCad);
 }
-function informacoesVeiculo($id_veiculo){
+function informacoesVeiculo($idVeiculo){
 
-    $sql = selectAbastecimentosPorVeiculo($id_veiculo);
+    $sql = selectAbastecimentosPorVeiculo($idVeiculo);
 
 	$row = $sql->fetch(PDO::FETCH_ASSOC);
     $setor = $row['setor'];
@@ -245,37 +244,35 @@ function informacoesVeiculo($id_veiculo){
 
     return $informacoesVeiculo;
 
-}
-             
+}       
 function alterarAbastecimento(){
 
-    $id_abastecimentoAlterar = $_POST['id_abastecimentoAlterar'];
-    $id_veiculoAlterar = $_POST['id_veiculoAlterar'];
-    $bombaAlterar = $_POST['bombaAlterar'];
-    $odometroinicialAlterar = $_POST['odometroinicialAlterar']; 
-    $odometrofinalAlterar = $_POST['odometrofinalAlterar']; 
-    $litros_odAlterar = $_POST['litros_odAlterar'];
-    $litrosAlterar = $_POST['litrosAlterar']; 
-    $ultimokmAlterar = $_POST['ultimokmAlterar']; 
-    $kmAlterar = $_POST['kmAlterar']; 
-    $diferencakmAlterar = $_POST['diferencakmAlterar'];
-    $mediaAlterar = $_POST['mediaAlterar'];
-    $ultimohrAlterar = $_POST['ultimohrAlterar']; 
-    $hrAlterar = $_POST['hrAlterar']; 
-    $diferencahrAlterar = $_POST['diferencahrAlterar']; 
-    $frentistaAlterar = $_POST['frentistaAlterar'];
+    $idAbastecimentoAlt = $_POST['idAbastecimentoAlt'];
+    $idVeiculoAlt = $_POST['idVeiculoAlt'];
+    $bombaAlt = $_POST['bombaAlt'];
+    $odometroInicialAlt = $_POST['odometroInicialAlt']; 
+    $odometroFinalAlt = $_POST['odometroFinalAlt']; 
+    $litrosOdAlt = $_POST['litrosOdAlt'];
+    $litrosAlt = $_POST['litrosAlt']; 
+    $ultimoKmAlt = $_POST['ultimoKmAlt']; 
+    $kmAlt = $_POST['kmAlt']; 
+    $diferencaKmAlt = $_POST['diferencaKmAlt'];
+    $mediaAlt = $_POST['mediaAlt'];
+    $ultimoHrAlt = $_POST['ultimoHrAlt']; 
+    $hrAlt = $_POST['hrAlt']; 
+    $diferencaHrAlt = $_POST['diferencaHrAlt']; 
+    $frentistaAlt = $_POST['frentistaAlt'];
 
-    updateAbastecimentoAlterar($id_abastecimentoAlterar, $id_veiculoAlterar, $bombaAlterar, $odometroinicialAlterar, $odometrofinalAlterar, 
-    $litros_odAlterar, $litrosAlterar, $ultimokmAlterar, $kmAlterar, $diferencakmAlterar, $mediaAlterar, $ultimohrAlterar, $hrAlterar, 
-    $diferencahrAlterar, $frentistaAlterar);
+    updateAbastecimentoAlterar($idAbastecimentoAlt, $idVeiculoAlt, $bombaAlt,$odometroInicialAlt,$odometroFinalAlt,$litrosOdAlt,$litrosAlt,
+    $ultimoKmAlt, $kmAlt, $diferencaKmAlt,$mediaAlt,$ultimoHrAlt ,$hrAlt,$diferencaHrAlt, $frentistaAlt);
    
 
 }   
 function excluirAbastecimento(){
 
-    $id_abastecimentoAlterar = $_POST['id_abastecimentoAlterar'];
+    $idAbastecimentoAlt = $_POST['idAbastecimentoAlt'];
 
-    deleteAbastecimento($id_abastecimentoAlterar);
+    deleteAbastecimento($idAbastecimentoAlt);
 
 }    
 

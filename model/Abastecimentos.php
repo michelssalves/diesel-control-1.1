@@ -11,13 +11,13 @@ function selectAbastecimentosTodosVeiculos(){
 
     return $sql;
 }
-function selectAbastecimentosPorVeiculo($id_veiculo){
+function selectAbastecimentosPorVeiculo($idVeiculo){
     include '../controller/config.php';
     
     $sql = $pdo->prepare("SELECT * FROM abastecimentos 
-	WHERE id_veiculo = :id_veiculo  
+	WHERE id_veiculo = :idVeiculo  
     ORDER BY data_abastecimento DESC LIMIT 1");
-	$sql->bindValue(':id_veiculo', $id_veiculo);
+	$sql->bindValue(':idVeiculo', $idVeiculo);
 	$sql->execute();
 
     return $sql;
@@ -36,73 +36,71 @@ function selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroM
 
     return $sql;
 }
-function insertAbastecimentoNovo( $id_veiculoRegistrar, $bombaRegistrar ,$odometroinicialRegistrar ,$ultimokmRegistrar ,$kmRegistrar ,
-$diferencakmRegistrar ,$ultimohrRegistrar ,$hrRegistrar ,$diferencahrRegistrar ,$frentistaRegistrar ,$odometrofinalRegistrar ,
-$litrosRegistrar, $litros_odRegistrar, $mediaRegistrar){
+function insertAbastecimentoNovo($idVeiculoCad,$bombaCad, $odometroInicialCad, $ultimoKmCad, $kmCad, $diferencaKmCad, $ultimoHrCad,
+$hrCad, $diferencaHrCad, $frentistaCad, $odometroFinalCad, $litrosCad, $litrosOdCad, $mediaCad){
 
     include '../controller/config.php';
 
     $sql = $pdo->prepare("INSERT INTO abastecimentos (id_veiculo, bomba, odometroinicial, ultimokm,	
     km, diferencakm, ultimohr, hr, diferencahr, frentista,	odometrofinal, litros, litros_od, media, data_abastecimento, dataabastecimento2) 
-    VALUES (:id_veiculoRegistrar, :bombaRegistrar, :odometroinicialRegistrar,:ultimokmRegistrar,:kmRegistrar, :diferencakmRegistrar, :ultimohrRegistrar, :hrRegistrar, :diferencahrRegistrar,
-    :frentistaRegistrar, :odometrofinalRegistrar, :litrosRegistrar, :litros_odRegistrar, :mediaRegistrar, :data_abastecimento, :data_sem_hora)");
+    VALUES (:idVeiculoCad, :bombaCad, :odometroInicialCad,:ultimoKmCad,:kmCad, :diferencaKmCad, :ultimoHrCad, :hrCad, :diferencaHrCad,
+    :frentistaCad, :odometroFinalCad, :litrosCad, :litrosOdCad, :mediaCad, :data_abastecimento, :data_sem_hora)");
 
-    $sql->bindValue(':id_veiculoRegistrar', $id_veiculoRegistrar);
-    $sql->bindValue(':bombaRegistrar', $bombaRegistrar);
-    $sql->bindValue(':odometroinicialRegistrar', $odometroinicialRegistrar);
-    $sql->bindValue(':ultimokmRegistrar', $ultimokmRegistrar);
-    $sql->bindValue(':kmRegistrar', $kmRegistrar);
-    $sql->bindValue(':diferencakmRegistrar', $diferencakmRegistrar);
-    $sql->bindValue(':ultimohrRegistrar', $ultimohrRegistrar);
-    $sql->bindValue(':hrRegistrar', $hrRegistrar);
-    $sql->bindValue(':diferencahrRegistrar', $diferencahrRegistrar);
-    $sql->bindValue(':frentistaRegistrar', $frentistaRegistrar);
-    $sql->bindValue(':odometrofinalRegistrar', $odometrofinalRegistrar);
-    $sql->bindValue(':litrosRegistrar', $litrosRegistrar);
-    $sql->bindValue(':litros_odRegistrar', $litros_odRegistrar);
-    $sql->bindValue(':mediaRegistrar', $mediaRegistrar);
+    $sql->bindValue(':idVeiculoCad', $idVeiculoCad);
+    $sql->bindValue(':bombaCad', $bombaCad);
+    $sql->bindValue(':odometroInicialCad', $odometroInicialCad);
+    $sql->bindValue(':ultimoKmCad', $ultimoKmCad);
+    $sql->bindValue(':kmCad', $kmCad);
+    $sql->bindValue(':diferencaKmCad', $diferencaKmCad);
+    $sql->bindValue(':ultimoHrCad', $ultimoHrCad);
+    $sql->bindValue(':hrCad', $hrCad);
+    $sql->bindValue(':diferencaHrCad', $diferencaHrCad);
+    $sql->bindValue(':frentistaCad', $frentistaCad);
+    $sql->bindValue(':odometroFinalCad', $odometroFinalCad);
+    $sql->bindValue(':litrosCad', $litrosCad);
+    $sql->bindValue(':litrosCad', $litrosCad);
+    $sql->bindValue(':mediaCad', $mediaCad);
     $sql->bindValue(':data_abastecimento', date('Y-m-d H:i'));
     $sql->bindValue(':data_sem_hora', date('Y-m-d'));
     $sql->execute();
 
 }
 
-function updateAbastecimentoAlterar($id_abastecimentoAlterar, $id_veiculoAlterar, $bombaAlterar, $odometroinicialAlterar, $odometrofinalAlterar, 
-$litros_odAlterar, $litrosAlterar, $ultimokmAlterar, $kmAlterar, $diferencakmAlterar, $mediaAlterar, $ultimohrAlterar, $hrAlterar, 
-$diferencahrAlterar, $frentistaAlterar){
+function updateAbastecimentoAlterar($idAbastecimentoAlt, $idVeiculoAlt, $bombaAlt,$odometroInicialAlt,$odometroFinalAlt,
+$litrosOdAlt,$litrosAlt,$ultimoKmAlt, $kmAlt, $diferencaKmAlt,$mediaAlt,$ultimoHrAlt ,$hrAlt,$diferencaHrAlt, $frentistaAlt){
 
     include '../controller/config.php';
 
-     $sql = $pdo->prepare("UPDATE abastecimentos SET id_veiculo = :id_veiculo, bomba = :bomba, odometroinicial = :odometroinicial, 
-     ultimokm = :ultimokm, km = :km, diferencakm = :diferencakm, ultimohr = :ultimohr, hr = :hr, diferencahr = :diferencahr, 
-     frentista = :frentista,	odometrofinal = :odometrofinal, litros = :litros, litros_od = :litros_od, media = :media, data_alteracao = :data_alteracao 
-     WHERE id_abastecimento = :id_abastecimento");
+     $sql = $pdo->prepare("UPDATE abastecimentos SET id_veiculo = :idVeiculoAlt, bomba = :bombaAlt, odometroinicial = :odometroInicialAlt, 
+     ultimokm = :ultimoKmAlt, km = :kmAlt, diferencakm = :diferencaKmAlt, ultimohr = :ultimoHrAlt, hr = :hrAlt, diferencahr = :diferencaHrAlt, 
+     frentista = :frentista, odometrofinal = :odometroFinalAlt, litros = :litrosAlt, litros_od = :litrosOdAlt, media = :mediaAlt, data_alteracao = :data_alteracao 
+     WHERE id_abastecimento = :idAbastecimentoAlt");
      
-     $sql->bindValue(':id_abastecimento', $id_abastecimentoAlterar);
-     $sql->bindValue(':id_veiculo', $id_veiculoAlterar);
-     $sql->bindValue(':bomba', $bombaAlterar);
-     $sql->bindValue(':odometroinicial', $odometroinicialAlterar);
-     $sql->bindValue(':ultimokm', $ultimokmAlterar);
-     $sql->bindValue(':km', $kmAlterar);
-     $sql->bindValue(':diferencakm', $diferencakmAlterar);
-     $sql->bindValue(':ultimohr', $ultimohrAlterar);
-     $sql->bindValue(':hr', $hrAlterar);
-     $sql->bindValue(':diferencahr', $diferencahrAlterar);
-     $sql->bindValue(':frentista', $frentistaAlterar);
-     $sql->bindValue(':odometrofinal', $odometrofinalAlterar);
-     $sql->bindValue(':litros', $litrosAlterar);
-     $sql->bindValue(':litros_od', $litros_odAlterar);
-     $sql->bindValue(':media', $mediaAlterar);
+     $sql->bindValue(':idAbastecimentoAlt', $idAbastecimentoAlt);
+     $sql->bindValue(':idVeiculoAlt', $idVeiculoAlt);
+     $sql->bindValue(':bombaAlt', $bombaAlt);
+     $sql->bindValue(':odometroInicialAlt', $odometroInicialAlt);
+     $sql->bindValue(':ultimoKmAlt', $ultimoKmAlt);
+     $sql->bindValue(':kmAlt', $kmAlt);
+     $sql->bindValue(':diferencaKmAlt', $diferencaKmAlt);
+     $sql->bindValue(':ultimoHrAlt', $ultimoHrAlt);
+     $sql->bindValue(':hrAlt', $hrAlt);
+     $sql->bindValue(':diferencaHrAlt', $diferencaHrAlt);
+     $sql->bindValue(':frentistaAlt', $frentistaAlt);
+     $sql->bindValue(':odometroFinalAlt', $odometroFinalAlt);
+     $sql->bindValue(':litrosAlt', $litrosAlt);
+     $sql->bindValue(':litrosOdAlt', $litrosOdAlt);
+     $sql->bindValue(':mediaAlt', $mediaAlt);
      $sql->bindValue(':data_alteracao', date('Y-m-d H:i'));
      $sql->execute();
  }
 
- function deleteAbastecimento($id_abastecimentoAlterar){
+ function deleteAbastecimento($idAbastecimentoAlt){
 
     include '../controller/config.php';
 
-    $sql = $pdo->prepare("DELETE FROM abastecimentos WHERE id_abastecimento = :id_abastecimentoAlterar");
-    $sql->bindValue(':id_abastecimentoAlterar', $id_abastecimentoAlterar);
+    $sql = $pdo->prepare("DELETE FROM abastecimentos WHERE id_abastecimento = :idAbastecimentoAlt");
+    $sql->bindValue(':idAbastecimentoAlt', $idAbastecimentoAlt);
     $sql->execute();
     
 }

@@ -59,10 +59,10 @@ include '../controller/abastecimentoDataBaseAcess.php';
                         </thead>
                         <tbody>
                             <tr>
-                                <td><input type="date" name="dataIncialFiltro" value="<?= $dataIncialFiltro ?>"></td>
-                                <td><input type="date" name="dataFinalFiltro" value="<?= $dataFinalFiltro ?>"></td>
+                                <td><input type="date" name="dataIncial" value="<?= $dataIncial ?>"></td>
+                                <td><input type="date" name="dataFinal" value="<?= $dataFinal ?>"></td>
                                 <td>
-                                    <select onChange="this.form.submit()" name="prefixoFiltro" required>
+                                    <select onChange="this.form.submit()" name="prefixo" required>
                                     <option selected><?= ($prefixoFiltro <> '' ? $prefixoFiltro : 'TODOS') ?></options>
                                     <option>TODOS</options>
                                         <?php
@@ -78,7 +78,7 @@ include '../controller/abastecimentoDataBaseAcess.php';
                                     </select>
                                 </td>
                                 <td>
-                                    <select onChange="this.form.submit()" name="combustivelFiltro">
+                                    <select onChange="this.form.submit()" name="combustivel">
                                     <option selected><?= ($combustivelFiltro <> '' ? $combustivelFiltro : 'TODOS') ?></options>
                                     <option>TODOS</options>
                                         <?php
@@ -92,7 +92,7 @@ include '../controller/abastecimentoDataBaseAcess.php';
                                     </select>        
                                 </td>
                                 <td>
-                                    <select onChange="this.form.submit()" name="marcaFiltro">
+                                    <select onChange="this.form.submit()" name="marca">
                                     <option selected><?= ($marcaFiltro <> '' ? $marcaFiltro : 'TODOS') ?></options>
                                     <option>TODOS</options>
                                         <?php
@@ -106,7 +106,7 @@ include '../controller/abastecimentoDataBaseAcess.php';
                                     </select>
                                 </td>
                                 <td>
-                                    <select onChange="this.form.submit()" name="modeloFiltro">
+                                    <select onChange="this.form.submit()" name="modelo">
                                     <option selected><?= ($modeloFiltro <> '' ? $modeloFiltro : 'TODOS') ?></options>
                                     <option>TODOS</options>
                                         <?php
@@ -120,7 +120,7 @@ include '../controller/abastecimentoDataBaseAcess.php';
                                     </select>
                                 </td>
                                 <td>
-                                    <select onChange="this.form.submit()" name="setorFiltro">
+                                    <select onChange="this.form.submit()" name="setor">
                                     <option selected><?= ($setorFiltro <> '' ? $setorFiltro : 'TODOS') ?></options>
                                     <option>TODOS</options>
                                         <?php
