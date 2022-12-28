@@ -2,7 +2,7 @@
 session_start();
 $acao = $_REQUEST['acao'];
 
-$tabela = filtrarAbastecimentos();
+$tabelaFiltrada = filtrarAbastecimentos();
 
 if($acao == 'limpar'){
 
