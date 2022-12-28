@@ -146,10 +146,6 @@ if($acao == 'excluir-abastecimento'){
 
 function registrarAbastecimento(){
 
-    include 'config.php';
-    include '../model/Abastecimentos.php';
-    include 'functions.php';
-
     $idVeiculoCad = $_POST['idVeiculoCad'];
     $bombaCad = $_POST['bombaCad'];
     $odometroInicialCad = $_POST['odometroInicialCad'];
