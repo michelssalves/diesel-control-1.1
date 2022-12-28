@@ -6,6 +6,31 @@ $acao = $_REQUEST['acao'];
 if($acao == 'alterar-abastecimento'){
 
     alterarAbastecimento();
+    function alterarAbastecimento(){
+
+        include '../model/Abastecimentos.php';
+     
+        $idAbastecimentoAlt = $_POST['idAbastecimentoAlt'];
+        $idVeiculoAlt = $_POST['idVeiculoAlt'];
+        $bombaAlt = $_POST['bombaAlt'];
+        $odometroInicialAlt = $_POST['odometroInicialAlt']; 
+        $odometroFinalAlt = $_POST['odometroFinalAlt']; 
+        $litrosOdAlt = $_POST['litrosOdAlt'];
+        $litrosAlt = $_POST['litrosAlt']; 
+        $ultimoKmAlt = $_POST['ultimoKmAlt']; 
+        $kmAlt = $_POST['kmAlt']; 
+        $diferencaKmAlt = $_POST['diferencaKmAlt'];
+        $ultimoHrAlt = $_POST['ultimoHrAlt']; 
+        $hrAlt = $_POST['hrAlt']; 
+        $diferencaHrAlt = $_POST['diferencaHrAlt']; 
+        $frentistaAlt = $_POST['frentistaAlt'];
+        $mediaAlt = $_POST['mediaAlt'];
+     
+      updateAbastecimentoAlterar($idAbastecimentoAlt, $idVeiculoAlt, $bombaAlt,$odometroInicialAlt,$odometroFinalAlt,
+      $litrosOdAlt,$litrosAlt,$ultimoKmAlt, $kmAlt, $diferencaKmAlt,$mediaAlt,$ultimoHrAlt ,$hrAlt,$diferencaHrAlt, $frentistaAlt);
+       
+    
+    } 
     
 }
 
@@ -189,31 +214,7 @@ function informacoesVeiculo($idVeiculo){
     return $informacoesVeiculo;
 
 }       
-function alterarAbastecimento(){
-
-    include '../model/Abastecimentos.php';
- 
-    $idAbastecimentoAlt = $_POST['idAbastecimentoAlt'];
-    $idVeiculoAlt = $_POST['idVeiculoAlt'];
-    $bombaAlt = $_POST['bombaAlt'];
-    $odometroInicialAlt = $_POST['odometroInicialAlt']; 
-    $odometroFinalAlt = $_POST['odometroFinalAlt']; 
-    $litrosOdAlt = $_POST['litrosOdAlt'];
-    $litrosAlt = $_POST['litrosAlt']; 
-    $ultimoKmAlt = $_POST['ultimoKmAlt']; 
-    $kmAlt = $_POST['kmAlt']; 
-    $diferencaKmAlt = $_POST['diferencaKmAlt'];
-    $ultimoHrAlt = $_POST['ultimoHrAlt']; 
-    $hrAlt = $_POST['hrAlt']; 
-    $diferencaHrAlt = $_POST['diferencaHrAlt']; 
-    $frentistaAlt = $_POST['frentistaAlt'];
-    $mediaAlt = $_POST['mediaAlt'];
- 
-  updateAbastecimentoAlterar($idAbastecimentoAlt, $idVeiculoAlt, $bombaAlt,$odometroInicialAlt,$odometroFinalAlt,
-  $litrosOdAlt,$litrosAlt,$ultimoKmAlt, $kmAlt, $diferencaKmAlt,$mediaAlt,$ultimoHrAlt ,$hrAlt,$diferencaHrAlt, $frentistaAlt);
-   
-
-}   
+  
 function excluirAbastecimento(){
 
     $idAbastecimentoAlt = $_POST['idAbastecimentoAlt'];
