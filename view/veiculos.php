@@ -201,7 +201,6 @@ include '../controller/veiculosDataBaseAcess.php';
             </div>
         </div>
     </div>
-    <?php include '../view/modalCadastrarVeiculos.php'; ?>
     <script src="diesel-control-1.1/assets/js/scripts.js"></script>
     <script src="diesel-control-1.1/assets/js/fontawesome.all.min.js"></script>
     <script src="diesel-control-1.1/assets/js/bootstrap.bundle.min.v5.2.3.js"></script>
