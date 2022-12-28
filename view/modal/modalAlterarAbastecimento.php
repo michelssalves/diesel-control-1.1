@@ -5,7 +5,7 @@
                 <h1>ALTERAR ABASTECIMENTO</h1>
             </div>
             <div class="modal-body">
-                <form method="POST">
+                <form method="get">
                     <input type="hidden" name="idAbastecimentoAlt" value="<?= $row['id_abastecimento'] ?>">
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing">Data:</span>
