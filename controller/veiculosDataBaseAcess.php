@@ -42,7 +42,8 @@ if($acao == 'limpar'){
         $filtroStatus $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor
         ORDER BY prefixo ASC LIMIT $start, $result_for_page");
         $sql->execute();
-      
+
+       echo $resultados = $sql->rowCount();
 
         if ($sql->rowCount() > 0) {
 
@@ -76,10 +77,10 @@ if($acao == 'limpar'){
 
         $txtTableVeiculos .='</tbody></table>';
 
-        $sql1 = $pdo->prepare("SELECT COUNT(id_veiculo) AS numeroDePaginas FROM veiculos");
+   /*     $sql1 = $pdo->prepare("SELECT COUNT(id_veiculo) AS numeroDePaginas FROM veiculos");
         $sql1->execute();
         $row1 = $sql1->fetch(PDO::FETCH_ASSOC);
-       echo $resultados  = $row1['numeroDePaginas'];
+       echo $resultados  = $row1['numeroDePaginas'];*/
 
         $number_pages = ceil($resultados / $result_for_page);
         $max_link = 2;
