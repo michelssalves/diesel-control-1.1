@@ -40,6 +40,8 @@ if($acao == 'excluir-abastecimento'){
 }
 function filtrarAbastecimentos(){
 
+    include 'modal/modalCadastrarAbastecimentos.php'; 
+
     $combustivel = $_POST['combustivel'];
     $marca = $_POST['marca'];
     $modelo = $_POST['modelo'];
@@ -55,6 +57,7 @@ function filtrarAbastecimentos(){
     if($setor && $setor <> 'TODOS'){$filtroSetor = "AND v.setor = '$setor'";}
 
     include 'functions.php';
+
 
         $sql = selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $dataInicial, $dataFinal);
 
