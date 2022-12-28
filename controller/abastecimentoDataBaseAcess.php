@@ -127,7 +127,7 @@ function filtrarAbastecimentos(){
            
         }
           
-        return $txtTableControles;  
+        return $sql;  
 
 } 
 function registrarAbastecimento(){
