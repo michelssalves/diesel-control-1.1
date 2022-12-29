@@ -4,7 +4,6 @@ include '../model/Veiculos.php';
 include '../controller/veiculosController.php';
 include 'header.php';
 ?>
-
 <body>
     <div class="container">
         <div class="col-md-auto mt-1">

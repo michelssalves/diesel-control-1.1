@@ -1,6 +1,22 @@
-<div class="w3-bar w3-light-grey">
-        <a href="menu-principal-novo" class="w3-bar-item w3-button">Usuario Logado: <?= $_SESSION['nome']?></a>
-        <a href="logout-novo" class="w3-bar-item w3-button w3-red w3-right">Sair</a>
+    <div class="container">
+        <div class="col-md-auto mt-1">
+            <div class="fundo-botoes rounded">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon">
+                            </span>
+                            <a class="navbar-brand mt-1" href="#"><label>Usuario Logado: <?= $_SESSION['nome']; ?></label></a>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarText">
+                            <span class="navbar-text">
+                                <a href="logout-novo" class="btn btn-danger btn">Sair</a>
+                            </span>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
     </div>
     <div class="container">
         <div class="row justify-content-md-center">

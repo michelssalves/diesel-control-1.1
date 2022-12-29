@@ -1,14 +1,36 @@
-<div class="w3-bar w3-light-grey">
-        <a href="menu-principal-novo" class="w3-bar-item w3-button">Menu Principal</a>
-        <a href="controle-de-veiculos-novo" class="w3-bar-item w3-button">Veiculos</a>
-        <a href="logout-novo" class="w3-bar-item w3-button w3-red w3-right">Sair</a>
-        <a class="w3-bar-item w3-button w3-right"><?= $_SESSION['nome']?></a>
-    </div>
     <div class="container">
-        <div class="row justify-content-md-center">
-            <div class="col-md-auto mt-4">  
-
-            <form method="POST">  
+        <div class="col-md-auto mt-1">
+            <div class="fundo-botoes rounded">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon">
+                            </span>
+                            <a class="navbar-brand mt-1" href="#"><label>Usuario Logado: <?= $_SESSION['nome']; ?></label></a>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarText">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-1">
+                                <li class="nav-item p-1">
+                                    <a href="controle-de-combustivel-novo" class="btn btn-primary btn">Menu Principal</a>
+                                </li>
+                                <li class="nav-item p-1">
+                                    <a href="controle-de-veiculos-novo" class="btn btn-primary btn">Veiculos</a>
+                                </li>
+                            </ul>
+                            <span class="navbar-text">
+                                <a href="logout-novo" class="btn btn-danger btn">Sair</a>
+                            </span>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+<div class="container mt-2 mb-1 ">
+    <div class="fundo-botoes rounded">
+        <div class="row justify-content-md-center h-auto ">
+            <div class="col-md-auto mt-4">
+                <form method="POST">  
                 <button type="button" class='btn btn-primary btn-sm' data-bs-toggle='modal' data-bs-target='#modalCadastrarAbastecimento'>Cadastrar</button>
                 <button class="btn btn-success btn-sm" onclick="table2excel('t1')">Excel</button>
                 <button type="submit" class='btn btn-primary btn-sm'>Filtrar</button>
@@ -16,6 +38,7 @@
             </div>
         </div>
     </div>
+</div>
     <div class="container">
                 <div class="table-responsive">
                     <table class="table table-sm fs-6 mb-0">
