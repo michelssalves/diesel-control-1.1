@@ -15,8 +15,9 @@
    <!--  /TABLESAW - DEIXA A TABELA RESPONSIVA-->
     <script src="diesel-control-1.1/assets/js/jquery-3.6.1.min.js"></script>
     <script src="diesel-control-1.1/assets/js/sorttable.js"></script>
-    <script src="diesel-control-1.1/assets/js/jquery.table2excel.js"></script>
     <script src="diesel-control-1.1/assets/js/scripts.js"></script>
+    <script src="diesel-control-1.1/assets/js/jquery.table2excel.js"></script>
+
     <script src="diesel-control-1.1/assets/js/preloader.js"></script>
     <script src="diesel-control-1.1/assets/js/fontawesome.all.min.js"></script>
     <script src="diesel-control-1.1/assets/js/bootstrap.bundle.min.v5.2.3.js"></script>
