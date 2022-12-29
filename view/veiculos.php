@@ -35,7 +35,7 @@ include 'header.php';
     </nav>
     </div>
     </div>
-    </div>
+  
 
 
    <!-- <div class="w3-bar w3-light-grey">
@@ -54,6 +54,7 @@ include 'header.php';
                     <button name="acao" value="limpar" type="submit" class='btn btn-secondary btn'>Limpar</button>  
             </div>
         </div>
+    </div>
     </div>
     <div class="container">
         <div class="table-responsive">
