@@ -26,15 +26,30 @@ function selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroM
     
     include '../controller/config.php';
 
-    $sql = $pdo->prepare("SELECT *FROM veiculos AS v  
+    $dados = array (
+        'sql' => '',
+        'count 2' => '',
+    );
+
+    $sqlFiltro = $pdo->prepare("SELECT *FROM veiculos AS v  
     JOIN abastecimentos AS a 
     ON a.id_veiculo = v.id_veiculo
     WHERE a.dataabastecimento2 = '$filtrodataAbastecimento'
     $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor
     ORDER BY a.data_abastecimento DESC LIMIT $start, $resultadoPorPagina");
-    $sql->execute();
+    $sqlFiltro->execute();
 
-    return $sql;
+    $sqlCount = $pdo->prepare("SELECT *FROM veiculos AS v  
+    JOIN abastecimentos AS a 
+    ON a.id_veiculo = v.id_veiculo
+    WHERE a.dataabastecimento2 = '$filtrodataAbastecimento'
+    $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor");
+    $sqlCount->execute();
+
+    $dados['sql'] = $sqlFiltro;
+    $dados['count'] = $sqlCount;
+
+    return  $dados;
 }
 function insertAbastecimentoNovo($idVeiculoCad,$bombaCad, $odometroInicialCad, $ultimoKmCad, $kmCad, $diferencaKmCad, $ultimoHrCad,
 $hrCad, $diferencaHrCad, $frentistaCad, $odometroFinalCad, $litrosCad, $litrosOdCad, $mediaCad){

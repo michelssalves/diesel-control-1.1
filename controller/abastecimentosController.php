@@ -47,12 +47,12 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
     $start = ($page * $resultadoPorPagina) - $resultadoPorPagina;
     
         $sql = selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $filtrodataAbastecimento, $start, $resultadoPorPagina);
-        $resultados = $sql->rowCount();
-        if ($sql->rowCount() > 0) {
+        $resultados = $sql[1]->rowCount();
+        if ($sql[0]->rowCount() > 0) {
             
             $txtTableAbastecimentos .='<tbody>';
 
-            $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
+            $lista = $sql[0]->fetchAll(PDO::FETCH_ASSOC);
 
             foreach($lista as $row){
 
