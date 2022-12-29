@@ -5,7 +5,7 @@ $acao = $_REQUEST['acao'];
 
 $token = verificaToken($_SESSION['id_funcionario']);
 
-if($_SESSION['token'] <> verificaToken($token )){
+if($_SESSION['token'] <> $token){
     
     session_destroy();
     header("Location:  login-diesel-control-novo");
