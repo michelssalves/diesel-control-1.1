@@ -1,7 +1,7 @@
 <?php
 if($acao == 'sair'){
     session_destroy();
-    header("Location:  login-diesel-control-novo");
+    header("Location: login-diesel-control-novo");
 }
 if($_SESSION['id_funcionario']){
     include '../model/Funcionarios.php';
