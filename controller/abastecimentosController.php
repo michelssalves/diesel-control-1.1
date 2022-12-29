@@ -144,7 +144,7 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
           
         }
 
-        return $txtTableAbastecimentos;  
+        return $resultados ;  
 
 } 
 if($acao == 'registrar-abastecimento'){
