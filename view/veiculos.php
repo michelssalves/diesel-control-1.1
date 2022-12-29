@@ -7,7 +7,7 @@ include 'header.php';
 
 <body>
     <div class="container">
-        <div class="col-md-auto">
+        <div class="col-md-auto mt-1">
             <div class="fundo-botoes rounded">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
