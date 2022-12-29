@@ -11,6 +11,7 @@
     <script src="diesel-control-1.1/assets/js/tablesawn-label.js"></script>
     <script src="diesel-control-1.1/assets/js/tablesaw.js"></script>
     <script src="diesel-control-1.1/assets/js/tablesaw-init.js"></script>
+    <script src="diesel-control-1.1/assets/js/preloader.js"></script>
    <!--  /TABLESAW - DEIXA A TABELA RESPONSIVA-->
     <script src="diesel-control-1.1/assets/js/jquery-3.6.1.min.js"></script>
     <script src="diesel-control-1.1/assets/js/sorttable.js"></script>
