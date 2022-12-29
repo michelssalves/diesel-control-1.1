@@ -1,3 +1,9 @@
+<body>
+    <div id="preloader">
+        <div class="inner">
+                <img src="diesel-control-1.1/assets/img/gifs/aguarde12.gif" alt="">
+           </div>
+        </div>
 <?php
 session_start();
 include '../model/Abastecimentos.php';
@@ -24,5 +30,6 @@ include 'header.php';
     <script src="diesel-control-1.1/assets/js/scripts.js"></script>
     <script src="diesel-control-1.1/assets/js/fontawesome.all.min.js"></script>
     <script src="diesel-control-1.1/assets/js/bootstrap.bundle.min.v5.2.3.js"></script>
+    <script src="diesel-control-1.1/assets/js/preloader.js"></script>
 </body>
 </html>
