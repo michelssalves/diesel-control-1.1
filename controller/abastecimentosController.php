@@ -47,7 +47,7 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
     $start = ($page * $resultadoPorPagina) - $resultadoPorPagina;
     
         $lista = selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $filtrodataAbastecimento, $start, $resultadoPorPagina);
-        $resultados = 50;
+        $resultados = $lista[1];
           
             $txtTableAbastecimentos .='<tbody>';
 
