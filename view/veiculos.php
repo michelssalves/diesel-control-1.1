@@ -14,13 +14,13 @@ include 'header.php';
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                    <a href="controle-de-combustivel-novo" class="w3-bar-item w3-button">Menu Principal</a>
+                    <a href="controle-de-combustivel-novo" class="btn btn-secondary btn">Menu Principal</a>
                     </li>
                     <li class="nav-item">
-                    <a href="controle-de-combustivel-novo" class="w3-bar-item w3-button">Controles</a>
+                    <a href="controle-de-combustivel-novo" class="btn btn-secondary btn">Controles</a>
                     </li>
                     <li class="nav-item ml-30">
-                        <a href="logout-novo" class="w3-bar-item w3-button w3-red w3-right">Sair</a>
+                        <a href="logout-novo" class="btn btn-warning btn">Sair</a>
                     </li>
                 </ul>
                 <span class="navbar-text">
