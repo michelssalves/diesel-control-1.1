@@ -6,8 +6,8 @@ if($_SESSION['id_funcionario']){
 
     $funcionario = verificaToken($_SESSION['id_funcionario']);
 
-    var_dump($funcionario);
-   // echo $funcionario['id_funcionario'];
+    //var_dump($funcionario);
+    echo $funcionario['id_funcionario'];
 
   /*  if($_SESSION['token'] <> $token){
         
