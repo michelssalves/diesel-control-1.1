@@ -17,9 +17,6 @@
                                     <a href="controle-de-veiculos" class="btn btn-primary btn">Veiculos</a>
                                 </li>
                             </ul>
-                            <span class="navbar-text">
-                                <a href="logout" class="btn btn-danger btn">Sair</a>
-                            </span>
                         </div>
                     </div>
                 </nav>
@@ -35,6 +32,7 @@
                         <button type="submit" class='btn btn-warning btn'>Filtrar</button>
                         <button class="btn btn-success btn" onclick="table2excel('t1')">Excel</button>
                         <button name="acao" value="limpar" type="submit" class='btn btn-secondary btn'>Limpar</button>
+                        <a href="logout" class="btn btn-danger btn-lg">Sair</a>
                 </div>
             </div>
         </div>
