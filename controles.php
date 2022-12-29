@@ -2,6 +2,7 @@
 session_start();
 include 'assets/controllers/abastecimentoDataBaseAcess.php';
 include 'assets/controllers/checkAcess.php';
+echo $_SESSION['id_permissao'];
 $nivelPremissao = 1;
 ?>
 <head>
