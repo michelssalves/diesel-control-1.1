@@ -20,15 +20,7 @@ function selectFuncionariosByUserMaster($usuario){
 
         return $sql;
     }
-function selectMenuUser($permissao){
 
-    include '../controller/config.php';
-
-        $sql = $pdo->query("SELECT * FROM menu_principal WHERE id_permissao <= $permissao");
-        $sql->execute();  
-
-        return $sql;
-        }
 function updateFuncionariosToken(){
 
     include '../controller/config.php';

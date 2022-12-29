@@ -4,7 +4,6 @@ include '../model/Abastecimentos.php';
 include '../controller/abastecimentosController.php';
 include '../controller/checkAcess.php';
 
-print_r($_SESSION);
 ?>
 <head>
     <meta charset="utf-8">
