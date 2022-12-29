@@ -170,16 +170,16 @@ function alterarAbastecimento(){
     $bombaAlt = $_POST['bombaAlt'];
     $odometroInicialAlt = $_POST['odometroInicialAlt']; 
     $odometroFinalAlt = $_POST['odometroFinalAlt']; 
-    $litrosOdAlt = $_POST['litrosOdAlt'];
+    $litrosOdAlt = $odometroFinalAlt - $odometroInicialAlt;
     $litrosAlt = $_POST['litrosAlt']; 
     $ultimoKmAlt = $_POST['ultimoKmAlt']; 
     $kmAlt = $_POST['kmAlt']; 
-    $diferencaKmAlt = $_POST['diferencaKmAlt'];
+    $diferencaKmAlt = $kmAlt - $ultimoKmAlt ;
     $ultimoHrAlt = $_POST['ultimoHrAlt']; 
     $hrAlt = $_POST['hrAlt']; 
-    $diferencaHrAlt = $_POST['diferencaHrAlt']; 
+    $diferencaHrAlt = $hrAlt - $ultimoHrAlt; 
     $frentistaAlt = $_POST['frentistaAlt'];
-    $mediaAlt = $_POST['mediaAlt'];
+    $mediaAlt = $diferencaKmAlt / $litrosAlt;
     $dataAbastecimentoAlt = $_POST['dataAbastecimentoAlt'];
  
   updateAbastecimentoAlterar($idAbastecimentoAlt, $idVeiculoAlt, $bombaAlt,$odometroInicialAlt,$odometroFinalAlt,

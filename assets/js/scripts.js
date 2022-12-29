@@ -17,28 +17,12 @@ function calcularDiferencaKmCad() {
 	document.getElementById("diferencaKmCad").value = subtrairConvertendo(kmAnteriorCad, kmAtualCad) 
 	
 }
-function calcularDiferencaKmAlt() {
-	
-	const kmAtualAlt = document.getElementById("kmAlt").value
-	const kmAnteriorAlt = document.getElementById("ultimoKmAlt").value
-	
-	document.getElementById("diferencaKmAlt").value = subtrairConvertendo(kmAnteriorAlt, kmAtualAlt) 
-	
-}
 function calcularDiferencaHrCad() {
 	const hrAtualCad = document.getElementById("hrCad").value
 	const hrAnteriorCad = document.getElementById("ultimoHrCad").value
 
     document.getElementById("diferencaHrCad").value = subtrairConvertendo(hrAnteriorCad, hrAtualCad) 
-}
-function calcularDiferencaHrAlt() {
-	const hrAtualAlt = document.getElementById("hrAlt").value
-	const hrAnteriorAlt = document.getElementById("ultimoHrAlt").value
-	console.log(hrAnteriorAlt)
-	console.log(hrAtualAlt)
-
-    document.getElementById("diferencaHrAlt").value = subtrairConvertendo(hrAnteriorAlt, hrAtualAlt) 
-}		
+}	
 function calcularLitrosOdCad() {
 
 	const odometroInicialCad = document.getElementById("odometroInicialCad").value
@@ -46,25 +30,11 @@ function calcularLitrosOdCad() {
 	document.getElementById("litrosOdCad").value = subtrairConvertendo(odometroInicialCad, odometroFinalCad)
 	
 }
-function calcularLitrosOdAlt() {
-
-	const odometroInicialAlt = document.getElementById("odometroinicialAlt").value
-	const odometroFinalAlt = document.getElementById("odometrofinalAlt").value
-	document.getElementById("litrosOdAlt").value = subtrairConvertendo(odometroInicialAlt, odometroFinalAlt)
-	
-}
 function calcularMediaCad(){
 
 	const kmRodadoCad = document.getElementById("diferencaKmCad").value
 	const litrosCad = document.getElementById("litrosCad").value
 	document.getElementById("mediaCad").value = dividirConvertendo(kmRodadoCad, litrosCad)
-		
-}
-function calcularMediaAlt(){
-
-	const kmRodadoAlt = document.getElementById("diferencaKmAlt").value
-	const litrosAlt = document.getElementById("litrosAlt").value
-	document.getElementById("mediaAlt").value = dividirConvertendo(kmRodadoAlt, litrosAlt)
 		
 }
 function subtrairConvertendo(v1, v2){
@@ -90,7 +60,6 @@ async function buscarInfoVeiculo(id){
 	document.getElementById("setor").value = response['dados'].setor
 	document.getElementById("ultimoKmCad").value = response['dados'].ultimoKm
 	document.getElementById("ultimoHrCad").value = response['dados'].ultimoHr
-
 
 }
 function table2excel(id) {
