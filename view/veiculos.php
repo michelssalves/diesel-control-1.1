@@ -1,7 +1,7 @@
 <body>
     <div id="preloader">
         <div class="inner">
-
+            <div class="bolas">
             <?php
             session_start();
             if ($_SESSION['id_permissao'] > 0) {
