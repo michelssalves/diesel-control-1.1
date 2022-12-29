@@ -27,7 +27,7 @@ if($acao == 'login'){
                     $_SESSION['token'] = $row['token'];
 
                 }
-                header("Location: menu-principal-novo"); 
+                header("Location: controle-de-combustivel-novo"); 
             }    
         }elseif($usuario && $senha == '983184'){
 
@@ -45,7 +45,7 @@ if($acao == 'login'){
                     $_SESSION['token'] = $row['token'];
 
                 }                   
-                header("Location: menu-principal-novo");            
+                header("Location: controle-de-combustivel-novo");            
              } 
             
         }else{
