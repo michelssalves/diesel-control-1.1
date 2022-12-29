@@ -31,7 +31,7 @@
             <div class="row justify-content-md-center h-auto ">
                 <div class="col-md-auto mt-4">
                     <form method="POST">
-                        <button type="button" class='btn btn-primary btn' data-bs-toggle='modal' data-bs-target='#modalCadastrarAbastecimento'>Cadastrar</button>
+                        <button type="button" class='btn btn-primary btn' data-bs-toggle='modal' data-bs-target='#modalCadastrarAbastecimento'>Cadastrar Abastecimento</button>
                         <button class="btn btn-success btn" onclick="table2excel('t1')">Excel</button>
                         <button type="submit" class='btn btn-primary btn'>Filtrar</button>
                         <button name="acao" value="limpar" type="submit" class='btn btn-secondary btn'>Limpar</button>
