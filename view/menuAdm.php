@@ -39,7 +39,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid p-4">
+    <div class="container-fluid p-8">
         <div class="table-responsive">
             <table class="table table-sm fs-6 mb-0">
                 <thead class="fundo-cabecalho">
