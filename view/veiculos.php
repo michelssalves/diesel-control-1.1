@@ -5,11 +5,10 @@ include '../controller/veiculosController.php';
 include 'header.php';
 ?>
 <body>
-<div class="fundo-cabecalho">
-<div class="container">
 
+<div class="container">
         <div class="col-md-auto mt-4">
-                
+        <div class="fundo-cabecalho">
         <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             
@@ -44,10 +43,11 @@ include 'header.php';
         <a href="logout-novo" class="w3-bar-item w3-button w3-red w3-right">Sair</a>
         <a class="w3-bar-item w3-button w3-right"><?php // $usuario; ?></a>
     </div>-->
-    <div class="fundo-cabecalho">
+
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-md-auto mt-4">
+            <div class="fundo-cabecalho">
                 <form method="POST">
                     <button class="btn btn-success btn" onclick="table2excel('t1')">Excel</button>
                     <button type="submit" class='btn btn-warning btn'>Filtrar</button>
