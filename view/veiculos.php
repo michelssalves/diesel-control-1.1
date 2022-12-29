@@ -1,9 +1,7 @@
 <body>
     <div id="preloader">
         <div class="inner">
-            <div class="bolas">
-                echo
-            </div>  
+                <img src="diesel-control-1.1/assets/img/gifs/aguarde12.gif" alt="">
            </div>
         </div>
             <?php
