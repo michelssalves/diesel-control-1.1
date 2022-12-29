@@ -44,11 +44,11 @@ function  verificaToken($idFuncionario){
     $sql->execute();
     if ($sql->rowCount() == 1) {
                     
-        $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
+        $funcionario = $sql->fetchAll(PDO::FETCH_ASSOC);
         foreach($lista as $row){
             $token = $row['token'];
         }
     }
-    return $token;
+    return $funcionario;
 }
 ?>

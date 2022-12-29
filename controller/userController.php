@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 $acao = $_REQUEST['acao'];
