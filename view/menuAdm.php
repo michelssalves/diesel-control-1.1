@@ -11,9 +11,6 @@
                         <div class="collapse navbar-collapse" id="navbarText">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-1">
                                 <li class="nav-item p-1">
-                                    <a href="controle-de-combustivel" class="btn btn-primary btn">Menu Principal</a>
-                                </li>
-                                <li class="nav-item p-1">
                                     <a href="controle-de-veiculos" class="btn btn-primary btn">Veiculos</a>
                                 </li>
                             </ul>
