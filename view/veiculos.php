@@ -7,7 +7,7 @@ include 'header.php';
 
 <body>
     <div class="container">
-        <div class="col-md-auto mt-4 ">
+        <div class="col-md-auto">
             <div class="fundo-botoes rounded">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
@@ -27,7 +27,7 @@ include 'header.php';
                                 </li>
                             </ul>
                             <span class="navbar-text">
-                                <a href="logout-novo" class="btn btn-danger btn w-200">Sair</a>
+                                <a href="logout-novo" class="btn btn-danger btn">Sair</a>
                             </span>
                         </div>
                     </div>
