@@ -5,7 +5,7 @@ if($_SESSION['id_funcionario']){
     $acao = $_REQUEST['acao'];
 
     $funcionario = verificaToken($_SESSION['id_funcionario']);
-
+  
     echo $funcionario['token'];
   /* if($_SESSION['token'] <> $funcionario['token']){
         

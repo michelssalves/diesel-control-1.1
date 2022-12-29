@@ -46,12 +46,12 @@ function  verificaToken($idFuncionario){
                     
         $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
         foreach($lista as $row){
-            $funcionario = $row['token'];
-            $funcionario = $row['id_funcionario'];
-            $funcionario = $row['usuario'];
-            $funcionario = $row['tipo_acesso'];
-            $funcionario = $row['nome'];
-            $funcionario = $row['id_permissao'];
+            $funcionario[0] = $row['token'];
+            $funcionario[1] = $row['id_funcionario'];
+            $funcionario[2] = $row['usuario'];
+            $funcionario[3] = $row['tipo_acesso'];
+            $funcionario[4] = $row['nome'];
+            $funcionario[5] = $row['id_permissao'];
         }
     }
     return $funcionario;
