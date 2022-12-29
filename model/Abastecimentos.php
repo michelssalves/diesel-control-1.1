@@ -26,11 +26,6 @@ function selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroM
     
     include '../controller/config.php';
 
-    $dados = array (
-        'sql' => '',
-        'count 2' => '',
-    );
-
     $sqlFiltro = $pdo->prepare("SELECT *FROM veiculos AS v  
     JOIN abastecimentos AS a 
     ON a.id_veiculo = v.id_veiculo
@@ -38,6 +33,7 @@ function selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroM
     $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor
     ORDER BY a.data_abastecimento DESC LIMIT $start, $resultadoPorPagina");
     $sqlFiltro->execute();
+    $lista = $sqlFiltro->fetchAll(PDO::FETCH_ASSOC);
 
     $sqlCount = $pdo->prepare("SELECT *FROM veiculos AS v  
     JOIN abastecimentos AS a 
@@ -46,8 +42,8 @@ function selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroM
     $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor");
     $sqlCount->execute();
 
-    $dados['sql'] = $sqlFiltro;
-    $dados['count'] = $sqlCount;
+    $dados[0] = $lista;
+    $dados[1] = $sqlCount;
 
     return  $dados;
 }

@@ -46,15 +46,12 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
     if($page == ''){$page = 1;}
     $start = ($page * $resultadoPorPagina) - $resultadoPorPagina;
     
-        $sql = selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $filtrodataAbastecimento, $start, $resultadoPorPagina);
-        $resultados = $sql[1]->rowCount();
-        if ($sql[0]->rowCount() > 0) {
-            
+        $lista = selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $filtrodataAbastecimento, $start, $resultadoPorPagina);
+        $resultados = 50;
+          
             $txtTableAbastecimentos .='<tbody>';
 
-            $lista = $sql[0]->fetchAll(PDO::FETCH_ASSOC);
-
-            foreach($lista as $row){
+            foreach($lista[0] as $row){
 
                 $modalAlterarAbastecimento = "modalAlterarAbastecimento".$row['id_abastecimento']."";
                 if(!$_SESSION['id_permissao'] < 1){
@@ -141,8 +138,6 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
             }
             $txtTableAbastecimentos .= "<li class='page-item'><a class='page-link' href='controle-de-combustivel?page=$number_pages'>Last Page</a></li>";
             $txtTableAbastecimentos .= '</ul></nav>';
-          
-        }
 
         return $txtTableAbastecimentos ;  
 
