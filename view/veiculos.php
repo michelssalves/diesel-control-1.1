@@ -24,9 +24,6 @@ include 'header.php';
                     <li class="nav-item p-1">
                         <a href="logout-novo" class="btn btn-danger btn">Sair</a>
                     </li>
-                    </li>
-                    <a class="navbar-brand" href="#"><label>Usuario Logado: <?= $_SESSION['nome']; ?></label></a>
-                    </li>
                 </ul>
                 <span class="navbar-text">
                 </span>
