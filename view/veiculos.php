@@ -5,12 +5,36 @@ include '../controller/veiculosController.php';
 include 'header.php';
 ?>
 <body>
-    <div class="w3-bar w3-light-grey">
-        <a href="menu-principal-novo" class="w3-bar-item w3-button">Menu Principal</a>
+<nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><label>Usuario Logado: <?= $_SESSION['nome']; ?></label></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a href="controle-de-combustivel-novo" class="w3-bar-item w3-button">Menu Principal</a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="controle-de-combustivel-novo" class="w3-bar-item w3-button">Controles</a>
+                    </li>
+                    <li class="nav-item ml-30">
+                        <a href="logout-novo" class="w3-bar-item w3-button w3-red w3-right">Sair</a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+               
+                </span>
+            </div>
+        </div>
+    </nav>
+   <!-- <div class="w3-bar w3-light-grey">
+        <a href="controle-de-combustivel-novo" class="w3-bar-item w3-button">Menu Principal</a>
         <a href="controle-de-combustivel-novo" class="w3-bar-item w3-button">Controles</a>
         <a href="logout-novo" class="w3-bar-item w3-button w3-red w3-right">Sair</a>
-        <a class="w3-bar-item w3-button w3-right"><?= $usuario; ?></a>
-    </div>
+        <a class="w3-bar-item w3-button w3-right"><?php // $usuario; ?></a>
+    </div>-->
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-md-auto mt-4">
