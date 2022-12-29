@@ -5,6 +5,9 @@ include '../controller/veiculosController.php';
 include 'header.php';
 ?>
 <body>
+<div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-auto mt-4">
 <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,14 +22,13 @@ include 'header.php';
                     <a href="controle-de-combustivel-novo" class="btn btn-secondary btn">Controles</a>
                     </li>
                     <li class="nav-item p-1">
-                        <a href="logout-novo" class="btn btn-warning btn">Sair</a>
+                        <a href="logout-novo" class="btn btn-danger btn">Sair</a>
                     </li>
                     </li>
                     <a class="navbar-brand" href="#"><label>Usuario Logado: <?= $_SESSION['nome']; ?></label></a>
                     </li>
                 </ul>
                 <span class="navbar-text">
-               
                 </span>
             </div>
         </div>
@@ -37,9 +39,7 @@ include 'header.php';
         <a href="logout-novo" class="w3-bar-item w3-button w3-red w3-right">Sair</a>
         <a class="w3-bar-item w3-button w3-right"><?php // $usuario; ?></a>
     </div>-->
-    <div class="container">
-        <div class="row justify-content-md-center">
-            <div class="col-md-auto mt-4">
+
                 <form method="POST">
                     <input type="hidden" name="filtrar" value="1">
                     <?php $link = "PopupCenter('cadastrar-veiculo',' Cadastrar Veiculos',400,900)"; ?>
