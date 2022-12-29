@@ -2,24 +2,8 @@
 session_start();
 include '../model/Veiculos.php';
 include '../controller/veiculosController.php';
+include 'Header.php';
 ?>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="diesel-control-1.1/assets/css/custom.css">
-    <link rel="stylesheet" href="diesel-control-1.1/assets/css/fontawesome.all.min.6.2.1.css">
-    <link rel="stylesheet" href="diesel-control-1.1/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="diesel-control-1.1/assets/css/tablesaw.css">
-    <link rel="stylesheet" href="diesel-control-1.1/assets/css/w3.min.css">
-    <!--  TABLESAW - DEIXA A TABELA RESPONSIVA-->
-    <script src="diesel-control-1.1/assets/js/tablesawn-label.js"></script>
-    <script src="diesel-control-1.1/assets/js/tablesaw.js"></script>
-    <script src="diesel-control-1.1/assets/js/tablesaw-init.js"></script>
-    <!--  /TABLESAW - DEIXA A TABELA RESPONSIVA-->
-    <script src="diesel-control-1.1/assets/js/jquery-3.6.1.min.js"></script>
-    <script src="diesel-control-1.1/assets/js/sorttable.js"></script>
-    <script src="diesel-control-1.1/assets/js/jquery.table2excel.js"></script>
-</head>
 <body>
     <div class="w3-bar w3-light-grey">
         <a href="menu-principal-novo" class="w3-bar-item w3-button">Menu Principal</a>
