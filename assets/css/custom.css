@@ -18,12 +18,16 @@
   .tabelas-customizadas select,  .tabelas-customizadas label{
     font-size: 15px;
   }
+  .fundo-botoes {
+    background-color: #DCDCDC;
+  }
   
   .fundo-cabecalho{
     
     background-color:#009688;
     
   }
+
   .fundo-cabecalho h1{
   
     text-align: center;
@@ -44,9 +48,6 @@
   
   }
 
-  .fundo-botoes {
-    background-color: #DCDCDC;
-  }
   .texto-de-advertencia{
   
     text-align: center;
