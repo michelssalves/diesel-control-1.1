@@ -35,4 +35,20 @@ function updateFuncionariosToken(){
         return $sql;
     }
 
+function  verificaToken($idFuncionario){
+
+    include '../controller/config.php';
+
+    $sql = $pdo->prepare("SELECT token FROM funcionarios WHERE id_funcionario = :idFuncionario");
+    $sql->bindValue('idFuncionario', $idFuncionario);
+    $sql->execute();
+    if ($sql->rowCount() == 1) {
+                    
+        $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
+        foreach($lista as $row){
+            $token = $row['token'];
+        }
+    }
+    return $token;
+}
 ?>
