@@ -1,7 +1,7 @@
 <?php
+session_start();
 include '../model/Funcionarios.php';
 include '../controller/userController.php';
-session_start();
 ?>
 <!doctype html>
 <html lang="en">
