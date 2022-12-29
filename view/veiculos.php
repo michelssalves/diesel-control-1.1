@@ -13,7 +13,7 @@ include 'header.php';
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
+                    <li class="nav-item md-auto">
                     <a href="controle-de-combustivel-novo" class="btn btn-secondary btn">Menu Principal</a>
                     </li>
                     <li class="nav-item">
