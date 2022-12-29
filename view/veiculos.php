@@ -44,7 +44,7 @@ include 'header.php';
         <a class="w3-bar-item w3-button w3-right"><?php // $usuario; ?></a>
     </div>-->
 
-    <div class="container mt-2 mb-1 h-auto">
+    <div class="container mt-2 mb-1 h-1">
     <div style="background-color: #5F9EA0;">
         <div class="row justify-content-md-center">
         
