@@ -7,20 +7,22 @@ include 'header.php';
 <body>
 <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><label>Usuario Logado: <?= $_SESSION['nome']; ?></label></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-1">
-                    <li class="nav-item ">
+                    <li class="nav-item p-1">
                     <a href="controle-de-combustivel-novo" class="btn btn-secondary btn">Menu Principal</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item p-1">
                     <a href="controle-de-combustivel-novo" class="btn btn-secondary btn">Controles</a>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item p-1">
                         <a href="logout-novo" class="btn btn-warning btn">Sair</a>
+                    </li>
+                    </li>
+                    <a class="navbar-brand" href="#"><label>Usuario Logado: <?= $_SESSION['nome']; ?></label></a>
                     </li>
                 </ul>
                 <span class="navbar-text">
