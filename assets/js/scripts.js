@@ -74,6 +74,8 @@ function table2excel(id) {
     });
 }
 function impedirClicks(){
+
 	document.getElementById("conteudo").style.display = "none";
 	document.getElementById("loading").style.display = "block";
+	
 }
