@@ -38,13 +38,10 @@ include 'header.php';
     </div>-->
 
                 <form method="POST">
-                    <input type="hidden" name="filtrar" value="1">
-                    <?php $link = "PopupCenter('cadastrar-veiculo',' Cadastrar Veiculos',400,900)"; ?>
-                    <button class="btn btn-success btn-sm" onclick="table2excel('t1')">Excel</button>
-                    <button type="submit" class='btn btn-warning btn-sm'>Filtrar</button>
-                    <button type="button" class='btn btn-primary btn-sm' data-bs-toggle='modal' data-bs-target='#modalCadastrarVeiculo'>Cadastrar</button>
-                    <button name="acao" value="limpar" type="submit" class='btn btn-secondary btn-sm'>Limpar</button>
-
+                    <button class="btn btn-success btn" onclick="table2excel('t1')">Excel</button>
+                    <button type="submit" class='btn btn-warning btn'>Filtrar</button>
+                    <button type="button" class='btn btn-primary btn' data-bs-toggle='modal' data-bs-target='#modalCadastrarVeiculo'>Cadastrar</button>
+                    <button name="acao" value="limpar" type="submit" class='btn btn-secondary btn'>Limpar</button>  
             </div>
         </div>
     </div>
