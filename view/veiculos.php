@@ -47,9 +47,7 @@ include 'header.php';
     <div class="container mt-2 mb-1 ">
     <div class="fundo-botoes rounded">
         <div class="row justify-content-md-center h-auto ">
-        
             <div class="col-md-auto mt-4">
-            
                 <form method="POST">
                     <button class="btn btn-success btn" onclick="table2excel('t1')">Excel</button>
                     <button type="submit" class='btn btn-warning btn'>Filtrar</button>
