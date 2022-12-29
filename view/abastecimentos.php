@@ -2,8 +2,8 @@
 session_start(); 
 include '../model/Abastecimentos.php';
 include '../controller/abastecimentosController.php';
-include '../controller/userController.php';
-echo $_SESSION['id_permissao'];
+
+echo $_SESSION['id_funcionario'];
 
 ?>
 <head>
