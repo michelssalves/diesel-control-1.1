@@ -45,9 +45,9 @@ function  verificaToken($idFuncionario){
     if ($sql->rowCount() == 1) {
                     
         $funcionario = $sql->fetchAll(PDO::FETCH_ASSOC);
-        foreach($lista as $row){
+       /* foreach($lista as $row){
             $token = $row['token'];
-        }
+        }*/
     }
     return $funcionario;
 }
