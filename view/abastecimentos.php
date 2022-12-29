@@ -32,9 +32,9 @@
 </style>
 <script>
     $(document).ready(function() {
-    $('.btn-theme').click(function(){
+ 
         $('#aguarde, #blanket').css('display','block');
-    });
+    
 });
 </script>
 <body>
