@@ -39,6 +39,7 @@
             </div>
         </div>
     </div>
+    <div class="d-grid gap-3">
     <div class="container-fluid p-4">
         <div class="table-responsive">
             <table class="table table-sm fs-6 mb-0">
