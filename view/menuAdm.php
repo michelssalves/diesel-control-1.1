@@ -44,8 +44,7 @@
             <table class="table table-sm fs-6 mb-0">
                 <thead class="fundo-cabecalho">
                     <tr>
-                        <th>Data 01</th>
-                        <th>Data 02</th>
+                        <th>Data Abastecimento</th>
                         <th>Prefixo</th>
                         <th>Combustivel</th>
                         <th>Marca</th>
