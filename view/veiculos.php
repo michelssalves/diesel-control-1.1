@@ -7,7 +7,7 @@ include 'header.php';
 <body>
 
 <div class="container">
-        <div class="row justify-content-md-center">
+
             <div class="col-md-auto mt-4">
                 <div class="fundo-cabecalho">
         <nav class="navbar navbar-expand-lg">
@@ -36,7 +36,7 @@ include 'header.php';
     </div>
     </div>
     </div>
-    </div>
+
 
    <!-- <div class="w3-bar w3-light-grey">
         <a href="controle-de-combustivel-novo" class="w3-bar-item w3-button">Menu Principal</a>
