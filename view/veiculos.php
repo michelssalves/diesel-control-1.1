@@ -12,14 +12,14 @@ include 'header.php';
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item p-0">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-1">
+                    <li class="nav-item ">
                     <a href="controle-de-combustivel-novo" class="btn btn-secondary btn">Menu Principal</a>
                     </li>
-                    <li class="nav-item p-0">
+                    <li class="nav-item">
                     <a href="controle-de-combustivel-novo" class="btn btn-secondary btn">Controles</a>
                     </li>
-                    <li class="nav-item p-0">
+                    <li class="nav-item ">
                         <a href="logout-novo" class="btn btn-warning btn">Sair</a>
                     </li>
                 </ul>
