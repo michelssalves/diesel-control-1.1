@@ -47,7 +47,7 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
     $start = ($page * $resultadoPorPagina) - $resultadoPorPagina;
     
         $sql = selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $filtrodataAbastecimento, $start, $resultadoPorPagina);
-
+        $resultados = $sql->rowCount();
         if ($sql->rowCount() > 0) {
             
             $txtTableAbastecimentos .='<tbody>';
