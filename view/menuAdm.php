@@ -137,7 +137,7 @@
                 <table id="t1" data-tablesaw-sortable data-tablesaw-sortable-switch class="tablesaw table-sm fs-6 mb-0" data-tablesaw-mode="columntoggle" data-tablesaw-minimap>
                     <thead class="fundo-cabecalho">
                         <tr>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="1">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="3">
                                 <center>Data
                             </th>
                             <th data-tablesaw-sortable-col data-tablesaw-priority="0">
@@ -155,10 +155,10 @@
                             <th data-tablesaw-sortable-col data-tablesaw-priority="1">
                                 <center>Prefixo
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="3">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="1">
                                 <center>Placa
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="1">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="3">
                                 <center>Combustivel
                             </th>
                             <th data-tablesaw-sortable-col data-tablesaw-priority="0">
