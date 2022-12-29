@@ -1,10 +1,9 @@
 <?php
-if($_SESSION['id_permissao'] >= 2){
+if($_SESSION['id_permissao'] > 1){
 session_start();
 include '../model/Veiculos.php';
 include '../controller/veiculosController.php';
 include 'header.php';
-;
 ?>
 <body>
     <div class="container">
@@ -213,6 +212,6 @@ include 'header.php';
 </body>
 </html>
 <?php } else{
-    
+
     header("Location: controle-de-combustivel-novo");
 }
