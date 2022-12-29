@@ -3,8 +3,6 @@ session_start();
 echo $_SESSION['id_permissao']; 
 include '../model/Abastecimentos.php';
 include '../controller/abastecimentosController.php';
-
-
 ?>
 <head>
     <meta charset="utf-8">

@@ -2,6 +2,7 @@
 session_start(); 
 include '../model/Abastecimentos.php';
 include '../controller/abastecimentosController.php';
+echo $_SESSION['id_permissao']; 
 ?>
 <head>
     <meta charset="utf-8">
