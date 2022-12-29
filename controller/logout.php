@@ -1,5 +1,5 @@
 <?php
-if($_SESSION['id_funcionario']){
+
     include '../model/Funcionarios.php';
 
     $acao = $_REQUEST['acao'];
@@ -16,5 +16,5 @@ if($_SESSION['id_funcionario']){
         session_destroy();
         header("Location:  login-diesel-control-novo");
     }
-}
+
 ?>
