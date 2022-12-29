@@ -1,9 +1,7 @@
 
 <body>
-<div id="loading" style="display: none" align="center">
-	<img src="diesel-control-1.1/assets/img/gifs/aguarde12.gif"/>
-</div>
-<div class="conteudo" id="conteudo" style="display: block">
+<div id="preloader">
+    <div class="inner">
 
 <?php
 session_start();
@@ -216,6 +214,7 @@ include 'header.php';
     <script src="diesel-control-1.1/assets/js/scripts.js"></script>
     <script src="diesel-control-1.1/assets/js/fontawesome.all.min.js"></script>
     <script src="diesel-control-1.1/assets/js/bootstrap.bundle.min.v5.2.3.js"></script>
+    <script src="diesel-control-1.1/assets/js/preloader.js"></script>
 </body>
 </html>
 <?php } else{
