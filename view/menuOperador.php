@@ -21,12 +21,10 @@
             </div>
         </div>
     </div>
-    <div class="container">
-  
-        <div class="row justify-content-md-center">
-     
-            <div class="col-md-auto mt-4">  
-            <div class="fundo-botoes rounded">
+    <div class="container mt-2 mb-1 ">
+        <div class="fundo-botoes rounded">
+            <div class="row justify-content-md-center h-auto ">
+                <div class="col-md-auto mt-4">
             <form method="POST">  
                 <button type="button" class='btn btn-success btn-lg' data-bs-toggle='modal' data-bs-target='#modalCadastrarAbastecimento'>Cadastrar</button>
                 <a href="logout-novo" class="btn btn-danger btn-lg">Sair</a>
