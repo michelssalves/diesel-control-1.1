@@ -120,7 +120,7 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
 
             $txtTableAbastecimentos .='</tbody></table>';
 
-            $number_pages = ceil(5 / $resultadoPorPagina);
+            $number_pages = ceil($resultados / $resultadoPorPagina);
             $max_link = 2;
     
             $txtTableAbastecimentos .= '<nav aria-label="Page navigation example"><ul class="pagination pagination-sm justify-content-center">';
@@ -136,7 +136,7 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
     
             for ($next_page = $page + 1; $next_page <= $page + $max_link; $next_page++) {
                 if ($next_page <= $number_pages) {
-                    $$txtTableAbastecimentos .= "<li class='page-item'><a class='page-link' href='controle-de-combustivel?page=$next_page' >$next_page</a></li>";
+                    $txtTableAbastecimentos .= "<li class='page-item'><a class='page-link' href='controle-de-combustivel?page=$next_page' >$next_page</a></li>";
                 }
             }
             $txtTableAbastecimentos .= "<li class='page-item'><a class='page-link' href='controle-de-combustivel?page=$number_pages'>Last Page</a></li>";
