@@ -6,6 +6,10 @@ include '../controller/veiculosController.php';
 include 'header.php';
 ?>
 <body>
+<div id="loading" style="display: none" align="center">
+	<img src="diesel-control-1.1/assets/img/gifs/aguarde12.gif"/>
+</div>
+<div class="conteudo" id="conteudo" style="display: block">
     <div class="container">
         <div class="col-md-auto mt-1">
             <div class="fundo-botoes rounded">
@@ -205,6 +209,7 @@ include 'header.php';
                         <?= filtrarVeiculos($filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, $filtroSetor, $filtroStatus, $page) ?>
             </div>
         </div>
+    </div>
     </div>
     <script src="diesel-control-1.1/assets/js/scripts.js"></script>
     <script src="diesel-control-1.1/assets/js/fontawesome.all.min.js"></script>
