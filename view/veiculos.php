@@ -30,13 +30,18 @@ include 'header.php';
             </div>
         </div>
     </nav>
+    </div>
+    </div>
+    </div>
    <!-- <div class="w3-bar w3-light-grey">
         <a href="controle-de-combustivel-novo" class="w3-bar-item w3-button">Menu Principal</a>
         <a href="controle-de-combustivel-novo" class="w3-bar-item w3-button">Controles</a>
         <a href="logout-novo" class="w3-bar-item w3-button w3-red w3-right">Sair</a>
         <a class="w3-bar-item w3-button w3-right"><?php // $usuario; ?></a>
     </div>-->
-
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-auto mt-4">
                 <form method="POST">
                     <button class="btn btn-success btn" onclick="table2excel('t1')">Excel</button>
                     <button type="submit" class='btn btn-warning btn'>Filtrar</button>
