@@ -32,7 +32,7 @@
                         <button type="submit" class='btn btn-warning btn'>Filtrar</button>
                         <button class="btn btn-success btn" onclick="table2excel('t1')">Excel</button>
                         <button name="acao" value="limpar" type="submit" class='btn btn-secondary btn'>Limpar</button>
-                        <a href="logout" class="btn btn-danger btn-lg">Sair</a>
+                        <a href="logout" class="btn btn-danger btn">Sair</a>
                 </div>
             </div>
         </div>
