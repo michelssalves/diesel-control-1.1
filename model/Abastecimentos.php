@@ -22,7 +22,7 @@ function selectAbastecimentosPorVeiculo($idVeiculo){
 
     return $sql;
 }
-function selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $filtrodataAbastecimento){
+function selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $filtrodataAbastecimento, $start, $resultadoPorPagina){
     
     include '../controller/config.php';
 
@@ -31,7 +31,7 @@ function selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroM
     ON a.id_veiculo = v.id_veiculo
     WHERE a.dataabastecimento2 = '$filtrodataAbastecimento'
     $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor
-    ORDER BY a.data_abastecimento DESC");
+    ORDER BY a.data_abastecimento DESC LIMIT $start, $resultadoPorPagina");
     $sql->execute();
 
     return $sql;

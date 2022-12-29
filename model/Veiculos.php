@@ -9,13 +9,13 @@ function selectCountVeiculos(){
     return $row['numeroDePaginas'];
 
 }
-function selectTodosOsVeiculosComFiltro($filtroStatus, $filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, $filtroSetor, $start, $result_for_page){        
+function selectTodosOsVeiculosComFiltro($filtroStatus, $filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, $filtroSetor, $start, $resultadoPorPagina){        
     
     include '../controller/config.php';
 
     $sql = $pdo->prepare("SELECT * FROM veiculos AS v 
         $filtroStatus $filtroPrefixo $filtroCombustivel $filtroMarca $filtroModelo $filtroSetor
-        ORDER BY prefixo ASC LIMIT $start, $result_for_page");
+        ORDER BY prefixo ASC LIMIT $start, $resultadoPorPagina");
         $sql->execute();
         return $sql;
     }

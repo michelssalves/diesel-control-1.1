@@ -4,6 +4,8 @@ include 'validaToken.php';
 
 $acao = $_REQUEST['acao'];
 
+$page = $_REQUEST['page'];
+
 $dataAbastecimento = ($_POST['dataAbastecimento'] ? $_POST['dataAbastecimento'] : date('2022-12-13'));
 $combustivel = ($_POST['combustivel'] <> '' ? $_POST['combustivel'] : 'TODOS');
 $marca = ($_POST['marca'] <> '' ? $_POST['marca'] : 'TODOS');
@@ -34,15 +36,21 @@ if($marca && $marca <> 'TODOS'){$filtroMarca = "AND v.marca = '$marca'";}
 if($modelo && $modelo <> 'TODOS'){$filtroModelo = "AND v.modelo = '$modelo'";}
 if($setor && $setor <> 'TODOS'){$filtroSetor = "AND v.setor = '$setor'";}
 
-function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $filtrodataAbastecimento){
+function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $filtrodataAbastecimento, $page){
 
     include 'config.php';
     include 'functions.php';
     include 'modal/modalCadastrarAbastecimento.php'; 
- 
-        $sql = selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $filtrodataAbastecimento);
+
+    $resultadoPorPagina = 25;
+    if($page == ''){$page = 1;}
+    $start = ($page * $resultadoPorPagina) - $resultadoPorPagina;
+    
+        $sql = selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $filtrodataAbastecimento, $start, $resultadoPorPagina);
 
         if ($sql->rowCount() > 0) {
+            
+            $txtTableAbastecimentos .='<tbody>';
 
             $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
 
@@ -77,7 +85,7 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
 
                     if($row['litros_od'] <> $row['litros'] ){$corLitros = 'bg-warning';}
      
-                $txtTableControles .= '<tr '.$linkModalAlterarAbastecimento.'>
+                $txtTableAbastecimentos .= '<tr '.$linkModalAlterarAbastecimento.'>
                 <td class="w3-left-align">'.dmaH($row['data_abastecimento']).'</td>
                 <td class="w3-left-align"> '.H_i($row['data_abastecimento']).'</td>
                 <td class="w3-left-align"> '.Month($row['data_abastecimento']).'</td>
@@ -109,10 +117,34 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
                 
                 }
             }
+
+            $txtTableAbastecimentos .='</tbody></table>';
+
+            $number_pages = ceil($resultados / $resultadoPorPagina);
+            $max_link = 2;
+    
+            $txtTableAbastecimentos .= '<nav aria-label="Page navigation example"><ul class="pagination pagination-sm justify-content-center">';
+    
+            $txtTableAbastecimentos .= "<li class='page-item'><a class='page-link' href='controle-de-veiculos?page=1'>First Page</a></li>";
+    
+            for ($previous_page = $page - $max_link; $previous_page <= $page - 1; $previous_page++) {
+                if ($previous_page >= 1) {
+                    $txtTableVeiculos .= "<li class='page-item'><a class='page-link' href='controle-de-veiculos?page=$previous_page'>$previous_page</a></li>";
+                }
+            }
+            $txtTableAbastecimentos .= "<li class='page-item active' ><a class='page-link' href='#'>$page</a></li>";
+    
+            for ($next_page = $page + 1; $next_page <= $page + $max_link; $next_page++) {
+                if ($next_page <= $number_pages) {
+                    $$txtTableAbastecimentos .= "<li class='page-item'><a class='page-link' href='controle-de-veiculos?page=$next_page' >$next_page</a></li>";
+                }
+            }
+            $txtTableAbastecimentos .= "<li class='page-item'><a class='page-link' href='controle-de-veiculos?page=$number_pages'>Last Page</a></li>";
+            $txtTableAbastecimentos .= '</ul></nav>';
           
         }
 
-        return $txtTableControles;  
+        return $$txtTableAbastecimentos;  
 
 } 
 if($acao == 'registrar-abastecimento'){

@@ -17,12 +17,9 @@ include 'header.php';
 
                 include 'menuOperador.php';
             }
-            ?>
-        <body>
-            <tbody>
-              <?= filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, $filtroSetor, $filtrodataAbastecimento); ?>
-            </tbody>
-         </table>
+             
+        echo filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, $filtroSetor, $filtrodataAbastecimento, $page); 
+?>
       </div>
      </div>
     </div>
