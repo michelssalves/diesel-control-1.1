@@ -155,7 +155,7 @@
                             <th data-tablesaw-sortable-col data-tablesaw-priority="1">
                                 <center>Prefixo
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="1">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="3">
                                 <center>Placa
                             </th>
                             <th data-tablesaw-sortable-col data-tablesaw-priority="1">
@@ -182,16 +182,16 @@
                             <th data-tablesaw-sortable-col data-tablesaw-priority="1">
                                 <center>Km
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="1">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="3">
                                 <center>Dif Km
                             </th>
                             <th data-tablesaw-sortable-col data-tablesaw-priority="0">
                                 <center>Ultimo Hr
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="1">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="3">
                                 <center>Hr
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="1">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="3">
                                 <center>Dif Hr
                             </th>
                             <th data-tablesaw-sortable-col data-tablesaw-priority="1">
