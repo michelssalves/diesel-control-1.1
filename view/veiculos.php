@@ -1,7 +1,8 @@
+<?php $gif = rand(10,16); ?>
 <body>
     <div id="preloader">
         <div class="inner">
-                <img src="diesel-control-1.1/assets/img/gifs/aguarde12.gif" alt="">
+                <img src="diesel-control-1.1/assets/img/gifs/aguarde<?= $gif ?>.gif">
            </div>
         </div>
             <?php
