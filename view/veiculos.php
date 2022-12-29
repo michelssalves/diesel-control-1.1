@@ -8,7 +8,7 @@ include 'header.php';
 
 <div class="container">
         <div class="col-md-auto mt-4">
-        <div class="fundo-cabecalho">
+        <div class="bg-primary">
         <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             
@@ -45,7 +45,7 @@ include 'header.php';
     </div>-->
 
     <div class="container">
-    <div class="fundo-cabecalho">
+    <div class="bg-primary">
         <div class="row justify-content-md-center">
         
             <div class="col-md-auto mt-4">
