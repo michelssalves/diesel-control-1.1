@@ -8,7 +8,7 @@ include 'header.php';
 
 <div class="container">
         <div class="col-md-auto mt-4 ">
-        <div style="background-color: #696969;"  class="rounded">
+        <div style="background-color: #696969;" class="rounded">
         <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             
@@ -45,7 +45,7 @@ include 'header.php';
     </div>-->
 
     <div class="container mt-2 mb-1 ">
-    <div style="background-color: #696969;">
+    <div style="background-color: #696969;" class="rounded">
         <div class="row justify-content-md-center h-auto ">
         
             <div class="col-md-auto mt-4">
