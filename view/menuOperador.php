@@ -9,6 +9,9 @@
                             <a class="navbar-brand mt-1" href="#"><label>Usuario Logado: <?= $_SESSION['nome']; ?></label></a>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarText">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-1">
+          
+                            </ul>
                             <span class="navbar-text">
                                 <a href="logout-novo" class="btn btn-danger btn">Sair</a>
                             </span>
