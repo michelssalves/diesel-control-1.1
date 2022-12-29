@@ -24,11 +24,13 @@
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-md-auto mt-4">  
+            <div class="fundo-botoes rounded">
             <form method="POST">  
                 <button type="button" class='btn btn-success btn-lg' data-bs-toggle='modal' data-bs-target='#modalCadastrarAbastecimento'>Cadastrar</button>
-                <a href="logout-novo" class="btn btn-danger btn">Sair</a>
+                <a href="logout-novo" class="btn btn-danger btn-lg">Sair</a>
             </div>
         </div>
+    </div>
     </div>
     <div class="container">
         <div class="table-responsive">
