@@ -1,7 +1,8 @@
 <?php
+include 'config.php';
 
 $sql = $pdo->prepare("SELECT token FROM funcionarios WHERE id_funcionario = :idFuncionario");
-$sql->binValue('idFuncionario', $_SESSION['id_funcionario']);
+$sql->bindValue('idFuncionario', $_SESSION['id_funcionario']);
 $sql->execute();
 if ($sql->rowCount() == 1) {
                 
