@@ -5,11 +5,10 @@ include '../controller/veiculosController.php';
 include 'header.php';
 ?>
 <body>
-
+<div class="fundo-cabecalho">
 <div class="container">
-
-            <div class="col-md-auto mt-4">
-                <div class="fundo-cabecalho">
+        <div class="col-md-auto mt-4">
+                
         <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             
@@ -27,7 +26,7 @@ include 'header.php';
 
                 </ul>
                 <span class="navbar-text">
-                <a class="navbar-brand" href="#"><label>Usuario Logado: <?= $_SESSION['nome']; ?></label></a>
+                <a class="navbar-brand mt-1" href="#"><label>Usuario Logado: <?= $_SESSION['nome']; ?></label></a>
                 <a href="logout-novo" class="btn btn-danger btn">Sair</a>
                 </span>
             </div>
