@@ -11,14 +11,14 @@
                         <div class="collapse navbar-collapse" id="navbarText">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-1">
                                 <li class="nav-item p-1">
-                                    <a href="controle-de-combustivel-novo" class="btn btn-primary btn">Menu Principal</a>
+                                    <a href="controle-de-combustivel" class="btn btn-primary btn">Menu Principal</a>
                                 </li>
                                 <li class="nav-item p-1">
-                                    <a href="controle-de-veiculos-novo" class="btn btn-primary btn">Veiculos</a>
+                                    <a href="controle-de-veiculos" class="btn btn-primary btn">Veiculos</a>
                                 </li>
                             </ul>
                             <span class="navbar-text">
-                                <a href="logout-novo" class="btn btn-danger btn">Sair</a>
+                                <a href="logout" class="btn btn-danger btn">Sair</a>
                             </span>
                         </div>
                     </div>

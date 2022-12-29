@@ -27,7 +27,7 @@
                 <div class="col-md-auto mt-4">
             <form method="POST">  
                 <button type="button" class='btn btn-success btn-lg' data-bs-toggle='modal' data-bs-target='#modalCadastrarAbastecimento'>Cadastrar Abastecimento</button>
-                <a href="logout-novo" class="btn btn-danger btn-lg">Sair</a>
+                <a href="logout" class="btn btn-danger btn-lg">Sair</a>
             </div>
         </div>
     </div>

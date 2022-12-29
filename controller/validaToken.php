@@ -3,7 +3,7 @@ if((!isset($_SESSION['id_funcionario'])) && (!isset($_SESSION['usuario'])) &&  (
     session_start();
     ob_start();
     unset($_SESSION['id_funcionario'],$_SESSION['usuario'],$_SESSION['nome'],$_SESSION['id_permissao'],$_SESSION['token']);
-    header("Location: login-diesel-control-novo");
+    header("Location: login-diesel-control");
 }else{
     if($_SESSION['id_funcionario']){
         include '../model/Funcionarios.php';
@@ -15,12 +15,12 @@ if((!isset($_SESSION['id_funcionario'])) && (!isset($_SESSION['usuario'])) &&  (
         if($_SESSION['token'] <> $funcionario[0]){
             
             session_destroy();
-            header("Location:  login-diesel-control-novo");
+            header("Location:  login-diesel-control");
         }
         if($_SESSION['permissao'] < $permissao){
             
             session_destroy();
-            header("Location:  login-diesel-control-novo");
+            header("Location:  login-diesel-control");
         }
     }
 }

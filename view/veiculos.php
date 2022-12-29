@@ -20,10 +20,10 @@ include 'header.php';
                         <div class="collapse navbar-collapse" id="navbarText">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-1">
                                 <li class="nav-item p-1">
-                                    <a href="controle-de-combustivel-novo" class="btn btn-primary btn">Menu Principal</a>
+                                    <a href="controle-de-combustivel" class="btn btn-primary btn">Menu Principal</a>
                                 </li>
                                 <li class="nav-item p-1">
-                                    <a href="controle-de-combustivel-novo" class="btn btn-primary btn">Controles</a>
+                                    <a href="controle-de-combustivel" class="btn btn-primary btn">Controles</a>
                                 </li>
                             </ul>
                             <span class="navbar-text">
