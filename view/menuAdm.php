@@ -2,7 +2,7 @@
         <a href="menu-principal-novo" class="w3-bar-item w3-button">Menu Principal</a>
         <a href="controle-de-veiculos-novo" class="w3-bar-item w3-button">Veiculos</a>
         <a href="logout-novo" class="w3-bar-item w3-button w3-red w3-right">Sair</a>
-        <a class="w3-bar-item w3-button w3-right"><?= $usuario; ?></a>
+        <a class="w3-bar-item w3-button w3-right"><?= $_SESSION['nome']?></a>
     </div>
     <div class="container">
         <div class="row justify-content-md-center">

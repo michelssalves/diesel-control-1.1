@@ -1,6 +1,6 @@
 <div class="w3-bar w3-light-grey">
+        <a href="menu-principal-novo" class="w3-bar-item w3-button">Usuario Logado: <?= $_SESSION['nome']?></a>
         <a href="logout-novo" class="w3-bar-item w3-button w3-red w3-right">Sair</a>
-        <a class="w3-bar-item w3-button w3-right"><?= $usuario; ?></a>
     </div>
     <div class="container">
         <div class="row justify-content-md-center">
