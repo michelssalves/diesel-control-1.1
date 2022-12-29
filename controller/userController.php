@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 $acao = $_REQUEST['acao'];
 $usuario = addslashes($_POST['usuario']);
 $senha = addslashes($_POST['senha']);
