@@ -3,9 +3,7 @@ session_start();
 include '../model/Abastecimentos.php';
 include '../controller/abastecimentosController.php';
 include 'header.php';
-echo $_SESSION['id_permissao']
 ?>
-
 <body>
             <?php
             if ($_SESSION['id_permissao'] > 1) {
