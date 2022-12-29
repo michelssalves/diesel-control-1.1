@@ -6,7 +6,7 @@
         <div class="row justify-content-md-center">
             <div class="col-md-auto mt-4">  
             <form method="POST">  
-                <button type="button" class='btn btn-primary btn-sm' data-bs-toggle='modal' data-bs-target='#modalCadastrarAbastecimento'>Cadastrar</button>
+                <button type="button" class='btn btn-success btn-lg' data-bs-toggle='modal' data-bs-target='#modalCadastrarAbastecimento'>Cadastrar</button>
             </div>
         </div>
     </div>
