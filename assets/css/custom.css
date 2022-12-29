@@ -43,6 +43,10 @@
     color: #FFFFFF;
   
   }
+
+  .fundo-botoes {
+    background-color: #DCDCDC;
+  }
   .texto-de-advertencia{
   
     text-align: center;
