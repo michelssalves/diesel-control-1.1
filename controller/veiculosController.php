@@ -80,7 +80,7 @@ function filtrarVeiculos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtr
 
             $resultados = selectCountVeiculos();  
 
-            $number_pages = ceil(10 / $resultadoPorPagina);
+            $number_pages = ceil($resultados / $resultadoPorPagina);
             $max_link = 2;
     
             $txtTableVeiculos .= '<nav aria-label="Page navigation example"><ul class="pagination pagination-sm justify-content-center">';
