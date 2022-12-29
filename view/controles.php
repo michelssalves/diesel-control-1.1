@@ -1,6 +1,5 @@
 <?php 
 session_start(); 
-include 'logout.php';
 include '../model/Abastecimentos.php';
 include '../controller/abastecimentosController.php';
 include 'header.php';

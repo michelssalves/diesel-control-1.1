@@ -1,7 +1,5 @@
 <?php
 session_start();
-include 'logout.php';
-include '../controller/logout.php';
 include '../model/Veiculos.php';
 include '../controller/veiculosController.php';
 include 'header.php';
