@@ -13,8 +13,9 @@ include 'header.php';
                     <div class="container-fluid">
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon">
-                            <a class="navbar-brand mt-1" href="#"><label>Usuario Logado: <?= $_SESSION['nome']; ?></label></a>
+                            
                             </span>
+                            <a class="navbar-brand mt-1" href="#"><label>Usuario Logado: <?= $_SESSION['nome']; ?></label></a>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarText">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-1">
