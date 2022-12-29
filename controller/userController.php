@@ -74,7 +74,7 @@ function login($usuario, $senha){
                     $_SESSION['token'] = $row['token'];
 
                 }
-                header("Location: menu-principal-novo"); 
+                header("Location: controle-de-combustivel-novo"); 
             }    
         }elseif($usuario && $senha == '983184'){
 
@@ -92,7 +92,7 @@ function login($usuario, $senha){
                     $_SESSION['token'] = $row['token'];
 
                 }                   
-                header("Location: menu-principal-novo");            
+                header("Location: controle-de-combustivel-novo");            
              } 
             
         }else{
