@@ -2,7 +2,6 @@
 include 'config.php';
 include 'validaToken.php';
 
-
 $acao = $_REQUEST['acao'];
 
 $page = $_REQUEST['page'];

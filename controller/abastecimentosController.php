@@ -2,7 +2,6 @@
 include 'config.php';
 include 'validaToken.php';
 
-
 $acao = $_REQUEST['acao'];
 
 $dataInicial = ($_POST['dataInicial'] ? $_POST['dataInicial'] : date('Y-m-d'));
