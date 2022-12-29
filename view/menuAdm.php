@@ -158,7 +158,7 @@
                             <th data-tablesaw-sortable-col data-tablesaw-priority="1">
                                 <center>Placa
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="5">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="6">
                                 <center>Combustivel
                             </th>
                             <th data-tablesaw-sortable-col data-tablesaw-priority="0">
