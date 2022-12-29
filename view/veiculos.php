@@ -5,9 +5,9 @@ include '../controller/veiculosController.php';
 include 'header.php';
 ?>
 <body>
-
-<div class="container">
 <div class="fundo-cabecalho">
+<div class="container">
+
         <div class="col-md-auto mt-4">
                 
         <nav class="navbar navbar-expand-lg">
@@ -35,7 +35,7 @@ include 'header.php';
     </nav>
     </div>
     </div>
-  
+    </div>
 
 
    <!-- <div class="w3-bar w3-light-grey">
@@ -44,6 +44,7 @@ include 'header.php';
         <a href="logout-novo" class="w3-bar-item w3-button w3-red w3-right">Sair</a>
         <a class="w3-bar-item w3-button w3-right"><?php // $usuario; ?></a>
     </div>-->
+    <div class="fundo-cabecalho">
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-md-auto mt-4">
