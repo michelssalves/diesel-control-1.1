@@ -6,7 +6,7 @@ include 'header.php';
 ?>
 <body>
 
-<div class="container">
+<div class="container rounded-circle">
         <div class="col-md-auto mt-4">
         <div style="background-color: #696969;">
         <nav class="navbar navbar-expand-lg">
