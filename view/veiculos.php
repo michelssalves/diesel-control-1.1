@@ -25,10 +25,8 @@ include 'header.php';
                                 <li class="nav-item p-1">
                                     <a href="controle-de-combustivel-novo" class="btn btn-primary btn">Controles</a>
                                 </li>
-
                             </ul>
                             <span class="navbar-text">
-                                <a class="navbar-brand mt-1" href="#"><label>Usuario Logado: <?= $_SESSION['nome']; ?></label></a>
                                 <a href="logout-novo" class="btn btn-danger btn">Sair</a>
                             </span>
                         </div>
