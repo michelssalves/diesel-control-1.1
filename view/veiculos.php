@@ -2,7 +2,7 @@
 session_start();
 include '../model/Veiculos.php';
 include '../controller/veiculosController.php';
-include 'Header.php';
+include 'header.php';
 ?>
 <body>
     <div class="w3-bar w3-light-grey">
