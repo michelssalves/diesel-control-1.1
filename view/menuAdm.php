@@ -55,8 +55,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><input type="date" name="dataInicial" value="<?= $dataInicial ?>"></td>
-                        <td><input type="date" name="dataFinal" value="<?= $dataFinal ?>"></td>
+                        <td><input type="date" name="dataAbastecimento" value="<?= $dataAbastecimento ?>"></td>
                         <td>
                             <select onChange="this.form.submit()" name="prefixo" required>
                                 <option selected><?= ($prefixoFiltro <> '' ? $prefixoFiltro : 'TODOS') ?></options>

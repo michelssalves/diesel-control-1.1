@@ -19,7 +19,7 @@ include 'header.php';
             ?>
         <body>
             <tbody>
-              <?= filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, $filtroSetor, $filtrodataInicial, $filtrodataFinal); ?>
+              <?= filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, $filtroSetor, $filtrodataAbastecimento); ?>
             </tbody>
          </table>
       </div>

@@ -4,8 +4,7 @@ include 'validaToken.php';
 
 $acao = $_REQUEST['acao'];
 
-$dataInicial = ($_POST['dataInicial'] ? $_POST['dataInicial'] : date('Y-m-d'));
-$dataFinal = ($_POST['dataFinal'] ? $_POST['dataFinal'] : date('Y-m-d'));
+$dataAbastecimento = ($_POST['dataAbastecimento'] ? $_POST['dataAbastecimento'] : date('Y-m-d'));
 $combustivel = ($_POST['combustivel'] <> '' ? $_POST['combustivel'] : 'TODOS');
 $marca = ($_POST['marca'] <> '' ? $_POST['marca'] : 'TODOS');
 $modelo = ($_POST['modelo'] <> '' ? $_POST['modelo'] : 'TODOS');
@@ -14,8 +13,7 @@ $setor = ($_POST['setor'] <> '' ? $_POST['setor'] : 'TODOS');
 
 if($acao == 'limpar'){
 
-    $dataInicial = date('Y-m-d'); 
-    $dataFinal = date('Y-m-d');
+    $dataAbastecimento = date('Y-m-d'); 
     $prefixo = '';
     $combustivel = '';
     $marca = '';
@@ -24,29 +22,25 @@ if($acao == 'limpar'){
 
 }
 
-if($dataInicial && $dataInicial <> ''){ 
-    $filtrodataInicial = $dataInicial;
+if($dataAbastecimento && $dataAbastecimento <> ''){ 
+    $filtrodataAbastecimento = $dataAbastecimento;
 }else{
-    $filtrodataInicial = date('Y-m-d');
+    $filtrodataAbastecimento = date('Y-m-d');
 }
-if($dataFinal && $dataFinal <> ''){ 
-    $filtrodataFinal = $dataFinal;
-}else{
-    $filtrodataFinal = date('Y-m-d');
-}
+
 if($prefixo && $prefixo <> 'TODOS'){$filtroPrefixo = "AND v.prefixo = '$prefixo'";};
 if($combustivel && $combustivel <> 'TODOS' ){$filtroCombustivel = "AND v.combustivel = '$combustivel'";}
 if($marca && $marca <> 'TODOS'){$filtroMarca = "AND v.marca = '$marca'";}
 if($modelo && $modelo <> 'TODOS'){$filtroModelo = "AND v.modelo = '$modelo'";}
 if($setor && $setor <> 'TODOS'){$filtroSetor = "AND v.setor = '$setor'";}
 
-function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $filtrodataInicial, $filtrodataFinal){
+function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $filtrodataAbastecimento){
 
     include 'config.php';
     include 'functions.php';
     include 'modal/modalCadastrarAbastecimento.php'; 
  
-        $sql = selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $filtrodataInicial, $filtrodataFinal);
+        $sql = selectAbastecimentosFiltrar($filtroPrefixo, $filtroCombustivel,$filtroMarca, $filtroModelo, $filtroSetor, $filtrodataAbastecimento);
 
         if ($sql->rowCount() > 0) {
 
