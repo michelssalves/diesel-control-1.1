@@ -1,3 +1,10 @@
+
+<body>
+<div id="loading" style="display: none" align="center">
+	<img src="diesel-control-1.1/assets/img/gifs/aguarde12.gif"/>
+</div>
+<div class="conteudo" id="conteudo" style="display: block">
+
 <?php
 session_start();
 if($_SESSION['id_permissao'] > 0){
@@ -5,11 +12,6 @@ include '../model/Veiculos.php';
 include '../controller/veiculosController.php';
 include 'header.php';
 ?>
-<body>
-<div id="loading" style="display: none" align="center">
-	<img src="diesel-control-1.1/assets/img/gifs/aguarde12.gif"/>
-</div>
-<div class="conteudo" id="conteudo" style="display: block">
     <div class="container">
         <div class="col-md-auto mt-1">
             <div class="fundo-botoes rounded">
