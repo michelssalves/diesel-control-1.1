@@ -2,6 +2,8 @@
 session_start(); 
 include '../model/Abastecimentos.php';
 include '../controller/abastecimentosController.php';
+include '../controller/checkAcess.php';
+
 
 echo $_SESSION['id_permissao'];
 ?>
