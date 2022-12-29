@@ -27,7 +27,7 @@ include 'header.php';
                                 </li>
                             </ul>
                             <span class="navbar-text">
-                                <a href="logout-novo" class="btn btn-danger btn">Sair</a>
+                                <a href="logout-novo" class="btn btn-danger btn w-25">Sair</a>
                             </span>
                         </div>
                     </div>
