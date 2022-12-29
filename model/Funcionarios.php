@@ -39,7 +39,7 @@ function  verificaToken($idFuncionario){
 
     include '../controller/config.php';
 
-    $sql = $pdo->prepare("SELECT token FROM funcionarios WHERE id_funcionario = :idFuncionario");
+    $sql = $pdo->prepare("SELECT * FROM funcionarios WHERE id_funcionario = :idFuncionario");
     $sql->bindValue('idFuncionario', $idFuncionario);
     $sql->execute();
     if ($sql->rowCount() == 1) {
