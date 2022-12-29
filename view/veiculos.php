@@ -213,5 +213,5 @@ include 'header.php';
 </body>
 </html>
 <?php } else{
-    include '../controller/logout.php';
+    echo $msg = "<script>alert('Usuario não possui acesso!')</script>";
 }
