@@ -1,5 +1,5 @@
 <?php
-if(intval($_SESSION['id_permissao']) > 1){
+if(intval($_SESSION['id_permissao']) > '1'){
 session_start();
 include '../model/Veiculos.php';
 include '../controller/veiculosController.php';
