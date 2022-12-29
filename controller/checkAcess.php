@@ -2,6 +2,7 @@
 session_start(); 
 include 'config.php';
 
+
 echo $id_funcionario = $_SESSION['id_funcionario'];
 $token = $_SESSION['token'];
 $permissao = $_SESSION['id_permissao'];
