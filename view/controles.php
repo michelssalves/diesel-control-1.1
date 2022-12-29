@@ -2,15 +2,16 @@
 session_start(); 
 include '../model/Abastecimentos.php';
 include '../controller/abastecimentosController.php';
-include 'Header.php';
+include 'header.php';
 ?>
 <body>
     <?php
         if($_SESSION['id_permissao'] > 1){
+            
             include 'menuAdm.php';
             
         }else{
-            
+
             include 'menuOperador.php';
         } 
     ?>
