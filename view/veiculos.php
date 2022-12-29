@@ -5,8 +5,9 @@ include '../controller/veiculosController.php';
 include 'header.php';
 ?>
 <body>
-<div class="fundo-cabecalho">
+
 <div class="container">
+<div class="fundo-cabecalho">
         <div class="col-md-auto mt-4">
                 
         <nav class="navbar navbar-expand-lg">
