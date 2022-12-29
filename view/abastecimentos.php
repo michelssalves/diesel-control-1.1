@@ -27,9 +27,9 @@ include 'header.php';
     </div>
     </div>
     </div>
+    <script src="diesel-control-1.1/assets/js/preloader.js"></script>
     <script src="diesel-control-1.1/assets/js/scripts.js"></script>
     <script src="diesel-control-1.1/assets/js/fontawesome.all.min.js"></script>
     <script src="diesel-control-1.1/assets/js/bootstrap.bundle.min.v5.2.3.js"></script>
-    <script src="diesel-control-1.1/assets/js/preloader.js"></script>
 </body>
 </html>
