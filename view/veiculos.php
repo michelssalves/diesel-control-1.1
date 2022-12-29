@@ -19,7 +19,6 @@
                                 <div class="container-fluid">
                                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                                         <span class="navbar-toggler-icon">
-
                                         </span>
                                         <a class="navbar-brand mt-1" href="#"><label>Usuario Logado: <?= $_SESSION['nome']; ?></label></a>
                                     </button>
@@ -33,7 +32,7 @@
                                             </li>
                                         </ul>
                                         <span class="navbar-text">
-                                            <a href="logout-novo" class="btn btn-danger btn">Sair</a>
+                                            <a href="logout" class="btn btn-danger btn">Sair</a>
                                         </span>
                                     </div>
                                 </div>
