@@ -1,6 +1,7 @@
 <?php
 include 'config.php';
-include 'logout.php';
+include 'validaToken.php';
+
 
 $acao = $_REQUEST['acao'];
 
