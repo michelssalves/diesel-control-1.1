@@ -2,6 +2,8 @@
     <div id="preloader">
         <div class="inner">
             <div class="bolas">
+            </div>  </div>
+        </div>
             <?php
             session_start();
             if ($_SESSION['id_permissao'] > 0) {
@@ -208,8 +210,7 @@
                                     <?= filtrarVeiculos($filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, $filtroSetor, $filtroStatus, $page) ?>
                         </div>
                     </div>
-                    </div>  </div>
-        </div>
+         
         <script src="diesel-control-1.1/assets/js/scripts.js"></script>
         <script src="diesel-control-1.1/assets/js/fontawesome.all.min.js"></script>
         <script src="diesel-control-1.1/assets/js/bootstrap.bundle.min.v5.2.3.js"></script>
