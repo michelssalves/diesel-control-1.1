@@ -1,6 +1,6 @@
 <?php
 session_start();
-if($_SESSION['id_permissao'] > 1){
+if($_SESSION['id_permissao'] > 0){
 include '../model/Veiculos.php';
 include '../controller/veiculosController.php';
 include 'header.php';
