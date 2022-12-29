@@ -54,9 +54,9 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
             foreach($lista as $row){
 
                 $modalAlterarAbastecimento = "modalAlterarAbastecimento".$row['id_abastecimento']."";
-
+                if(!$_SESSION['id_permissao'] < 1){
                 $linkModalAlterarAbastecimento = "data-bs-toggle='modal' data-bs-target='#$modalAlterarAbastecimento' style='cursor:pointer'";
-                
+                }
                 $corDifKm = '';
                 $corDifHr = '';
                 $corMedia = '';
@@ -108,8 +108,11 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
                 <td class="'.$corMedia.' w3-right-align"><center> '.($row['media']).' </td>
                 <td><center> '.$row['setor'].'</td>
                 </tr>';
+                if(!$_SESSION['id_permissao'] < 1){
 
                 include 'modal/modalAlterarAbastecimento.php';
+                
+                }
             }
           
         }
