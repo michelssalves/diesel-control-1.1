@@ -19,17 +19,16 @@ include 'header.php';
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-1">
                     <li class="nav-item p-1">
-                    <a href="controle-de-combustivel-novo" class="btn btn-secondary btn">Menu Principal</a>
+                    <a href="controle-de-combustivel-novo" class="btn btn-primary btn">Menu Principal</a>
                     </li>
                     <li class="nav-item p-1">
-                    <a href="controle-de-combustivel-novo" class="btn btn-secondary btn">Controles</a>
+                    <a href="controle-de-combustivel-novo" class="btn btn-primary btn">Controles</a>
                     </li>
-                    <li class="nav-item p-1">
-                        <a href="logout-novo" class="btn btn-danger btn">Sair</a>
-                    </li>
+
                 </ul>
                 <span class="navbar-text">
                 <a class="navbar-brand" href="#"><label>Usuario Logado: <?= $_SESSION['nome']; ?></label></a>
+                <a href="logout-novo" class="btn btn-danger btn">Sair</a>
                 </span>
             </div>
         </div>
