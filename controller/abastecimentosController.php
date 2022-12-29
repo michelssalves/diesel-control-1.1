@@ -4,7 +4,7 @@ include 'validaToken.php';
 
 $acao = $_REQUEST['acao'];
 
-$dataAbastecimento = ($_POST['dataAbastecimento'] ? $_POST['dataAbastecimento'] : date('Y-m-d'));
+$dataAbastecimento = ($_POST['dataAbastecimento'] ? $_POST['dataAbastecimento'] : date('2022-12-13'));
 $combustivel = ($_POST['combustivel'] <> '' ? $_POST['combustivel'] : 'TODOS');
 $marca = ($_POST['marca'] <> '' ? $_POST['marca'] : 'TODOS');
 $modelo = ($_POST['modelo'] <> '' ? $_POST['modelo'] : 'TODOS');
@@ -13,7 +13,7 @@ $setor = ($_POST['setor'] <> '' ? $_POST['setor'] : 'TODOS');
 
 if($acao == 'limpar'){
 
-    $dataAbastecimento = date('Y-m-d'); 
+    $dataAbastecimento = date('2022-12-13'); 
     $prefixo = '';
     $combustivel = '';
     $marca = '';
