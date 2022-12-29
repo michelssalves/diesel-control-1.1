@@ -46,7 +46,7 @@ include 'header.php';
 
     <div class="container mt-2 mb-1 ">
     <div style="background-color: #5F9EA0;">
-        <div class="row justify-content-md-center h-25 ">
+        <div class="row justify-content-md-center h-auto ">
         
             <div class="col-md-auto mt-4">
             
