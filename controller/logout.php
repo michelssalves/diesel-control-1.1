@@ -6,7 +6,7 @@ if($_SESSION['id_funcionario']){
 
     $funcionario = verificaToken($_SESSION['id_funcionario']);
   
-    echo $funcionario['token'];
+    echo $funcionario[0];
   /* if($_SESSION['token'] <> $funcionario['token']){
         
         session_destroy();
