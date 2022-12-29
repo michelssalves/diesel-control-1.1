@@ -4,58 +4,50 @@ include '../model/Veiculos.php';
 include '../controller/veiculosController.php';
 include 'header.php';
 ?>
+
 <body>
-
-<div class="container">
+    <div class="container">
         <div class="col-md-auto mt-4 ">
-        <div class="fundo-botoes rounded">
-        <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-1">
-                    <li class="nav-item p-1">
-                    <a href="controle-de-combustivel-novo" class="btn btn-primary btn">Menu Principal</a>
-                    </li>
-                    <li class="nav-item p-1">
-                    <a href="controle-de-combustivel-novo" class="btn btn-primary btn">Controles</a>
-                    </li>
+            <div class="fundo-botoes rounded">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon">
+                            <a class="navbar-brand mt-1" href="#"><label>Usuario Logado: <?= $_SESSION['nome']; ?></label></a>
+                            </span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarText">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-1">
+                                <li class="nav-item p-1">
+                                    <a href="controle-de-combustivel-novo" class="btn btn-primary btn">Menu Principal</a>
+                                </li>
+                                <li class="nav-item p-1">
+                                    <a href="controle-de-combustivel-novo" class="btn btn-primary btn">Controles</a>
+                                </li>
 
-                </ul>
-                <span class="navbar-text">
-                <a class="navbar-brand mt-1" href="#"><label>Usuario Logado: <?= $_SESSION['nome']; ?></label></a>
-                <a href="logout-novo" class="btn btn-danger btn">Sair</a>
-                </span>
+                            </ul>
+                            <span class="navbar-text">
+                                <a class="navbar-brand mt-1" href="#"><label>Usuario Logado: <?= $_SESSION['nome']; ?></label></a>
+                                <a href="logout-novo" class="btn btn-danger btn">Sair</a>
+                            </span>
+                        </div>
+                    </div>
+                </nav>
             </div>
         </div>
-    </nav>
     </div>
-    </div>
-    </div>
-
-
-   <!-- <div class="w3-bar w3-light-grey">
-        <a href="controle-de-combustivel-novo" class="w3-bar-item w3-button">Menu Principal</a>
-        <a href="controle-de-combustivel-novo" class="w3-bar-item w3-button">Controles</a>
-        <a href="logout-novo" class="w3-bar-item w3-button w3-red w3-right">Sair</a>
-        <a class="w3-bar-item w3-button w3-right"><?php // $usuario; ?></a>
-    </div>-->
-
     <div class="container mt-2 mb-1 ">
-    <div class="fundo-botoes rounded">
-        <div class="row justify-content-md-center h-auto ">
-            <div class="col-md-auto mt-4">
-                <form method="POST">
-                    <button class="btn btn-success btn" onclick="table2excel('t1')">Excel</button>
-                    <button type="submit" class='btn btn-warning btn'>Filtrar</button>
-                    <button type="button" class='btn btn-primary btn' data-bs-toggle='modal' data-bs-target='#modalCadastrarVeiculo'>Cadastrar</button>
-                    <button name="acao" value="limpar" type="submit" class='btn btn-secondary btn'>Limpar</button>  
+        <div class="fundo-botoes rounded">
+            <div class="row justify-content-md-center h-auto ">
+                <div class="col-md-auto mt-4">
+                    <form method="POST">
+                        <button class="btn btn-success btn" onclick="table2excel('t1')">Excel</button>
+                        <button type="submit" class='btn btn-warning btn'>Filtrar</button>
+                        <button type="button" class='btn btn-primary btn' data-bs-toggle='modal' data-bs-target='#modalCadastrarVeiculo'>Cadastrar</button>
+                        <button name="acao" value="limpar" type="submit" class='btn btn-secondary btn'>Limpar</button>
+                </div>
             </div>
         </div>
-    </div>
     </div>
     <div class="container">
         <div class="table-responsive">
@@ -97,7 +89,7 @@ include 'header.php';
                                     ?>
                             </select>
                         </td>
-                        <td> 
+                        <td>
                             <select onChange="this.form.submit()" name="combustivel">
                                 <option selected><?= ($combustivel <> '' ? $combustivel : 'TODOS') ?></options>
                                 <option>TODOS</options>
@@ -111,7 +103,7 @@ include 'header.php';
                                     ?>
                             </select>
                         </td>
-                        <td> 
+                        <td>
                             <select onChange="this.form.submit()" name="marca">
                                 <option selected><?= ($marca <> '' ? $marca : 'TODOS') ?></options>
                                 <option>TODOS</options>
@@ -125,7 +117,7 @@ include 'header.php';
                                     ?>
                             </select>
                         </td>
-                        <td> 
+                        <td>
                             <select onChange="this.form.submit()" name="modelo">
                                 <option selected><?= ($modelo <> '' ? $modelo : 'TODOS') ?></options>
                                 <option>TODOS</options>
@@ -139,7 +131,7 @@ include 'header.php';
                                     ?>
                             </select>
                         </td>
-                        <td> 
+                        <td>
                             <select onChange="this.form.submit()" name="setor">
                                 <option selected><?= ($setor <> '' ? $setor : 'TODOS') ?></options>
                                 <option>TODOS</options>
@@ -212,7 +204,6 @@ include 'header.php';
                     </thead>
                     <tbody>
                         <?= filtrarVeiculos($filtroPrefixo, $filtroCombustivel, $filtroMarca, $filtroModelo, $filtroSetor, $filtroStatus, $page) ?>
-             
             </div>
         </div>
     </div>
@@ -220,4 +211,5 @@ include 'header.php';
     <script src="diesel-control-1.1/assets/js/fontawesome.all.min.js"></script>
     <script src="diesel-control-1.1/assets/js/bootstrap.bundle.min.v5.2.3.js"></script>
 </body>
+
 </html>
