@@ -5,13 +5,12 @@ if($_SESSION['id_funcionario']){
     $acao = $_REQUEST['acao'];
 
     $funcionario = verificaToken($_SESSION['id_funcionario']);
-  
-    echo $funcionario[0];
-  /* if($_SESSION['token'] <> $funcionario['token']){
+
+    if($_SESSION['token'] <> $funcionario[0]){
         
         session_destroy();
         header("Location:  login-diesel-control-novo");
-    }*/
+    }
 
     if($acao == 'sair'){
         session_destroy();
