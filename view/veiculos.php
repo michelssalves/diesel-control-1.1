@@ -28,6 +28,7 @@ include 'header.php';
 
                             </ul>
                             <span class="navbar-text">
+                                <a class="navbar-brand mt-1" href="#"><label>Usuario Logado: <?= $_SESSION['nome']; ?></label></a>
                                 <a href="logout-novo" class="btn btn-danger btn">Sair</a>
                             </span>
                         </div>
