@@ -1,5 +1,6 @@
 <?php
 $permissao = $_SESSION['id_permissao'];
+/*
 if($permissao > 1){
 session_start();
 include '../model/Veiculos.php';
