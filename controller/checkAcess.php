@@ -20,6 +20,8 @@ foreach($lista as $row){
     $tokenLogado = $row['token'];
 }
 
+echo  $permissaoLogado;
+
 if($usuarioLogado <> $login || $idLogado <> $id_funcionario || $tokenLogado <> $token || $permissaoLogado <> $permissao || $nivelPremissao > $permissao){
     session_destroy();
     header("Location: login-diesel-control-novo");
