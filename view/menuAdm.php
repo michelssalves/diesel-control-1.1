@@ -137,7 +137,7 @@
                 <table id="t1" data-tablesaw-sortable data-tablesaw-sortable-switch class="tablesaw table-sm fs-6 mb-0" data-tablesaw-mode="columntoggle" data-tablesaw-minimap>
                     <thead class="fundo-cabecalho">
                         <tr>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="3">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="5">
                                 <center>Data
                             </th>
                             <th data-tablesaw-sortable-col data-tablesaw-priority="0">
@@ -158,7 +158,7 @@
                             <th data-tablesaw-sortable-col data-tablesaw-priority="1">
                                 <center>Placa
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="3">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="5">
                                 <center>Combustivel
                             </th>
                             <th data-tablesaw-sortable-col data-tablesaw-priority="0">
@@ -182,16 +182,16 @@
                             <th data-tablesaw-sortable-col data-tablesaw-priority="1">
                                 <center>Km
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="3">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="5">
                                 <center>Dif Km
                             </th>
                             <th data-tablesaw-sortable-col data-tablesaw-priority="0">
                                 <center>Ultimo Hr
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="3">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="5">
                                 <center>Hr
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="3">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="5">
                                 <center>Dif Hr
                             </th>
                             <th data-tablesaw-sortable-col data-tablesaw-priority="1">
