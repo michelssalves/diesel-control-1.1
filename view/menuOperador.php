@@ -13,7 +13,7 @@
           
                             </ul>
                             <span class="navbar-text">
-                                <a href="logout-novo" class="btn btn-danger btn">Sair</a>
+                               
                             </span>
                         </div>
                     </div>
