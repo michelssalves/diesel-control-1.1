@@ -214,4 +214,5 @@ include 'header.php';
 </html>
 <?php } else{
     echo $msg = "<script>alert('Usuario não possui acesso!')</script>";
+    header("Location: controle-de-combustivel-novo");
 }
