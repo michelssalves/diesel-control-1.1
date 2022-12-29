@@ -1,4 +1,4 @@
-<?php $gif = rand(10,16); ?>
+<?php $gif = rand(1,4); ?>
 <body>
     <div id="preloader">
         <div class="inner">
