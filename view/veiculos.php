@@ -2,7 +2,9 @@
     <div id="preloader">
         <div class="inner">
             <div class="bolas">
-            </div>  </div>
+                echo
+            </div>  
+           </div>
         </div>
             <?php
             session_start();
