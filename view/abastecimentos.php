@@ -1,9 +1,9 @@
 <?php 
-session_start(); 
+session_start();
+echo $_SESSION['id_permissao']; 
 include '../model/Abastecimentos.php';
 include '../controller/abastecimentosController.php';
 
-echo $_SESSION['id_funcionario'];
 
 ?>
 <head>
