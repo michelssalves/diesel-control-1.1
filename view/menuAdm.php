@@ -188,10 +188,10 @@
                             <th data-tablesaw-sortable-col data-tablesaw-priority="0">
                                 <center>Ultimo Hr
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="5">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="6">
                                 <center>Hr
                             </th>
-                            <th data-tablesaw-sortable-col data-tablesaw-priority="5">
+                            <th data-tablesaw-sortable-col data-tablesaw-priority="6">
                                 <center>Dif Hr
                             </th>
                             <th data-tablesaw-sortable-col data-tablesaw-priority="1">
