@@ -1,5 +1,6 @@
 ﻿<?php
 include 'config.php';
+include 'logout.php';
 
 $acao = $_REQUEST['acao'];
 
