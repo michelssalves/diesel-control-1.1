@@ -3,6 +3,7 @@ session_start();
 include '../model/Veiculos.php';
 include '../controller/veiculosController.php';
 include 'header.php';
+$permissao = 2;
 ?>
 <body>
     <div class="container">

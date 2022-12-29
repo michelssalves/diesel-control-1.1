@@ -17,6 +17,11 @@ if((!isset($_SESSION['id_funcionario'])) && (!isset($_SESSION['usuario'])) &&  (
             session_destroy();
             header("Location:  login-diesel-control-novo");
         }
+        if($_SESSION['permissao'] < $permissao){
+            
+            session_destroy();
+            header("Location:  login-diesel-control-novo");
+        }
     }
 }
 
