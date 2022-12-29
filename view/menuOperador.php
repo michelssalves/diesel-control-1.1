@@ -1,26 +1,3 @@
-    <div class="container">
-        <div class="col-md-auto mt-1">
-            <div class="fundo-botoes rounded">
-                <nav class="navbar navbar-expand-lg">
-                    <div class="container-fluid">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon">
-                            </span>
-                            <a class="navbar-brand mt-1" href="#"><label>Usuario Logado: <?= $_SESSION['nome']; ?></label></a>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarText">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-1">
-          
-                            </ul>
-                            <span class="navbar-text">
-                               
-                            </span>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
     <div class="container mt-2 mb-1 ">
         <div class="fundo-botoes rounded">
             <div class="row justify-content-md-center h-auto ">
