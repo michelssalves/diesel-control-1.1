@@ -1,10 +1,9 @@
 <?php 
 session_start(); 
-include '../controller/logout.php';
+//include '../controller/logout.php';
 include '../model/Abastecimentos.php';
 include '../controller/abastecimentosController.php';
 include 'header.php';
-
 ?>
 <body>
     <?php
