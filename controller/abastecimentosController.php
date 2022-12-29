@@ -120,7 +120,7 @@ function filtrarAbastecimentos($filtroPrefixo, $filtroCombustivel,$filtroMarca, 
 
             $txtTableAbastecimentos .='</tbody></table>';
 
-            $number_pages = ceil(5 / $resultadoPorPagina);
+            $number_pages = ceil(50 / $resultadoPorPagina);
             $max_link = 2;
     
             $txtTableAbastecimentos .= '<nav aria-label="Page navigation example"><ul class="pagination pagination-sm justify-content-center">';
